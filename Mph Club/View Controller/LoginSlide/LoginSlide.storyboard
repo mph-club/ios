@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Qh-N4-vvW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Slide View Controller-->
+        <scene sceneID="0mZ-Bn-K1L">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="y1k-NM-Vl4" customClass="LoginSlideViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6as-0N-QZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="170"/>
+        </scene>
+        <!--Login Slide Main View Controller-->
+        <scene sceneID="fu5-rQ-KDn">
+            <objects>
+                <viewController id="7Qh-N4-vvW" customClass="LoginSlideMainViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBC-lL-Ugy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-sc-glt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="y1k-NM-Vl4" kind="embed" id="xBg-dM-Xe7"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-ua-6Kf">
+                                <rect key="frame" x="168" y="593" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.29510286229999999" green="1" blue="0.95037076220000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2F7-ua-6Kf" firstAttribute="leading" secondItem="TQx-9B-dtP" secondAttribute="leading" constant="168" id="6sZ-c4-BRa"/>
+                            <constraint firstItem="2F7-ua-6Kf" firstAttribute="top" secondItem="TQx-9B-dtP" secondAttribute="top" constant="590" id="8x7-jv-kbf"/>
+                            <constraint firstItem="TQx-9B-dtP" firstAttribute="bottom" secondItem="2F7-ua-6Kf" secondAttribute="bottom" constant="20" id="A8c-qy-0ZK"/>
+                            <constraint firstItem="TQx-9B-dtP" firstAttribute="trailing" secondItem="2F7-ua-6Kf" secondAttribute="trailing" constant="168" id="EUo-bx-YQ4"/>
+                            <constraint firstItem="Mds-sc-glt" firstAttribute="trailing" secondItem="TQx-9B-dtP" secondAttribute="trailing" id="cz3-fA-UP5"/>
+                            <constraint firstItem="Mds-sc-glt" firstAttribute="bottom" secondItem="TQx-9B-dtP" secondAttribute="bottom" id="ovH-Kg-ueE"/>
+                            <constraint firstItem="Mds-sc-glt" firstAttribute="leading" secondItem="TQx-9B-dtP" secondAttribute="leading" id="tVb-7r-Hp8"/>
+                            <constraint firstItem="Mds-sc-glt" firstAttribute="top" secondItem="gBC-lL-Ugy" secondAttribute="top" id="zR0-dV-BfS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TQx-9B-dtP"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Mds-sc-glt" id="URc-0X-pmR"/>
+                        <outlet property="pageControl" destination="2F7-ua-6Kf" id="bGu-Rk-5HU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8SC-Zg-4Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="-577.06146926536735"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zqb-D0-l1c">
+            <objects>
+                <viewController storyboardIdentifier="slide1ViewController" id="ikB-Kl-Oys" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpn-ZP-iK6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.21920736766385884" green="1" blue="0.14826897837853203" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="D1x-hp-3QE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXR-Kj-ZBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="850"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2AB-9R-ZPG">
+            <objects>
+                <viewController storyboardIdentifier="slide2ViewController" id="IJJ-vk-8fe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g89-8H-F4O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.37691648219761953" blue="0.34095968819223532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="PDq-lL-Vuv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STd-Wh-m8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="849"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qer-eK-01j">
+            <objects>
+                <viewController storyboardIdentifier="slide3ViewController" id="Abl-Qb-R1p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MiM-jJ-Tvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.29510286228086335" green="1" blue="0.95037076215977445" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="4tQ-HL-PSr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kY8-7x-dEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="849"/>
+        </scene>
+    </scenes>
+</document>
