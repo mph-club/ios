@@ -19,6 +19,8 @@
 		35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */; };
 		35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */; };
 		35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */; };
+		35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */; };
+		35FAB4A220E57A6E008EED64 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FAB4A120E57A6E008EED64 /* CreateAccount.storyboard */; };
 		7286C2BD96A026AEB5013592 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2A2C285FCB20E2302705EF /* Pods_Mph_Club.framework */; };
 		901F8474A8F855AC81A17609 /* Pods_Mph_ClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FD6E9C2D51C74230945A01 /* Pods_Mph_ClubUITests.framework */; };
 		E3815EF11F304E7B833E2811 /* Pods_Mph_ClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B620E47CFD5CAD9B3961F77B /* Pods_Mph_ClubTests.framework */; };
@@ -60,6 +62,8 @@
 		35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSlide.storyboard; sourceTree = "<group>"; };
 		35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
 		35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
+		35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		35FAB4A120E57A6E008EED64 /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		4AD9C2DB511D86A79857F443 /* Pods-Mph Club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.debug.xcconfig"; sourceTree = "<group>"; };
 		59EE7818E9F99793BF187C5F /* Pods-Mph ClubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubUITests/Pods-Mph ClubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69FD6E9C2D51C74230945A01 /* Pods_Mph_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mph_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3543144F20E579CB00B5F80E /* Create Account */,
 				35DBE65F20E3E1A80041325A /* LoginSlide */,
 				35207DCC20E3D62000BA838A /* Login */,
 			);
@@ -145,6 +150,15 @@
 				35207DD120E3D68F00BA838A /* Login.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3543144F20E579CB00B5F80E /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+				35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */,
+				35FAB4A120E57A6E008EED64 /* CreateAccount.storyboard */,
+			);
+			path = "Create Account";
 			sourceTree = "<group>";
 		};
 		3591B8B020DAC06C00BA0CF9 = {
@@ -329,6 +343,7 @@
 			files = (
 				35207DD220E3D68F00BA838A /* Login.storyboard in Resources */,
 				3543144E20E5742A00B5F80E /* Main.storyboard in Resources */,
+				35FAB4A220E57A6E008EED64 /* CreateAccount.storyboard in Resources */,
 				35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */,
@@ -413,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				3543144D20E5742A00B5F80E /* PageViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
