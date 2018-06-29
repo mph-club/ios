@@ -69,13 +69,13 @@ class LoginSlideViewController: UIPageViewController {
     /**
      Scrolls to the next view controller.
      */
-    func scrollToNextViewController() {
-        if let visibleViewController = viewControllers?.first,
-            let nextViewController = pageViewController(self,
-                                                        viewControllerAfter: visibleViewController) {
-            _scrollToViewController(viewController: nextViewController)
-        }
-    }
+//    func scrollToNextViewController() {
+//        if let visibleViewController = viewControllers?.first,
+//            let nextViewController = pageViewController(self,
+//                                                        viewControllerAfter: visibleViewController) {
+//            _scrollToViewController(viewController: nextViewController)
+//        }
+//    }
     
     /**
      Scrolls to the view controller at the given index. Automatically calculates
@@ -83,45 +83,45 @@ class LoginSlideViewController: UIPageViewController {
      
      - parameter newIndex: the new index to scroll to
      */
-    func scrollToViewController(index newIndex: Int) {
-        if let firstViewController = viewControllers?.first,
-            let currentIndex = orderedViewControllers.index(of: firstViewController) {
-            let direction: UIPageViewControllerNavigationDirection = newIndex >= currentIndex ? .forward : .reverse
-            let nextViewController = orderedViewControllers[newIndex]
-            _scrollToViewController(viewController: nextViewController, direction: direction)
-          
-        }
-    }
-    
-
-    
-    /**
-     Scrolls to the given 'viewController' page.
-     
-     - parameter viewController: the view controller to show.
-     */
-    private func _scrollToViewController(viewController: UIViewController,
-                                         direction: UIPageViewControllerNavigationDirection = .forward) {
-        setViewControllers([viewController],
-                           direction: direction,
-                           animated: true,
-                           completion: { (finished) -> Void in
-                            // Setting the view controller programmatically does not fire
-                            // any delegate methods, so we have to manually notify the
-                            // 'tutorialDelegate' of the new index.
-                            self.notifyTutorialDelegateOfNewIndex()
-        })
-    }
-    
-    /**
-     Notifies '_tutorialDelegate' that the current page index was updated.
-     */
-    private func notifyTutorialDelegateOfNewIndex() {
-        if let firstViewController = viewControllers?.first,
-            let index = orderedViewControllers.index(of: firstViewController) {
-            loginSlideDelegate?.loginSlideViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
-        }
-    }
+//    func scrollToViewController(index newIndex: Int) {
+//        if let firstViewController = viewControllers?.first,
+//            let currentIndex = orderedViewControllers.index(of: firstViewController) {
+//            let direction: UIPageViewControllerNavigationDirection = newIndex >= currentIndex ? .forward : .reverse
+//            let nextViewController = orderedViewControllers[newIndex]
+//            _scrollToViewController(viewController: nextViewController, direction: direction)
+//
+//        }
+//    }
+//
+//
+//
+//    /**
+//     Scrolls to the given 'viewController' page.
+//
+//     - parameter viewController: the view controller to show.
+//     */
+//    private func _scrollToViewController(viewController: UIViewController,
+//                                         direction: UIPageViewControllerNavigationDirection = .forward) {
+//        setViewControllers([viewController],
+//                           direction: direction,
+//                           animated: true,
+//                           completion: { (finished) -> Void in
+//                            // Setting the view controller programmatically does not fire
+//                            // any delegate methods, so we have to manually notify the
+//                            // 'tutorialDelegate' of the new index.
+//                            self.notifyTutorialDelegateOfNewIndex()
+//        })
+//    }
+//
+//    /**
+//     Notifies '_tutorialDelegate' that the current page index was updated.
+//     */
+//    private func notifyTutorialDelegateOfNewIndex() {
+//        if let firstViewController = viewControllers?.first,
+//            let index = orderedViewControllers.index(of: firstViewController) {
+//            loginSlideDelegate?.loginSlideViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
+//        }
+//    }
 
     /*
     // MARK: - Navigation
@@ -143,14 +143,16 @@ extension LoginSlideViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else { return nil }
         
-        let previousIndex = viewControllerIndex - 1
+    //    let previousIndex = 4
         
+        let previousIndex = viewControllerIndex - 1
+
         // User is on the first view controller and swiped left to loop to
         // the last view controller.
         guard previousIndex >= 0 else {
             return orderedViewControllers.last
         }
-        
+
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }

@@ -20,9 +20,6 @@ class LoginSlideMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-      //  loginSlideViewController.loginSlideDelegate = self
         pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
     }
     
@@ -30,17 +27,9 @@ class LoginSlideMainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loginSlideViewController = segue.destination as? LoginSlideViewController {
             loginSlideViewController.loginSlideDelegate = self
-            // self.loginSlideViewController = loginSlideViewController
         }
     }
   
-//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//        if let loginSlideViewController = segue.destination as? LoginSlideViewController {
-//
-//           // self.loginSlideViewController = loginSlideViewController
-//        }
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,7 +40,7 @@ class LoginSlideMainViewController: UIViewController {
      Fired when the user taps on the pageControl to change its current page.
      */
     @objc func didChangePageControlValue() {
-        loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
+   //     loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
     }
     
     /*
@@ -82,13 +71,3 @@ extension LoginSlideMainViewController: LoginSlideViewControllerDelegate {
     
 }
 
-//extension LoginSlideMainViewController: LoginSlideViewControllerDelegate {
-//    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController, didUpdatePageCount count: Int) {
-//        pageControl.numberOfPages = count
-//    }
-//
-//    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController, didUpdatePageIndex index: Int) {
-//        pageControl.currentPage = index
-//    }
-//
-//}

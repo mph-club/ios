@@ -10,15 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var navBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navBar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navBar?.shadowImage = UIImage()
+        self.navBar?.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
 
