@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09D01A81D1656F7624CA0D1243B59AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		25CAFC05EE2CEE9893C5C0C14125FD26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		36F6292E394ADE4C0890CE1394324941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		630D72FD67FEC08F039E25607446E997 /* Pods-Mph ClubTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FCD935239126919F83E278AE858FC0B /* Pods-Mph ClubTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75E6ABFAC49FBAB8BA6DB437E0BB7DCE /* Pods-Mph Club-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D379BD599BE3C479F9A5AB23A776A1 /* Pods-Mph Club-dummy.m */; };
-		7A6E1375A321C131D57F5290F86D7D44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		84CC32A7BB7B3E1635CC04BC803144D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		980E66C4CF6701A520D5AD64600D151D /* Pods-Mph ClubUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EA20825A310A11F273616876605A024 /* Pods-Mph ClubUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09DD68910554F6365F5345D0A475758 /* Pods-Mph ClubTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2423A083DE5C84AADC0A3493D0CF1A8 /* Pods-Mph ClubTests-dummy.m */; };
 		CEB110AF81EE121618CAFDF763596D0D /* Pods-Mph ClubUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36216EA25440323E76D55AC59BD4E907 /* Pods-Mph ClubUITests-dummy.m */; };
 		D696FBEC8AB849C9CE3BE1F1F3847DCB /* Pods-Mph Club-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAD7050977EB6933B7CA9E0DDFC9BC8 /* Pods-Mph Club-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F964AE011830D8EAC096D220CE3E1634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +47,9 @@
 		481B923257CD8B89BAD6462B176B4908 /* Pods-Mph ClubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mph ClubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		50B804A2D898CC32DF4A7D2AE83B24F6 /* Pods-Mph ClubUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mph ClubUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		53B47858C507048F2369ED3EA9B99865 /* Pods-Mph Club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mph Club.debug.xcconfig"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5DAD7050977EB6933B7CA9E0DDFC9BC8 /* Pods-Mph Club-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mph Club-umbrella.h"; sourceTree = "<group>"; };
 		5E4476435C54CABFD8DF0F01A6F3AD29 /* Pods_Mph_ClubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mph_ClubTests.framework; path = "Pods-Mph ClubTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		71828DFA079ECA4F75319D24F49D8B4B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D7C0F00770D2D70F6A467A32ECA899 /* Pods-Mph ClubUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mph ClubUITests.modulemap"; sourceTree = "<group>"; };
 		8EA20825A310A11F273616876605A024 /* Pods-Mph ClubUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mph ClubUITests-umbrella.h"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D01A81D1656F7624CA0D1243B59AFA /* Foundation.framework in Frameworks */,
+				36F6292E394ADE4C0890CE1394324941 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6E1375A321C131D57F5290F86D7D44 /* Foundation.framework in Frameworks */,
+				F964AE011830D8EAC096D220CE3E1634 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25CAFC05EE2CEE9893C5C0C14125FD26 /* Foundation.framework in Frameworks */,
+				84CC32A7BB7B3E1635CC04BC803144D5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,14 +109,6 @@
 				A8D223F88156E68F14AE6E03BE4B170A /* Pods-Mph ClubUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		6205AD4A451BB88613B977F10D1B38E3 /* Pods-Mph ClubTests */ = {
@@ -196,9 +188,17 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +373,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph Club/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph Club/Pods-Mph Club.modulemap";
 				OTHER_LDFLAGS = "";
@@ -412,11 +408,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph ClubTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -513,11 +505,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph ClubTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -610,11 +598,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph ClubUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph ClubUITests/Pods-Mph ClubUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -649,11 +633,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph ClubUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph ClubUITests/Pods-Mph ClubUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -687,11 +667,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Mph Club/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Mph Club/Pods-Mph Club.modulemap";
 				OTHER_LDFLAGS = "";

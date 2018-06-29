@@ -22,18 +22,25 @@ class LoginSlideMainViewController: UIViewController {
         super.viewDidLoad()
         
 
-        loginSlideViewController.loginSlideDelegate = self
+      //  loginSlideViewController.loginSlideDelegate = self
         pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
     }
     
-  
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loginSlideViewController = segue.destination as? LoginSlideViewController {
-            
-           // self.loginSlideViewController = loginSlideViewController
+            loginSlideViewController.loginSlideDelegate = self
+            // self.loginSlideViewController = loginSlideViewController
         }
     }
+  
+//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//
+//        if let loginSlideViewController = segue.destination as? LoginSlideViewController {
+//
+//           // self.loginSlideViewController = loginSlideViewController
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

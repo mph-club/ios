@@ -10,7 +10,9 @@ import UIKit
 
 class LoginSlideViewController: UIPageViewController {
     
-    weak var loginSlideDelegate: LoginSlideViewControllerDelegate?
+    
+    
+    var loginSlideDelegate: LoginSlideViewControllerDelegate?
     
 
     
@@ -213,7 +215,7 @@ extension LoginSlideViewController: UIPageViewControllerDelegate {
 }
 
 
-protocol LoginSlideViewControllerDelegate: class {
+protocol LoginSlideViewControllerDelegate {
     
     /**
      Called when the number of pages is updated.
