@@ -18,7 +18,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="y1k-NM-Vl4" customClass="LoginSlideViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6as-0N-QZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-650"/>
+            <point key="canvasLocation" x="1585" y="112"/>
         </scene>
         <!--Login Slide Main View Controller-->
         <scene sceneID="lEI-L1-7lg">
@@ -57,7 +57,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="e2B-lZ-Uoy" kind="show" id="alU-Rd-yoi"/>
+                                    <segue destination="DMg-Qc-AA2" kind="show" id="alU-Rd-yoi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-Wt-mUw">
@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fv0-Uz-HNt" kind="show" id="4E5-5W-vZh"/>
+                                    <segue destination="bpu-hz-2dC" kind="show" id="4E5-5W-vZh"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-ua-6Kf">
@@ -107,6 +107,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLO-tf-LIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2717.5999999999999" y="-1442.3645320197045"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mFH-ff-3ws">
+            <objects>
+                <viewController id="bpu-hz-2dC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vDx-7n-YF5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="Fs5-LD-pb7">
+                                <rect key="frame" x="0.0" y="-88" width="375" height="450"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fs5-LD-pb7" secondAttribute="trailing" id="9al-Rc-ya2"/>
+                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="top" secondItem="vDx-7n-YF5" secondAttribute="topMargin" constant="-88" id="Td9-3R-HcN"/>
+                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="leading" secondItem="vDx-7n-YF5" secondAttribute="leading" id="jww-AK-HQO"/>
+                            <constraint firstItem="wIU-cq-kTo" firstAttribute="bottom" secondItem="Fs5-LD-pb7" secondAttribute="bottom" constant="328" id="slY-vo-w0P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wIU-cq-kTo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aq3-4y-Iid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3605.5999999999999" y="-1442.3645320197045"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wPg-ug-K3s">
+            <objects>
+                <viewController id="DMg-Qc-AA2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1et-XC-wkd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="YHX-Pn-W9F">
+                                <rect key="frame" x="0.0" y="-89" width="375" height="496"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kmi-8Y-S0k" firstAttribute="bottom" secondItem="YHX-Pn-W9F" secondAttribute="bottom" constant="283" id="8jS-fb-ug4"/>
+                            <constraint firstItem="YHX-Pn-W9F" firstAttribute="leading" secondItem="1et-XC-wkd" secondAttribute="leading" id="DAk-JA-j3l"/>
+                            <constraint firstItem="YHX-Pn-W9F" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="topMargin" constant="-89" id="IZG-sh-ll0"/>
+                            <constraint firstAttribute="trailing" secondItem="YHX-Pn-W9F" secondAttribute="trailing" id="gQg-it-H1m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kmi-8Y-S0k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auF-qq-Apt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3582" y="-692"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="qb1-R7-Two">
@@ -184,7 +236,7 @@ while in town</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STd-Wh-m8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682" y="16"/>
+            <point key="canvasLocation" x="354" y="848"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qer-eK-01j">
@@ -242,7 +294,7 @@ while in town</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kY8-7x-dEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3335" y="16"/>
+            <point key="canvasLocation" x="1005.6" y="848.27586206896558"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mqo-g9-Qi8">
@@ -301,26 +353,11 @@ while in town</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odd-fO-Q8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="16"/>
-        </scene>
-        <!--CreateAccount-->
-        <scene sceneID="lGZ-fv-mYr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CreateAccount" id="fv0-Uz-HNt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N5m-Bv-C60" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3263" y="-1405"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="qfp-uG-JBA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="e2B-lZ-Uoy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmr-6U-JJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3084" y="-1046"/>
+            <point key="canvasLocation" x="-353" y="848"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
         <image name="walkthrough1" width="187" height="333"/>
         <image name="walkthrough2" width="187" height="333"/>
         <image name="walkthrough3" width="187" height="333"/>

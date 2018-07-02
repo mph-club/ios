@@ -8,36 +8,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var navBar: UINavigationBar!
+
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navBar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navBar?.shadowImage = UIImage()
-        self.navBar?.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        addToolBar()
     }
     
-    @IBAction func close(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    
+    func addToolBar() {
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        self.emailTextField.inputAccessoryView = toolbar
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
     }
-    */
-
+    
 }

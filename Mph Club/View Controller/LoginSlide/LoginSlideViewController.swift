@@ -34,7 +34,7 @@ class LoginSlideViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
-        loginSlideDelegate?.loginSlideViewController(tutorialPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+        loginSlideDelegate?.loginSlideViewController(LoginSlidePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
     
         
         if let firstViewController = orderedViewControllers.first {
@@ -43,14 +43,7 @@ class LoginSlideViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
-        
-        
-//        if let initialViewController = orderedViewControllers.first {
-//            _scrollToViewController(viewController: initialViewController)
-//        }
-//
-//
-//
+
         
         
     }
@@ -66,72 +59,7 @@ class LoginSlideViewController: UIPageViewController {
     }
     
     
-    /**
-     Scrolls to the next view controller.
-     */
-//    func scrollToNextViewController() {
-//        if let visibleViewController = viewControllers?.first,
-//            let nextViewController = pageViewController(self,
-//                                                        viewControllerAfter: visibleViewController) {
-//            _scrollToViewController(viewController: nextViewController)
-//        }
-//    }
-    
-    /**
-     Scrolls to the view controller at the given index. Automatically calculates
-     the direction.
-     
-     - parameter newIndex: the new index to scroll to
-     */
-//    func scrollToViewController(index newIndex: Int) {
-//        if let firstViewController = viewControllers?.first,
-//            let currentIndex = orderedViewControllers.index(of: firstViewController) {
-//            let direction: UIPageViewControllerNavigationDirection = newIndex >= currentIndex ? .forward : .reverse
-//            let nextViewController = orderedViewControllers[newIndex]
-//            _scrollToViewController(viewController: nextViewController, direction: direction)
-//
-//        }
-//    }
-//
-//
-//
-//    /**
-//     Scrolls to the given 'viewController' page.
-//
-//     - parameter viewController: the view controller to show.
-//     */
-//    private func _scrollToViewController(viewController: UIViewController,
-//                                         direction: UIPageViewControllerNavigationDirection = .forward) {
-//        setViewControllers([viewController],
-//                           direction: direction,
-//                           animated: true,
-//                           completion: { (finished) -> Void in
-//                            // Setting the view controller programmatically does not fire
-//                            // any delegate methods, so we have to manually notify the
-//                            // 'tutorialDelegate' of the new index.
-//                            self.notifyTutorialDelegateOfNewIndex()
-//        })
-//    }
-//
-//    /**
-//     Notifies '_tutorialDelegate' that the current page index was updated.
-//     */
-//    private func notifyTutorialDelegateOfNewIndex() {
-//        if let firstViewController = viewControllers?.first,
-//            let index = orderedViewControllers.index(of: firstViewController) {
-//            loginSlideDelegate?.loginSlideViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
-//        }
-//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -180,29 +108,12 @@ extension LoginSlideViewController: UIPageViewControllerDataSource {
     }
     
     
-//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        return orderedViewControllers.count
-//    }
-//
-//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        guard let firstViewController = viewControllers?.first,
-//        let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
-//                return 0
-//        }
-//        return firstViewControllerIndex
-//    }
     
 }
 
 
 extension LoginSlideViewController: UIPageViewControllerDelegate {
     
-//    func pageViewController(_ pageViewController: UIPageViewController,
-//                            didFinishAnimating finished: Bool,
-//                            previousViewControllers: [UIViewController],
-//                            transitionCompleted completed: Bool) {
-//        notifyTutorialDelegateOfNewIndex()
-//    }
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
@@ -210,7 +121,7 @@ extension LoginSlideViewController: UIPageViewControllerDelegate {
                             transitionCompleted completed: Bool) {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.index(of: firstViewController) {
-            loginSlideDelegate?.loginSlideViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
+            loginSlideDelegate?.loginSlideViewController(LoginSlidePageViewController: self, didUpdatePageIndex: index)
         }
     }
     
@@ -222,17 +133,17 @@ protocol LoginSlideViewControllerDelegate {
     /**
      Called when the number of pages is updated.
      
-     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
      - parameter count: the total number of pages.
      */
-    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController, didUpdatePageCount count: Int)
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController, didUpdatePageCount count: Int)
     
     /**
      Called when the current index is updated.
      
-     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
      - parameter index: the index of the currently visible page.
      */
-    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController, didUpdatePageIndex index: Int)
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController, didUpdatePageIndex index: Int)
     
 }

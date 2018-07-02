@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Egj-1b-UUE">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMg-Qc-AA2">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,29 +10,87 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="dc8-O6-m97">
+        <!--Login View Controller-->
+        <scene sceneID="wPg-ug-K3s">
             <objects>
-                <viewController id="Egj-1b-UUE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nsb-q7-wJ4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="DMg-Qc-AA2" customClass="LoginViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1et-XC-wkd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szl-Mu-MhY">
-                                <rect key="frame" x="159" y="323" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEe-cP-Rtb">
+                                <rect key="frame" x="0.0" y="325" width="375" height="675"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00E-8R-NRV" userLabel="ContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-bQ-h3L">
+                                                <rect key="frame" x="164" y="630" width="47" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-1d-Xtb">
+                                                <rect key="frame" x="42" y="24" width="280" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iru-eP-B1g">
+                                                <rect key="frame" x="42" y="70" width="280" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="675" id="dmi-wk-Fbh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="00E-8R-NRV" firstAttribute="top" secondItem="pEe-cP-Rtb" secondAttribute="top" id="D0K-k1-bfF"/>
+                                    <constraint firstAttribute="trailing" secondItem="00E-8R-NRV" secondAttribute="trailing" id="NPX-0g-lIP"/>
+                                    <constraint firstItem="00E-8R-NRV" firstAttribute="leading" secondItem="pEe-cP-Rtb" secondAttribute="leading" id="d9r-xE-Ahh"/>
+                                    <constraint firstAttribute="bottom" secondItem="00E-8R-NRV" secondAttribute="bottom" id="kT7-Jm-b3b"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-0z-sVk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="325"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="GKQ-DR-X0h"/>
+                                    <constraint firstAttribute="height" constant="325" id="OvH-6o-gaL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="mx7-dx-NCz"/>
+                        <constraints>
+                            <constraint firstItem="pEe-cP-Rtb" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="top" constant="325" id="1yG-v9-aSd"/>
+                            <constraint firstItem="00E-8R-NRV" firstAttribute="width" secondItem="1et-XC-wkd" secondAttribute="width" id="HH7-dE-Qag"/>
+                            <constraint firstItem="BgU-0z-sVk" firstAttribute="leading" secondItem="pEe-cP-Rtb" secondAttribute="leading" id="TTM-za-M7R"/>
+                            <constraint firstItem="BgU-0z-sVk" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="top" id="Vvq-FJ-a4w"/>
+                            <constraint firstItem="pEe-cP-Rtb" firstAttribute="leading" secondItem="Kmi-8Y-S0k" secondAttribute="leading" id="YXY-EJ-W8l"/>
+                            <constraint firstItem="pEe-cP-Rtb" firstAttribute="trailing" secondItem="Kmi-8Y-S0k" secondAttribute="trailing" id="j70-H7-9u4"/>
+                            <constraint firstItem="pEe-cP-Rtb" firstAttribute="bottom" secondItem="Kmi-8Y-S0k" secondAttribute="bottom" constant="34" id="qzn-su-QXf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kmi-8Y-S0k"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="wbR-1d-Xtb" id="C16-WD-a7i"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yAa-0y-o0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auF-qq-Apt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gBR-b6-aB5"/>
             </objects>
-            <point key="canvasLocation" x="122" y="168"/>
+            <point key="canvasLocation" x="3581.5999999999999" y="-693.10344827586209"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
+    </resources>
 </document>

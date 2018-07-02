@@ -59,12 +59,12 @@ class LoginSlideMainViewController: UIViewController {
 
 extension LoginSlideMainViewController: LoginSlideViewControllerDelegate {
     
-    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController,
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
                                     didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
     }
     
-    func loginSlideViewController(tutorialPageViewController: LoginSlideViewController,
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
                                     didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
     }
