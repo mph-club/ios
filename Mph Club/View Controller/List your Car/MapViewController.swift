@@ -14,14 +14,16 @@ protocol HandleMapSearch: class {
 }
 
 protocol LocationSearchTableDelegate {
-    func displayAddressSelected(_ carLocation: String)
+    func displayAddressSelected(_ locationDetail: LocationDetail)
 }
 
 class MapViewController: UIViewController {
     
     var addressDelegate: LocationSearchTableDelegate?
     
-    var carLocation = String()
+ //   var carLocation = String()
+    
+    var locationDetailProperty = LocationDetail()
     
     var selectedPin: MKPlacemark?
     var resultSearchController: UISearchController!
@@ -65,7 +67,7 @@ class MapViewController: UIViewController {
     @objc func getDirections(){
         print("Hit next")
         
-        addressDelegate?.displayAddressSelected(carLocation)
+        addressDelegate?.displayAddressSelected(locationDetailProperty)
         self.performSegue(withIdentifier: "unwindToMenu", sender: self)
         
         // call delegate LocationSearchTableDelegate
@@ -108,7 +110,7 @@ extension MapViewController: HandleMapSearch {
 
     func dropPinZoomIn(_ placemark: MKPlacemark, locationName: String){
         
-        saveCarLocation(placemark)
+        saveCarLocation(placemark, locationName: locationName)
         
         // cache the pin
         selectedPin = placemark
@@ -130,21 +132,57 @@ extension MapViewController: HandleMapSearch {
     }
     
     
-    func saveCarLocation(_ placemark: MKPlacemark)  {
+    func saveCarLocation(_ placemark: MKPlacemark, locationName: String)  {
         // Get placemark title
         // Get address
         // Get zip code
         // get suite
         // store in dictionary
         
+//        print(placemark.addressDictionary!["Street"]!)
+//        print(placemark.addressDictionary!["City"]!)
+//        print(placemark.addressDictionary!["State"]!)
+//        print(placemark.addressDictionary!["ZIP"]!)
+//        print(placemark.addressDictionary!["Country"]!)
+        
+        var locationDetail = LocationDetail()
+        locationDetail.title = locationName
+        
+        guard let unwrappedStreet = placemark.addressDictionary!["Street"] else { return }
+        locationDetail.address = unwrappedStreet as! String
+        
+        
+        guard let unwrappedCity = placemark.addressDictionary!["City"] else { return }
+        locationDetail.city = unwrappedCity as! String
+        
+        guard let unwrappedState = placemark.addressDictionary!["State"] else { return }
+        locationDetail.state = unwrappedState as! String
+        
+        guard let unwrappedZip = placemark.addressDictionary!["ZIP"] else { return }
+        locationDetail.zipCode = unwrappedZip as! String
+        
+        guard let unwrappedCountry = placemark.addressDictionary!["Country"] else { return }
+        locationDetail.country = unwrappedCountry as! String
+        
+        locationDetail.fullAddress = placemark.title!
 
-        carLocation = placemark.title!
+        locationDetailProperty = locationDetail
         
 //        for item in placemark.title! {
 //            print(item)
 //        }
     }
     
+}
+
+struct LocationDetail {
+    var title = String()
+    var address = String()
+    var city = String()
+    var state = String()
+    var zipCode = String()
+    var fullAddress = String()
+    var country = String()
 }
 
 extension MapViewController : MKMapViewDelegate {

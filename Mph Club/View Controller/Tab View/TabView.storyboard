@@ -232,12 +232,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CITY &amp; STATE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2BP-2d-MZL" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="16" y="330" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ZIP CODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHH-DK-bO5" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="16" y="373" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PLACE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qMj-aX-9YO" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="16" y="415" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="npk-KM-839"/>
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="gLX-zV-MLD" id="7D7-cg-ACq"/>
+                        <outlet property="cityAndStateTextField" destination="2BP-2d-MZL" id="5X6-fD-TWI"/>
+                        <outlet property="placeTextField" destination="qMj-aX-9YO" id="W8T-Cu-Pge"/>
+                        <outlet property="zipCodeTextField" destination="QHH-DK-bO5" id="6hV-YA-WsO"/>
                         <segue destination="sr7-m7-ddr" kind="show" identifier="goToMap" id="NGW-4n-Imw"/>
                     </connections>
                 </viewController>
@@ -319,7 +343,7 @@
         <!--Location Search Table-->
         <scene sceneID="ted-pC-6WX">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTable" id="bPZ-Lz-L1J" customClass="LocationSearchTable" customModule="MapKitTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="bPZ-Lz-L1J" customClass="LocationSearchTable" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aT7-aJ-HUd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

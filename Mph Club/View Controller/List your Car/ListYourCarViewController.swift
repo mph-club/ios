@@ -11,8 +11,11 @@ import UIKit
 class ListYourCarViewController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var addressTextField: UITextField!
-
+    @IBOutlet weak var addressTextField: MphTextField!
+    @IBOutlet var cityAndStateTextField: MphTextField!
+    @IBOutlet var zipCodeTextField: MphTextField!
+    @IBOutlet var placeTextField: MphTextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,9 +70,13 @@ class ListYourCarViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension ListYourCarViewController: LocationSearchTableDelegate {
-    
-    func displayAddressSelected(_ carLocation: String) {
-        self.addressTextField.text = carLocation
+    func displayAddressSelected(_ locationDetail: LocationDetail) {
+        self.addressTextField.text = locationDetail.address
+        self.cityAndStateTextField.text = "\(locationDetail.city), \(locationDetail.state)"
+        self.zipCodeTextField.text = locationDetail.zipCode
+        self.placeTextField.text = locationDetail.title
         print("Hit")
-     }
+    }
+    
+
 }
