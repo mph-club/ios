@@ -12,9 +12,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
+    let emailDummy = "alex@mphclub.com"
+    let passwordDummy = "alex123"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fast login
+        self.emailTextField.text = "alex@mphclub.com"
+        self.pwTextField.text = "alex123"
+        
         addToolBar()
     }
     
@@ -27,10 +36,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         toolbar.sizeToFit()
         
         self.emailTextField.inputAccessoryView = toolbar
+        self.pwTextField.inputAccessoryView = toolbar
     }
     
     @objc func doneButtonAction() {
         self.view.endEditing(true)
     }
+    
+    @IBAction func loginUser(_ sender: UIButton) {
+        if self.emailTextField.text == emailDummy && self.pwTextField.text == passwordDummy {
+            performSegue(withIdentifier: "goToTabView", sender: nil)
+        } else {
+            print("Incorrect Password")
+        }
+    }
+    
     
 }
