@@ -19,7 +19,7 @@ class LocationSearchTable: UITableViewController {
     var mapView: MKMapView?
     
     
-    func parseAddress(_ selectedItem:MKPlacemark) -> String {
+    func parseAddress(_ selectedItem: CLPlacemark) -> String {
         
         // put a space between "4" and "Melrose Place"
         let firstSpace = (selectedItem.subThoroughfare != nil &&
@@ -95,7 +95,7 @@ extension LocationSearchTable {
 extension LocationSearchTable {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
+        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
         
         let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name!
         print(selectedItem2)

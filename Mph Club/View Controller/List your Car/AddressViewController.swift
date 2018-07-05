@@ -1,5 +1,5 @@
 //
-//  ListYourCarViewController.swift
+//  AddressViewController.swift
 //  Mph Club
 //
 //  Created by Alex Cruz on 7/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListYourCarViewController: UIViewController, UITextFieldDelegate {
+class AddressViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var addressTextField: MphTextField!
@@ -16,18 +16,23 @@ class ListYourCarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var zipCodeTextField: MphTextField!
     @IBOutlet var placeTextField: MphTextField!
     
-
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addressTextField.delegate = self
-        
-//        print("segue")
-//        let mapvc = MapViewController()
-//        mapvc.addressDelegate = self
+        self.nextButton.backgroundColor = UIColor.lightGray
+        setUpTextField(color: UIColor.lightGray.cgColor)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.addressTextField.isUserInteractionEnabled = true
+    }
+    
+    func setUpTextField(color: CGColor) {
+        self.cityAndStateTextField.setBottomSingleBorder(color: color)
+        self.zipCodeTextField.setBottomSingleBorder(color: color)
+        self.placeTextField.setBottomSingleBorder(color: color)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,22 +62,15 @@ class ListYourCarViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
-extension ListYourCarViewController: LocationSearchTableDelegate {
-    func displayAddressSelected(_ locationDetail: LocationDetail) {
+extension AddressViewController: LocationSearchTableDelegate {
+    func displayAddressSelected(_ locationDetail: Location) {
+        self.nextButton.backgroundColor = UIColor.black
+        setUpTextField(color: UIColor.black.cgColor)
         self.addressTextField.text = locationDetail.address
-        self.cityAndStateTextField.text = "\(locationDetail.city), \(locationDetail.state)"
+        self.cityAndStateTextField.text = "\(String(describing: locationDetail.city!)), \(String(describing: locationDetail.state!))"
         self.zipCodeTextField.text = locationDetail.zipCode
         self.placeTextField.text = locationDetail.title
         print("Hit")
