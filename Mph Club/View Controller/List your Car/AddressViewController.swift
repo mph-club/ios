@@ -72,7 +72,13 @@ extension AddressViewController: LocationSearchTableDelegate {
         self.addressTextField.text = locationDetail.address
         self.cityAndStateTextField.text = "\(String(describing: locationDetail.city!)), \(String(describing: locationDetail.state!))"
         self.zipCodeTextField.text = locationDetail.zipCode
-        self.placeTextField.text = locationDetail.title
+        
+        if locationDetail.address != locationDetail.title {
+            self.placeTextField.text = locationDetail.title
+        } else {
+            self.placeTextField.text = ""
+        }
+        
         print("Hit")
     }
     

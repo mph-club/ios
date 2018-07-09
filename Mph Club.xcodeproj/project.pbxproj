@@ -24,6 +24,13 @@
 		35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30520ED11EE0083CA93 /* MapViewController.swift */; };
 		35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */; };
 		35DAA30A20EE63B10083CA93 /* ListYourCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DAA30920EE63B10083CA93 /* ListYourCar.storyboard */; };
+		35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */; };
+		35DAA30E20EFBEC80083CA93 /* nextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30D20EFBEC80083CA93 /* nextButton.swift */; };
+		35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */; };
+		35DAA31620F3DC060083CA93 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31520F3DC060083CA93 /* HomeViewController.swift */; };
+		35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31720F401280083CA93 /* FleetTableViewController.swift */; };
+		35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */; };
+		35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31B20F40A320083CA93 /* DetailViewController.swift */; };
 		35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */; };
 		35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */; };
 		35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */; };
@@ -75,6 +82,13 @@
 		35DAA30520ED11EE0083CA93 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCarLocationViewController.swift; sourceTree = "<group>"; };
 		35DAA30920EE63B10083CA93 /* ListYourCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListYourCar.storyboard; sourceTree = "<group>"; };
+		35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEligibilityViewController.swift; sourceTree = "<group>"; };
+		35DAA30D20EFBEC80083CA93 /* nextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextButton.swift; sourceTree = "<group>"; };
+		35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		35DAA31520F3DC060083CA93 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		35DAA31720F401280083CA93 /* FleetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTableViewController.swift; sourceTree = "<group>"; };
+		35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTableViewCell.swift; sourceTree = "<group>"; };
+		35DAA31B20F40A320083CA93 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSlide.storyboard; sourceTree = "<group>"; };
 		35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
 		35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +145,8 @@
 				35207DCC20E3D62000BA838A /* Login */,
 				3598E02320EBBAC100E595EE /* Tab View */,
 				3598E02620EBD78900E595EE /* List your Car */,
+				35DAA31420F3DBF50083CA93 /* Home */,
+				35DAA31120F3DA000083CA93 /* Fleet View */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
+				35DAA30D20EFBEC80083CA93 /* nextButton.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -231,8 +248,28 @@
 				35DAA30520ED11EE0083CA93 /* MapViewController.swift */,
 				35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */,
 				35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */,
+				35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */,
+				35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */,
 			);
 			path = "List your Car";
+			sourceTree = "<group>";
+		};
+		35DAA31120F3DA000083CA93 /* Fleet View */ = {
+			isa = PBXGroup;
+			children = (
+				35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */,
+				35DAA31720F401280083CA93 /* FleetTableViewController.swift */,
+				35DAA31B20F40A320083CA93 /* DetailViewController.swift */,
+			);
+			path = "Fleet View";
+			sourceTree = "<group>";
+		};
+		35DAA31420F3DBF50083CA93 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				35DAA31520F3DC060083CA93 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		35DBE65F20E3E1A80041325A /* LoginSlide */ = {
@@ -280,6 +317,7 @@
 				3591B8B520DAC06C00BA0CF9 /* Sources */,
 				3591B8B620DAC06C00BA0CF9 /* Frameworks */,
 				3591B8B720DAC06C00BA0CF9 /* Resources */,
+				BB480A94EE8B96B122414D3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -457,6 +495,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB480A94EE8B96B122414D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APJTextPickerView/APJTextPickerView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APJTextPickerView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -467,14 +523,21 @@
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
+				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
+				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
+				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
+				35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
+				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
+				35DAA31620F3DC060083CA93 /* HomeViewController.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				35DAA30E20EFBEC80083CA93 /* nextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

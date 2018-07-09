@@ -6,6 +6,7 @@ target 'Mph Club' do
   use_frameworks!
 
   # Pods for Mph Club
+  pod "APJTextPickerView"
 
   target 'Mph ClubTests' do
     inherit! :search_paths

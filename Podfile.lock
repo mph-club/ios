@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 34fdd39de741552c17dd35717b9abda6ae12f696
+PODS:
+  - APJTextPickerView (0.0.7)
+
+DEPENDENCIES:
+  - APJTextPickerView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - APJTextPickerView
+
+SPEC CHECKSUMS:
+  APJTextPickerView: 2c2b6ca0f2a8076b8e10e3d6f2e92add429118e5
+
+PODFILE CHECKSUM: 9fd3fdf38d67be729b30f27fe76be6f4a39efe81
 
 COCOAPODS: 1.5.3
