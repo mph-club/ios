@@ -53,10 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        UINavigationBar.appearance().barTintColor = .clear
-        UINavigationBar.appearance().tintColor = .clear
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().isTranslucent = false
+
     }
     
     

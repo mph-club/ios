@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyM-F9-Ppn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4dr-rW-oOQ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,18 +25,18 @@
             <objects>
                 <viewController id="4dr-rW-oOQ" customClass="LoginSlideMainViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N3e-5q-WFB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-sc-glt">
-                                <rect key="frame" x="0.0" y="-88" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="856"/>
                                 <viewLayoutGuide key="safeArea" id="yJP-mo-RE6"/>
                                 <connections>
                                     <segue destination="y1k-NM-Vl4" kind="embed" id="xBg-dM-Xe7"/>
                                 </connections>
                             </containerView>
                             <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1R-HA-1xs">
-                                <rect key="frame" x="0.0" y="619" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="707" width="375" height="62"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-ed-HZS">
                                         <rect key="frame" x="187" y="7" width="1" height="46"/>
@@ -47,7 +47,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0t-L8-6Bw">
-                                <rect key="frame" x="0.0" y="622" width="186" height="54"/>
+                                <rect key="frame" x="0.0" y="710" width="186" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="186" id="Pkp-kY-Hy3"/>
                                     <constraint firstAttribute="height" constant="54" id="qj1-jn-KOu"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-Wt-mUw">
-                                <rect key="frame" x="189" y="622" width="186" height="54"/>
+                                <rect key="frame" x="189" y="710" width="186" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-ua-6Kf">
-                                <rect key="frame" x="168" y="479" width="39" height="124"/>
+                                <rect key="frame" x="168" y="523" width="39" height="168"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -119,9 +119,6 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.95304328203201294" green="0.80399209260940552" blue="0.08989427238702774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="4dr-rW-oOQ" kind="relationship" relationship="rootViewController" id="oGr-MZ-e9G"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8n-a8-UUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

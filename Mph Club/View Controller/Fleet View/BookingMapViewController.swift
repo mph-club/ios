@@ -47,7 +47,7 @@ class BookingMapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! BookingLocationSearchTable
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as! BookingLocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
         let searchBar = resultSearchController!.searchBar
@@ -78,7 +78,7 @@ class BookingMapViewController: UIViewController {
      //   dismiss(animated: true, completion: nil)
       //  self.navigationController = nil
 //        self.navigationController?.popToRootViewController(animated: true)
-        self.navigationController?.dismiss(animated: false, completion:nil)
+     //   self.navigationController?.dismiss(animated: false, completion:nil)
         self.performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
