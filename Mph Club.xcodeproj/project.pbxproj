@@ -12,6 +12,9 @@
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		350881AA20EA7CFF00ED2B5E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A920EA7CFF00ED2B5E /* Login.storyboard */; };
 		35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207DCD20E3D64800BA838A /* LoginViewController.swift */; };
+		35789D1320F4338200A07445 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1220F4338200A07445 /* SearchViewController.swift */; };
+		35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingMapViewController.swift */; };
+		35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -64,6 +67,9 @@
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		350881A920EA7CFF00ED2B5E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		35207DCD20E3D64800BA838A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35789D1220F4338200A07445 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		35789D1620F4412400A07445 /* BookingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMapViewController.swift; sourceTree = "<group>"; };
+		35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocationSearchTable.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +266,9 @@
 				35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */,
 				35DAA31720F401280083CA93 /* FleetTableViewController.swift */,
 				35DAA31B20F40A320083CA93 /* DetailViewController.swift */,
+				35789D1220F4338200A07445 /* SearchViewController.swift */,
+				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
+				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
 			);
 			path = "Fleet View";
 			sourceTree = "<group>";
@@ -524,11 +533,14 @@
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
+				35789D1320F4338200A07445 /* SearchViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
+				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
+				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */,
@@ -713,7 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -732,7 +744,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

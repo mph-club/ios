@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideLeftBarButton()
+    //    hideLeftBarButton()
 
 
 
@@ -20,24 +20,26 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        hideLeftBarButton()
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
+      //  hideLeftBarButton()
+    self.tabBarController?.navigationItem.hidesBackButton = true
+    self.navigationController?.setNavigationBarHidden(true, animated: animated)
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        hideLeftBarButton()
+     //   self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func hideLeftBarButton() {
       //  self.tabBarController?.navigationItem.leftBarButtonItem?.disab
-        self.tabBarController?.navigationItem.hidesBackButton = true
+      //  self.tabBarController?.navigationItem.hidesBackButton = true
       //  self.tabBarController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
+        
+//        self.tabBarController?.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.tabBarController?.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.tabBarController?.navigationController?.navigationBar.isTranslucent = false
+//        self.tabBarController?.navigationController?.view.backgroundColor = UIColor.clear
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +48,11 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.view.backgroundColor = UIColor.black
+        
+//        self.tabBarController?.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.tabBarController?.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.tabBarController?.navigationController?.navigationBar.isTranslucent = false
+//        self.tabBarController?.navigationController?.view.backgroundColor = UIColor.black
     }
     
     
@@ -57,7 +60,11 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "goToFleet", sender: nil)
     }
     
-
+//    @IBAction func goToMap(_ sender: UIButton) {
+//        performSegue(withIdentifier: "goToMap", sender: nil)
+//    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
     
     /*
     // MARK: - Navigation

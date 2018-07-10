@@ -15,16 +15,17 @@ struct Car {
 
 class FleetTableViewController: UITableViewController {
 
-    var newBackButton = UIBarButtonItem()
+  //  var newBackButton = UIBarButtonItem()
     
     var carList = [Car]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.navigationItem.hidesBackButton = true
-        self.tabBarController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
-        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(FleetTableViewController.back(sender:)))
-        self.tabBarController?.navigationItem.leftBarButtonItem = newBackButton
+//        self.tabBarController?.navigationItem.hidesBackButton = true
+//        self.tabBarController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
+//
+//        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(FleetTableViewController.back(sender:)))
+//        self.tabBarController?.navigationItem.leftBarButtonItem = newBackButton
         
        
         carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
@@ -38,13 +39,16 @@ class FleetTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+//        self.tabBarController?.navigationItem.hidesBackButton = false
+          self.navigationController?.setNavigationBarHidden(false, animated: animated)
+
 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        newBackButton.isEnabled = false
-        newBackButton.tintColor = UIColor.clear
+//        newBackButton.isEnabled = false
+//        newBackButton.tintColor = UIColor.clear
     }
     
     override func didReceiveMemoryWarning() {

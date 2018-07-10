@@ -108,16 +108,16 @@
             </objects>
             <point key="canvasLocation" x="2717.5999999999999" y="-1442.3645320197045"/>
         </scene>
-        <!--Custom Nav Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="qb1-R7-Two">
             <objects>
-                <navigationController id="IyM-F9-Ppn" customClass="CustomNavController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="IyM-F9-Ppn" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="49W-pT-CEk">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.95304328203201294" green="0.80399209260940552" blue="0.08989427238702774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="4dr-rW-oOQ" kind="relationship" relationship="rootViewController" id="oGr-MZ-e9G"/>

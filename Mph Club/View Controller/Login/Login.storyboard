@@ -89,7 +89,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="wbR-1d-Xtb" id="C16-WD-a7i"/>
                         <outlet property="pwTextField" destination="iru-eP-B1g" id="IiM-4b-HwK"/>
-                        <segue destination="EpP-9g-rZg" kind="show" identifier="goToTabView" id="G9D-Yz-pZo"/>
+                        <segue destination="EpP-9g-rZg" kind="presentation" identifier="goToTabView" modalPresentationStyle="currentContext" id="G9D-Yz-pZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auF-qq-Apt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  SearchViewController.swift
 //  Mph Club
 //
 //  Created by Alex Cruz on 7/9/18.
@@ -8,16 +8,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class SearchViewController: UIViewController {
 
-    var newBackButton = UIBarButtonItem()
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationItem.hidesBackButton = false
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-//        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(DetailViewController.back(sender:)))
-//        self.navigationItem.leftBarButtonItem = newBackButton
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,11 +28,10 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
+    @IBAction func closeSearch(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
-
     /*
     // MARK: - Navigation
 
