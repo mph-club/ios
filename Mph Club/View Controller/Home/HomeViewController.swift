@@ -122,7 +122,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
               //  print(gestureRecognizer.view!.center.y)
                 if(gestureRecognizer.view!.center.y < 555) {
                     print(1)
-                    gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x, y: gestureRecognizer.view!.center.y + translation.y)
+                //    gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x, y: gestureRecognizer.view!.center.y + translation.y)
                   
                     if searchButton!.center.y > 85 {
                         print(searchButton!.center.y)
@@ -131,7 +131,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                     }
                     
                 }else {
-                    gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x, y: 554)
+                //    gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x, y: 554)
                     
                     searchButton!.center = CGPoint(x: searchButton!.center.x, y: 554)
                    // gestureRecognizer.velocity(in: searchButton).applying(CGAffineTransform(scaleX: 2.0, y: 2.0))

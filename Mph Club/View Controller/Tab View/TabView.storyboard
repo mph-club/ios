@@ -44,16 +44,45 @@
             </objects>
             <point key="canvasLocation" x="1077" y="298"/>
         </scene>
+        <!--Home Stretchy Table View Controller-->
+        <scene sceneID="8dr-x4-j6b">
+            <objects>
+                <tableViewController id="wfn-VH-ofJ" customClass="HomeStretchyTableViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CrB-eb-fsr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6JJ-iN-UWR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6JJ-iN-UWR" id="bUk-RP-DL0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wfn-VH-ofJ" id="Myu-F5-WfR"/>
+                            <outlet property="delegate" destination="wfn-VH-ofJ" id="EkC-GN-7b8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HKx-nm-MKg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL7-bk-cUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="-78"/>
+        </scene>
         <!--Hello-->
         <scene sceneID="FeK-SP-caH">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="kGe-zo-Spm" customClass="HomeViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eIs-Pa-jHr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1003"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1067"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yI-a4-4ZQ">
-                                <rect key="frame" x="0.0" y="-66" width="375" height="1069"/>
+                                <rect key="frame" x="0.0" y="-66" width="375" height="1133"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owl-CQ-oWb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
@@ -113,7 +142,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2508" y="-369.26536731634184"/>
+            <point key="canvasLocation" x="2785" y="-422"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="BxO-X8-HfG">
@@ -192,7 +221,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="mIF-QK-dNP">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="mIF-QK-dNP">
                             <rect key="frame" x="0.0" y="361" width="375" height="194"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -995,7 +1024,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kGe-zo-Spm" kind="relationship" relationship="rootViewController" id="OGF-vD-5Pw"/>
+                        <segue destination="wfn-VH-ofJ" kind="relationship" relationship="rootViewController" id="DEk-oz-W52"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUm-BH-7QM" userLabel="First Responder" sceneMemberID="firstResponder"/>
