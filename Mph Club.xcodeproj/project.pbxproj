@@ -22,6 +22,13 @@
 		3591B8DD20DAC06D00BA0CF9 /* Mph_ClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8DC20DAC06D00BA0CF9 /* Mph_ClubUITests.swift */; };
 		3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E02120EBB8E100E595EE /* MphTextField.swift */; };
 		3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3598E02420EBBADF00E595EE /* TabView.storyboard */; };
+		35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D7C20F7A31800575225 /* ExplorerViewController.swift */; };
+		35CC0D7F20F7A33800575225 /* dontknowcar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35CC0D7E20F7A33700575225 /* dontknowcar.jpg */; };
+		35CC0D8120F7A34600575225 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8020F7A34600575225 /* Helpers.swift */; };
+		35CC0D8320F7A34E00575225 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8220F7A34E00575225 /* TableViewCell.swift */; };
+		35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8620F7A41F00575225 /* UINavigationBar+Alpha.swift */; };
+		35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8820F7A42100575225 /* UIScrollView+ScalableCover.swift */; };
+		35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */; };
 		35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30120ED0EC60083CA93 /* AddressViewController.swift */; };
 		35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */; };
 		35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30520ED11EE0083CA93 /* MapViewController.swift */; };
@@ -83,6 +90,13 @@
 		3591B8DE20DAC06D00BA0CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3598E02120EBB8E100E595EE /* MphTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MphTextField.swift; sourceTree = "<group>"; };
 		3598E02420EBBADF00E595EE /* TabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabView.storyboard; sourceTree = "<group>"; };
+		35CC0D7C20F7A31800575225 /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		35CC0D7E20F7A33700575225 /* dontknowcar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dontknowcar.jpg; sourceTree = "<group>"; };
+		35CC0D8020F7A34600575225 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		35CC0D8220F7A34E00575225 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		35CC0D8620F7A41F00575225 /* UINavigationBar+Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Alpha.swift"; sourceTree = "<group>"; };
+		35CC0D8820F7A42100575225 /* UIScrollView+ScalableCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScalableCover.swift"; sourceTree = "<group>"; };
+		35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		35DAA30120ED0EC60083CA93 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		35DAA30520ED11EE0083CA93 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -232,8 +246,11 @@
 		3598E02020EBB8B400E595EE /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				35CC0D8620F7A41F00575225 /* UINavigationBar+Alpha.swift */,
+				35CC0D8820F7A42100575225 /* UIScrollView+ScalableCover.swift */,
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
 				35DAA30D20EFBEC80083CA93 /* nextButton.swift */,
+				35CC0D8020F7A34600575225 /* Helpers.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -242,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				3598E02420EBBADF00E595EE /* TabView.storyboard */,
+				35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */,
 			);
 			path = "Tab View";
 			sourceTree = "<group>";
@@ -276,7 +294,10 @@
 		35DAA31420F3DBF50083CA93 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				35CC0D7E20F7A33700575225 /* dontknowcar.jpg */,
 				35DAA31520F3DC060083CA93 /* HomeViewController.swift */,
+				35CC0D7C20F7A31800575225 /* ExplorerViewController.swift */,
+				35CC0D8220F7A34E00575225 /* TableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -423,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CC0D7F20F7A33800575225 /* dontknowcar.jpg in Resources */,
 				35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
 				35DAA30A20EE63B10083CA93 /* ListYourCar.storyboard in Resources */,
@@ -529,15 +551,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
+				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				35789D1320F4338200A07445 /* SearchViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
+				35CC0D8320F7A34E00575225 /* TableViewCell.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
+				35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
@@ -548,7 +574,9 @@
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
 				35DAA31620F3DC060083CA93 /* HomeViewController.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
+				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* nextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,9 +744,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3G9LCNM63;
+				DEVELOPMENT_TEAM = V25FP97PQT;
 				INFOPLIST_FILE = "Mph Club/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -732,9 +763,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3G9LCNM63;
+				DEVELOPMENT_TEAM = V25FP97PQT;
 				INFOPLIST_FILE = "Mph Club/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -750,7 +784,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mph ClubTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-ClubTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -767,7 +805,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mph ClubTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-ClubTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -783,7 +825,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mph ClubUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-ClubUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,7 +845,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mph ClubUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-ClubUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

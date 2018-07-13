@@ -105,6 +105,7 @@ extension MapViewController: HandleMapSearch {
         let searchBar = resultSearchController!.searchBar
         if searchBar.text != "" {
             doneButton.isEnabled = true
+            doneButton.tintColor = UIColor.black
         }
     }
 

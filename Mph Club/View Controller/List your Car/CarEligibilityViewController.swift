@@ -27,6 +27,14 @@ class CarEligibilityViewController: UIViewController {
         initModelPickerView()
         
         setUpTextField(color: UIColor.lightGray.cgColor)
+        
+        let backImg: UIImage = UIImage(named: "arrowLeft28Px")!
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+    }
+    
+    @objc func close() {
+        self.performSegue(withIdentifier: "unwindToAddress", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +70,8 @@ class CarEligibilityViewController: UIViewController {
         modelPickerView.dataSource = self
     }
 
+    
+    
 
 }
 
@@ -97,8 +107,18 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
         if textPickerView.tag == 1 {
             return yearStrings[row]
         } else if textPickerView.tag == 2 {
+            if self.makeLabel.text != "" {
+                self.makeLabel.textColor = UIColor.black
+                self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+                
+                
+            }
             return makeStrings[row]
         } else {
+            if self.modelLabel.text != "" {
+                self.modelLabel.textColor = UIColor.black
+                self.modelPickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+            }
             return modelStrings[row]
         }
     }

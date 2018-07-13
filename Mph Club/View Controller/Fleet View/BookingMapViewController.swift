@@ -82,11 +82,23 @@ class BookingMapViewController: UIViewController {
         self.performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
+    @IBAction func goToFeed(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "goToFeed", sender: self)
+    }
     
     @objc func getDirections(){
-        addressDelegate?.displayAddressSelected(locationDetailProperty)
-        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+     //   addressDelegate?.displayAddressSelected(locationDetailProperty)
+        
+        self.performSegue(withIdentifier: "goToFeed", sender: self)
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? FleetTableViewController {
+            destinationVC.bookingMapVC = self
+        }
+    }
+    
 }
 
 extension BookingMapViewController : CLLocationManagerDelegate {

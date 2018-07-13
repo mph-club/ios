@@ -16,6 +16,11 @@ class AddressViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var zipCodeTextField: MphTextField!
     @IBOutlet var placeTextField: MphTextField!
     
+    @IBOutlet weak var cityAndStateLabel: UILabel!
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var placesLabel: UILabel!
+    
+    
     @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
@@ -23,6 +28,10 @@ class AddressViewController: UIViewController, UITextFieldDelegate {
         addressTextField.delegate = self
         self.nextButton.backgroundColor = UIColor.lightGray
         setUpTextField(color: UIColor.lightGray.cgColor)
+        
+        self.cityAndStateLabel.textColor = UIColor.lightGray
+        self.zipCodeLabel.textColor = UIColor.lightGray
+        self.placesLabel.textColor = UIColor.lightGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,6 +42,10 @@ class AddressViewController: UIViewController, UITextFieldDelegate {
         self.cityAndStateTextField.setBottomSingleBorder(color: color)
         self.zipCodeTextField.setBottomSingleBorder(color: color)
         self.placeTextField.setBottomSingleBorder(color: color)
+        
+        self.cityAndStateLabel.textColor = UIColor.black
+        self.zipCodeLabel.textColor = UIColor.black
+        self.placesLabel.textColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,14 +72,18 @@ class AddressViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
-
+    @IBAction func unwindToAddress(segue: UIStoryboardSegue) {}
 
 }
 
 extension AddressViewController: LocationSearchTableDelegate {
     func displayAddressSelected(_ locationDetail: Location) {
+        
         self.nextButton.backgroundColor = UIColor.black
         setUpTextField(color: UIColor.black.cgColor)
         self.addressTextField.text = locationDetail.address
