@@ -984,7 +984,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="400" id="aTE-Lf-rf7" customClass="TableViewCell" customModule="StretchyHeaderView" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="400" id="aTE-Lf-rf7" customClass="TableViewCell" customModule="Mph_Club" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="aTE-Lf-rf7" id="rsa-d0-lHy">
