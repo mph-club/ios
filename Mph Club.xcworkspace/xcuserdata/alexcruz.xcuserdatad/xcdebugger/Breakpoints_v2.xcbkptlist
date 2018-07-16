@@ -433,8 +433,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
             endingLineNumber = "155"
-            landmarkName = "Location"
-            landmarkType = "14">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -443,12 +443,12 @@
                   symbolName = "Mph_Club.Location.init() -&gt; Mph_Club.Location"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexcruz/Desktop/mphclub-app-ios/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
-                  timestampString = "552883056.359337"
+                  urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
+                  timestampString = "553458874.277792"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
                   offsetFromSymbolStart = "90">
                </Location>
                <Location
@@ -458,12 +458,12 @@
                   symbolName = "Mph_Club.Location.init(title: Swift.Optional&lt;Swift.String&gt;, address: Swift.Optional&lt;Swift.String&gt;, city: Swift.Optional&lt;Swift.String&gt;, state: Swift.Optional&lt;Swift.String&gt;, zipCode: Swift.Optional&lt;Swift.String&gt;, country: Swift.Optional&lt;Swift.String&gt;) -&gt; Mph_Club.Location"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexcruz/Desktop/mphclub-app-ios/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
-                  timestampString = "552883056.360749"
+                  urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
+                  timestampString = "553458874.27922"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
                   offsetFromSymbolStart = "149">
                </Location>
             </Locations>
@@ -491,23 +491,23 @@
                   symbolName = "Mph_Club.Location.init() -&gt; Mph_Club.Location"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexcruz/Desktop/mphclub-app-ios/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
-                  timestampString = "552883056.366299"
+                  urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
+                  timestampString = "553458874.283083"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
                   endingLineNumber = "158"
-                  offsetFromSymbolStart = "308">
+                  offsetFromSymbolStart = "192">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Mph_Club.Location.city.getter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "Mph_Club.Location.address.getter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexcruz/Desktop/mphclub-app-ios/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
-                  timestampString = "552883056.3678989"
+                  urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
+                  timestampString = "553458874.2857341"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -518,11 +518,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Mph_Club.Location.city.setter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "Mph_Club.Location.address.setter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexcruz/Desktop/mphclub-app-ios/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
-                  timestampString = "552883056.369258"
+                  urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/MapViewController.swift"
+                  timestampString = "553458874.288211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -587,7 +587,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/BookingMapViewController.swift"
-            timestampString = "552957107.666559"
+            timestampString = "553464635.598001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
