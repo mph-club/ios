@@ -18,6 +18,8 @@
 		357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */; };
 		357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */; };
 		357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F720FD25D20033FD0E /* EnterDLViewController.swift */; };
+		357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */; };
+		357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
 		357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 		357E08F720FD25D20033FD0E /* EnterDLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDLViewController.swift; sourceTree = "<group>"; };
+		357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
+		357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpForDLViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 				357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */,
 				357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */,
 				357E08F720FD25D20033FD0E /* EnterDLViewController.swift */,
+				357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */,
+				357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
+				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
 				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
@@ -586,6 +593,7 @@
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
 				35DAA31620F3DC060083CA93 /* HomeViewController.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
+				357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */,
 				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
 				35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */,
