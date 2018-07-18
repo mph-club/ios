@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import APJTextPickerView
 
 class PopUpForDLViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @objc func close() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

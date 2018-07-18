@@ -134,6 +134,5 @@ extension CarEligibilityViewController: APJTextPickerViewDataSource {
         } else {
             return modelStrings.count
         }
-        
     }
 }
