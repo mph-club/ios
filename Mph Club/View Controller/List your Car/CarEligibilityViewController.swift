@@ -91,11 +91,7 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
             print("Selected: \(modelStrings[row])")
         }
         
-       
-        
     }
-    
-    
     
     func checkAllSelected() {
         if yearPickerView.text != "" && makePickerView.text != "" {
@@ -110,8 +106,6 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
             if self.makeLabel.text != "" {
                 self.makeLabel.textColor = UIColor.black
                 self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
-                
-                
             }
             return makeStrings[row]
         } else {
