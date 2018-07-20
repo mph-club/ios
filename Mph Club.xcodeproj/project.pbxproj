@@ -30,6 +30,13 @@
 		3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */; };
 		3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */; };
 		3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */; };
+		3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */; };
+		3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */; };
+		3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3012102313400F4A6EF /* BookingWindowViewController.swift */; };
+		3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3032102318100F4A6EF /* TripLengthViewController.swift */; };
+		3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C305210231E500F4A6EF /* SetPriceViewController.swift */; };
+		3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C307210265F800F4A6EF /* AddPriceViewController.swift */; };
+		3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -106,6 +113,13 @@
 		3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAPhotoOfCarViewController.swift; sourceTree = "<group>"; };
 		3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPhotoViewViewController.swift; sourceTree = "<group>"; };
 		3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoReviewViewController.swift; sourceTree = "<group>"; };
+		3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowBookingWorksViewController.swift; sourceTree = "<group>"; };
+		3582C3012102313400F4A6EF /* BookingWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingWindowViewController.swift; sourceTree = "<group>"; };
+		3582C3032102318100F4A6EF /* TripLengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLengthViewController.swift; sourceTree = "<group>"; };
+		3582C305210231E500F4A6EF /* SetPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
+		3582C307210265F800F4A6EF /* AddPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceViewController.swift; sourceTree = "<group>"; };
+		3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPriceViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -316,6 +330,13 @@
 				3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */,
 				3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */,
 				3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */,
+				3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */,
+				3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */,
+				3582C3012102313400F4A6EF /* BookingWindowViewController.swift */,
+				3582C3032102318100F4A6EF /* TripLengthViewController.swift */,
+				3582C305210231E500F4A6EF /* SetPriceViewController.swift */,
+				3582C307210265F800F4A6EF /* AddPriceViewController.swift */,
+				3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
@@ -593,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */,
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
@@ -610,10 +632,13 @@
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
 				35CC0D8320F7A34E00575225 /* TableViewCell.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
+				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
 				35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */,
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
+				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
+				3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */,
 				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
@@ -623,8 +648,10 @@
 				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
+				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
 				35DAA31620F3DC060083CA93 /* HomeViewController.swift in Sources */,
+				3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */,
 				357E09082100D2A40033FD0E /* TellUsAboutYourCarViewController.swift in Sources */,
 				357E090020FFB0D90033FD0E /* PhotoViewController.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
@@ -633,6 +660,7 @@
 				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
 				35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */,
+				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* nextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
