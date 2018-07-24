@@ -37,6 +37,11 @@
 		3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C305210231E500F4A6EF /* SetPriceViewController.swift */; };
 		3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C307210265F800F4A6EF /* AddPriceViewController.swift */; };
 		3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */; };
+		3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */; };
+		3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */; };
+		3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30F21066C3100F4A6EF /* PublishViewController.swift */; };
+		3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */; };
+		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -120,6 +125,11 @@
 		3582C305210231E500F4A6EF /* SetPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
 		3582C307210265F800F4A6EF /* AddPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceViewController.swift; sourceTree = "<group>"; };
 		3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPriceViewController.swift; sourceTree = "<group>"; };
+		3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTermsViewController.swift; sourceTree = "<group>"; };
+		3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
+		3582C30F21066C3100F4A6EF /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingApprovalViewController.swift; sourceTree = "<group>"; };
+		3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -337,6 +347,11 @@
 				3582C305210231E500F4A6EF /* SetPriceViewController.swift */,
 				3582C307210265F800F4A6EF /* AddPriceViewController.swift */,
 				3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */,
+				3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */,
+				3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */,
+				3582C30F21066C3100F4A6EF /* PublishViewController.swift */,
+				3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */,
+				3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
@@ -623,10 +638,12 @@
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
+				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				35789D1320F4338200A07445 /* SearchViewController.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
+				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
@@ -634,6 +651,7 @@
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
 				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
 				35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */,
+				3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */,
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
@@ -642,10 +660,12 @@
 				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
+				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */,
 				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,
 				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
+				3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
