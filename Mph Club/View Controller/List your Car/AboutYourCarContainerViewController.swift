@@ -8,8 +8,17 @@
 
 import UIKit
 
-class AboutYourCarContainerViewController: UIViewController {
+extension AboutYourCarContainerViewController: ChangeButtonColorDelegate {
+    func setColor(color: UIColor) {
+        print(color)
+        nextButton.backgroundColor = color
+    }
+}
 
+class AboutYourCarContainerViewController: UIViewController {
+    
+    @IBOutlet weak var nextButton: nextButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,14 +37,21 @@ class AboutYourCarContainerViewController: UIViewController {
     }
     
 
-    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tellUsAboutYourCarViewController = segue.destination as? TellUsAboutYourCarViewController {
+            tellUsAboutYourCarViewController.delegate = self
+        }
+        self.navigationController?.navigationBar.layer.backgroundColor = UIColor.clear.cgColor
+    }
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//        self.navigationController?.navigationBar.layer.backgroundColor = UIColor.clear.cgColor
+//    }
+ 
 
 }
