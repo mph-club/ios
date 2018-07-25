@@ -10,10 +10,14 @@ import UIKit
 
 class EnterCodeViewController: UIViewController {
 
+    @IBOutlet weak var codeTextField: MphTextField!
     @IBOutlet weak var nextButton: nextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.codeTextField.keyboardType = UIKeyboardType.decimalPad
+        
         let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(ProgressViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
@@ -45,12 +49,14 @@ class EnterCodeViewController: UIViewController {
 extension EnterCodeViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        nextButton.backgroundColor = UIColor.black
+        
         print("Begin")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        if codeTextField.text! != "" {
+            nextButton.backgroundColor = UIColor.black
+        }
         print("End")
     }
     

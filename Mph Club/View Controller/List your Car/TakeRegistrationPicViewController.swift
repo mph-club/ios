@@ -33,11 +33,11 @@ class TakeRegistrationPicViewController: UIViewController {
         let fireAction = fireActionSheet(title: "Select one", message: "")
         
         fireAction.addAction(UIAlertAction(title: "Choose from photo library", style: .default, handler: { action in
-            
+            self.performSegue(withIdentifier: "regisPhotoView", sender: "library")
         }))
         
         fireAction.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { action in
-            self.performSegue(withIdentifier: "regisPhotoView", sender: nil)
+            self.performSegue(withIdentifier: "regisPhotoView", sender: "camera")
         }))
         
         fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
@@ -45,14 +45,18 @@ class TakeRegistrationPicViewController: UIViewController {
         self.present(fireAction, animated: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        if segue.identifier == "regisPhotoView" {
+            if let destinationVC = segue.destination as? RegisPhotoViewController {
+                if sender as! String == "library" {
+                    destinationVC.typeOfPicker = "library"
+                } else {
+                    destinationVC.typeOfPicker = "camera"
+                }
+                
+            }
+        }
     }
-    */
 
 }

@@ -42,6 +42,7 @@
 		3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30F21066C3100F4A6EF /* PublishViewController.swift */; };
 		3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */; };
 		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
+		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -130,6 +131,7 @@
 		3582C30F21066C3100F4A6EF /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingApprovalViewController.swift; sourceTree = "<group>"; };
 		3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
+		3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				3582C30F21066C3100F4A6EF /* PublishViewController.swift */,
 				3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */,
 				3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */,
+				3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
+				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
@@ -848,7 +852,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V25FP97PQT;
+				DEVELOPMENT_TEAM = L3G9LCNM63;
 				INFOPLIST_FILE = "Mph Club/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -867,7 +871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V25FP97PQT;
+				DEVELOPMENT_TEAM = L3G9LCNM63;
 				INFOPLIST_FILE = "Mph Club/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

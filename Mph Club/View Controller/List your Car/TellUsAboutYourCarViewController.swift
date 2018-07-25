@@ -23,7 +23,6 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
 //    }
     
     
-    var oneTime = true
     var isState = true
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -50,6 +49,8 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         super.viewDidLoad()
         
 
+        plateTextField.delegate = self
+        statePickerView.delegate = self
         
         initStatePickerView()
         
@@ -129,18 +130,16 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
     
     
     @objc func cancelNumberPad() {
-        normalState()
         carDescTextView.resignFirstResponder()
     }
     
     @objc func doneWithNumberPad() {
-        normalState()
         carDescTextView.resignFirstResponder()
     }
     
     
     func normalState() {
-        if self.plateTextField.text != "" && self.statePickerView.text != "" && self.carDescTextView.text != "" {
+        if self.plateTextField.text! != "" && self.statePickerView.text! != "" && self.carDescTextView.text! != "" {
             // turn btn black
             delegate?.setColor(color: UIColor.black)
         }
@@ -206,6 +205,24 @@ extension TellUsAboutYourCarViewController: APJTextPickerViewDelegate {
     }
 }
 
+extension TellUsAboutYourCarViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.tag == 1 {
+            plateTextField.text = textField.text
+        }
+        
+        if textField.tag == 2 {
+            statePickerView.text = textField.text
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+    }
+}
+
+
 extension TellUsAboutYourCarViewController: APJTextPickerViewDataSource {
     func numberOfRows(in pickerView: APJTextPickerView) -> Int {
         
@@ -226,6 +243,12 @@ extension TellUsAboutYourCarViewController {
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         print("test")
+        
+
+        
+        if textView.tag == 3 {
+            carDescTextView.text = textView.text
+        }
 
         activeField = textView
         lastOffset = self.scrollView.contentOffset
@@ -235,6 +258,7 @@ extension TellUsAboutYourCarViewController {
     
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        normalState()
         activeField?.resignFirstResponder()
         activeField = nil
         return true
@@ -271,9 +295,8 @@ extension TellUsAboutYourCarViewController {
             
             if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 
-                if oneTime == true {
+                if keyboardSize.height > 250 {
                     keyboardHeight = keyboardSize.height - 144
-                    oneTime = false
                 } else {
                     keyboardHeight = keyboardSize.height
                 }
@@ -313,6 +336,8 @@ extension TellUsAboutYourCarViewController {
     
     @objc func AboutYourCarViewKeyboardWillHide(notification: NSNotification) {
         
+        self.normalState()
+        
         self.plateTextField.isUserInteractionEnabled = true
         self.statePickerView.isUserInteractionEnabled = true
         self.carDescTextView.isUserInteractionEnabled = true
@@ -320,15 +345,18 @@ extension TellUsAboutYourCarViewController {
        if isCarDescTextView == true {
 
             UIView.animate(withDuration: 0.3) {
-                self.constraintContentHeight.constant -= self.keyboardHeight
-                if self.lastOffset != nil {
-                    self.scrollView.contentOffset = self.lastOffset
+                
+                if self.keyboardHeight != nil {
+                    self.constraintContentHeight.constant -= self.keyboardHeight
+                    if self.lastOffset != nil {
+                        self.scrollView.contentOffset = self.lastOffset
+                    }
                 }
+
                 
                 self.keyboardHeight = nil
                 isCarDescTextView = false
-                self.normalState()
-
+                
             }
 
        }

@@ -14,6 +14,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var retakeButton: UIButton!
     
+    var typeOfPicker = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func takePhoto() {
         imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self 
-        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        
+        if typeOfPicker == "library" {
+            imagePicker.sourceType = .photoLibrary
+        } else {
+            imagePicker.sourceType = .camera
+        }
+        
         
         present(imagePicker, animated: true, completion: nil)
     }

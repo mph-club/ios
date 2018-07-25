@@ -31,6 +31,9 @@ class CarEligibilityViewController: UIViewController {
         let backImg: UIImage = UIImage(named: "arrowLeft28Px")!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
     
     @objc func close() {
@@ -39,7 +42,20 @@ class CarEligibilityViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+    }
+    
+    @objc func keyboardWillAppear() {
+        //Do something here
+    }
+    
+    @objc func keyboardWillDisappear() {
+        //Do something here
+        checkAllSelected()
     }
     
     func setUpTextField(color: CGColor) {
@@ -76,7 +92,18 @@ class CarEligibilityViewController: UIViewController {
 }
 
 
+extension CarEligibilityViewController: UITextFieldDelegate {
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("ending")
+    }
+}
+
+
 extension CarEligibilityViewController: APJTextPickerViewDelegate {
+    
+    
+    
     private func textPickerView(_ textPickerView: APJTextPickerView, didSelectDate date: Date) {
         print("Date Selected: \(date)")
     }
@@ -84,22 +111,30 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
     func textPickerView(_ textPickerView: APJTextPickerView, didSelectString row: Int) {
         if textPickerView.tag == 1 {
             print("Selected: \(yearStrings[row])")
+            yearPickerView.text = yearStrings[row]
         } else if textPickerView.tag == 2 {
             print("Selected: \(makeStrings[row])")
+            makePickerView.text = makeStrings[row]
         } else {
-            checkAllSelected()
             print("Selected: \(modelStrings[row])")
+            modelPickerView.text = modelStrings[row]
         }
+        
+        checkAllSelected()
+        
         
     }
     
     func checkAllSelected() {
-        if yearPickerView.text != "" && makePickerView.text != "" {
+        if yearPickerView.text! != "" && makePickerView.text! != "" && modelPickerView.text! != ""  {
             nextButtton.backgroundColor = UIColor.black
         }
     }
     
     func textPickerView(_ textPickerView: APJTextPickerView, titleForRow row: Int) -> String? {
+        
+        
+        
         if textPickerView.tag == 1 {
             return yearStrings[row]
         } else if textPickerView.tag == 2 {
@@ -115,7 +150,14 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
             }
             return modelStrings[row]
         }
+        
+        
     }
+    
+    
+    
+    
+    
 }
 
 extension CarEligibilityViewController: APJTextPickerViewDataSource {

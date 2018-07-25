@@ -10,10 +10,12 @@ import UIKit
 
 class VerifyPhoneViewController: UIViewController {
 
+    @IBOutlet weak var phoneTextField: MphTextField!
     @IBOutlet weak var nextButton: nextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.phoneTextField.keyboardType = UIKeyboardType.decimalPad
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +34,15 @@ class VerifyPhoneViewController: UIViewController {
 extension VerifyPhoneViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        nextButton.backgroundColor = UIColor.black
+        
+        
         print("Begin")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        if phoneTextField.text! != "" {
+            nextButton.backgroundColor = UIColor.black
+        }
          print("End")
     }
     

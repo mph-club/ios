@@ -11,7 +11,6 @@ import APJTextPickerView
 
 class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
 
-    var oneTime = true
     var isState = true
     
     @IBOutlet weak var stateTextField: APJTextPickerView!
@@ -20,6 +19,8 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var nextButton: nextButton!
     
     // Constraints
     @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
@@ -31,15 +32,15 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        licenseNumberTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
+        firstNameTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
+        
         scrollView.delegate = self
         
         licenseNumberTextField.delegate = self
         firstNameTextField.delegate = self
         
-        // Observe keyboard change
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
+  
         // Add touch gesture for contentView
         self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(returnTextView(gesture:))))
         
@@ -54,7 +55,15 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        // Observe keyboard change
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -236,6 +245,22 @@ extension LicenseDetailViewController: APJTextPickerViewDataSource {
 // MARK: UITextFieldDelegate
 extension LicenseDetailViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField.tag == 1 {
+            stateTextField.text = textField.text
+        }
+        
+        if textField.tag == 2 {
+            licenseNumberTextField.text = textField.text
+            licenseNumberTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
+        }
+        
+        if textField.tag == 3 {
+            firstNameTextField.text = textField.text
+            firstNameTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
+        }
+        
+        
         activeField = textField
         lastOffset = self.scrollView.contentOffset
         return true
@@ -293,13 +318,14 @@ extension LicenseDetailViewController {
             
             if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 
-                if oneTime == true {
+            
+                if keyboardSize.height > 250 {
                     keyboardHeight = keyboardSize.height - 144
-                    oneTime = false
                 } else {
                     keyboardHeight = keyboardSize.height
                 }
                 
+      
                 
                 // so increase contentView's height by keyboard height
                 UIView.animate(withDuration: 0.3, animations: {
@@ -321,10 +347,10 @@ extension LicenseDetailViewController {
                 let distanceToBottom = (self.scrollView.frame.size.height - 87) - unwrappedActiveFieldY - unwrappedActiveFieldHeight
                 let collapseSpace = keyboardHeight - distanceToBottom
                 
-                if collapseSpace < 0 {
-                    // no collapse
-                    return
-                }
+//                if collapseSpace < 0 {
+//                    // no collapse
+//                    return
+//                }
                 
                 // set new offset for scroll view
                 UIView.animate(withDuration: 0.3, animations: {
@@ -354,7 +380,15 @@ extension LicenseDetailViewController {
                 
             }
             keyboardHeight = nil
+            normalState()
         }
 
     }
+    
+    func normalState() {
+        if self.stateTextField.text! != "" && self.licenseNumberTextField.text! != "" && self.firstNameTextField.text! != "" {
+            self.nextButton.backgroundColor = UIColor.black
+        }
+    }
+    
 }

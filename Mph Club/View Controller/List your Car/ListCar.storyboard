@@ -478,6 +478,7 @@ Everyone else will just see an approximate location and get an idea of where you
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="WKS-dY-Uym" id="SB3-Bd-Adz"/>
+                        <outlet property="phoneTextField" destination="jic-L0-76f" id="a9R-gi-LdG"/>
                         <segue destination="Vmv-5g-B6I" kind="unwind" identifier="unwindToProgress" unwindAction="unwindToProgressWithSegue:" id="zbh-N5-Squ"/>
                     </connections>
                 </viewController>
@@ -558,6 +559,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <viewLayoutGuide key="safeArea" id="fV8-Us-bo6"/>
                     </view>
                     <connections>
+                        <outlet property="codeTextField" destination="lmJ-t9-ZRm" id="Q12-Bu-jLF"/>
                         <outlet property="nextButton" destination="fO0-FH-1YG" id="9tZ-ur-5bM"/>
                     </connections>
                 </viewController>
@@ -687,7 +689,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-EG-3aP">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-EG-3aP" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="526" width="343" height="61"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -787,7 +789,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Ak-qq-2kZ" kind="show" id="hNU-nr-zGi"/>
+                                    <segue destination="0N9-fp-jQm" kind="show" id="6Ak-Jh-pER"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -805,6 +807,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <outlet property="contentView" destination="kkm-8s-AtH" id="9ef-V5-iSt"/>
                         <outlet property="firstNameTextField" destination="tv8-GS-rhw" id="0sM-K2-DOF"/>
                         <outlet property="licenseNumberTextField" destination="m4x-Dz-Feh" id="72J-uA-s1B"/>
+                        <outlet property="nextButton" destination="Wg6-EG-3aP" id="Xdf-Et-J79"/>
                         <outlet property="scrollView" destination="aru-32-4gx" id="XQL-kA-6uM"/>
                         <outlet property="stateTextField" destination="5Bq-7i-83I" id="IlQ-vX-LMr"/>
                         <segue destination="HBc-wm-Mzm" kind="show" identifier="goToInsurancePicture" id="qUf-cN-d6e"/>
@@ -812,7 +815,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Kn-hNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10402" y="2186"/>
+            <point key="canvasLocation" x="17294" y="2244"/>
         </scene>
         <!--Take Insurance Pic View Controller-->
         <scene sceneID="tS1-JU-9ht">
@@ -892,7 +895,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                 <connections>
                                     <action selector="next:" destination="D1F-ta-fFe" eventType="touchUpInside" id="E38-BH-yZ1"/>
                                     <action selector="next:" destination="HBc-wm-Mzm" eventType="touchUpInside" id="Twj-c2-dEr"/>
-                                    <segue destination="cAV-uf-uNB" kind="show" id="cMb-Zf-u38"/>
+                                    <segue destination="cAV-uf-uNB" kind="show" id="dRl-aX-Uha"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zY-KT-pxC">
@@ -913,7 +916,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <action selector="retake:" destination="Nyb-E4-7jQ" eventType="touchUpInside" id="NVq-w9-YJt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-wL-i9W">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-wL-i9W">
                                 <rect key="frame" x="0.0" y="64" width="375" height="253"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -1106,8 +1109,6 @@ Everyone else will just see an approximate location and get an idea of where you
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="cAV-uf-uNB" eventType="touchUpInside" id="3dr-9e-XrM"/>
-                                    <action selector="next:" destination="D1F-ta-fFe" eventType="touchUpInside" id="CDX-Zx-Sug"/>
-                                    <segue destination="rb9-OZ-QiD" kind="show" identifier="regisPhotoView" id="Zyc-3f-h9j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1119,6 +1120,9 @@ Everyone else will just see an approximate location and get an idea of where you
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YNj-aK-rXf"/>
                     </view>
+                    <connections>
+                        <segue destination="rb9-OZ-QiD" kind="show" identifier="regisPhotoView" id="WXN-8H-X7z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnH-0Y-oV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1132,7 +1136,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8y1-cF-Rfu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8y1-cF-Rfu">
                                 <rect key="frame" x="0.0" y="62" width="375" height="253"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -1335,7 +1339,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAW-wD-JaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lfA-UO-pwX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="10058.4" y="2996.8515742128939"/>
+            <point key="canvasLocation" x="10004" y="3025"/>
         </scene>
         <!--Tell us about your car-->
         <scene sceneID="1MJ-TQ-j16">
@@ -2153,7 +2157,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eDv-HH-htT" kind="show" id="1em-3I-dPD"/>
+                                    <segue destination="6Du-uJ-ki4" kind="show" id="xNH-v3-fr9"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Increase earnings by letting your price automatically adjust to match demand with Recommended pricing." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="diw-Ko-w6z">
@@ -2178,21 +2182,21 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nf-aJ-wba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17404" y="3115.5922038980511"/>
+            <point key="canvasLocation" x="17294" y="3116"/>
         </scene>
         <!--Add Price View Controller-->
         <scene sceneID="PNs-DL-6hL">
             <objects>
                 <viewController id="eDv-HH-htT" customClass="AddPriceViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6n-bf-iw4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="767"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEe-vq-jGY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="703"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCg-Ow-NjU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="703"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Increase your chances of booking your car with recommended pricing." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itb-fa-y8O">
                                                 <rect key="frame" x="18" y="118" width="323" height="49"/>
@@ -2298,28 +2302,11 @@ Everyone else will just see an approximate location and get an idea of where you
                                                     <segue destination="9u0-A7-sXe" kind="presentation" id="0iA-QX-XXC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU7-7r-vgc">
-                                                <rect key="frame" x="16" y="622" width="342" height="61"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="61" id="Ir2-Uu-K7w"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                                <state key="normal" title="Continue">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="QyJ-gY-LNv" kind="show" id="e16-j4-5k3"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="6DB-yL-ltI"/>
-                                            <constraint firstAttribute="bottom" secondItem="KU7-7r-vgc" secondAttribute="bottom" constant="20" id="BFD-2a-fVq"/>
-                                            <constraint firstAttribute="trailing" secondItem="KU7-7r-vgc" secondAttribute="trailing" constant="17" id="MRl-36-v1s"/>
-                                            <constraint firstAttribute="height" constant="703" id="VL5-v4-FMT"/>
-                                            <constraint firstItem="KU7-7r-vgc" firstAttribute="leading" secondItem="DCg-Ow-NjU" secondAttribute="leading" constant="16" id="ecs-oo-w4a"/>
+                                            <constraint firstAttribute="height" constant="647" id="VL5-v4-FMT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2340,17 +2327,20 @@ Everyone else will just see an approximate location and get an idea of where you
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rol-tg-n6T"/>
                     </view>
-                    <size key="freeformSize" width="375" height="767"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="button1" destination="vFg-jb-4Jy" id="0Vu-ei-L89"/>
                         <outlet property="button2" destination="GrC-e9-nmY" id="aJe-S7-jDd"/>
+                        <outlet property="constraintContentHeight" destination="VL5-v4-FMT" id="Rfl-kO-QyT"/>
+                        <outlet property="contentView" destination="DCg-Ow-NjU" id="fyl-M7-0Sp"/>
                         <outlet property="fixedPriceTextField" destination="aDD-62-YmV" id="IrV-Bf-KYy"/>
                         <outlet property="recommendedPriceLabel" destination="Gl0-X8-VTF" id="kIY-vL-nuB"/>
+                        <outlet property="scrollView" destination="IEe-vq-jGY" id="Anp-xz-N52"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xi-Q3-KRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18304.799999999999" y="3132.6836581709149"/>
+            <point key="canvasLocation" x="18759" y="2860"/>
         </scene>
         <!--Review Terms View Controller-->
         <scene sceneID="sCS-yj-W4i">
@@ -2434,7 +2424,7 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iED-zV-hb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19288.799999999999" y="3288.3058470764622"/>
+            <point key="canvasLocation" x="19522" y="3385"/>
         </scene>
         <!--Publish View Controller-->
         <scene sceneID="o5X-xj-ocR">
@@ -2597,7 +2587,7 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
             <objects>
                 <viewController id="9u0-A7-sXe" customClass="AboutPriceViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vbP-3w-aHl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Recommended pricing" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-v7-tMx">
@@ -2636,7 +2626,7 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiQ-GX-bCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19151" y="2544"/>
+            <point key="canvasLocation" x="19466" y="2527"/>
         </scene>
         <!--When Ready View Controller-->
         <scene sceneID="Alx-NU-sKJ">
@@ -2665,6 +2655,59 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
             </objects>
             <point key="canvasLocation" x="20740" y="4741"/>
         </scene>
+        <!--Price Container View Controller-->
+        <scene sceneID="O6u-wD-EuZ">
+            <objects>
+                <viewController id="6Du-uJ-ki4" customClass="PriceContainerViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ldb-bG-xhk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-UJ-umu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="eDv-HH-htT" kind="embed" id="zJz-W5-SG0"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgr-3e-InE">
+                                <rect key="frame" x="13" y="579" width="348" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="m2J-mP-DW3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="6Du-uJ-ki4" eventType="touchUpInside" id="5Qa-Vb-dyL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vxD-UJ-umu" firstAttribute="bottom" secondItem="lWp-iN-QbW" secondAttribute="bottom" id="2nm-o9-h3C"/>
+                            <constraint firstItem="sgr-3e-InE" firstAttribute="leading" secondItem="Ldb-bG-xhk" secondAttribute="leading" constant="13" id="4Qe-Xu-VPt"/>
+                            <constraint firstItem="vxD-UJ-umu" firstAttribute="top" secondItem="lWp-iN-QbW" secondAttribute="top" id="8bL-T4-9s4"/>
+                            <constraint firstAttribute="bottom" secondItem="sgr-3e-InE" secondAttribute="bottom" constant="35" id="Y47-fX-5ve"/>
+                            <constraint firstItem="vxD-UJ-umu" firstAttribute="leading" secondItem="lWp-iN-QbW" secondAttribute="leading" id="ZkD-QT-fMN"/>
+                            <constraint firstItem="vxD-UJ-umu" firstAttribute="trailing" secondItem="lWp-iN-QbW" secondAttribute="trailing" id="ee8-rd-uY8"/>
+                            <constraint firstAttribute="trailing" secondItem="sgr-3e-InE" secondAttribute="trailing" constant="14" id="oqq-oW-cr9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWp-iN-QbW"/>
+                    </view>
+                    <connections>
+                        <segue destination="caq-bX-R3D" kind="unwind" unwindAction="unwindToProgressWithSegue:" id="PlP-EW-uZX"/>
+                        <segue destination="caq-bX-R3D" kind="unwind" identifier="unwindToCheckList" unwindAction="unwindToCheckListWithSegue:" id="7BP-MX-Ug5"/>
+                        <segue destination="QyJ-gY-LNv" kind="show" identifier="goToTerms" id="IMX-Vh-PuF"/>
+                        <segue destination="caq-bX-R3D" kind="unwind" identifier="unwindToSetPriceView" unwindAction="unwindToSetPriceViewWithSegue:" id="b3Y-db-IbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBb-Wi-AKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="caq-bX-R3D" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="18018" y="3243"/>
+        </scene>
     </scenes>
     <resources>
         <image name="375x313" width="375" height="313"/>
@@ -2678,6 +2721,6 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
         <image name="shape" width="282" height="283"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hNU-nr-zGi"/>
+        <segue reference="6Ak-Jh-pER"/>
     </inferredMetricsTieBreakers>
 </document>
