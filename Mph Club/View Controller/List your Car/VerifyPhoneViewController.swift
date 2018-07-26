@@ -25,9 +25,13 @@ class VerifyPhoneViewController: UIViewController {
     
     
     @IBAction func backToProgress(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "unwindToProgress", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func next(_ sender: nextButton) {
+        // pop confirming number is correct.
+        confirmNumber()
+    }
 }
 
 
@@ -46,7 +50,25 @@ extension VerifyPhoneViewController: UITextFieldDelegate {
          print("End")
     }
     
+    
+    func confirmNumber() {
+        let fireAction = fireActionSheet(title: "Phone Number Confirmation", message: "Please confirm the number you entered is correct before continuing.")
+        
+        fireAction.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.performSegue(withIdentifier: "enterCode", sender: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            self.phoneTextField.text = ""
+        }))
+        
+        self.present(fireAction, animated: true)
+    }
+    
 }
+
+
+
 
 
 extension UITextField{

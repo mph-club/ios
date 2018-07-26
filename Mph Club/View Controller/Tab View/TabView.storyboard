@@ -273,8 +273,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maximize the return on your luxury vehicle investment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-Ok-qAa">
+                                <rect key="frame" x="16" y="0.0" width="343" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Earn over $50,000 a year by renting out your vehicle to our selective luxury clientele." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WAh-wM-iYv">
+                                <rect key="frame" x="16" y="180" width="342" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8b-MA-Zt2">
-                                <rect key="frame" x="16" y="12" width="343" height="60"/>
+                                <rect key="frame" x="15" y="493" width="343" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ttn-r4-DLh"/>
@@ -290,9 +304,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v8b-MA-Zt2" firstAttribute="leading" secondItem="w86-VQ-QTb" secondAttribute="leading" constant="16" id="3Wd-pv-yDY"/>
-                            <constraint firstItem="w86-VQ-QTb" firstAttribute="trailing" secondItem="v8b-MA-Zt2" secondAttribute="trailing" constant="16" id="rsF-Pc-O4a"/>
-                            <constraint firstItem="v8b-MA-Zt2" firstAttribute="top" secondItem="w86-VQ-QTb" secondAttribute="top" constant="12" id="v8b-s8-sJo"/>
+                            <constraint firstItem="v8b-MA-Zt2" firstAttribute="leading" secondItem="w86-VQ-QTb" secondAttribute="leading" constant="15" id="3Wd-pv-yDY"/>
+                            <constraint firstItem="w86-VQ-QTb" firstAttribute="trailing" secondItem="v8b-MA-Zt2" secondAttribute="trailing" constant="17" id="rsF-Pc-O4a"/>
+                            <constraint firstItem="v8b-MA-Zt2" firstAttribute="top" secondItem="w86-VQ-QTb" secondAttribute="top" constant="493" id="v8b-s8-sJo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w86-VQ-QTb"/>
                     </view>
@@ -662,6 +676,9 @@
                                             <state key="normal" title="List your luxury vehicle">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="e9l-wD-8OA" kind="show" id="ZZs-iO-ubp"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -688,6 +705,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwi-UX-f9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1575" y="-544"/>
+        </scene>
+        <!--ListCar-->
+        <scene sceneID="3Fo-7w-Jq7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListCar" id="e9l-wD-8OA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcv-HN-kpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="-434"/>
         </scene>
         <!--EXPLORE-->
         <scene sceneID="Arw-lv-a2h">

@@ -18,7 +18,7 @@ class EnterCodeViewController: UIViewController {
         
         self.codeTextField.keyboardType = UIKeyboardType.decimalPad
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(ProgressViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(ProgressViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
     }

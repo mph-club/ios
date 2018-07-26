@@ -46,16 +46,16 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
         
         initStatePickerView()
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "backArrow"), style: .plain, target: self, action: #selector(LicenseDetailViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(LicenseDetailViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        
+
 
     }
     

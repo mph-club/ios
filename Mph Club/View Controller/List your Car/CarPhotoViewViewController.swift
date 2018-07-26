@@ -17,7 +17,7 @@ class CarPhotoViewViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var image4: UIImageView!
     @IBOutlet weak var image5: UIImageView!
     
-    
+    var typeOfPicker = ""
     
  //   @IBOutlet weak var retakeButton: UIButton!
     
@@ -28,19 +28,48 @@ class CarPhotoViewViewController: UIViewController, UIImagePickerControllerDeleg
 //        retakeButton.layer.borderWidth = 2
 //        retakeButton.layer.borderColor = UIColor.black.cgColor
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "arrowLeft28Px"), style: .plain, target: self, action: #selector(CarPhotoViewViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(CarPhotoViewViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
         
-        takePhoto()
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        
+        if typeOfPicker == "library" {
+            imagePicker.sourceType = .photoLibrary
+        } else {
+            imagePicker.sourceType = .camera
+        }
+        present(self.imagePicker, animated: true, completion: nil)
+        
     }
     
     func takePhoto() {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
         
-        present(imagePicker, animated: true, completion: nil)
+
+        
+        let fireAction = fireActionSheet(title: "Select one", message: "")
+        
+        fireAction.addAction(UIAlertAction(title: "Choose from photo library", style: .default, handler: { action in
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { action in
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        self.present(fireAction, animated: true)
+        
+        
+
+        
+
+        
+        
     }
     
     @objc func close() {

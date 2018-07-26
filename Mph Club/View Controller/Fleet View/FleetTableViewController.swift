@@ -50,7 +50,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func customBackButton() {
-         let backImg: UIImage = UIImage(named: "arrowLeft28Px")!
+         let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(FleetTableViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }

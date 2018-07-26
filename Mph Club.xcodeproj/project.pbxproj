@@ -12,6 +12,8 @@
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		350881AA20EA7CFF00ED2B5E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A920EA7CFF00ED2B5E /* Login.storyboard */; };
 		35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207DCD20E3D64800BA838A /* LoginViewController.swift */; };
+		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
+		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
 		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
 		35789D1320F4338200A07445 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1220F4338200A07445 /* SearchViewController.swift */; };
 		35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingMapViewController.swift */; };
@@ -101,6 +103,8 @@
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		350881A920EA7CFF00ED2B5E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		35207DCD20E3D64800BA838A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
 		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
 		35789D1220F4338200A07445 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		35789D1620F4412400A07445 /* BookingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMapViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
 				35DAA30D20EFBEC80083CA93 /* nextButton.swift */,
 				35CC0D8020F7A34600575225 /* Helpers.swift */,
+				353D3BF0210A12C000CF748C /* Constant.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */,
 				3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */,
 				3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */,
+				353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */,
 				3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */,
 				3582C3012102313400F4A6EF /* BookingWindowViewController.swift */,
 				3582C3032102318100F4A6EF /* TripLengthViewController.swift */,
@@ -643,6 +649,7 @@
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
+				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
 				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				35789D1320F4338200A07445 /* SearchViewController.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
@@ -684,6 +691,7 @@
 				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
 				35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */,
+				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
 				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* nextButton.swift in Sources */,
 			);

@@ -22,7 +22,7 @@ class AboutYourCarContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImg: UIImage = UIImage(named: "arrowLeft28Px")!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }

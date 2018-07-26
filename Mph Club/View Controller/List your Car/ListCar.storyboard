@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rb9-OZ-QiD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gu8-QX-COf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -169,6 +169,16 @@ Everyone else will just see an approximate location and get an idea of where you
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-lj-ujW">
+                                <rect key="frame" x="300" y="82" width="46" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="E90-72-xNR" kind="show" id="avB-J5-IB3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -200,7 +210,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gm-mk-UjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293.5999999999999" y="2011.8440779610196"/>
+            <point key="canvasLocation" x="12169" y="2042"/>
         </scene>
         <!--Eligibility-->
         <scene sceneID="woJ-IH-KZD">
@@ -268,12 +278,12 @@ Everyone else will just see an approximate location and get an idea of where you
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-e7-D3D" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
-                                <rect key="frame" x="16" y="577" width="348" height="53"/>
+                                <rect key="frame" x="16" y="586" width="343" height="61"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="qm2-iS-o6c"/>
+                                    <constraint firstAttribute="height" constant="61" id="qm2-iS-o6c"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -297,14 +307,14 @@ Everyone else will just see an approximate location and get an idea of where you
                             <constraint firstItem="geR-ff-MDZ" firstAttribute="trailing" secondItem="bDd-jL-mcd" secondAttribute="trailing" constant="106" id="QV5-HO-UjI"/>
                             <constraint firstItem="fvW-Fb-VMP" firstAttribute="leading" secondItem="XJd-e7-D3D" secondAttribute="leading" id="aPp-iv-Q8I"/>
                             <constraint firstItem="jj4-Nq-aTX" firstAttribute="trailing" secondItem="hvb-Uy-G5c" secondAttribute="trailingMargin" id="aws-eg-mqq"/>
-                            <constraint firstAttribute="bottom" secondItem="XJd-e7-D3D" secondAttribute="bottom" constant="37" id="hcT-OK-bA1"/>
+                            <constraint firstAttribute="bottom" secondItem="XJd-e7-D3D" secondAttribute="bottom" constant="20" id="hcT-OK-bA1"/>
                             <constraint firstItem="COW-0B-phx" firstAttribute="trailing" secondItem="fvW-Fb-VMP" secondAttribute="trailing" id="iG5-Vk-NmP"/>
                             <constraint firstItem="GUF-9A-XN7" firstAttribute="top" secondItem="COW-0B-phx" secondAttribute="bottom" constant="29" id="jzi-db-CGb"/>
                             <constraint firstItem="bDd-jL-mcd" firstAttribute="top" secondItem="geR-ff-MDZ" secondAttribute="top" constant="34" id="mSn-He-Mz3"/>
                             <constraint firstItem="jj4-Nq-aTX" firstAttribute="leading" secondItem="Ukw-uI-FgL" secondAttribute="leading" id="o8u-n8-FA3"/>
                             <constraint firstItem="bDd-jL-mcd" firstAttribute="leading" secondItem="fAV-3u-Lkl" secondAttribute="leading" id="sn3-Oe-Qqe"/>
                             <constraint firstItem="COW-0B-phx" firstAttribute="leading" secondItem="Ukw-uI-FgL" secondAttribute="leading" id="xFk-R9-9Sh"/>
-                            <constraint firstItem="geR-ff-MDZ" firstAttribute="trailing" secondItem="XJd-e7-D3D" secondAttribute="trailing" constant="11" id="z7w-iX-8cb"/>
+                            <constraint firstItem="geR-ff-MDZ" firstAttribute="trailing" secondItem="XJd-e7-D3D" secondAttribute="trailing" constant="16" id="z7w-iX-8cb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="geR-ff-MDZ"/>
                     </view>
@@ -456,7 +466,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LqF-mj-pKS" kind="show" id="Myg-Fb-MkK"/>
+                                    <action selector="next:" destination="gKa-Gi-nNq" eventType="touchUpInside" id="hh2-Ql-MvE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -469,7 +479,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <viewLayoutGuide key="safeArea" id="wWw-IB-pRm"/>
                     </view>
                     <navigationItem key="navigationItem" id="69t-m4-jz0">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowLeft28Px" id="qSy-dO-Qz8">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="close28Px" id="qSy-dO-Qz8">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backToProgress:" destination="gKa-Gi-nNq" id="VE7-6b-OVb"/>
@@ -479,11 +489,10 @@ Everyone else will just see an approximate location and get an idea of where you
                     <connections>
                         <outlet property="nextButton" destination="WKS-dY-Uym" id="SB3-Bd-Adz"/>
                         <outlet property="phoneTextField" destination="jic-L0-76f" id="a9R-gi-LdG"/>
-                        <segue destination="Vmv-5g-B6I" kind="unwind" identifier="unwindToProgress" unwindAction="unwindToProgressWithSegue:" id="zbh-N5-Squ"/>
+                        <segue destination="LqF-mj-pKS" kind="show" identifier="enterCode" id="bln-R4-xvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oX2-t2-aUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Vmv-5g-B6I" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2336.8000000000002" y="2996.8515742128939"/>
         </scene>
@@ -788,9 +797,6 @@ Everyone else will just see an approximate location and get an idea of where you
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="0N9-fp-jQm" kind="show" id="6Ak-Jh-pER"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -815,7 +821,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Kn-hNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17294" y="2244"/>
+            <point key="canvasLocation" x="4951" y="2997"/>
         </scene>
         <!--Take Insurance Pic View Controller-->
         <scene sceneID="tS1-JU-9ht">
@@ -1064,7 +1070,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.8939496535" green="0.8939496535" blue="0.8939496535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1077,7 +1083,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHW-NT-jjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="2012"/>
+            <point key="canvasLocation" x="5463" y="1480"/>
         </scene>
         <!--Take Registration Pic View Controller-->
         <scene sceneID="LzZ-OT-wTh">
@@ -1304,12 +1310,12 @@ Everyone else will just see an approximate location and get an idea of where you
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-hH-Sbi" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
-                                <rect key="frame" x="13" y="572" width="348" height="53"/>
+                                <rect key="frame" x="16" y="586" width="343" height="61"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="57W-BV-6wX"/>
+                                    <constraint firstAttribute="height" constant="61" id="57W-BV-6wX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1322,11 +1328,11 @@ Everyone else will just see an approximate location and get an idea of where you
                         <constraints>
                             <constraint firstItem="EsY-MB-pQp" firstAttribute="leading" secondItem="Aup-lA-grs" secondAttribute="leading" id="EjM-py-gSn"/>
                             <constraint firstItem="EsY-MB-pQp" firstAttribute="top" secondItem="Aup-lA-grs" secondAttribute="top" id="NOa-kK-GnT"/>
-                            <constraint firstItem="B4I-hH-Sbi" firstAttribute="leading" secondItem="p5b-kf-kTk" secondAttribute="leading" constant="13" id="RNe-yb-lhB"/>
+                            <constraint firstItem="B4I-hH-Sbi" firstAttribute="leading" secondItem="p5b-kf-kTk" secondAttribute="leading" constant="16" id="RNe-yb-lhB"/>
                             <constraint firstItem="EsY-MB-pQp" firstAttribute="bottom" secondItem="Aup-lA-grs" secondAttribute="bottom" id="ZFE-6t-7Hd"/>
-                            <constraint firstAttribute="bottom" secondItem="B4I-hH-Sbi" secondAttribute="bottom" constant="42" id="cuW-QY-SJv"/>
+                            <constraint firstAttribute="bottom" secondItem="B4I-hH-Sbi" secondAttribute="bottom" constant="20" id="cuW-QY-SJv"/>
                             <constraint firstItem="EsY-MB-pQp" firstAttribute="trailing" secondItem="Aup-lA-grs" secondAttribute="trailing" id="jXJ-m4-slN"/>
-                            <constraint firstAttribute="trailing" secondItem="B4I-hH-Sbi" secondAttribute="trailing" constant="14" id="rCy-dd-I6r"/>
+                            <constraint firstAttribute="trailing" secondItem="B4I-hH-Sbi" secondAttribute="trailing" constant="16" id="rCy-dd-I6r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Aup-lA-grs"/>
                     </view>
@@ -1502,12 +1508,12 @@ Everyone else will just see an approximate location and get an idea of where you
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnG-uE-H8U">
-                                <rect key="frame" x="11" y="594" width="348" height="53"/>
+                                <rect key="frame" x="16" y="586" width="343" height="61"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="omb-i4-NHF"/>
+                                    <constraint firstAttribute="height" constant="61" id="omb-i4-NHF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1520,7 +1526,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <constraints>
                             <constraint firstItem="rGf-d1-Z0K" firstAttribute="trailing" secondItem="CnG-uE-H8U" secondAttribute="trailing" constant="16" id="IY6-mu-sth"/>
                             <constraint firstItem="rGf-d1-Z0K" firstAttribute="bottom" secondItem="CnG-uE-H8U" secondAttribute="bottom" constant="20" id="k1p-Rh-iJ0"/>
-                            <constraint firstItem="CnG-uE-H8U" firstAttribute="leading" secondItem="rGf-d1-Z0K" secondAttribute="leading" constant="11" id="nDM-aj-hMe"/>
+                            <constraint firstItem="CnG-uE-H8U" firstAttribute="leading" secondItem="rGf-d1-Z0K" secondAttribute="leading" constant="16" id="nDM-aj-hMe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rGf-d1-Z0K"/>
                     </view>
@@ -1540,7 +1546,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="375x313" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-8N-Qi8">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="375x313" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-8N-Qi8">
                                 <rect key="frame" x="4" y="68" width="366.5" height="313"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1550,7 +1556,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <outletCollection property="gestureRecognizers" destination="tPz-F6-piU" appends="YES" id="Qj1-OH-bId"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-zi-5yq">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-zi-5yq">
                                 <rect key="frame" x="4" y="384" width="90" height="90"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1561,7 +1567,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <outletCollection property="gestureRecognizers" destination="YXg-OT-naz" appends="YES" id="PYJ-tv-DmI"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-5x-HMq">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-5x-HMq">
                                 <rect key="frame" x="96" y="384" width="90" height="90"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1571,7 +1577,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <outletCollection property="gestureRecognizers" destination="hpf-L4-Xd4" appends="YES" id="bFE-Rg-ibv"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-7E-nbe">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-7E-nbe">
                                 <rect key="frame" x="281" y="384" width="90" height="90"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -1592,7 +1598,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <segue destination="Cjw-aD-vrd" kind="show" id="kS8-Hb-tIA"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="qQK-xX-hRT">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="qQK-xX-hRT">
                                 <rect key="frame" x="188" y="384" width="90" height="90"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -1660,7 +1666,7 @@ Everyone else will just see an approximate location and get an idea of where you
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="12309.6" y="2996.8515742128939"/>
+            <point key="canvasLocation" x="12220" y="2997"/>
         </scene>
         <!--Add Profile Photo View Controller-->
         <scene sceneID="hct-pn-zQW">
@@ -1701,7 +1707,6 @@ Everyone else will just see an approximate location and get an idea of where you
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="Cjw-aD-vrd" eventType="touchUpInside" id="Mqb-JY-NQT"/>
-                                    <segue destination="Ho1-ij-KZf" kind="show" identifier="addSelfie" id="aEn-f9-la8"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selfie-icon" translatesAutoresizingMaskIntoConstraints="NO" id="qri-b5-KyD">
@@ -1717,10 +1722,13 @@ Everyone else will just see an approximate location and get an idea of where you
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MwS-qv-3Hx"/>
                     </view>
+                    <connections>
+                        <segue destination="Ho1-ij-KZf" kind="show" identifier="addSelfie" id="hSx-ZA-CIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ah-aw-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13158" y="2997"/>
+            <point key="canvasLocation" x="12980" y="2997"/>
         </scene>
         <!--Photo Review View Controller-->
         <scene sceneID="J4W-cd-17A">
@@ -1747,7 +1755,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9T9-5d-E3D" kind="show" id="ZYE-pM-5ks"/>
+                                    <segue destination="E90-72-xNR" kind="show" id="VVV-Ke-5ST"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCn-JO-pT1">
@@ -1796,7 +1804,63 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0L-e0-2HI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14076" y="2996.8515742128939"/>
+            <point key="canvasLocation" x="13689" y="2996"/>
+        </scene>
+        <!--How Guest Will Book Container View Controller-->
+        <scene sceneID="wZb-aH-jXE">
+            <objects>
+                <viewController id="E90-72-xNR" customClass="HowGuestWillBookContainerViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ppp-Ww-GIA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTU-IT-7Dt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="9T9-5d-E3D" kind="embed" id="rER-XG-7II"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03R-7U-0ug">
+                                <rect key="frame" x="0.0" y="574" width="375" height="93"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="Ry3-bi-ZoR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdM-to-cJE">
+                                <rect key="frame" x="16" y="586" width="344" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="FTs-Uq-ap0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Submit Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Y6c-wK-kVV" kind="show" id="DqS-Zn-XRR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HTU-IT-7Dt" firstAttribute="bottom" secondItem="eet-ad-RNH" secondAttribute="bottom" id="05o-t5-pWc"/>
+                            <constraint firstItem="03R-7U-0ug" firstAttribute="bottom" secondItem="eet-ad-RNH" secondAttribute="bottom" id="4v5-bn-NYd"/>
+                            <constraint firstItem="xdM-to-cJE" firstAttribute="leading" secondItem="eet-ad-RNH" secondAttribute="leading" constant="16" id="7pG-q6-xpz"/>
+                            <constraint firstItem="HTU-IT-7Dt" firstAttribute="trailing" secondItem="eet-ad-RNH" secondAttribute="trailing" id="M6g-HJ-ajJ"/>
+                            <constraint firstItem="HTU-IT-7Dt" firstAttribute="top" secondItem="ppp-Ww-GIA" secondAttribute="top" id="cYI-OJ-L02"/>
+                            <constraint firstItem="eet-ad-RNH" firstAttribute="bottom" secondItem="xdM-to-cJE" secondAttribute="bottom" constant="20" id="j8i-C4-7E5"/>
+                            <constraint firstItem="03R-7U-0ug" firstAttribute="trailing" secondItem="eet-ad-RNH" secondAttribute="trailing" id="l3A-Jx-9uH"/>
+                            <constraint firstItem="eet-ad-RNH" firstAttribute="trailing" secondItem="xdM-to-cJE" secondAttribute="trailing" constant="15" id="nr4-1E-4QW"/>
+                            <constraint firstItem="03R-7U-0ug" firstAttribute="leading" secondItem="eet-ad-RNH" secondAttribute="leading" id="pO8-6O-vYM"/>
+                            <constraint firstItem="HTU-IT-7Dt" firstAttribute="leading" secondItem="eet-ad-RNH" secondAttribute="leading" id="pPg-M1-4Dv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eet-ad-RNH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZ4-lT-k6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14432.799999999999" y="3008.5457271364321"/>
         </scene>
         <!--How Booking Works View Controller-->
         <scene sceneID="opi-sU-DVc">
@@ -1809,11 +1873,11 @@ Everyone else will just see an approximate location and get an idea of where you
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-kn-gBV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="770"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTi-Q7-Fnm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTi-Q7-Fnm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="770"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here’s how guests will book with you" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4e-x5-Sqe">
-                                                <rect key="frame" x="16" y="-40" width="359" height="95"/>
+                                                <rect key="frame" x="16" y="5" width="359" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1823,7 +1887,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guest finds your car listing" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtO-fM-Jgv">
-                                                <rect key="frame" x="16" y="75" width="343" height="35"/>
+                                                <rect key="frame" x="16" y="120" width="343" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1833,7 +1897,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQG-0H-041">
-                                                <rect key="frame" x="16" y="104" width="343" height="77"/>
+                                                <rect key="frame" x="16" y="149" width="343" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1844,7 +1908,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meet your guest" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J7-zX-B9K">
-                                                <rect key="frame" x="16" y="189" width="343" height="35"/>
+                                                <rect key="frame" x="16" y="234" width="343" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1854,7 +1918,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coordinate where and when you’ll meet your guest." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-WJ-Qdu">
-                                                <rect key="frame" x="16" y="204" width="343" height="77"/>
+                                                <rect key="frame" x="16" y="249" width="343" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1864,7 +1928,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick up your car" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37e-an-OkJ">
-                                                <rect key="frame" x="16" y="283" width="343" height="35"/>
+                                                <rect key="frame" x="16" y="328" width="343" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1874,7 +1938,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-Nt-WWT">
-                                                <rect key="frame" x="16" y="317" width="343" height="77"/>
+                                                <rect key="frame" x="16" y="362" width="343" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1885,7 +1949,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your safety is our number one concern" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-jS-dFe">
-                                                <rect key="frame" x="16" y="417" width="343" height="55"/>
+                                                <rect key="frame" x="16" y="462" width="343" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1895,7 +1959,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mph covers your car with $1 million in liability insurance and 24/7 roadside assistance throughout the trip." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFH-Hh-MVD">
-                                                <rect key="frame" x="16" y="468" width="343" height="77"/>
+                                                <rect key="frame" x="16" y="513" width="343" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -1904,33 +1968,16 @@ Everyone else will just see an approximate location and get an idea of where you
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIh-EO-e8A">
-                                                <rect key="frame" x="15" y="567" width="344" height="61"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="61" id="en3-fj-2cD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                                <state key="normal" title="Submit Photo">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="Y6c-wK-kVV" kind="show" id="sbz-vZ-t3z"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="eIh-EO-e8A" secondAttribute="trailing" constant="16" id="56G-P5-bhr"/>
-                                            <constraint firstAttribute="bottom" secondItem="eIh-EO-e8A" secondAttribute="bottom" constant="78" id="83Q-lK-c3s"/>
-                                            <constraint firstAttribute="height" constant="706" id="CKB-E6-64r"/>
+                                            <constraint firstAttribute="height" constant="770" id="CKB-E6-64r"/>
                                             <constraint firstAttribute="width" constant="375" id="DjB-zs-6UQ"/>
-                                            <constraint firstItem="eIh-EO-e8A" firstAttribute="leading" secondItem="xTi-Q7-Fnm" secondAttribute="leading" constant="15" id="HIU-WT-LL1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xTi-Q7-Fnm" firstAttribute="top" secondItem="9s4-kn-gBV" secondAttribute="top" constant="64" id="Q49-8S-1GT"/>
+                                    <constraint firstItem="xTi-Q7-Fnm" firstAttribute="top" secondItem="9s4-kn-gBV" secondAttribute="top" id="Q49-8S-1GT"/>
                                     <constraint firstAttribute="trailing" secondItem="xTi-Q7-Fnm" secondAttribute="trailing" id="SaI-eR-oSS"/>
                                     <constraint firstAttribute="bottom" secondItem="xTi-Q7-Fnm" secondAttribute="bottom" id="SlU-ML-TJw"/>
                                     <constraint firstItem="xTi-Q7-Fnm" firstAttribute="leading" secondItem="9s4-kn-gBV" secondAttribute="leading" id="U3Q-0q-Le9"/>
@@ -1950,7 +1997,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rv6-hM-Qd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15008.799999999999" y="2996.4017991004498"/>
+            <point key="canvasLocation" x="15181.6" y="3041.3793103448279"/>
         </scene>
         <!--Booking Window View Controller-->
         <scene sceneID="jrw-Rd-4S3">
@@ -2029,7 +2076,7 @@ Everyone else will just see an approximate location and get an idea of where you
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZA-wG-mNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9xu-4l-Mi1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="15801" y="3116"/>
+            <point key="canvasLocation" x="15881" y="3099"/>
         </scene>
         <!--Trip Length View Controller-->
         <scene sceneID="ndG-Ob-F8Q">
@@ -2670,12 +2717,12 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgr-3e-InE">
-                                <rect key="frame" x="13" y="579" width="348" height="53"/>
+                                <rect key="frame" x="16" y="586" width="343" height="61"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="m2J-mP-DW3"/>
+                                    <constraint firstAttribute="height" constant="61" id="m2J-mP-DW3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -2687,12 +2734,12 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vxD-UJ-umu" firstAttribute="bottom" secondItem="lWp-iN-QbW" secondAttribute="bottom" id="2nm-o9-h3C"/>
-                            <constraint firstItem="sgr-3e-InE" firstAttribute="leading" secondItem="Ldb-bG-xhk" secondAttribute="leading" constant="13" id="4Qe-Xu-VPt"/>
+                            <constraint firstItem="sgr-3e-InE" firstAttribute="leading" secondItem="Ldb-bG-xhk" secondAttribute="leading" constant="16" id="4Qe-Xu-VPt"/>
                             <constraint firstItem="vxD-UJ-umu" firstAttribute="top" secondItem="lWp-iN-QbW" secondAttribute="top" id="8bL-T4-9s4"/>
-                            <constraint firstAttribute="bottom" secondItem="sgr-3e-InE" secondAttribute="bottom" constant="35" id="Y47-fX-5ve"/>
+                            <constraint firstAttribute="bottom" secondItem="sgr-3e-InE" secondAttribute="bottom" constant="20" id="Y47-fX-5ve"/>
                             <constraint firstItem="vxD-UJ-umu" firstAttribute="leading" secondItem="lWp-iN-QbW" secondAttribute="leading" id="ZkD-QT-fMN"/>
                             <constraint firstItem="vxD-UJ-umu" firstAttribute="trailing" secondItem="lWp-iN-QbW" secondAttribute="trailing" id="ee8-rd-uY8"/>
-                            <constraint firstAttribute="trailing" secondItem="sgr-3e-InE" secondAttribute="trailing" constant="14" id="oqq-oW-cr9"/>
+                            <constraint firstAttribute="trailing" secondItem="sgr-3e-InE" secondAttribute="trailing" constant="16" id="oqq-oW-cr9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWp-iN-QbW"/>
                     </view>
@@ -2700,7 +2747,6 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                         <segue destination="caq-bX-R3D" kind="unwind" unwindAction="unwindToProgressWithSegue:" id="PlP-EW-uZX"/>
                         <segue destination="caq-bX-R3D" kind="unwind" identifier="unwindToCheckList" unwindAction="unwindToCheckListWithSegue:" id="7BP-MX-Ug5"/>
                         <segue destination="QyJ-gY-LNv" kind="show" identifier="goToTerms" id="IMX-Vh-PuF"/>
-                        <segue destination="caq-bX-R3D" kind="unwind" identifier="unwindToSetPriceView" unwindAction="unwindToSetPriceViewWithSegue:" id="b3Y-db-IbH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBb-Wi-AKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2712,7 +2758,6 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
     <resources>
         <image name="375x313" width="375" height="313"/>
         <image name="95x95" width="95" height="95"/>
-        <image name="arrowLeft28Px" width="28" height="28"/>
         <image name="checkCircleFilled64Px" width="64" height="64"/>
         <image name="close28Px" width="28" height="28"/>
         <image name="group7" width="40" height="40"/>
@@ -2721,6 +2766,6 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
         <image name="shape" width="282" height="283"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ak-Jh-pER"/>
+        <segue reference="avB-J5-IB3"/>
     </inferredMetricsTieBreakers>
 </document>

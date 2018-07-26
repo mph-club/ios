@@ -14,6 +14,8 @@ class PhotoReviewViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var retakeButton: UIButton!
     
+    var typeOfPicker = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,7 @@ class PhotoReviewViewController: UIViewController, UIImagePickerControllerDelega
         retakeButton.layer.borderWidth = 2
         retakeButton.layer.borderColor = UIColor.black.cgColor
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(RegisPhotoViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(RegisPhotoViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
         
@@ -36,7 +38,12 @@ class PhotoReviewViewController: UIViewController, UIImagePickerControllerDelega
     func takePhoto() {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        
+        if typeOfPicker == "library" {
+            imagePicker.sourceType = .photoLibrary
+        } else {
+            imagePicker.sourceType = .camera
+        }
         
         present(imagePicker, animated: true, completion: nil)
     }
@@ -46,7 +53,22 @@ class PhotoReviewViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func retake(_ sender: UIButton) {
-        takePhoto()
+        let fireAction = fireActionSheet(title: "Select one", message: "")
+        
+        fireAction.addAction(UIAlertAction(title: "Choose from photo library", style: .default, handler: { action in
+            self.typeOfPicker = "library"
+            self.takePhoto()
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { action in
+            self.typeOfPicker = "camera"
+            self.takePhoto()
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        self.present(fireAction, animated: true)
+        
     }
     
 
@@ -89,7 +111,7 @@ class PhotoReviewViewController: UIViewController, UIImagePickerControllerDelega
 ////        retakeButton.layer.borderWidth = 2
 ////        retakeButton.layer.borderColor = UIColor.black.cgColor
 ////
-////        let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(RegisPhotoViewController.close))
+////        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(RegisPhotoViewController.close))
 ////        button1.tintColor = UIColor.black
 ////        self.navigationItem.leftBarButtonItem  = button1
 ////

@@ -87,7 +87,11 @@ extension AddressViewController: LocationSearchTableDelegate {
         self.nextButton.backgroundColor = UIColor.black
         setUpTextField(color: UIColor.black.cgColor)
         self.addressTextField.text = locationDetail.address
-        self.cityAndStateTextField.text = "\(String(describing: locationDetail.city!)), \(String(describing: locationDetail.state!))"
+        
+        guard let city = locationDetail.city else { return }
+        guard let state = locationDetail.state else { return }
+    
+        self.cityAndStateTextField.text = "\(String(describing: city)), \(String(describing: state))"
         self.zipCodeTextField.text = locationDetail.zipCode
         
         if locationDetail.address != locationDetail.title {

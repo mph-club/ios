@@ -22,7 +22,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         retakeButton.layer.borderWidth = 2
         retakeButton.layer.borderColor = UIColor.black.cgColor
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(PhotoViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(PhotoViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
         
@@ -48,7 +48,21 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
 
     @IBAction func retake(_ sender: UIButton) {
-        takePhoto()
+        let fireAction = fireActionSheet(title: "Select one", message: "")
+        
+        fireAction.addAction(UIAlertAction(title: "Choose from photo library", style: .default, handler: { action in
+            self.typeOfPicker = "library"
+            self.takePhoto()
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { action in
+            self.typeOfPicker = "camera"
+            self.takePhoto()
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        self.present(fireAction, animated: true)
     }
     
     

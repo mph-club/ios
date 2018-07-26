@@ -14,7 +14,7 @@ class ReviewTermsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navButton1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(ReviewTermsViewController.close))
+        let navButton1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(ReviewTermsViewController.close))
         navButton1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = navButton1
         

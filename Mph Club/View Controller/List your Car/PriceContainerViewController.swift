@@ -13,13 +13,13 @@ class PriceContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let navButton1 = UIBarButtonItem(image: UIImage(named: "arrowLeft28Px"), style: .plain, target: self, action: #selector(PriceContainerViewController.close))
+        let navButton1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(PriceContainerViewController.close))
         navButton1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = navButton1
     }
     
     @objc func close() {
-        performSegue(withIdentifier: "unwindToSetPriceView", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

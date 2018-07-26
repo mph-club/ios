@@ -28,7 +28,7 @@ class CarEligibilityViewController: UIViewController {
         
         setUpTextField(color: UIColor.lightGray.cgColor)
         
-        let backImg: UIImage = UIImage(named: "arrowLeft28Px")!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         

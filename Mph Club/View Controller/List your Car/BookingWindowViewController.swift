@@ -19,7 +19,7 @@ class BookingWindowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "arrowLeft28Px"), style: .plain, target: self, action: #selector(BookingWindowViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.backArrowIcon), style: .plain, target: self, action: #selector(BookingWindowViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
         

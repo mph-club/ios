@@ -14,7 +14,7 @@ class TakeRegistrationPicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button1 = UIBarButtonItem(image: UIImage(named: "close28Px"), style: .plain, target: self, action: #selector(PhotoViewController.close))
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(PhotoViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
     }

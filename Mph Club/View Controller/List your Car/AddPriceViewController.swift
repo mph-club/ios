@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPriceViewController: UIViewController {
+class AddPriceViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -30,18 +30,17 @@ class AddPriceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.delegate = self
+        
         fixedPriceTextField.delegate = self
         
         button1.setImage(UIImage(named : "group7"), for: UIControlState.normal)
         button2.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
         fixedPriceTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
         
-        let navButton1 = UIBarButtonItem(image: UIImage(named: "arrowLeft28Px"), style: .plain, target: self, action: #selector(AddPriceViewController.close))
-        navButton1.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem  = navButton1
-        
+
         self.fixedPriceTextField.keyboardType = UIKeyboardType.decimalPad
-        
+
         // Observe keyboard change
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -57,9 +56,10 @@ class AddPriceViewController: UIViewController {
         activeField = nil
     }
     
-    @objc func close() {
-        performSegue(withIdentifier: "unwindToSetPriceView", sender: nil)
-    }
+//    @objc func close() {
+//        dismiss(animated: true, completion: nil)
+//
+//    }
     
     
 
@@ -104,15 +104,40 @@ class AddPriceViewController: UIViewController {
     }
         
         
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.setBottomBorder()
+        if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
+            print("reach bottom")
+        }
+        
+        if (scrollView.contentOffset.y <= 0){
+            print("reach top")
+            self.removeBottomBorder()
+        }
+        
+        if (scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)){
+            //not top and not bottom
+        }
     }
-    */
+    
+    
+    func setBottomBorder() {
+        self.navigationController?.navigationBar.layer.backgroundColor = UIColor.white.cgColor
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.navigationController?.navigationBar.layer.shadowOpacity = 1.0
+        self.navigationController?.navigationBar.layer.shadowRadius = 0.0
+    }
+    
+    func removeBottomBorder() {
+        self.navigationController?.navigationBar.layer.backgroundColor = UIColor.white.cgColor
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.white.cgColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.navigationController?.navigationBar.layer.shadowOpacity = 1.0
+        self.navigationController?.navigationBar.layer.shadowRadius = 0.0
+    }
 
 }
 
