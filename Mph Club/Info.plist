@@ -28,6 +28,39 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LoginSlide</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>ListCar</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitleListCar</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>shortcutTitleListCar</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenListCar</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>1</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>BookCar</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitleBookCar</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>shortcutTitleBookCar</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenBookCar</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>1</string>
+			</dict>
+		</dict>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

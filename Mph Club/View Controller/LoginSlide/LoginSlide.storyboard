@@ -315,8 +315,8 @@ while in town</string>
         </scene>
     </scenes>
     <resources>
-        <image name="walkthrough1" width="187" height="333"/>
-        <image name="walkthrough2" width="187" height="333"/>
-        <image name="walkthrough3" width="187" height="333"/>
+        <image name="walkthrough1" width="187" height="406"/>
+        <image name="walkthrough2" width="187" height="406"/>
+        <image name="walkthrough3" width="187" height="406"/>
     </resources>
 </document>

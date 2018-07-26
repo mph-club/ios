@@ -14,6 +14,7 @@
 		35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207DCD20E3D64800BA838A /* LoginViewController.swift */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
 		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
+		353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 353D3BF4210A5BEB00CF748C /* InfoPlist.strings */; };
 		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
 		35789D1320F4338200A07445 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1220F4338200A07445 /* SearchViewController.swift */; };
 		35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingMapViewController.swift */; };
@@ -105,6 +106,7 @@
 		35207DCD20E3D64800BA838A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
+		353D3BF4210A5BEB00CF748C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
 		35789D1220F4338200A07445 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		35789D1620F4412400A07445 /* BookingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMapViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
 				3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */,
 				3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */,
+				353D3BF4210A5BEB00CF748C /* InfoPlist.strings */,
 				3591B8C820DAC06D00BA0CF9 /* Info.plist */,
 			);
 			path = "Mph Club";
@@ -538,6 +541,7 @@
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				350881AA20EA7CFF00ED2B5E /* Login.storyboard in Resources */,
+				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
