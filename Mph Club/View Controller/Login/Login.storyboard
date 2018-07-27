@@ -72,11 +72,25 @@
                                     <constraint firstAttribute="height" constant="325" id="OvH-6o-gaL"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-cG-cIy">
+                                <rect key="frame" x="331" y="40" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Jpr-ak-ME5"/>
+                                    <constraint firstAttribute="width" constant="28" id="zcu-vi-zHu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close28Px"/>
+                                <connections>
+                                    <action selector="close:" destination="DMg-Qc-AA2" eventType="touchUpInside" id="e0d-AQ-835"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pEe-cP-Rtb" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="top" constant="325" id="1yG-v9-aSd"/>
                             <constraint firstItem="00E-8R-NRV" firstAttribute="width" secondItem="1et-XC-wkd" secondAttribute="width" id="HH7-dE-Qag"/>
+                            <constraint firstItem="Kmi-8Y-S0k" firstAttribute="trailing" secondItem="uG2-cG-cIy" secondAttribute="trailing" constant="16" id="Ida-Dk-gho"/>
+                            <constraint firstItem="uG2-cG-cIy" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="top" constant="40" id="K1M-Ov-Hn8"/>
                             <constraint firstItem="BgU-0z-sVk" firstAttribute="leading" secondItem="pEe-cP-Rtb" secondAttribute="leading" id="TTM-za-M7R"/>
                             <constraint firstItem="BgU-0z-sVk" firstAttribute="top" secondItem="1et-XC-wkd" secondAttribute="top" id="Vvq-FJ-a4w"/>
                             <constraint firstItem="pEe-cP-Rtb" firstAttribute="leading" secondItem="Kmi-8Y-S0k" secondAttribute="leading" id="YXY-EJ-W8l"/>
@@ -108,5 +122,6 @@
     </scenes>
     <resources>
         <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
+        <image name="close28Px" width="28" height="28"/>
     </resources>
 </document>

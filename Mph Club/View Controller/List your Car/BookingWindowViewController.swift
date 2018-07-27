@@ -27,7 +27,7 @@ class BookingWindowViewController: UIViewController {
     }
     
     
-    fileprivate var windowStrings = ["1 hour", "2 hours"]
+    fileprivate var windowStrings = ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours", "8 hours"]
     private func initWindowPickerView() {
         windowPickerView.type = .strings
         windowPickerView.pickerDelegate = self

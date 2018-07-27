@@ -12,14 +12,33 @@ class HowGuestWillBookContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         let button1 = UIBarButtonItem(image: UIImage(named: Constant.closeIcon), style: .plain, target: self, action: #selector(RegisPhotoViewController.close))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
     }
     
+    
+    
     @objc func close() {
-        dismiss(animated: true, completion: nil)
+        let fireAction = fireActionSheet(title: "Before you close", message: "If you proceed with this action, you'll have to start from the beginning.")
+        
+        fireAction.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            
+        }))
+        
+        self.present(fireAction, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

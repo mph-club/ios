@@ -31,11 +31,31 @@ class ReviewTermsViewController: UIViewController {
     
 
     @objc func close() {
-        dismiss(animated: true, completion: nil)
+        let fireAction = fireActionSheet(title: "Before you close", message: "If you proceed with this action, you'll have to start from the beginning.")
+        
+        fireAction.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            
+        }))
+        
+        self.present(fireAction, animated: true)
     }
     
     @IBAction func decline(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        let fireAction = fireActionSheet(title: "Before you close", message: "If you proceed with this action, you'll have to start from the beginning.")
+        
+        fireAction.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        fireAction.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
+            
+        }))
+        
+        self.present(fireAction, animated: true)
     }
     
     /*

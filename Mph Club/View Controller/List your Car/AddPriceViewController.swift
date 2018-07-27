@@ -56,10 +56,7 @@ class AddPriceViewController: UIViewController, UIScrollViewDelegate {
         activeField = nil
     }
     
-//    @objc func close() {
-//        dismiss(animated: true, completion: nil)
-//
-//    }
+
     
     
 

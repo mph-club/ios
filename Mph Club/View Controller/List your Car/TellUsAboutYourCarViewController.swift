@@ -157,7 +157,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         self.statePickerView.setBottomSingleBorder(color: color)
     }
     
-    fileprivate var stateStrings = ["Florida", "Cali", "NY", "BA"]
+    fileprivate var stateStrings = ["Florida", "California", "New York", "Atlanta", "Dallas", "New Jersey"]
     private func initStatePickerView() {
         statePickerView.type = .strings
         statePickerView.pickerDelegate = self

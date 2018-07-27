@@ -1,40 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bpu-hz-2dC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="mFH-ff-3ws">
             <objects>
-                <viewController id="bpu-hz-2dC" sceneMemberID="viewController">
+                <viewController id="bpu-hz-2dC" customClass="CreateAccountViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDx-7n-YF5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="Fs5-LD-pb7">
-                                <rect key="frame" x="0.0" y="-88" width="375" height="450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="326"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="326" id="mth-en-RBs"/>
+                                    <constraint firstAttribute="width" constant="375" id="wIt-me-R7Y"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEO-0o-HTP">
+                                <rect key="frame" x="331" y="33" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Muq-cr-7Hb"/>
+                                    <constraint firstAttribute="width" constant="28" id="aKl-jM-UDE"/>
+                                </constraints>
+                                <state key="normal" image="close28Px"/>
+                                <connections>
+                                    <action selector="close:" destination="bpu-hz-2dC" eventType="touchUpInside" id="gSg-tL-iwI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Fs5-LD-pb7" secondAttribute="trailing" id="9al-Rc-ya2"/>
-                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="top" secondItem="vDx-7n-YF5" secondAttribute="topMargin" constant="-88" id="Td9-3R-HcN"/>
-                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="leading" secondItem="vDx-7n-YF5" secondAttribute="leading" id="jww-AK-HQO"/>
-                            <constraint firstItem="wIU-cq-kTo" firstAttribute="bottom" secondItem="Fs5-LD-pb7" secondAttribute="bottom" constant="328" id="slY-vo-w0P"/>
+                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="leading" secondItem="wIU-cq-kTo" secondAttribute="leading" id="0cC-Wb-JOU"/>
+                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="top" secondItem="vDx-7n-YF5" secondAttribute="top" id="COH-nk-0sf"/>
+                            <constraint firstItem="EEO-0o-HTP" firstAttribute="top" secondItem="wIU-cq-kTo" secondAttribute="top" constant="13" id="YLb-Xx-hqM"/>
+                            <constraint firstItem="wIU-cq-kTo" firstAttribute="trailing" secondItem="EEO-0o-HTP" secondAttribute="trailing" constant="16" id="ZzU-hs-ZT0"/>
+                            <constraint firstItem="Fs5-LD-pb7" firstAttribute="trailing" secondItem="wIU-cq-kTo" secondAttribute="trailing" id="emy-yL-Guz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wIU-cq-kTo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq3-4y-Iid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3605.5999999999999" y="-1442.3645320197045"/>
+            <point key="canvasLocation" x="3605.5999999999999" y="-1442.4287856071965"/>
         </scene>
     </scenes>
     <resources>
         <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
+        <image name="close28Px" width="28" height="28"/>
     </resources>
 </document>

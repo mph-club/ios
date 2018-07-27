@@ -26,14 +26,14 @@ class TripLengthViewController: UIViewController {
         self.navigationItem.leftBarButtonItem  = button1
     }
     
-    fileprivate var shortTripStrings = ["1 hour", "2 hours"]
+    fileprivate var shortTripStrings = ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours", "8 hours"]
     private func initShortTripPickerView() {
         shortTripPickerView.type = .strings
         shortTripPickerView.pickerDelegate = self
         shortTripPickerView.dataSource = self
     }
     
-    fileprivate var longTripStrings = ["1 hour", "2 hours"]
+    fileprivate var longTripStrings = ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours", "8 hours"]
     private func initlLongTripPickerView() {
         longTripPickerView.type = .strings
         longTripPickerView.pickerDelegate = self
