@@ -17,56 +17,84 @@ protocol BookingLocationSearchTableDelegate {
     func displayAddressSelected(_ locationDetail: Location)
 }
 
-class BookingMapViewController: UIViewController {
+class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate {
     
     var addressDelegate: BookingLocationSearchTableDelegate?
-    
     var locationDetailProperty = Location()
-    
     var selectedPin: CLPlacemark?
     var resultSearchController: UISearchController!
-    
     let locationManager = CLLocationManager()
+    var userLocation = String()
+    @IBOutlet weak var searchBar: UISearchBar!
+
     
-    @IBOutlet weak var mapView: MKMapView!
-    
-    @IBOutlet weak var doneButton: UIButton!
-    
-    // Done btn
-    @IBAction func button3(_ sender: AnyObject) {
-        getDirections()
-    }
-    
+    @IBOutlet weak var searchBarContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
-        doneButton.isEnabled = false
+        //doneButton.isEnabled = false
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
+        
+        
+        
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as! BookingLocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
-        let searchBar = resultSearchController!.searchBar
+        
+        searchBar = resultSearchController!.searchBar
+        searchBar.frame = CGRect(x: 0, y: 0, width: (navigationController?.view.bounds.size.width)!, height: self.searchBarContainer.bounds.size.height)
+        searchBar.backgroundImage = UIImage()
+        searchBar.barTintColor = .white
         searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
-        navigationItem.titleView = resultSearchController?.searchBar
+        searchBar.placeholder = "Enter any city, airport or address in FL"
+     //   resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
+        searchBar.delegate = self
+        resultSearchController.delegate = self
+   
+        searchBar.setValue("Clear", forKey:"_cancelButtonText")
+        
+        self.searchBarContainer.addSubview((resultSearchController?.searchBar)!)
+        setBottomBorder()
+        
         resultSearchController.hidesNavigationBarDuringPresentation = false
-        resultSearchController.dimsBackgroundDuringPresentation = true
+        resultSearchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+        
+        
+//        self.resultSearchController.isActive = true
+//        self.resultSearchController.searchBar.becomeFirstResponder()
+        
         
         
     }
     
+    func didPresentSearchController(_ resultSearchController: UISearchController) {
+     //   resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+       // resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
+    }
+    
+    
+    
+    private func setBottomBorder() {
+        let border = CALayer()
+        border.backgroundColor = UIColor.black.cgColor
+        border.frame = CGRect(x: 20, y: Int(self.searchBarContainer.layer.bounds.size.height)-15, width: Int(self.searchBarContainer.layer.bounds.size.width)-40, height: 1)
+        self.searchBarContainer.layer.addSublayer(border)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//         self.tabBarController?.navigationItem.hidesBackButton = false
-//         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,10 +103,6 @@ class BookingMapViewController: UIViewController {
     }
     
     @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
-     //   dismiss(animated: true, completion: nil)
-      //  self.navigationController = nil
-//        self.navigationController?.popToRootViewController(animated: true)
-     //   self.navigationController?.dismiss(animated: false, completion:nil)
         self.performSegue(withIdentifier: "unwindToHome", sender: self)
     }
     
@@ -87,8 +111,6 @@ class BookingMapViewController: UIViewController {
     }
     
     @objc func getDirections(){
-     //   addressDelegate?.displayAddressSelected(locationDetailProperty)
-        
         self.performSegue(withIdentifier: "goToFeed", sender: self)
 
     }
@@ -110,10 +132,23 @@ extension BookingMapViewController : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
+//        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        
+        let geocoder = CLGeocoder()
+        
+        geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response , error in
+      
+            if let unwrapped = response {
+                if let address = unwrapped.first {
+                    self.userLocation = address.areasOfInterest![0]
+                }
+            }
+
+         
+
+        })
+    
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -127,32 +162,34 @@ extension BookingMapViewController: BookingHandleMapSearch {
     func searchBarNotEmpty() {
         let searchBar = resultSearchController!.searchBar
         if searchBar.text != "" {
-            doneButton.isEnabled = true
+           // doneButton.isEnabled = true
         }
     }
     
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String){
-        searchBarNotEmpty()
         
-        saveCarLocation(placemark)
-        
-        // cache the pin
-        selectedPin = placemark
-        // clear existing pins
-        mapView.removeAnnotations(mapView.annotations)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = (placemark.location?.coordinate)!
-        annotation.title = placemark.name
-        
-        if let city = placemark.locality,
-            let state = placemark.administrativeArea {
-            annotation.subtitle = "\(city) \(state)"
-        }
-        
-        mapView.addAnnotation(annotation)
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegionMake((placemark.location?.coordinate)!, span)
-        mapView.setRegion(region, animated: true)
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+//        searchBarNotEmpty()
+//
+//        saveCarLocation(placemark)
+//
+//        // cache the pin
+//        selectedPin = placemark
+//        // clear existing pins
+//        mapView.removeAnnotations(mapView.annotations)
+//        let annotation = MKPointAnnotation()
+//        annotation.coordinate = (placemark.location?.coordinate)!
+//        annotation.title = placemark.name
+//
+//        if let city = placemark.locality,
+//            let state = placemark.administrativeArea {
+//            annotation.subtitle = "\(city) \(state)"
+//        }
+//
+//        mapView.addAnnotation(annotation)
+//        let span = MKCoordinateSpanMake(0.05, 0.05)
+//        let region = MKCoordinateRegionMake((placemark.location?.coordinate)!, span)
+//        mapView.setRegion(region, animated: true)
     }
     
     
@@ -259,34 +296,29 @@ struct BookingLocationDetail {
         }
         
         
-        
-        
-        
-        
-        
     }
     
     
 }
 
-extension BookingMapViewController : MKMapViewDelegate {
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-        
-        guard !(annotation is MKUserLocation) else { return nil }
-        
-        let reuseId = "pin"
-        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
-        
-        //        pinView.pinTintColor = UIColor.orange
-        //        pinView.canShowCallout = true
-        //        let smallSquare = CGSize(width: 30, height: 30)
-        //        var button: UIButton?
-        //        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-        //        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
-        //        button?.addTarget(self, action: #selector(MapViewController.getDirections), for: .touchUpInside)
-        //        pinView.leftCalloutAccessoryView = button
-        
-        return pinView
-    }
-}
+//extension BookingMapViewController : MKMapViewDelegate {
+//
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
+//
+//        guard !(annotation is MKUserLocation) else { return nil }
+//
+//        let reuseId = "pin"
+//        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
+//
+//        //        pinView.pinTintColor = UIColor.orange
+//        //        pinView.canShowCallout = true
+//        //        let smallSquare = CGSize(width: 30, height: 30)
+//        //        var button: UIButton?
+//        //        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
+//        //        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
+//        //        button?.addTarget(self, action: #selector(MapViewController.getDirections), for: .touchUpInside)
+//        //        pinView.leftCalloutAccessoryView = button
+//
+//        return pinView
+//    }
+//}

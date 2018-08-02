@@ -34,7 +34,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>shortcutTitleListCar</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenListCar</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).ListCar</string>
 			<key>UIApplicationShortcutItemUserInfo</key>
 			<dict>
 				<key>version</key>
@@ -49,7 +49,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>shortcutTitleBookCar</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenBookCar</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).BookCar</string>
 			<key>UIApplicationShortcutItemUserInfo</key>
 			<dict>
 				<key>version</key>

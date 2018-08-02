@@ -12,7 +12,8 @@ shortcutSubtitleBookCar = "Save and ride";
 shortcutTitleListCar = "List your car";
 shortcutSubtitleListCar = "Make money";
 
-
+NSLocationAlwaysAndWhenInUseUsageDescription = "We use location to provide list of cars in your area.";
+NSLocationWhenInUseUsageDescription = "We use location to provide list of cars in your area.";
 
 
 

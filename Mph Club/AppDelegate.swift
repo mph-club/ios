@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
     enum ShortcutIdentifier: String {
         case ListCar
@@ -27,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+ 
         Thread.sleep(forTimeInterval: 1.8)
-        
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             
             handleShortcut(shortcutItem)
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+
     
     func application(_ application: UIApplication,
                      performActionFor shortcutItem: UIApplicationShortcutItem,
@@ -56,6 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     fileprivate func selectTabBarItemForIdentifier(_ identifier: ShortcutIdentifier) -> Bool {
+    
+        self.window?.rootViewController!.performSegue(withIdentifier: "goToTabView", sender: nil)
+
         
         guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
             return false
@@ -69,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBarController.selectedIndex = 1
             return true
         case .ListCar:
+            
             tabBarController.selectedIndex = 2
             return true
         }

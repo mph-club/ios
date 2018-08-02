@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="containerView" destination="Mds-sc-glt" id="Otg-dt-tZp"/>
                         <outlet property="pageControl" destination="2F7-ua-6Kf" id="eQy-H6-h0j"/>
+                        <segue destination="Zoz-pa-M7D" kind="show" identifier="goToTabView" id="Jxl-HR-GUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLO-tf-LIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,6 +297,14 @@ while in town</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odd-fO-Q8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1975" y="16"/>
+        </scene>
+        <!--TabView-->
+        <scene sceneID="vdn-dC-F8A">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabView" id="Zoz-pa-M7D" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00y-Ja-UVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3438" y="-1634"/>
         </scene>
         <!--CreateAccount-->
         <scene sceneID="lGZ-fv-mYr">

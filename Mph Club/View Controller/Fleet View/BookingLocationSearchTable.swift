@@ -11,13 +11,13 @@ import MapKit
 
 
 
-class BookingLocationSearchTable: UITableViewController {
+class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     
     weak var handleMapSearchDelegate: BookingHandleMapSearch?
     var matchingItems: [MKMapItem] = []
-    var mapView: MKMapView?
     
+    @IBOutlet weak var tableView: UITableView!
     
     func parseAddress(_ selectedItem: CLPlacemark) -> String {
         
@@ -51,17 +51,57 @@ class BookingLocationSearchTable: UITableViewController {
         return addressLine
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchingItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
+        cell.textLabel?.text = selectedItem.name
+        cell.detailTextLabel?.text = parseAddress(selectedItem)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // if not Fl show alert
+        
+        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
+        
+        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name!
+
+        if selectedItem.administrativeArea! == "FL" {
+            print("exists")
+            
+            handleMapSearchDelegate?.dropPinZoomIn(selectedItem, locationName: selectedItem2)
+            dismiss(animated: true, completion: nil)
+        } else {
+            // pop up not allowed
+            self.present(fireAlert(title: "mph club message", message: "Sorry, currently only servicing FL"), animated: true)
+           
+        }
+        
+
+    }
+    
 }
 
-extension BookingLocationSearchTable : UISearchResultsUpdating {
+
+
+extension BookingLocationSearchTable: UISearchResultsUpdating {
+    
+   
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let mapView = mapView,
-            let searchBarText = searchController.searchBar.text else { return }
+        
+        searchController.searchBar.setShowsCancelButton(false, animated: false)
+        
+        guard let searchBarText = searchController.searchBar.text else { return }
         
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = searchBarText
-        request.region = mapView.region
+      //  request.region = mapView.region
         let search = MKLocalSearch(request: request)
         
         search.start { response, _ in
@@ -72,38 +112,11 @@ extension BookingLocationSearchTable : UISearchResultsUpdating {
             self.tableView.reloadData()
         }
         
+        
     }
     
 }
 
-extension BookingLocationSearchTable {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matchingItems.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
-        cell.textLabel?.text = selectedItem.name
-        cell.detailTextLabel?.text = parseAddress(selectedItem)
-        return cell
-    }
-    
-}
 
-extension BookingLocationSearchTable {
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
-        
-        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name!
-        print(selectedItem2)
-        
-        
-        print(selectedItem)
-        handleMapSearchDelegate?.dropPinZoomIn(selectedItem, locationName: selectedItem2)
-        dismiss(animated: true, completion: nil)
-    }
-    
-}
+
+
