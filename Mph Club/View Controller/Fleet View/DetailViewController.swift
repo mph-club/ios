@@ -8,12 +8,17 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIScrollViewDelegate {
 
     var newBackButton = UIBarButtonItem()
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.delegate = self
+        
 //        self.navigationItem.hidesBackButton = false
 //        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
 //        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(DetailViewController.back(sender:)))
@@ -29,6 +34,16 @@ class DetailViewController: UIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.black
+//        
+//        self.navigationController?.navigationBar.backgroundColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {

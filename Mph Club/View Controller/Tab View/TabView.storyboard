@@ -275,6 +275,9 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="1567"/>
+                    <connections>
+                        <outlet property="scrollView" destination="vPU-tS-byq" id="IA7-Eh-woY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyo-xw-OnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
