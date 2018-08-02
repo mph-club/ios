@@ -18,6 +18,17 @@ class DetailViewController: UIViewController {
 //        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
 //        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(DetailViewController.back(sender:)))
 //        self.navigationItem.leftBarButtonItem = newBackButton
+        
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
 
     override func didReceiveMemoryWarning() {
