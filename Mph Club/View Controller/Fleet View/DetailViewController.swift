@@ -13,38 +13,60 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     var newBackButton = UIBarButtonItem()
     
     @IBOutlet weak var scrollView: UIScrollView!
+    var lastContentOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.delegate = self
         
-//        self.navigationItem.hidesBackButton = false
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-//        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(DetailViewController.back(sender:)))
-//        self.navigationItem.leftBarButtonItem = newBackButton
-        
         let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
+        newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
     
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
+    }
+    
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.view.backgroundColor = UIColor.black
-//        
-//        self.navigationController?.navigationBar.backgroundColor = UIColor.black
+        var offset = scrollView.contentOffset.y / 150
+        if offset > 1 {
+            offset = 1
+            let color = UIColor.black
+            self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+            self.navigationController?.navigationBar.isTranslucent = true
+            self.navigationController?.navigationBar.backgroundColor = color
+            UIApplication.shared.statusBarView?.backgroundColor = color
+        } else {
+            let color = UIColor.clear
+            self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+            self.navigationController?.navigationBar.backgroundColor = color
+            UIApplication.shared.statusBarView?.backgroundColor = color
+        }
+        
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,18 +74,20 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "unwindToFleet", sender: nil)
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+extension UIApplication {
+    
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
+    }
+    
+}
+

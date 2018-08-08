@@ -41,8 +41,7 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         
-        
-        
+       
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as! BookingLocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
@@ -53,7 +52,6 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         searchBar.barTintColor = .white
         searchBar.sizeToFit()
         searchBar.placeholder = "Enter any city, airport or address in FL"
-     //   resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
         searchBar.delegate = self
         resultSearchController.delegate = self
    
@@ -70,9 +68,7 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         
 //        self.resultSearchController.isActive = true
 //        self.resultSearchController.searchBar.becomeFirstResponder()
-        
-        
-        
+      
     }
     
     func didPresentSearchController(_ resultSearchController: UISearchController) {
@@ -141,7 +137,10 @@ extension BookingMapViewController : CLLocationManagerDelegate {
       
             if let unwrapped = response {
                 if let address = unwrapped.first {
-                    self.userLocation = address.areasOfInterest![0]
+                    if let uw = address.areasOfInterest {
+                        self.userLocation = uw[0]
+                    }
+                   // self.userLocation = address.areasOfInterest![0]
                 }
             }
 

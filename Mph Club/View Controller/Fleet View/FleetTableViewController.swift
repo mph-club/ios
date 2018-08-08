@@ -26,16 +26,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tabBarController?.navigationItem.hidesBackButton = true
-//        self.tabBarController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
-//
-//        newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(FleetTableViewController.back(sender:)))
-//        self.tabBarController?.navigationItem.leftBarButtonItem = newBackButton
-        
-        
-        
 
-        
        
         carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
         carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
@@ -69,8 +60,10 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        //  self.navigationController?.setNavigationBarHidden(false, animated: animated)
-
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -189,7 +182,22 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "carDetailView" {
+//            if segue.destination is DetailViewController {
+//            
+//                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//                self.navigationController?.navigationBar.shadowImage = UIImage()
+//                self.navigationController?.navigationBar.isTranslucent = true
+//                self.navigationController?.navigationBar.barTintColor = UIColor.clear
+//            }
+//
+//
+//        }
+//    }
     
+    
+     @IBAction func unwindToFleet(segue: UIStoryboardSegue) {}
 
     /*
     // Override to support conditional editing of the table view.
