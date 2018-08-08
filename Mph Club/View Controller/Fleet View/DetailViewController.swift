@@ -8,7 +8,44 @@
 
 import UIKit
 
+class FeatureAttributesCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+}
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView.tag == 2 {
+            return featureItems.count
+        } else {
+            return items.count
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView.tag == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeatureAttributesCell
+            cell.titleLabel.text = featureItems[indexPath.row]
+            print("items: \(featureItems[indexPath.row])")
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarAttributesCell
+            cell.titleLabel.text = items[indexPath.row]
+            print("items: \(items[indexPath.row])")
+            return cell
+        }
+
+    }
+    
+
+}
+
 class DetailViewController: UIViewController, UIScrollViewDelegate {
+    
+    var featureItems = ["1", "2", "3", "4"]
+    var items = ["2 Seats", "2 Door", "13 MPG", "GPS"]
 
     var newBackButton = UIBarButtonItem()
     
@@ -77,8 +114,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         performSegue(withIdentifier: "unwindToFleet", sender: nil)
     }
     
-
-
+    
 
 }
 
