@@ -7,6 +7,7 @@ target 'Mph Club' do
 
   # Pods for Mph Club
   pod "APJTextPickerView"
+  pod 'JTAppleCalendar', '~> 7.0'
 
   target 'Mph ClubTests' do
     inherit! :search_paths

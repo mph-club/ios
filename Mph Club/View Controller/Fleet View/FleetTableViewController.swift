@@ -56,28 +56,28 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func navButtonBorder(isOn: Bool) {
-//        if let navigationController = self.navigationController {
-//
-//            // Set the color you want here
-//            let navigationBar = navigationController.navigationBar
-//
-//
-//            if isOn == true {
-//                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0.3))
-//                navBorder.backgroundColor = UIColor.lightGray
-//                navBorder.isOpaque = true
-//                self.navigationController?.navigationBar.addSubview(navBorder)
-//            } else {
-//                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0))
-//                navBorder.backgroundColor = UIColor.clear
-//                navBorder.isOpaque = false
-//                self.navigationController?.navigationBar.addSubview(navBorder)
-//
-//
-//            }
-//
-//
-//        }
+        if let navigationController = self.navigationController {
+
+            // Set the color you want here
+            let navigationBar = navigationController.navigationBar
+
+
+            if isOn == true {
+                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0.3))
+                navBorder.backgroundColor = UIColor.lightGray
+                navBorder.isOpaque = true
+                self.navigationController?.navigationBar.addSubview(navBorder)
+            } else {
+                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0))
+                navBorder.backgroundColor = UIColor.clear
+                navBorder.isOpaque = false
+                self.navigationController?.navigationBar.addSubview(navBorder)
+
+
+            }
+
+
+        }
      
     }
     
