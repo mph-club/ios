@@ -12,6 +12,9 @@ class FleetTableViewCell: UITableViewCell {
     
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var tripLabel: UILabel!
+    @IBOutlet weak var milesLabel: UILabel!
     
 
     override func awakeFromNib() {

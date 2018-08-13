@@ -95,13 +95,30 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     private let kURLString = "https://www.test.com"
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     var lastContentOffset: CGFloat = 0
     
-
+    var vehicle: Vehicle?
+    
+    @IBOutlet weak var vehicleImg: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tripLabel: UILabel!
+    @IBOutlet weak var milesLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.isDirectionalLockEnabled = false
+        
+        print(vehicle!)
+        
+        self.vehicleImg.image = UIImage(named: vehicle!.img)
+        self.titleLabel.text = vehicle!.title
+        self.tripLabel.text = "\(String(describing: vehicle!.trips)) trips"
+        self.milesLabel.text = "\(String(describing: vehicle!.miles)) mi"
+        
         
         setDummyData()
         reviews()
@@ -117,6 +134,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        
+        self.continueButton.layer.cornerRadius = 5
         
     }
     
@@ -158,8 +177,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -170,31 +187,55 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var offset = scrollView.contentOffset.y / 150
-        if offset > 1 {
-            offset = 1
-            let color = UIColor.white
-            self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-            self.navigationController?.navigationBar.isTranslucent = true
-            self.navigationController?.navigationBar.backgroundColor = color
-            UIApplication.shared.statusBarView?.backgroundColor = color
-            
-            let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
-            newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
-            self.navigationItem.leftBarButtonItem = newBackButton
-            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
-        } else {
-            let color = UIColor.clear
-            self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
-            self.navigationController?.navigationBar.backgroundColor = color
-            UIApplication.shared.statusBarView?.backgroundColor = color
-            
-            let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
-            newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
-            self.navigationItem.leftBarButtonItem = newBackButton
-            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        
+        if let navigationController = self.navigationController {
+            let navigationBar = navigationController.navigationBar
+            let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0.3))
+       
+        
+            var offset = scrollView.contentOffset.y / 150
+            if offset > 1 {
+                offset = 1
+                let color = UIColor.white
+                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+                self.navigationController?.navigationBar.shadowImage = UIImage()
+                self.navigationController?.navigationBar.isTranslucent = true
+                self.navigationController?.navigationBar.backgroundColor = color
+                UIApplication.shared.statusBarView?.backgroundColor = color
+                
+                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
+                self.navigationItem.leftBarButtonItem = newBackButton
+                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+                
+                
+                    // Set the color you want here
+                    navBorder.backgroundColor = UIColor.lightGray
+                    navBorder.isOpaque = true
+                    self.navigationController?.navigationBar.addSubview(navBorder)
+                
+                
+                
+                
+            } else {
+                let color = UIColor.clear
+                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+                self.navigationController?.navigationBar.backgroundColor = color
+                UIApplication.shared.statusBarView?.backgroundColor = color
+                
+                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
+                self.navigationItem.leftBarButtonItem = newBackButton
+                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+                
+              
+                    // Set the color you want here
+                navBorder.backgroundColor = UIColor.clear
+               // navBorder.isOpaque = false
+                self.navigationController?.navigationBar.addSubview(navBorder)
+              
+            }
         }
         
     }
@@ -210,6 +251,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     @objc func back(sender: UIBarButtonItem) {
         performSegue(withIdentifier: "unwindToFleet", sender: nil)
     }
+    
+    @IBAction func unwindToDetail(segue: UIStoryboardSegue) {}
     
     
 

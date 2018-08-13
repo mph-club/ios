@@ -13,11 +13,20 @@ struct Car {
     let carTitle: String
 }
 
+
+struct Vehicle {
+    var title: String
+    var img: String
+    var price: Int
+    var trips: Int
+    var miles: Int
+}
+
 class FleetTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   //  var newBackButton = UIBarButtonItem()
     
-    var carList = [Car]()
+    var carList = [Vehicle]()
     @IBOutlet weak var tripPreferenceBox: UIView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,11 +35,10 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
-        carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
-        carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
-        carList.append(Car(carImage: "Mercedes-Maybach-6-Cabriolet-HP", carTitle: "Test"))
+        
+        carList.append(Vehicle(title: "Porsche Panamera 2017", img: "panamera", price: 240, trips: 10, miles: 11))
+        carList.append(Vehicle(title: "Maserati Granturismo 2016", img: "maserati", price: 140, trips: 8, miles: 4))
+        carList.append(Vehicle(title: "Mercedes-Benz G-Class 2014", img: "gwagon", price: 440, trips: 5, miles: 6))
         
         tableView.estimatedRowHeight = 363
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -44,6 +52,33 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
          let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(FleetTableViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+        self.navButtonBorder(isOn: true)
+    }
+    
+    func navButtonBorder(isOn: Bool) {
+//        if let navigationController = self.navigationController {
+//
+//            // Set the color you want here
+//            let navigationBar = navigationController.navigationBar
+//
+//
+//            if isOn == true {
+//                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0.3))
+//                navBorder.backgroundColor = UIColor.lightGray
+//                navBorder.isOpaque = true
+//                self.navigationController?.navigationBar.addSubview(navBorder)
+//            } else {
+//                let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0))
+//                navBorder.backgroundColor = UIColor.clear
+//                navBorder.isOpaque = false
+//                self.navigationController?.navigationBar.addSubview(navBorder)
+//
+//
+//            }
+//
+//
+//        }
+     
     }
     
     @objc func close() {
@@ -71,11 +106,14 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
        
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        self.navButtonBorder(isOn: false)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-//        newBackButton.isEnabled = false
-//        newBackButton.tintColor = UIColor.clear
-        
+        self.navButtonBorder(isOn: false)
         if self.isMovingFromParentViewController {
             bookingMapVC.dismiss(animated: true, completion: nil)
         }
@@ -108,11 +146,20 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
 
         // Configure the cell...
         
-//        cell.carImage.image = UIImage(named: carList[indexPath.row].carImage)
-//        cell.titleLabel.text = carList[indexPath.row].carTitle
+        
+        cell.carImage.image = UIImage(named: carList[indexPath.row].img)
+        cell.titleLabel.text = carList[indexPath.row].title
+        cell.priceLabel.text = "\(carList[indexPath.row].price)"
+        cell.tripLabel.text = "\(carList[indexPath.row].trips) Trips"
+        cell.milesLabel.text = "\(carList[indexPath.row].miles) mil"
         
 
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 
@@ -182,19 +229,20 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "carDetailView" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "carDetailView" {
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! DetailViewController
+                controller.vehicle = carList[indexPath.row]
+            }
+            
 //            if segue.destination is DetailViewController {
-//            
-//                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//                self.navigationController?.navigationBar.shadowImage = UIImage()
-//                self.navigationController?.navigationBar.isTranslucent = true
-//                self.navigationController?.navigationBar.barTintColor = UIColor.clear
+//
+//
 //            }
-//
-//
-//        }
-//    }
+        }
+    }
     
     
      @IBAction func unwindToFleet(segue: UIStoryboardSegue) {}

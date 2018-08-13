@@ -16,6 +16,8 @@
 		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
 		353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 353D3BF4210A5BEB00CF748C /* InfoPlist.strings */; };
 		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
+		355D02B1211DDF9200B681D4 /* TripDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */; };
+		355D02B3211DE30100B681D4 /* PickUpAndReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */; };
 		3562EB81211B7D56001C8A3B /* CarAttributesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562EB80211B7D56001C8A3B /* CarAttributesCell.swift */; };
 		35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingMapViewController.swift */; };
 		35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */; };
@@ -107,6 +109,8 @@
 		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
 		353D3BF4210A5BEB00CF748C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
+		355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDatesViewController.swift; sourceTree = "<group>"; };
+		355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpAndReturnViewController.swift; sourceTree = "<group>"; };
 		3562EB80211B7D56001C8A3B /* CarAttributesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAttributesCell.swift; sourceTree = "<group>"; };
 		35789D1620F4412400A07445 /* BookingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMapViewController.swift; sourceTree = "<group>"; };
 		35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocationSearchTable.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
 				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
 				3562EB80211B7D56001C8A3B /* CarAttributesCell.swift */,
+				355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */,
+				355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */,
 			);
 			path = "Fleet View";
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				3562EB81211B7D56001C8A3B /* CarAttributesCell.swift in Sources */,
 				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
+				355D02B1211DDF9200B681D4 /* TripDatesViewController.swift in Sources */,
 				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
 				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
@@ -669,6 +676,7 @@
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
 				3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */,
+				355D02B3211DE30100B681D4 /* PickUpAndReturnViewController.swift in Sources */,
 				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
