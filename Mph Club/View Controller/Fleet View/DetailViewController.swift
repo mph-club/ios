@@ -21,6 +21,21 @@ class SimilarCarCell: UICollectionViewCell {
     
 }
 
+extension UIColor {
+    
+    /// Converts this `UIColor` instance to a 1x1 `UIImage` instance and returns it.
+    ///
+    /// - Returns: `self` as a 1x1 `UIImage`.
+    func as1ptImage() -> UIImage {
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        setFill()
+        UIGraphicsGetCurrentContext()?.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -110,6 +125,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         scrollView.isDirectionalLockEnabled = false
         
         print(vehicle!)
@@ -181,6 +198,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
+
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     }
     
@@ -188,10 +206,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if let navigationController = self.navigationController {
-            let navigationBar = navigationController.navigationBar
-            let navBorder: UIView = UIView(frame: CGRect(x: 0, y: navigationBar.frame.size.height - 0.25, width: navigationBar.frame.size.width, height: 0.3))
-       
+        if self.navigationController != nil {
         
             var offset = scrollView.contentOffset.y / 150
             if offset > 1 {
@@ -200,6 +215,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
                 self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
                 self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
                 self.navigationController?.navigationBar.shadowImage = UIImage()
+                self.navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
                 self.navigationController?.navigationBar.isTranslucent = true
                 self.navigationController?.navigationBar.backgroundColor = color
                 UIApplication.shared.statusBarView?.backgroundColor = color
@@ -208,17 +224,11 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
                 newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
                 self.navigationItem.leftBarButtonItem = newBackButton
                 self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
-                
-                
-                    // Set the color you want here
-                    navBorder.backgroundColor = UIColor.lightGray
-                    navBorder.isOpaque = true
-                    self.navigationController?.navigationBar.addSubview(navBorder)
-                
-                
-                
+
                 
             } else {
+                
+                self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
                 let color = UIColor.clear
                 self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
                 self.navigationController?.navigationBar.backgroundColor = color
@@ -229,12 +239,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
                 self.navigationItem.leftBarButtonItem = newBackButton
                 self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
                 
-              
-                    // Set the color you want here
-                navBorder.backgroundColor = UIColor.clear
-               // navBorder.isOpaque = false
-                self.navigationController?.navigationBar.addSubview(navBorder)
-              
             }
         }
         
