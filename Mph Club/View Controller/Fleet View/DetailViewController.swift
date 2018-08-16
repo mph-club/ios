@@ -214,8 +214,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
             if offset > 1 {
                 
                 UIView.animate(withDuration: 1, animations: {
-                    self.vehicleImg.frame.size.width -= 4
-                    self.vehicleImg.frame.size.height -= 4
+                    self.vehicleImg.frame.size.width -= offset
+                    self.vehicleImg.frame.size.height -= offset
                 }, completion: nil)
                 
                 
@@ -238,8 +238,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
             } else {
                 
                 UIView.animate(withDuration: 1, animations: {
-                    self.vehicleImg.frame.size.width += 4
-                    self.vehicleImg.frame.size.height += 4
+                    self.vehicleImg.frame.size.width += offset
+                    self.vehicleImg.frame.size.height += offset
                 }, completion: nil)
                 
                 self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()

@@ -827,7 +827,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.596069"
+            timestampString = "556145801.776077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "324"
@@ -843,7 +843,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.596366"
+            timestampString = "556145801.77639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "281"
@@ -859,7 +859,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.596565"
+            timestampString = "556145801.776601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "229"
@@ -875,7 +875,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.596766"
+            timestampString = "556145801.776817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -891,7 +891,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.5969599"
+            timestampString = "556145801.777024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -907,7 +907,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.597151"
+            timestampString = "556145801.7772321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
@@ -923,7 +923,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.597342"
+            timestampString = "556145801.777439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "307"
@@ -1163,7 +1163,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.597741"
+            timestampString = "556145801.777897"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "380"
@@ -1179,7 +1179,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.597937"
+            timestampString = "556145801.778109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "399"
@@ -1387,7 +1387,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "556132757.5983059"
+            timestampString = "556145801.778536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "332"
@@ -1467,7 +1467,7 @@
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/AddAPhotoOfCarViewController.swift"
-                  timestampString = "556132758.137934"
+                  timestampString = "556136804.369168"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -1482,7 +1482,7 @@
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/AddAPhotoOfCarViewController.swift"
-                  timestampString = "556132758.139681"
+                  timestampString = "556136804.371264"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -2283,13 +2283,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.599242"
+            timestampString = "556145801.779685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
+            startingLineNumber = "288"
+            endingLineNumber = "288">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2299,13 +2297,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.599712"
+            timestampString = "556145801.780189"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "DetailViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2315,11 +2313,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.6000921"
+            timestampString = "556145801.7806619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2331,12 +2329,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.600548"
+            timestampString = "556145801.781132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "setDummyData()"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
+            timestampString = "556145801.7816041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
+            landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2347,28 +2361,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.600952"
+            timestampString = "556145801.782058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "setDummyData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.601343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2379,13 +2377,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Fleet View/DetailViewController.swift"
-            timestampString = "556132757.60173"
+            timestampString = "556145801.7825021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "statusBarView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
