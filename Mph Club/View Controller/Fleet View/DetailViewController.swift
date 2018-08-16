@@ -207,9 +207,18 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if self.navigationController != nil {
+            
+
         
             var offset = scrollView.contentOffset.y / 150
             if offset > 1 {
+                
+                UIView.animate(withDuration: 1, animations: {
+                    self.vehicleImg.frame.size.width -= 4
+                    self.vehicleImg.frame.size.height -= 4
+                }, completion: nil)
+                
+                
                 offset = 1
                 let color = UIColor.white
                 self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
@@ -227,6 +236,11 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
 
                 
             } else {
+                
+                UIView.animate(withDuration: 1, animations: {
+                    self.vehicleImg.frame.size.width += 4
+                    self.vehicleImg.frame.size.height += 4
+                }, completion: nil)
                 
                 self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
                 let color = UIColor.clear
