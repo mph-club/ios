@@ -260,7 +260,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-tS-byq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2300"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="goL-Mn-xvU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="goL-Mn-xvU">
                                         <rect key="frame" x="-2" y="-85" width="378" height="318"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shh-cJ-Qso">
@@ -651,7 +651,9 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vPU-tS-byq" secondAttribute="bottom" id="CxX-tE-XzA"/>
                             <constraint firstItem="goL-Mn-xvU" firstAttribute="top" secondItem="J5s-jS-ppq" secondAttribute="bottom" constant="-85" id="FGc-Rv-59M"/>
+                            <constraint firstAttribute="trailing" secondItem="goL-Mn-xvU" secondAttribute="trailing" constant="-1" id="Lsl-Vw-UiC"/>
                             <constraint firstItem="vPU-tS-byq" firstAttribute="top" secondItem="EwV-Ol-Cxd" secondAttribute="top" id="MIz-fY-Jzv"/>
+                            <constraint firstItem="goL-Mn-xvU" firstAttribute="leading" secondItem="EwV-Ol-Cxd" secondAttribute="leading" constant="-2" id="xJa-xQ-S3t"/>
                             <constraint firstAttribute="trailing" secondItem="vPU-tS-byq" secondAttribute="trailing" id="ye4-hg-i7e"/>
                             <constraint firstItem="vPU-tS-byq" firstAttribute="leading" secondItem="EwV-Ol-Cxd" secondAttribute="leading" id="zqi-vl-3M8"/>
                         </constraints>
