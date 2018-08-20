@@ -8,14 +8,18 @@
 import UIKit
 import JTAppleCalendar
 
-class CalenderViewController: UIViewController {
+class TestRangeSelectionViewController: UIViewController {
     
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var save: UIButton!
+    
     let df = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.save.layer.cornerRadius = 4
         
         calendarView.visibleDates() { visibleDates in
             self.setupMonthLabel(date: visibleDates.monthDates.first!.date)
@@ -25,6 +29,11 @@ class CalenderViewController: UIViewController {
         calendarView.allowsMultipleSelection = true
         
     }
+    
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func setupMonthLabel(date: Date) {
         df.dateFormat = "MMM"
@@ -116,7 +125,7 @@ extension TestRangeSelectionViewController: JTAppleCalendarViewDelegate, JTApple
 
 
 
-class CalenderViewController: JTAppleCell {
+class TestRangeSelectionViewControllerCell: JTAppleCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var selectedView: UIView!
 }

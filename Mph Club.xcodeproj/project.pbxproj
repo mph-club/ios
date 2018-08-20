@@ -16,7 +16,6 @@
 		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
 		353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 353D3BF4210A5BEB00CF748C /* InfoPlist.strings */; };
 		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
-		355BE1ED212200B600FCCDC2 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BE1EC212200B600FCCDC2 /* CalenderViewController.swift */; };
 		355D02B1211DDF9200B681D4 /* TripDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */; };
 		355D02B3211DE30100B681D4 /* PickUpAndReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */; };
 		355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355D02BA2121F6AF00B681D4 /* CellView.xib */; };
@@ -51,6 +50,7 @@
 		3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */; };
 		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
 		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
+		358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -112,7 +112,6 @@
 		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
 		353D3BF4210A5BEB00CF748C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
-		355BE1EC212200B600FCCDC2 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDatesViewController.swift; sourceTree = "<group>"; };
 		355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpAndReturnViewController.swift; sourceTree = "<group>"; };
 		355D02BA2121F6AF00B681D4 /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingApprovalViewController.swift; sourceTree = "<group>"; };
 		3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
 		3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
+		358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRangeSelectionViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,9 +261,9 @@
 		355D02B92121F68F00B681D4 /* Calender */ = {
 			isa = PBXGroup;
 			children = (
+				358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */,
 				355D02BA2121F6AF00B681D4 /* CellView.xib */,
 				355D02BC2121F6F300B681D4 /* CellView.swift */,
-				355BE1EC212200B600FCCDC2 /* CalenderViewController.swift */,
 			);
 			name = Calender;
 			path = "New Group";
@@ -688,9 +688,9 @@
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
+				358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */,
 				35CC0D8320F7A34E00575225 /* TableViewCell.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
-				355BE1ED212200B600FCCDC2 /* CalenderViewController.swift in Sources */,
 				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
 				35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */,
 				3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */,
