@@ -145,15 +145,30 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         
         self.continueButton.layer.cornerRadius = 5
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setNavigationBarStyle()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
+    }
+    
+    func setNavigationBarStyle() {
+        let color = UIColor.white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = color
+        UIApplication.shared.statusBarView?.backgroundColor = color
     }
     
     func reviews() {
@@ -192,67 +207,59 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         similarCarList.append(SimilarCar(title: "Ferrari California 2015", img: "dontknowcar", price: 200, trips: 4))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
 
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
-    }
     
     
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if self.navigationController != nil {
-            
-
-        
-            var offset = scrollView.contentOffset.y / 150
-            if offset > 1 {
-                
-                self.vehicleImg.frame.size.width -= offset
-                self.vehicleImg.frame.size.height -= offset
-                
-                
-                offset = 1
-                let color = UIColor.white
-                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
-                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-                self.navigationController?.navigationBar.shadowImage = UIImage()
-                self.navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
-                self.navigationController?.navigationBar.isTranslucent = true
-                self.navigationController?.navigationBar.backgroundColor = color
-                UIApplication.shared.statusBarView?.backgroundColor = color
-                
-                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
-                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
-                self.navigationItem.leftBarButtonItem = newBackButton
-                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
-
-                
-            } else {
-                self.vehicleImg.frame.size.width += offset
-                self.vehicleImg.frame.size.height += offset
-
-                
-                self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
-                let color = UIColor.clear
-                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
-                self.navigationController?.navigationBar.backgroundColor = color
-                UIApplication.shared.statusBarView?.backgroundColor = color
-                
-                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
-                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
-                self.navigationItem.leftBarButtonItem = newBackButton
-                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-                
-            }
-        }
-        
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//
+//        if self.navigationController != nil {
+//
+//
+//
+//            var offset = scrollView.contentOffset.y / 150
+//            if offset > 1 {
+//
+//                self.vehicleImg.frame.size.width -= offset
+//                self.vehicleImg.frame.size.height -= offset
+//
+//
+//                offset = 1
+//                let color = UIColor.white
+//                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+//                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//                self.navigationController?.navigationBar.shadowImage = UIImage()
+//                self.navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
+//                self.navigationController?.navigationBar.isTranslucent = true
+//                self.navigationController?.navigationBar.backgroundColor = color
+//                UIApplication.shared.statusBarView?.backgroundColor = color
+//
+//                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+//                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
+//                self.navigationItem.leftBarButtonItem = newBackButton
+//                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+//
+//
+//            } else {
+//                self.vehicleImg.frame.size.width += offset
+//                self.vehicleImg.frame.size.height += offset
+//
+//
+//                self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
+//                let color = UIColor.clear
+//                self.navigationController?.navigationBar.tintColor = UIColor(hue: 1, saturation: offset, brightness: 1, alpha: 1)
+//                self.navigationController?.navigationBar.backgroundColor = color
+//                UIApplication.shared.statusBarView?.backgroundColor = color
+//
+//                let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+//                newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
+//                self.navigationItem.leftBarButtonItem = newBackButton
+//                self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+//
+//            }
+//        }
+//
+//    }
     
     
     
