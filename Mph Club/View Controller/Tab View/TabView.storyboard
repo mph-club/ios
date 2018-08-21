@@ -1598,7 +1598,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl1-im-4PX">
-                                <rect key="frame" x="0.0" y="550.33333333333337" width="375" height="127.66666666666663"/>
+                                <rect key="frame" x="0.0" y="569.33333333333337" width="375" height="108.66666666666663"/>
                                 <connections>
                                     <segue destination="ani-n0-WR9" kind="embed" id="kfa-rh-Nz7"/>
                                 </connections>
@@ -1640,11 +1640,11 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-CA-IWC">
-                                <rect key="frame" x="0.0" y="179" width="375" height="371"/>
+                                <rect key="frame" x="0.0" y="198" width="375" height="371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-zv-ory">
-                                        <rect key="frame" x="166.66666666666666" y="0.0" width="41.666666666666657" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="165.66666666666666" y="0.0" width="43.666666666666657" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1713,7 +1713,7 @@
                             <constraint firstItem="hr0-te-jcL" firstAttribute="centerX" secondItem="sl1-im-4PX" secondAttribute="centerX" id="I3P-UM-VYg"/>
                             <constraint firstItem="AbV-CA-IWC" firstAttribute="leading" secondItem="Gp0-TW-xFd" secondAttribute="leading" id="KHH-Py-Q2Z"/>
                             <constraint firstItem="sl1-im-4PX" firstAttribute="leading" secondItem="AbV-CA-IWC" secondAttribute="leading" id="TBs-VW-cS5"/>
-                            <constraint firstItem="AbV-CA-IWC" firstAttribute="top" secondItem="R7n-ha-lKg" secondAttribute="bottom" constant="91" id="V0J-TZ-WrZ"/>
+                            <constraint firstItem="AbV-CA-IWC" firstAttribute="top" secondItem="R7n-ha-lKg" secondAttribute="bottom" constant="110" id="V0J-TZ-WrZ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="hr0-te-jcL" secondAttribute="bottom" constant="8" id="g5E-Ei-ugZ"/>
                             <constraint firstItem="hr0-te-jcL" firstAttribute="leading" secondItem="Gp0-TW-xFd" secondAttribute="leadingMargin" id="p9Y-bl-N7y"/>
                             <constraint firstItem="5Xw-Od-qA4" firstAttribute="width" secondItem="Gp0-TW-xFd" secondAttribute="width" id="qke-Fr-2tv"/>
@@ -1765,7 +1765,7 @@
             <objects>
                 <tableViewController id="ani-n0-WR9" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uf0-zP-VwH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="127.66666666666663"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108.66666666666663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>

@@ -36,7 +36,8 @@ class TestRangeSelectionViewController: UIViewController {
     
     
     func setupMonthLabel(date: Date) {
-        df.dateFormat = "MMM"
+        print(date)
+        df.dateFormat = "MMMM YYYY"
         monthLabel.text = df.string(from: date)
     }
     
