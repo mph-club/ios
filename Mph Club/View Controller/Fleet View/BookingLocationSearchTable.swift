@@ -62,6 +62,8 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
         
         if (selectedItem.name?.contains("Airport"))! {
             cell.iconImage.image = UIImage(named: "plane")
+        } else if (selectedItem.name?.contains("mph club"))! {
+            cell.iconImage.image = UIImage(named: "lion-28px")
         } else {
             cell.iconImage.image = UIImage(named: "pin")
         }

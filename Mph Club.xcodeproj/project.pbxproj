@@ -52,6 +52,10 @@
 		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
 		358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */; };
 		358DB0AA212C826F00E3822B /* BookingSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A9212C826F00E3822B /* BookingSearchCell.swift */; };
+		358DB0AC212C8DC900E3822B /* StartTimeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0AB212C8DC900E3822B /* StartTimeTVC.swift */; };
+		358DB0AE212C8DE900E3822B /* EndTimeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0AD212C8DE900E3822B /* EndTimeTVC.swift */; };
+		358DB0B0212CA43E00E3822B /* FeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0AF212CA43E00E3822B /* FeaturesTableViewController.swift */; };
+		358DB0B2212CA5CC00E3822B /* FeatureContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0B1212CA5CC00E3822B /* FeatureContainerVC.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -149,6 +153,10 @@
 		3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
 		358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRangeSelectionViewController.swift; sourceTree = "<group>"; };
 		358DB0A9212C826F00E3822B /* BookingSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSearchCell.swift; sourceTree = "<group>"; };
+		358DB0AB212C8DC900E3822B /* StartTimeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeTVC.swift; sourceTree = "<group>"; };
+		358DB0AD212C8DE900E3822B /* EndTimeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeTVC.swift; sourceTree = "<group>"; };
+		358DB0AF212CA43E00E3822B /* FeaturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewController.swift; sourceTree = "<group>"; };
+		358DB0B1212CA5CC00E3822B /* FeatureContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureContainerVC.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -402,6 +410,10 @@
 				355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */,
 				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
 				358DB0A9212C826F00E3822B /* BookingSearchCell.swift */,
+				358DB0AB212C8DC900E3822B /* StartTimeTVC.swift */,
+				358DB0AD212C8DE900E3822B /* EndTimeTVC.swift */,
+				358DB0AF212CA43E00E3822B /* FeaturesTableViewController.swift */,
+				358DB0B1212CA5CC00E3822B /* FeatureContainerVC.swift */,
 			);
 			path = "Fleet View";
 			sourceTree = "<group>";
@@ -687,6 +699,7 @@
 				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
+				358DB0AC212C8DC900E3822B /* StartTimeTVC.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
@@ -705,6 +718,7 @@
 				355D02B3211DE30100B681D4 /* PickUpAndReturnViewController.swift in Sources */,
 				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
+				358DB0B0212CA43E00E3822B /* FeaturesTableViewController.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
 				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
@@ -720,11 +734,13 @@
 				3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */,
 				357E09082100D2A40033FD0E /* TellUsAboutYourCarViewController.swift in Sources */,
 				357E090020FFB0D90033FD0E /* PhotoViewController.swift in Sources */,
+				358DB0AE212C8DE900E3822B /* EndTimeTVC.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */,
 				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				358DB0B2212CA5CC00E3822B /* FeatureContainerVC.swift in Sources */,
 				35CC0D8920F7A42100575225 /* UIScrollView+ScalableCover.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
 				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,

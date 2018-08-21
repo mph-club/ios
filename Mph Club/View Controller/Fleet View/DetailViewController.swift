@@ -158,6 +158,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     }
     
@@ -186,7 +187,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         self.textView.textColor = UIColor.black
         
         let linkAttributes: [String : Any] = [
-            NSAttributedStringKey.foregroundColor.rawValue: UIColor.blue,
+            NSAttributedStringKey.foregroundColor.rawValue: UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0),
             NSAttributedStringKey.underlineColor.rawValue: UIColor.lightGray,
             NSAttributedStringKey.underlineStyle.rawValue: NSUnderlineStyle.styleSingle.rawValue
         ]
