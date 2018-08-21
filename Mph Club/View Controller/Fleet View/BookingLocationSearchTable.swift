@@ -57,10 +57,17 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BookingSearchCell
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
-        cell.textLabel?.text = selectedItem.name
-        cell.detailTextLabel?.text = parseAddress(selectedItem)
+        
+        if (selectedItem.name?.contains("Airport"))! {
+            cell.iconImage.image = UIImage(named: "plane")
+        } else {
+            cell.iconImage.image = UIImage(named: "pin")
+        }
+        
+        cell.placeLabel.text = selectedItem.name
+        cell.addressLabel.text = parseAddress(selectedItem)
         return cell
     }
     
@@ -83,6 +90,10 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
         }
         
 
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
     
 }

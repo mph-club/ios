@@ -51,6 +51,7 @@
 		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
 		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
 		358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */; };
+		358DB0AA212C826F00E3822B /* BookingSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A9212C826F00E3822B /* BookingSearchCell.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -147,6 +148,7 @@
 		3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
 		3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
 		358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRangeSelectionViewController.swift; sourceTree = "<group>"; };
+		358DB0A9212C826F00E3822B /* BookingSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSearchCell.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -395,10 +397,11 @@
 				35DAA31720F401280083CA93 /* FleetTableViewController.swift */,
 				35DAA31B20F40A320083CA93 /* DetailViewController.swift */,
 				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
-				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
 				3562EB80211B7D56001C8A3B /* CarAttributesCell.swift */,
 				355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */,
 				355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */,
+				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
+				358DB0A9212C826F00E3822B /* BookingSearchCell.swift */,
 			);
 			path = "Fleet View";
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
+				358DB0AA212C826F00E3822B /* BookingSearchCell.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
 				3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */,
