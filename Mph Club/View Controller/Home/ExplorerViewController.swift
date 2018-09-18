@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AWSCognitoIdentityProvider
 
 class ExplorerViewController: UITableViewController {
+    
+    var response: AWSCognitoIdentityUserGetDetailsResponse?
+    var user: AWSCognitoIdentityUser?
+    var pool: AWSCognitoIdentityUserPool?
     
     private var lastContentOffset: CGFloat = 0
     
@@ -24,9 +29,6 @@ class ExplorerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  self.title = "mph club"
-        
-        
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 7))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "mph-club-logo")
@@ -42,8 +44,19 @@ class ExplorerViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         createButton()
+
     }
     
+    
+    
+    func refresh() {
+        self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+            DispatchQueue.main.async(execute: {
+                self.response = task.result
+            })
+            return nil
+        }
+    }
     
     func createButton() {
         
@@ -74,7 +87,7 @@ class ExplorerViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         let navigationBar = navigationController!.navigationBar
         navigationBar.attachToScrollView(tableView)
         
@@ -83,6 +96,11 @@ class ExplorerViewController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
 
+        self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+        if (self.user == nil) {
+            self.user = self.pool?.currentUser()
+        }
+        refresh()
     }
     
     

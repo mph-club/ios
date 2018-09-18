@@ -12,7 +12,6 @@ class StartTimeTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(StartTimeTVC.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black

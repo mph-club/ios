@@ -22,10 +22,9 @@ struct Vehicle {
     var miles: Int
 }
 
+
 class FleetTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-  //  var newBackButton = UIBarButtonItem()
-    
     var carList = [Vehicle]()
     @IBOutlet weak var tripPreferenceBox: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -84,6 +83,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -94,10 +94,6 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @objc func back(sender: UIBarButtonItem) {
         _ = navigationController?.popViewController(animated: true)
@@ -106,35 +102,26 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return carList.count
     }
 
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! FleetTableViewCell
-
-        // Configure the cell...
-        
-        
         cell.carImage.image = UIImage(named: carList[indexPath.row].img)
         cell.titleLabel.text = carList[indexPath.row].title
         cell.priceLabel.text = "\(carList[indexPath.row].price)"
         cell.tripLabel.text = "\(carList[indexPath.row].trips) Trips"
         cell.milesLabel.text = "\(carList[indexPath.row].miles) mil"
-        
-
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 
 
@@ -145,126 +132,53 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     var num = Int()
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
         if(velocity.y>0) {
-            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
-            UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-              //  self.navigationController?.setToolbarHidden(true, animated: true)
-                print("Hide")
-                
-                
-                // Move trip preference box up
-                if self.tripPreferenceBox.frame.maxY > 149.5 {
-//                    if velocity > 400.0 {
-//                        self.num += -10
-//                    } else if velocity > 200.0 {
-//                        self.num += -3
-//                    } else {
-//                        self.num += -3
-//                    }
-                    //   print("Moving down: \(scrollView.panGestureRecognizer.velocity(in: tableView))")
-                    
-                    
-                    
-                    
-                 //   self.tripPreferenceBox.transform = CGAffineTransform(translationX: 0, y: CGFloat(self.num))
-                    
-                    
-                }
-                
-                
-                
-              //  self.tableView.frame = CGRect(x: 15, y: 40, width: 360, height: 400)
-                
-                
-            }, completion: nil)
-            
-            
-            
-            UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.tripPreferenceBox.frame = CGRect(x: 15, y: 40, width: self.view.frame.width-25, height: 90)
-                self.tableView.frame = CGRect(x: 15, y: 150, width: self.view.frame.width-25, height: self.view.frame.height-150)
-            }, completion: nil)
-            
-            
-            
-            
+            self.hidePreferenceBox()
         } else {
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                //self.navigationController?.setToolbarHidden(false, animated: true)
-                print("Unhide")
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.tripPreferenceBox.frame = CGRect(x: 15, y: 105, width: self.view.frame.width-25, height: 90)
-                self.tableView.frame = CGRect(x: 15, y: 210, width: self.view.frame.width-25, height: self.view.frame.height-210)
-            }, completion: nil)
+            self.unHidePreferenceBox()
         }
     }
     
+    func hidePreferenceBox() {
+        UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions(), animations: {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            if self.tripPreferenceBox.frame.maxY > 149.5 {
+                
+            }
+            
+        }, completion: nil)
+      
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: {
+            self.tripPreferenceBox.frame = CGRect(x: 15, y: 40, width: self.view.frame.width-25, height: 90)
+            self.tableView.frame = CGRect(x: 15, y: 150, width: self.view.frame.width-25, height: self.view.frame.height-150)
+        }, completion: nil)
+    }
+    
+    
+    func unHidePreferenceBox() {
+        UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions(), animations: {
+            self.tripPreferenceBox.frame = CGRect(x: 15, y: 105, width: self.view.frame.width-25, height: 90)
+            self.tableView.frame = CGRect(x: 15, y: 210, width: self.view.frame.width-25, height: self.view.frame.height-210)
+        }, completion: nil)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "carDetailView" {
-            
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = segue.destination as! DetailViewController
                 controller.vehicle = carList[indexPath.row]
             }
-            
-//            if segue.destination is DetailViewController {
-//
-//
-//            }
+        
         }
     }
     
     
      @IBAction func unwindToFleet(segue: UIStoryboardSegue) {}
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -56,9 +56,6 @@
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="e2B-lZ-Uoy" kind="show" id="alU-Rd-yoi"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-Wt-mUw">
                                 <rect key="frame" x="189" y="710" width="186" height="54"/>
@@ -103,6 +100,7 @@
                         <outlet property="containerView" destination="Mds-sc-glt" id="Otg-dt-tZp"/>
                         <outlet property="pageControl" destination="2F7-ua-6Kf" id="eQy-H6-h0j"/>
                         <segue destination="Zoz-pa-M7D" kind="show" identifier="goToTabView" id="Jxl-HR-GUY"/>
+                        <segue destination="abT-Td-MBF" kind="show" id="hxe-4P-bmV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLO-tf-LIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,16 +312,127 @@ while in town</string>
             </objects>
             <point key="canvasLocation" x="3263" y="-1405"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="qfp-uG-JBA">
+        <!--Sign In View Controller-->
+        <scene sceneID="evA-XR-noW">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="e2B-lZ-Uoy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmr-6U-JJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="signinController" automaticallyAdjustsScrollViewInsets="NO" id="abT-Td-MBF" customClass="SignInViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsS-GB-MjJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t10-wc-coL">
+                                <rect key="frame" x="0.0" y="325" width="375" height="675"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72x-8n-92d" userLabel="ContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-27-lbB" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="36" width="312" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1gt-V3-Sjm" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="82" width="312" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owh-L2-1gt">
+                                                <rect key="frame" x="31" y="134" width="312" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signInPressed:" destination="abT-Td-MBF" eventType="touchUpInside" id="2v5-Wp-hcM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98c-d2-GAy">
+                                                <rect key="frame" x="116" y="273" width="138" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="signOut:" destination="abT-Td-MBF" eventType="touchUpInside" id="pS4-Fq-Y28"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="675" id="r7T-Lb-2fh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="72x-8n-92d" firstAttribute="leading" secondItem="t10-wc-coL" secondAttribute="leading" id="UXq-gh-CE2"/>
+                                    <constraint firstAttribute="trailing" secondItem="72x-8n-92d" secondAttribute="trailing" id="XL1-fV-GOm"/>
+                                    <constraint firstItem="72x-8n-92d" firstAttribute="top" secondItem="t10-wc-coL" secondAttribute="top" id="aZZ-7i-qh7"/>
+                                    <constraint firstAttribute="bottom" secondItem="72x-8n-92d" secondAttribute="bottom" id="hv6-dz-tev"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mercedes-Maybach-6-Cabriolet-HP" translatesAutoresizingMaskIntoConstraints="NO" id="Dno-0s-rA3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="325"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="1bq-A4-Mdf"/>
+                                    <constraint firstAttribute="height" constant="325" id="x5t-0g-NdE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K51-AX-Chg">
+                                <rect key="frame" x="331" y="40" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0Qa-z4-gZF"/>
+                                    <constraint firstAttribute="width" constant="28" id="M20-yh-MNA"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close28Px"/>
+                                <connections>
+                                    <action selector="close:" destination="abT-Td-MBF" eventType="touchUpInside" id="1hd-MV-j98"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f7C-T5-G1R" firstAttribute="trailing" secondItem="K51-AX-Chg" secondAttribute="trailing" constant="16" id="5Ii-Jp-SlK"/>
+                            <constraint firstItem="t10-wc-coL" firstAttribute="leading" secondItem="f7C-T5-G1R" secondAttribute="leading" id="6cI-jU-yws"/>
+                            <constraint firstItem="t10-wc-coL" firstAttribute="trailing" secondItem="f7C-T5-G1R" secondAttribute="trailing" id="B3M-eJ-k3r"/>
+                            <constraint firstItem="Dno-0s-rA3" firstAttribute="leading" secondItem="t10-wc-coL" secondAttribute="leading" id="JNe-a3-tI1"/>
+                            <constraint firstItem="K51-AX-Chg" firstAttribute="top" secondItem="gsS-GB-MjJ" secondAttribute="top" constant="40" id="Wp1-qh-hTu"/>
+                            <constraint firstItem="t10-wc-coL" firstAttribute="bottom" secondItem="f7C-T5-G1R" secondAttribute="bottom" constant="34" id="Yej-Y9-zy4"/>
+                            <constraint firstItem="Dno-0s-rA3" firstAttribute="top" secondItem="gsS-GB-MjJ" secondAttribute="top" id="dQq-3f-UrR"/>
+                            <constraint firstItem="72x-8n-92d" firstAttribute="width" secondItem="gsS-GB-MjJ" secondAttribute="width" id="gRt-kx-iF9"/>
+                            <constraint firstItem="t10-wc-coL" firstAttribute="top" secondItem="gsS-GB-MjJ" secondAttribute="top" constant="325" id="n2x-kC-n37"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f7C-T5-G1R"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="password" destination="1gt-V3-Sjm" id="fKz-lQ-IdD"/>
+                        <outlet property="username" destination="rAA-27-lbB" id="AA6-Sj-l0w"/>
+                        <segue destination="UdT-PS-bJW" kind="presentation" identifier="goToTabView" modalPresentationStyle="currentContext" id="kKx-bS-d1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAJ-Qg-ITH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h8L-sL-CjY"/>
             </objects>
-            <point key="canvasLocation" x="3084" y="-1046"/>
+            <point key="canvasLocation" x="4098" y="-723"/>
+        </scene>
+        <!--TabView-->
+        <scene sceneID="eKK-4e-OhY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabView" id="UdT-PS-bJW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZL-Gh-Dw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4822" y="-762"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
+        <image name="close28Px" width="28" height="28"/>
         <image name="walkthrough1" width="187" height="406"/>
         <image name="walkthrough2" width="187" height="406"/>
         <image name="walkthrough3" width="187" height="406"/>

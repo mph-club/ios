@@ -162,6 +162,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     }
     
+    
+    
     func setNavigationBarStyle() {
         let color = UIColor.white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

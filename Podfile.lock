@@ -1,20 +1,42 @@
 PODS:
   - APJTextPickerView (0.0.7)
+  - AWSCognito (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSCognitoIdentityProvider (2.6.28):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.6.28)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.6.28)
   - JTAppleCalendar (7.1.5)
+  - UICKeyChainStore (2.0.7)
 
 DEPENDENCIES:
   - APJTextPickerView
+  - AWSCognito (~> 2.6.28)
+  - AWSCognitoIdentityProvider (~> 2.6.0)
+  - AWSCore (~> 2.6.0)
   - JTAppleCalendar (~> 7.0)
+  - UICKeyChainStore (~> 2.0.6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - APJTextPickerView
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
     - JTAppleCalendar
+    - UICKeyChainStore
 
 SPEC CHECKSUMS:
   APJTextPickerView: 2c2b6ca0f2a8076b8e10e3d6f2e92add429118e5
+  AWSCognito: 7e4b529f1e19ce04a00dec4de175509dd5001d5f
+  AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: bc73582f6293f5de9904d9152903cc04bfb5ebd3
+PODFILE CHECKSUM: e876a4aac75029041f9b58b66c10176f1eddcd00
 
 COCOAPODS: 1.5.3
