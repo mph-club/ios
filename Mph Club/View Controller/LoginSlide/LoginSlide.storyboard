@@ -12,14 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login Slide View Controller-->
-        <scene sceneID="0mZ-Bn-K1L">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="y1k-NM-Vl4" customClass="LoginSlideViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6as-0N-QZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2681" y="-650"/>
-        </scene>
         <!--Login Slide Main View Controller-->
         <scene sceneID="lEI-L1-7lg">
             <objects>
@@ -31,9 +23,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mds-sc-glt">
                                 <rect key="frame" x="0.0" y="-44" width="375" height="856"/>
                                 <viewLayoutGuide key="safeArea" id="yJP-mo-RE6"/>
-                                <connections>
-                                    <segue destination="y1k-NM-Vl4" kind="embed" id="xBg-dM-Xe7"/>
-                                </connections>
                             </containerView>
                             <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1R-HA-1xs">
                                 <rect key="frame" x="0.0" y="707" width="375" height="62"/>
@@ -122,179 +111,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8n-a8-UUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="-1442"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2AB-9R-ZPG">
-            <objects>
-                <viewController storyboardIdentifier="slide2ViewController" id="IJJ-vk-8fe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFill" id="g89-8H-F4O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkthrough2" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-bx-TQf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-ps-Iv1">
-                                <rect key="frame" x="0.0" y="310" width="227" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="Avn-N0-vlQ"/>
-                                </constraints>
-                                <string key="text">Ride in style 
-while in town</string>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-iQ-H04">
-                                <rect key="frame" x="8" y="341" width="227" height="36"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide high-end cars but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p6J-xF-Tgh">
-                                <rect key="frame" x="20" y="378" width="208" height="128"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.37691648219761953" blue="0.34095968819223532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="qo9-iQ-H04" firstAttribute="leading" secondItem="PDq-lL-Vuv" secondAttribute="leading" constant="8" id="3GZ-gK-UnV"/>
-                            <constraint firstItem="Xaf-bx-TQf" firstAttribute="leading" secondItem="Lxe-ps-Iv1" secondAttribute="leading" id="DzD-67-WFg"/>
-                            <constraint firstItem="PDq-lL-Vuv" firstAttribute="trailing" secondItem="qo9-iQ-H04" secondAttribute="trailing" constant="140" id="MX1-X2-hFz"/>
-                            <constraint firstItem="Xaf-bx-TQf" firstAttribute="trailing" secondItem="PDq-lL-Vuv" secondAttribute="trailing" id="SaM-3p-bsw"/>
-                            <constraint firstItem="Lxe-ps-Iv1" firstAttribute="top" secondItem="PDq-lL-Vuv" secondAttribute="top" constant="266" id="Urn-j0-hhD"/>
-                            <constraint firstItem="PDq-lL-Vuv" firstAttribute="bottom" secondItem="p6J-xF-Tgh" secondAttribute="bottom" constant="272" id="XVw-j2-DJp"/>
-                            <constraint firstItem="Xaf-bx-TQf" firstAttribute="leading" secondItem="PDq-lL-Vuv" secondAttribute="leading" id="YLO-Vq-COD"/>
-                            <constraint firstItem="Xaf-bx-TQf" firstAttribute="top" secondItem="g89-8H-F4O" secondAttribute="top" id="Yex-Ez-ELe"/>
-                            <constraint firstAttribute="bottom" secondItem="Xaf-bx-TQf" secondAttribute="bottom" id="bEg-s1-aid"/>
-                            <constraint firstItem="p6J-xF-Tgh" firstAttribute="top" secondItem="qo9-iQ-H04" secondAttribute="bottom" constant="1" id="dlo-vT-FAE"/>
-                            <constraint firstItem="PDq-lL-Vuv" firstAttribute="trailing" secondItem="p6J-xF-Tgh" secondAttribute="trailing" constant="147" id="gDW-Za-WC1"/>
-                            <constraint firstItem="p6J-xF-Tgh" firstAttribute="leading" secondItem="PDq-lL-Vuv" secondAttribute="leading" constant="20" id="kAG-tc-sbZ"/>
-                            <constraint firstItem="PDq-lL-Vuv" firstAttribute="trailing" secondItem="Lxe-ps-Iv1" secondAttribute="trailing" constant="148" id="nkW-LM-Ie8"/>
-                            <constraint firstItem="qo9-iQ-H04" firstAttribute="top" secondItem="Lxe-ps-Iv1" secondAttribute="bottom" constant="8" symbolic="YES" id="u1g-lc-K1m"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="PDq-lL-Vuv"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="STd-Wh-m8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2682" y="16"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qer-eK-01j">
-            <objects>
-                <viewController storyboardIdentifier="slide3ViewController" id="Abl-Qb-R1p" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFill" id="MiM-jJ-Tvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkthrough3" translatesAutoresizingMaskIntoConstraints="NO" id="Mv7-d4-6Og">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="817"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nel-FE-fDB">
-                                <rect key="frame" x="0.0" y="308" width="227" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="lsc-lL-NgG"/>
-                                </constraints>
-                                <string key="text">Ride in style 
-while in town</string>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL3-yI-GL9">
-                                <rect key="frame" x="25.333333333333329" y="339" width="194.66666666666669" height="36"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide high-end cars but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-lP-dRd">
-                                <rect key="frame" x="19" y="373" width="208" height="128"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.29510286228086335" green="1" blue="0.95037076215977445" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="XsV-lP-dRd" firstAttribute="leading" secondItem="4tQ-HL-PSr" secondAttribute="leading" constant="19" id="2Li-60-kb3"/>
-                            <constraint firstItem="XsV-lP-dRd" firstAttribute="top" secondItem="nel-FE-fDB" secondAttribute="bottom" constant="42" id="Ehg-Vc-LKF"/>
-                            <constraint firstItem="nel-FE-fDB" firstAttribute="top" secondItem="4tQ-HL-PSr" secondAttribute="top" constant="264" id="JHe-qO-Ycd"/>
-                            <constraint firstItem="4tQ-HL-PSr" firstAttribute="trailing" secondItem="nel-FE-fDB" secondAttribute="trailing" constant="148" id="KLp-ff-BWI"/>
-                            <constraint firstItem="XsV-lP-dRd" firstAttribute="centerX" secondItem="bL3-yI-GL9" secondAttribute="centerX" id="Lvg-Vw-vDl"/>
-                            <constraint firstItem="Mv7-d4-6Og" firstAttribute="leading" secondItem="4tQ-HL-PSr" secondAttribute="leading" id="Ndw-BE-0Em"/>
-                            <constraint firstItem="Mv7-d4-6Og" firstAttribute="leading" secondItem="nel-FE-fDB" secondAttribute="leading" id="PTw-gi-fSh"/>
-                            <constraint firstItem="bL3-yI-GL9" firstAttribute="top" secondItem="nel-FE-fDB" secondAttribute="bottom" constant="8" symbolic="YES" id="Ty1-pu-SoK"/>
-                            <constraint firstItem="4tQ-HL-PSr" firstAttribute="bottom" secondItem="XsV-lP-dRd" secondAttribute="bottom" constant="277" id="aRm-HI-jhi"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Mv7-d4-6Og" secondAttribute="bottom" constant="-39" id="fer-87-H7O"/>
-                            <constraint firstItem="Mv7-d4-6Og" firstAttribute="trailing" secondItem="4tQ-HL-PSr" secondAttribute="trailing" id="hVL-oa-cSt"/>
-                            <constraint firstItem="Mv7-d4-6Og" firstAttribute="top" secondItem="MiM-jJ-Tvc" secondAttribute="top" id="mSD-Kz-d6D"/>
-                            <constraint firstItem="nel-FE-fDB" firstAttribute="trailing" secondItem="XsV-lP-dRd" secondAttribute="trailing" id="s25-sJ-OkW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4tQ-HL-PSr"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kY8-7x-dEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3335" y="16"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mqo-g9-Qi8">
-            <objects>
-                <viewController storyboardIdentifier="slide1ViewController" id="gco-yF-RQu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFill" id="2Ep-w4-m7i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkthrough1" translatesAutoresizingMaskIntoConstraints="NO" id="arr-r4-7yY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tci-az-kOK">
-                                <rect key="frame" x="0.0" y="310" width="227" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="dpd-ZV-Vvz"/>
-                                </constraints>
-                                <string key="text">Ride in style 
-while in town</string>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vG-w5-Mt7">
-                                <rect key="frame" x="8" y="341" width="227" height="36"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide high-end cars but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="llM-P0-4qu">
-                                <rect key="frame" x="20" y="378" width="208" height="128"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.37691648220000001" blue="0.3409596882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="arr-r4-7yY" secondAttribute="bottom" id="07i-gH-wVM"/>
-                            <constraint firstItem="Ye7-Ow-Cc2" firstAttribute="bottom" secondItem="llM-P0-4qu" secondAttribute="bottom" constant="272" id="1E9-1c-SAZ"/>
-                            <constraint firstItem="arr-r4-7yY" firstAttribute="leading" secondItem="Ye7-Ow-Cc2" secondAttribute="leading" id="B3P-QU-qa4"/>
-                            <constraint firstItem="llM-P0-4qu" firstAttribute="leading" secondItem="Ye7-Ow-Cc2" secondAttribute="leading" constant="20" id="B4T-0Y-sZo"/>
-                            <constraint firstItem="8vG-w5-Mt7" firstAttribute="leading" secondItem="Ye7-Ow-Cc2" secondAttribute="leading" constant="8" id="FWT-c0-udb"/>
-                            <constraint firstItem="8vG-w5-Mt7" firstAttribute="top" secondItem="Tci-az-kOK" secondAttribute="bottom" constant="8" symbolic="YES" id="IxS-sY-ART"/>
-                            <constraint firstItem="llM-P0-4qu" firstAttribute="top" secondItem="8vG-w5-Mt7" secondAttribute="bottom" constant="1" id="Pv7-e7-P9N"/>
-                            <constraint firstItem="Ye7-Ow-Cc2" firstAttribute="trailing" secondItem="llM-P0-4qu" secondAttribute="trailing" constant="147" id="ZdU-QM-90w"/>
-                            <constraint firstItem="arr-r4-7yY" firstAttribute="trailing" secondItem="Ye7-Ow-Cc2" secondAttribute="trailing" id="bme-f8-hpc"/>
-                            <constraint firstItem="Tci-az-kOK" firstAttribute="top" secondItem="Ye7-Ow-Cc2" secondAttribute="top" constant="266" id="cPU-hO-DEi"/>
-                            <constraint firstItem="arr-r4-7yY" firstAttribute="top" secondItem="2Ep-w4-m7i" secondAttribute="top" id="gS8-Ee-atA"/>
-                            <constraint firstItem="Ye7-Ow-Cc2" firstAttribute="trailing" secondItem="Tci-az-kOK" secondAttribute="trailing" constant="148" id="l08-1Q-E6c"/>
-                            <constraint firstItem="arr-r4-7yY" firstAttribute="leading" secondItem="Tci-az-kOK" secondAttribute="leading" id="pUH-9X-2FK"/>
-                            <constraint firstItem="Ye7-Ow-Cc2" firstAttribute="trailing" secondItem="8vG-w5-Mt7" secondAttribute="trailing" constant="140" id="wfA-Ew-Mdf"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ye7-Ow-Cc2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="odd-fO-Q8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1975" y="16"/>
         </scene>
         <!--TabView-->
         <scene sceneID="vdn-dC-F8A">
@@ -433,8 +249,5 @@ while in town</string>
     <resources>
         <image name="Mercedes-Maybach-6-Cabriolet-HP" width="802" height="601"/>
         <image name="close28Px" width="28" height="28"/>
-        <image name="walkthrough1" width="187" height="406"/>
-        <image name="walkthrough2" width="187" height="406"/>
-        <image name="walkthrough3" width="187" height="406"/>
     </resources>
 </document>

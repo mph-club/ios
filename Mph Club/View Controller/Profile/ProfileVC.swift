@@ -32,6 +32,7 @@ class ProfileVC: UIViewController {
     func refresh() {
         self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
             DispatchQueue.main.async(execute: {
+                _ = self.tabBarController?.selectedIndex = 0
                 self.response = task.result
             })
             return nil

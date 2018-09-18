@@ -17,16 +17,22 @@ class SignInViewController: UIViewController {
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
     var usernameText: String?
     
-    var response: AWSCognitoIdentityUserGetDetailsResponse?
-    var user: AWSCognitoIdentityUser?
-    var pool: AWSCognitoIdentityUserPool?
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+//    var response: AWSCognitoIdentityUserGetDetailsResponse?
+//    var user: AWSCognitoIdentityUser?
+//    var pool: AWSCognitoIdentityUserPool?
+    
+    var loginSlideViewController = LoginSlideViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
-        if (self.user == nil) {
-            self.user = self.pool?.currentUser()
-        }
+        pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
+//        self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+//        if (self.user == nil) {
+//            self.user = self.pool?.currentUser()
+//        }
     }
     
     
@@ -55,9 +61,17 @@ class SignInViewController: UIViewController {
         }
     }
 
+
     
-    @IBAction func signOut(_ sender: AnyObject) {
-        self.user?.signOut()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let loginSlideViewController = segue.destination as? LoginSlideViewController {
+            loginSlideViewController.loginSlideDelegate = self 
+        }
+    }
+    
+    
+    @objc func didChangePageControlValue() {
+            //loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
     }
     
 }
@@ -69,7 +83,7 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
         self.passwordAuthenticationCompletion = passwordAuthenticationCompletionSource
         DispatchQueue.main.async {
             if (self.usernameText == nil) {
-                self.usernameText = authenticationInput.lastKnownUsername
+              //  self.usernameText = authenticationInput.lastKnownUsername
             }
         }
     }
@@ -101,4 +115,18 @@ extension UIViewController {
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
+}
+
+extension SignInViewController: LoginSlideViewControllerDelegate {
+    
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
+                                  didUpdatePageCount count: Int) {
+        pageControl.numberOfPages = count
+    }
+    
+    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
+                                  didUpdatePageIndex index: Int) {
+        pageControl.currentPage = index
+    }
+    
 }

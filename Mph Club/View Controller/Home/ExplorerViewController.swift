@@ -29,6 +29,7 @@ class ExplorerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 7))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "mph-club-logo")

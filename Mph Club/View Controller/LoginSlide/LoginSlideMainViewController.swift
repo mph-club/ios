@@ -8,46 +8,46 @@
 
 import UIKit
 
-class LoginSlideMainViewController: UIViewController {
+//class LoginSlideMainViewController: UIViewController {
 
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var pageControl: UIPageControl!
+//    @IBOutlet weak var containerView: UIView!
+//    @IBOutlet weak var pageControl: UIPageControl!
     
-    var loginSlideViewController = LoginSlideViewController()
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
-    }
+//    var loginSlideViewController = LoginSlideViewController()
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let loginSlideViewController = segue.destination as? LoginSlideViewController {
-            loginSlideViewController.loginSlideDelegate = self
-        }
-    }
-  
-
-    @objc func didChangePageControlValue() {
-   //     loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
+//    }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let loginSlideViewController = segue.destination as? LoginSlideViewController {
+//            loginSlideViewController.loginSlideDelegate = self
+//        }
+//    }
+//
+//
+//    @objc func didChangePageControlValue() {
+//   //     loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
+//    }
  
 
 
-}
+//}
 
-extension LoginSlideMainViewController: LoginSlideViewControllerDelegate {
-    
-    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
-                                    didUpdatePageCount count: Int) {
-        pageControl.numberOfPages = count
-    }
-    
-    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
-                                    didUpdatePageIndex index: Int) {
-        pageControl.currentPage = index
-    }
-    
-}
+//extension LoginSlideMainViewController: LoginSlideViewControllerDelegate {
+//
+//    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
+//                                    didUpdatePageCount count: Int) {
+//        pageControl.numberOfPages = count
+//    }
+//
+//    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController,
+//                                    didUpdatePageIndex index: Int) {
+//        pageControl.currentPage = index
+//    }
+//
+//}
 

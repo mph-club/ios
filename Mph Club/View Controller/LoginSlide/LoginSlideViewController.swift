@@ -23,7 +23,7 @@ class LoginSlideViewController: UIPageViewController {
     }()
     
     private func newSlideViewController(slideNumber: String) -> UIViewController {
-        return UIStoryboard(name: "LoginSlide", bundle: nil) .
+        return UIStoryboard(name: "TabView", bundle: nil) .
             instantiateViewController(withIdentifier: "\(slideNumber)ViewController")
     }
 
