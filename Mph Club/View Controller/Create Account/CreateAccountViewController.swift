@@ -21,10 +21,26 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customNavBar()
         self.email.delegate = self
         self.password.delegate = self
         self.phone.delegate = self
         self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
+    }
+    
+    func customNavBar() {
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.backArrowIcon), style: .plain, target: self, action: #selector(CreateAccountViewController.close))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIColor.lightGray.as1ptImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    @objc func close() {
+        performSegue(withIdentifier: "unwindToSignIn", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,12 +110,15 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let sender = sender as! AWSCognitoIdentityUserPoolSignUpResponse
-        if let confirmationCodeVC = segue.destination as? ConfirmationCodeVC {
-            confirmationCodeVC.user = sender.user
-            confirmationCodeVC.sentTo = sender.codeDeliveryDetails?.destination
+        if segue.identifier! != "unwindToSignIn" {
+            let sender = sender as! AWSCognitoIdentityUserPoolSignUpResponse
+            if let confirmationCodeVC = segue.destination as? ConfirmationCodeVC {
+                confirmationCodeVC.user = sender.user
+                confirmationCodeVC.sentTo = sender.codeDeliveryDetails?.destination
+                confirmationCodeVC.password = self.password.text!
+            }
         }
-    
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -107,9 +126,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
-    @IBAction func close(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+    @IBAction func unwindToSignUp(segue: UIStoryboardSegue) {}
     
 }

@@ -27,6 +27,23 @@ class ConfirmForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customNavBar()
+    }
+    
+    
+    func customNavBar() {
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.backArrowIcon), style: .plain, target: self, action: #selector(ConfirmForgotPasswordViewController.close))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIColor.lightGray.as1ptImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    @objc func close() {
+        performSegue(withIdentifier: "unwindToForgotPw", sender: nil)
     }
     
     // MARK: - IBActions
@@ -62,5 +79,7 @@ class ConfirmForgotPasswordViewController: UIViewController {
             return nil
         }
     }
+    
+    
     
 }

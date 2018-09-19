@@ -24,15 +24,16 @@ class ProfileVC: UIViewController {
     }
 
     @IBAction func signOut(_ sender: AnyObject) {
+        _ = self.tabBarController?.selectedIndex = 0
         self.user?.signOut()
         refresh()
 
     }
     
     func refresh() {
+        
         self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
             DispatchQueue.main.async(execute: {
-                _ = self.tabBarController?.selectedIndex = 0
                 self.response = task.result
             })
             return nil

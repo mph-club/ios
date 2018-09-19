@@ -27,11 +27,29 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customNavBar()
         self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    
+    func customNavBar() {
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.backArrowIcon), style: .plain, target: self, action: #selector(ForgotPasswordViewController.close))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIColor.lightGray.as1ptImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    @objc func close() {
+        performSegue(withIdentifier: "unwindToSignIn", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,4 +93,6 @@ class ForgotPasswordViewController: UIViewController {
             return nil
             } 
     }
+    
+    @IBAction func unwindToForgotPw(segue: UIStoryboardSegue) {}
 }

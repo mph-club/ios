@@ -14,6 +14,8 @@ class ConfirmationCodeVC: UIViewController {
     
     var sentTo: String?
     var user: AWSCognitoIdentityUser?
+    var password: String?
+
     
     @IBOutlet weak var sentToLabel: UILabel!
     @IBOutlet weak var username: UITextField!
@@ -21,8 +23,24 @@ class ConfirmationCodeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customNavBar()
         self.username.text = self.user!.username;
         self.sentToLabel.text = "Code sent to: \(self.sentTo!)"
+    }
+    
+    func customNavBar() {
+        let button1 = UIBarButtonItem(image: UIImage(named: Constant.backArrowIcon), style: .plain, target: self, action: #selector(ConfirmationCodeVC.close))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIColor.lightGray.as1ptImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    @objc func close() {
+        performSegue(withIdentifier: "unwindToSignUp", sender: nil)
     }
     
     // MARK: IBActions
@@ -51,8 +69,13 @@ class ConfirmationCodeVC: UIViewController {
                     
                     strongSelf.present(alertController, animated: true, completion:  nil)
                 } else {
-                   // let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
-                    self?.performSegue(withIdentifier: "TabView", sender: nil)
+                  //  _ = self?.tabBarController?.selectedIndex = 0
+                  //  self?.username.text = nil
+                      self?.dismiss(animated: true, completion: nil)
+                  //   self?.performSegue(withIdentifier: "TabView", sender: nil)
+                    
+                    // LOGIN USER
+
                 }
             })
             return nil

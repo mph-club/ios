@@ -11,7 +11,14 @@ import Foundation
 import AWSCognitoIdentityProvider
 
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UIScrollViewDelegate {
+     var isState = true
+     var activeField: UITextField?
+     var lastOffset: CGPoint!
+     var keyboardHeight: CGFloat!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
@@ -20,27 +27,51 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-//    var response: AWSCognitoIdentityUserGetDetailsResponse?
-//    var user: AWSCognitoIdentityUser?
-//    var pool: AWSCognitoIdentityUserPool?
+    @IBOutlet weak var createAccountBtn: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+
     
     var loginSlideViewController = LoginSlideViewController()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scrollView.scrollsToTop = false
+        hideKeyboardWhenTappedAround()
         pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
-//        self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
-//        if (self.user == nil) {
-//            self.user = self.pool?.currentUser()
-//        }
+
+        self.username.delegate = self
+        self.password.delegate = self
+        
+        // Add touch gesture for contentView
+        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignInViewController.returnTextView(gesture:))))
+    }
+    
+    @objc func returnTextView(gesture: UIGestureRecognizer) {
+        guard activeField != nil else {
+            return
+        }
+        
+        activeField?.resignFirstResponder()
+        activeField = nil
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.createAccountBtn.layer.borderWidth = 1.5
+        self.createAccountBtn.layer.borderColor = UIColor.black.cgColor
         self.password.text = nil
         self.username.text = usernameText
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {
@@ -48,9 +79,6 @@ class SignInViewController: UIViewController {
             let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.username.text!, password: self.password.text! )
             self.passwordAuthenticationCompletion?.set(result: authDetails)
             print(authDetails!)
-            
-        
- 
             
         } else {
             let alertController = UIAlertController(title: "Missing information",
@@ -72,6 +100,15 @@ class SignInViewController: UIViewController {
     
     @objc func didChangePageControlValue() {
             //loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
+    }
+    
+
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard scrollView.contentOffset.y > CGPoint.zero.y else {
+            scrollView.setContentOffset(CGPoint.zero, animated: false)
+            return
+        }
     }
     
 }
@@ -104,6 +141,8 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
             }
         }
     }
+    
+    @IBAction func unwindToSignIn(segue: UIStoryboardSegue) {}
 }
 
 extension UIViewController {
@@ -129,4 +168,49 @@ extension SignInViewController: LoginSlideViewControllerDelegate {
         pageControl.currentPage = index
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
+
+// MARK: UITextFieldDelegate
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeField = textField
+        lastOffset = self.scrollView.contentOffset
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activeField?.resignFirstResponder()
+        activeField = nil
+        return true
+    }
+}
+
+
+
+
+    // MARK: Keyboard Handling
+extension SignInViewController {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        view.frame.origin.y = -keyboardRect.height
+    }
+        
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
+    }
 }
