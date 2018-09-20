@@ -101,7 +101,7 @@ class ExplorerViewController: UITableViewController {
         if (self.user == nil) {
             self.user = self.pool?.currentUser()
         }
-        refresh()
+      //  refresh()
     }
     
     

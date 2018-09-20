@@ -16,6 +16,7 @@ class ConfirmationCodeVC: UIViewController {
     var user: AWSCognitoIdentityUser?
     var password: String?
 
+    var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
     
     @IBOutlet weak var sentToLabel: UILabel!
     @IBOutlet weak var username: UITextField!
@@ -69,12 +70,27 @@ class ConfirmationCodeVC: UIViewController {
                     
                     strongSelf.present(alertController, animated: true, completion:  nil)
                 } else {
+                  //  let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
                   //  _ = self?.tabBarController?.selectedIndex = 0
                   //  self?.username.text = nil
-                      self?.dismiss(animated: true, completion: nil)
+                   //   self?.dismiss(animated: true, completion: nil)
                   //   self?.performSegue(withIdentifier: "TabView", sender: nil)
                     
                     // LOGIN USER
+                    if (self!.username.text != nil && self?.password! != nil) {
+                        let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self!.username.text!, password: (self?.password!)! )
+                        self?.passwordAuthenticationCompletion?.set(result: authDetails)
+                     //   self?.performSegue(withIdentifier: "TabView", sender: nil)
+                        self?.dismiss(animated: true, completion: nil)
+                        print(authDetails!)
+                        
+                    } else {
+                        let alertController = UIAlertController(title: "Missing information",
+                                                                message: "Please enter a valid user name and password",
+                                                                preferredStyle: .alert)
+                        let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+                        alertController.addAction(retryAction)
+                    }
 
                 }
             })

@@ -127,6 +127,7 @@
                         <outlet property="sentToLabel" destination="rHv-gR-QkL" id="BPp-tg-JvH"/>
                         <outlet property="username" destination="vCR-f7-CXl" id="Juz-az-w1J"/>
                         <segue destination="uTb-1T-Rz8" kind="unwind" identifier="unwindToSignUp" unwindAction="unwindToSignUpWithSegue:" id="alH-wO-YD7"/>
+                        <segue destination="f7G-KZ-nfs" kind="show" identifier="TabView" id="2Po-gB-vp9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RR3-x6-0fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
