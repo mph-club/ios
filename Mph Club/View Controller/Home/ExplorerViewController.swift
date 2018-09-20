@@ -51,12 +51,32 @@ class ExplorerViewController: UITableViewController {
     
     
     func refresh() {
-        self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+        
+        self.user?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
             DispatchQueue.main.async(execute: {
-                self.response = task.result
+                let getSessionResult = getSessionTask.result
+                print(getSessionResult!)
+                let idToken = getSessionResult?.idToken
+                print(idToken!)
+                let accessToken = getSessionResult?.accessToken?.tokenString
+                print(accessToken!)
+                // self.response = task.result
             })
             return nil
         }
+
+        
+        
+//        self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+//            DispatchQueue.main.async(execute: {
+//                let getSessionResult = task.result
+//                print(getSessionResult)
+////                let idToken = getSessionResult.idToken?.tokenString
+////                let accessToken = getSessionResult.accessToken?.tokenString
+//               // self.response = task.result
+//            })
+//            return nil
+//        }
     }
     
     func createButton() {

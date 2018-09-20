@@ -11,7 +11,6 @@
 		350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350881A520EA71D500ED2B5E /* CustomNavController.swift */; };
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		350881AA20EA7CFF00ED2B5E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A920EA7CFF00ED2B5E /* Login.storyboard */; };
-		35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207DCD20E3D64800BA838A /* LoginViewController.swift */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
 		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
 		353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 353D3BF4210A5BEB00CF748C /* InfoPlist.strings */; };
@@ -119,7 +118,6 @@
 		350881A520EA71D500ED2B5E /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		350881A920EA7CFF00ED2B5E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		35207DCD20E3D64800BA838A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
 		353D3BF4210A5BEB00CF748C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				350881A920EA7CFF00ED2B5E /* Login.storyboard */,
-				35207DCD20E3D64800BA838A /* LoginViewController.swift */,
 				35D63910215009A900B912AA /* SignInViewController.swift */,
 			);
 			path = Login;
@@ -754,7 +751,6 @@
 				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
 				355D02B1211DDF9200B681D4 /* TripDatesViewController.swift in Sources */,
 				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
-				35207DCE20E3D64800BA838A /* LoginViewController.swift in Sources */,
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
 				355D02BD2121F6F300B681D4 /* CellView.swift in Sources */,
