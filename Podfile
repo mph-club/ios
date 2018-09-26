@@ -13,6 +13,10 @@ target 'Mph Club' do
   pod 'AWSCognito', '~> 2.6.28'
   
   pod 'UICKeyChainStore', '~> 2.0.6'
+  pod 'Mixpanel-swift'
+  
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'Mph ClubTests' do
     inherit! :search_paths

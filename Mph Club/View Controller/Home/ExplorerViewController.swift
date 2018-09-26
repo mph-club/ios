@@ -8,6 +8,8 @@
 
 import UIKit
 import AWSCognitoIdentityProvider
+import Crashlytics
+
 
 class ExplorerViewController: UITableViewController {
     
@@ -132,6 +134,7 @@ class ExplorerViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+       // Crashlytics.sharedInstance().crash()
         self.searchButton.isHidden = true
         let navigationBar = navigationController!.navigationBar
         navigationBar.reset()

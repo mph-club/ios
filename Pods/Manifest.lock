@@ -7,7 +7,13 @@ PODS:
     - AWSCore (= 2.6.28)
   - AWSCognitoIdentityProviderASF (1.0.1)
   - AWSCore (2.6.28)
+  - Crashlytics (3.10.7):
+    - Fabric (~> 1.7.11)
+  - Fabric (1.7.11)
   - JTAppleCalendar (7.1.5)
+  - Mixpanel-swift (2.4.5):
+    - Mixpanel-swift/Complete (= 2.4.5)
+  - Mixpanel-swift/Complete (2.4.5)
   - UICKeyChainStore (2.0.7)
 
 DEPENDENCIES:
@@ -15,7 +21,10 @@ DEPENDENCIES:
   - AWSCognito (~> 2.6.28)
   - AWSCognitoIdentityProvider (~> 2.6.0)
   - AWSCore (~> 2.6.0)
+  - Crashlytics
+  - Fabric
   - JTAppleCalendar (~> 7.0)
+  - Mixpanel-swift
   - UICKeyChainStore (~> 2.0.6)
 
 SPEC REPOS:
@@ -25,7 +34,10 @@ SPEC REPOS:
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
+    - Crashlytics
+    - Fabric
     - JTAppleCalendar
+    - Mixpanel-swift
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
@@ -34,9 +46,12 @@ SPEC CHECKSUMS:
   AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
+  Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
+  Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  Mixpanel-swift: a9ed3dd197d8f2837920cec6be1acdb51d07b31a
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: e876a4aac75029041f9b58b66c10176f1eddcd00
+PODFILE CHECKSUM: 5074cff774ef3be5b3830ef1d65b1a6a8f4f168e
 
 COCOAPODS: 1.5.3

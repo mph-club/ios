@@ -747,7 +747,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.075253"
+            timestampString = "559673781.356043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "324"
@@ -763,7 +763,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.075786"
+            timestampString = "559673781.356353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "281"
@@ -779,7 +779,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.076252"
+            timestampString = "559673781.356573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "229"
@@ -795,7 +795,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.076703"
+            timestampString = "559673781.356789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -811,7 +811,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.077145"
+            timestampString = "559673781.3570091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -827,7 +827,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.077571"
+            timestampString = "559673781.357224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
@@ -843,7 +843,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.077997"
+            timestampString = "559673781.357434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "307"
@@ -1083,7 +1083,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.078681"
+            timestampString = "559673781.3578629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "380"
@@ -1099,7 +1099,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.079132"
+            timestampString = "559673781.358106"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "399"
@@ -1307,7 +1307,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/List your Car/LicenseDetailViewController.swift"
-            timestampString = "559158826.079795"
+            timestampString = "559673781.358502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "332"
@@ -1383,31 +1383,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Mph_Club.AddAPhotoOfCarViewController.next(__ObjC.UIButton) -&gt; ()"
+                  symbolName = "Mph_Club.AddAPhotoOfCarViewController.next(__C.UIButton) -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/AddAPhotoOfCarViewController.swift"
-                  timestampString = "559154970.5532891"
+                  timestampString = "559604144.66093"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
-                  offsetFromSymbolStart = "158">
+                  offsetFromSymbolStart = "157">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.UIAlertAction) -&gt; () in Mph_Club.AddAPhotoOfCarViewController.next(__ObjC.UIButton) -&gt; ()"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in Mph_Club.AddAPhotoOfCarViewController.next(__C.UIButton) -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/List%20your%20Car/AddAPhotoOfCarViewController.swift"
-                  timestampString = "559154970.554752"
+                  timestampString = "559604144.662342"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
                   endingLineNumber = "45"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1515,11 +1515,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.080435"
+            timestampString = "559673781.3588721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "ShortcutIdentifier"
             landmarkType = "13">
          </BreakpointContent>
@@ -1531,11 +1531,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.080754"
+            timestampString = "559673781.359372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "selectTabBarItemForIdentifier(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2651,7 +2651,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/ConfirmationFlow/ConfirmationCodeVC.swift"
-            timestampString = "559158826.083972"
+            timestampString = "559673781.360732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -2667,11 +2667,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.084269"
+            timestampString = "559673781.360981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "signInPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2683,11 +2683,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.0844589"
+            timestampString = "559673781.361021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "getDetails(_:passwordAuthenticationCompletionSource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2699,11 +2699,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.084653"
+            timestampString = "559673781.361055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "didCompleteStepWithError(_:)"
             landmarkType = "7">
             <Locations>
@@ -2747,11 +2747,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.084839"
+            timestampString = "559673781.361087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "getDetails(_:passwordAuthenticationCompletionSource:)"
             landmarkType = "7">
             <Locations>
@@ -2795,55 +2795,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085031"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "didCompleteStepWithError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085223"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "didCompleteStepWithError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085403"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "didCompleteStepWithError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085585"
+            timestampString = "559673781.361118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -2859,7 +2811,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085763"
+            timestampString = "559673781.361149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "didCompleteStepWithError(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.361179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "didCompleteStepWithError(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.361209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -2875,7 +2859,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.085942"
+            timestampString = "559673781.361239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
@@ -2891,7 +2875,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.08613"
+            timestampString = "559673781.361269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "didCompleteStepWithError(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.361299"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "getDetails(_:passwordAuthenticationCompletionSource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.361328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -2907,27 +2923,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.086311"
+            timestampString = "559673781.361358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "getDetails(_:passwordAuthenticationCompletionSource:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.086493"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "signInPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2939,27 +2939,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.08667"
+            timestampString = "559673781.361388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "signInPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.361418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "signInPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.086846"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
             landmarkName = "signInPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2987,11 +2987,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.087059"
+            timestampString = "559673781.361468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "showAlertError(message:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3003,11 +3003,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.0872329"
+            timestampString = "559673781.3615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "didCompleteStepWithError(_:)"
             landmarkType = "7">
             <Locations>
@@ -3019,12 +3019,12 @@
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/AppDelegate.swift"
-                  timestampString = "559154970.671329"
+                  timestampString = "559604145.1488169"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "211"
-                  endingLineNumber = "211"
-                  offsetFromSymbolStart = "21">
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "41">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -3034,12 +3034,12 @@
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/AppDelegate.swift"
-                  timestampString = "559154970.672821"
+                  timestampString = "559604145.1500731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "215"
+                  endingLineNumber = "215"
+                  offsetFromSymbolStart = "45">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3051,11 +3051,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.087491"
+            timestampString = "559673781.3619339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "didCompleteStepWithError(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3067,11 +3067,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.087754"
+            timestampString = "559673781.362366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "getRememberDevice(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3083,11 +3083,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.087991"
+            timestampString = "559673781.362793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "getRememberDevice(_:)"
             landmarkType = "7">
             <Locations>
@@ -3095,31 +3095,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Mph_Club.AppDelegate.getRememberDevice(__ObjC.AWSTaskCompletionSource&lt;__ObjC.NSNumber&gt;) -&gt; ()"
+                  symbolName = "Mph_Club.AppDelegate.getRememberDevice(__C.AWSTaskCompletionSource&lt;__C.NSNumber&gt;) -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/AppDelegate.swift"
-                  timestampString = "559154970.683064"
+                  timestampString = "559604145.159155"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
-                  offsetFromSymbolStart = "75">
+                  startingLineNumber = "193"
+                  endingLineNumber = "193"
+                  offsetFromSymbolStart = "95">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Mph_Club.AppDelegate.getRememberDevice(__ObjC.AWSTaskCompletionSource&lt;__ObjC.NSNumber&gt;) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in Mph_Club.AppDelegate.getRememberDevice(__C.AWSTaskCompletionSource&lt;__C.NSNumber&gt;) -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/AppDelegate.swift"
-                  timestampString = "559154970.684507"
+                  timestampString = "559604145.1605951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "192"
-                  endingLineNumber = "192"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3131,11 +3131,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.088227"
+            timestampString = "559673781.363221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "startPasswordAuthentication()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3147,11 +3147,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.088487"
+            timestampString = "559673781.363647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "startPasswordAuthentication()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3163,11 +3163,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.088752"
+            timestampString = "559673781.364073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "startMultiFactorAuthentication()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3179,11 +3179,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.089016"
+            timestampString = "559673781.3645329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "startMultiFactorAuthentication()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3195,11 +3195,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.089276"
+            timestampString = "559673781.364964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "signInPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3207,15 +3207,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.089455"
+            timestampString = "559673781.365002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3223,11 +3223,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Profile/ProfileVC.swift"
-            timestampString = "559158826.089754"
+            timestampString = "559596630.3760149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -3239,11 +3239,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Profile/ProfileVC.swift"
-            timestampString = "559158826.089992"
+            timestampString = "559596630.37641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -3259,11 +3259,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.0902309"
+            timestampString = "559673781.365085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "keyboardWillShow(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3275,11 +3275,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.0903291"
+            timestampString = "559673781.3651201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "keyboardWillHide(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3291,11 +3291,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.090426"
+            timestampString = "559673781.365152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "textFieldShouldBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3307,11 +3307,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
-            timestampString = "559158826.09051"
+            timestampString = "559673781.365183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3323,7 +3323,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/ConfirmationFlow/ConfirmationCodeVC.swift"
-            timestampString = "559158826.090596"
+            timestampString = "559673781.365214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -3339,7 +3339,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/ConfirmationFlow/ConfirmationCodeVC.swift"
-            timestampString = "559158826.090826"
+            timestampString = "559673781.365428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -3355,7 +3355,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/ConfirmationFlow/ConfirmationCodeVC.swift"
-            timestampString = "559158826.09105"
+            timestampString = "559673781.3656369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -3371,7 +3371,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/ConfirmationFlow/ConfirmationCodeVC.swift"
-            timestampString = "559158826.091277"
+            timestampString = "559673781.365845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -3419,11 +3419,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/AppDelegate.swift"
-            timestampString = "559158826.091498"
+            timestampString = "559673781.366092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "didCompleteStepWithError(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3431,15 +3431,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.091748"
+            timestampString = "559673781.366519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3451,11 +3451,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.092002"
+            timestampString = "559673781.3665659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "refresh()"
             landmarkType = "7">
             <Locations>
@@ -3467,27 +3467,27 @@
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/Home/ExplorerViewController.swift"
-                  timestampString = "559154970.7240911"
+                  timestampString = "559604145.186517"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "22">
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "30">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;__ObjC.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
+                  symbolName = "closure #1 (__C.AWSTask&lt;__C.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/Home/ExplorerViewController.swift"
-                  timestampString = "559154970.725521"
+                  timestampString = "559604145.188194"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "17">
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "29">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3499,11 +3499,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.092211"
+            timestampString = "559673781.366609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "refresh()"
             landmarkType = "7">
             <Locations>
@@ -3511,31 +3511,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;__ObjC.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
+                  symbolName = "closure #1 (__C.AWSTask&lt;__C.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/Home/ExplorerViewController.swift"
-                  timestampString = "559154970.730636"
+                  timestampString = "559604145.192601"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "17">
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "29">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (__ObjC.AWSTask&lt;__ObjC.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (__C.AWSTask&lt;__C.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Swift.AnyObject&gt; in Mph_Club.ExplorerViewController.refresh() -&gt; ()"
                   moduleName = "Mph Club"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alexcruz/Desktop/Alex/Mph%20Club/Mph%20Club/View%20Controller/Home/ExplorerViewController.swift"
-                  timestampString = "559154970.732595"
+                  timestampString = "559604145.193921"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3547,55 +3547,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.092417"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "refresh()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.092622"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "refresh()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.092827"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "refresh()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.093014"
+            timestampString = "559673781.3666511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -3611,7 +3563,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.093213"
+            timestampString = "559673781.366693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "refresh()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
+            timestampString = "559673781.366734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -3627,7 +3595,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.093411"
+            timestampString = "559673781.3667769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -3643,7 +3611,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.093609"
+            timestampString = "559673781.366818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -3659,12 +3627,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
-            timestampString = "559158826.0938359"
+            timestampString = "559673781.366859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "refresh()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
+            timestampString = "559673781.3668979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "refresh()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
+            timestampString = "559673781.3669389"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "refresh()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Login/SignInViewController.swift"
+            timestampString = "559673781.36698"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Profile/ProfileVC.swift"
+            timestampString = "559596630.3805341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "signOut(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mph Club/View Controller/Home/ExplorerViewController.swift"
+            timestampString = "559673781.367034"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "buttonClicked()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -9,7 +9,9 @@
 import UIKit
 import CoreLocation
 import AWSCognitoIdentityProvider
-
+import Mixpanel
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -37,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
- 
+        Mixpanel.initialize(token: "0d5bb533e299c39f2c8a91a09ee30807")
         Thread.sleep(forTimeInterval: 1.8)
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             
@@ -76,10 +78,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         self.storyboard = UIStoryboard(name: "TabView", bundle: nil)
         pool.delegate = self
         
+        Fabric.with([Crashlytics.self])
+        
+        // TODO: Move this to where you establish a user session
+        self.logUser()
+
         
         return true
     }
     
+    func logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.sharedInstance().setUserEmail("user@fabric.io")
+        Crashlytics.sharedInstance().setUserIdentifier("12345")
+        Crashlytics.sharedInstance().setUserName("Test User")
+    }
+
 
     
     func application(_ application: UIApplication,

@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 import AWSCognitoIdentityProvider
-
+import Mixpanel
 
 class SignInViewController: UIViewController, UIScrollViewDelegate {
      var isState = true
@@ -35,6 +35,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Mixpanel.mainInstance().track(event: "Second Event")
         self.scrollView.scrollsToTop = false
         hideKeyboardWhenTappedAround()
         pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
