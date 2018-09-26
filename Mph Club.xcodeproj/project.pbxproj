@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
+		350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */; };
+		350307E0215BFDE80012E9B9 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DF215BFDE80012E9B9 /* Booking.storyboard */; };
 		350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350881A520EA71D500ED2B5E /* CustomNavController.swift */; };
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
@@ -115,6 +117,8 @@
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
 		350307D7215BF18F0012E9B9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
+		350307DF215BFDE80012E9B9 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		350881A520EA71D500ED2B5E /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -237,12 +241,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		350881AB20EA815F00ED2B5E /* Model */ = {
+		350307DE215BFB660012E9B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Model;
-			path = "New Group";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
@@ -318,8 +321,8 @@
 		3591B8BB20DAC06C00BA0CF9 /* Mph Club */ = {
 			isa = PBXGroup;
 			children = (
+				350307DE215BFB660012E9B9 /* Model */,
 				3598E02020EBB8B400E595EE /* Custom Classes */,
-				350881AB20EA815F00ED2B5E /* Model */,
 				35207DCA20E3D5A300BA838A /* View Controller */,
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
 				3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */,
@@ -448,6 +451,8 @@
 		35DAA31120F3DA000083CA93 /* Fleet View */ = {
 			isa = PBXGroup;
 			children = (
+				350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */,
+				350307DF215BFDE80012E9B9 /* Booking.storyboard */,
 				35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */,
 				35DAA31720F401280083CA93 /* FleetTableViewController.swift */,
 				35DAA31B20F40A320083CA93 /* DetailViewController.swift */,
@@ -623,10 +628,12 @@
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
+				350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
 				3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */,
+				350307E0215BFDE80012E9B9 /* Booking.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

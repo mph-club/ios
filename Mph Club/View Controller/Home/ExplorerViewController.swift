@@ -26,11 +26,20 @@ class ExplorerViewController: UITableViewController {
     
 
     var searchButton = UIButton()
-   
+    
+    func logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.sharedInstance().setUserEmail("user@fabric.io")
+        Crashlytics.sharedInstance().setUserIdentifier("12345")
+        Crashlytics.sharedInstance().setUserName("Test User")
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logUser()
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 7))
         imageView.contentMode = .scaleAspectFit
@@ -134,7 +143,7 @@ class ExplorerViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-       // Crashlytics.sharedInstance().crash()
+        Crashlytics.sharedInstance().crash()
         self.searchButton.isHidden = true
         let navigationBar = navigationController!.navigationBar
         navigationBar.reset()
