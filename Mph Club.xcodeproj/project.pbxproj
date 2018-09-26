@@ -86,7 +86,6 @@
 		35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31720F401280083CA93 /* FleetTableViewController.swift */; };
 		35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */; };
 		35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31B20F40A320083CA93 /* DetailViewController.swift */; };
-		35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */; };
 		35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */; };
 		35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */; };
 		35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */; };
@@ -199,7 +198,6 @@
 		35DAA31720F401280083CA93 /* FleetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTableViewController.swift; sourceTree = "<group>"; };
 		35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetTableViewCell.swift; sourceTree = "<group>"; };
 		35DAA31B20F40A320083CA93 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSlide.storyboard; sourceTree = "<group>"; };
 		35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
 		35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
 		35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -481,7 +479,6 @@
 		35DBE65F20E3E1A80041325A /* LoginSlide */ = {
 			isa = PBXGroup;
 			children = (
-				35DBE66220E3E1DD0041325A /* LoginSlide.storyboard */,
 				350881A520EA71D500ED2B5E /* CustomNavController.swift */,
 				35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */,
 				35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */,
@@ -623,7 +620,6 @@
 			files = (
 				355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */,
 				35CC0D7F20F7A33800575225 /* dontknowcar.jpg in Resources */,
-				35DBE66320E3E1DD0041325A /* LoginSlide.storyboard in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
