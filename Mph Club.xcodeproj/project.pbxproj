@@ -11,6 +11,13 @@
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
 		350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */; };
 		350307E0215BFDE80012E9B9 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DF215BFDE80012E9B9 /* Booking.storyboard */; };
+		350307E2215D15670012E9B9 /* TestFairySDK-1.17.0 in Resources */ = {isa = PBXBuildFile; fileRef = 350307E1215D15670012E9B9 /* TestFairySDK-1.17.0 */; };
+		350307E4215D15920012E9B9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E3215D15920012E9B9 /* CoreMedia.framework */; };
+		350307E6215D159A0012E9B9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E5215D159A0012E9B9 /* CoreMotion.framework */; };
+		350307E8215D15A90012E9B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E7215D15A90012E9B9 /* AVFoundation.framework */; };
+		350307EA215D15B60012E9B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E9215D15B60012E9B9 /* SystemConfiguration.framework */; };
+		350307EC215D15C00012E9B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307EB215D15C00012E9B9 /* OpenGLES.framework */; };
+		350307F1215D2E500012E9B9 /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 350307EE215D2E4E0012E9B9 /* upload-dsym.sh */; };
 		350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350881A520EA71D500ED2B5E /* CustomNavController.swift */; };
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
@@ -52,6 +59,7 @@
 		3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */; };
 		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
 		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
+		3586D19C215D32AB003339BB /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307EF215D2E4F0012E9B9 /* libTestFairy.a */; };
 		358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A7212B18B900E3822B /* TestRangeSelectionViewController.swift */; };
 		358DB0AA212C826F00E3822B /* BookingSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0A9212C826F00E3822B /* BookingSearchCell.swift */; };
 		358DB0AC212C8DC900E3822B /* StartTimeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DB0AB212C8DC900E3822B /* StartTimeTVC.swift */; };
@@ -119,6 +127,16 @@
 		350307D7215BF18F0012E9B9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		350307DF215BFDE80012E9B9 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		350307E1215D15670012E9B9 /* TestFairySDK-1.17.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "TestFairySDK-1.17.0"; sourceTree = "<group>"; };
+		350307E3215D15920012E9B9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		350307E5215D159A0012E9B9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		350307E7215D15A90012E9B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		350307E9215D15B60012E9B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		350307EB215D15C00012E9B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		350307ED215D15FC0012E9B9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		350307EE215D2E4E0012E9B9 /* upload-dsym.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "upload-dsym.sh"; sourceTree = "<group>"; };
+		350307EF215D2E4F0012E9B9 /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
+		350307F0215D2E4F0012E9B9 /* TestFairy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
 		350881A520EA71D500ED2B5E /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -218,7 +236,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350307EC215D15C00012E9B9 /* OpenGLES.framework in Frameworks */,
+				350307EA215D15B60012E9B9 /* SystemConfiguration.framework in Frameworks */,
+				350307E8215D15A90012E9B9 /* AVFoundation.framework in Frameworks */,
+				350307E6215D159A0012E9B9 /* CoreMotion.framework in Frameworks */,
+				350307E4215D15920012E9B9 /* CoreMedia.framework in Frameworks */,
 				05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */,
+				3586D19C215D32AB003339BB /* libTestFairy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +345,11 @@
 		3591B8BB20DAC06C00BA0CF9 /* Mph Club */ = {
 			isa = PBXGroup;
 			children = (
+				350307ED215D15FC0012E9B9 /* Header.h */,
+				350307EF215D2E4F0012E9B9 /* libTestFairy.a */,
+				350307F0215D2E4F0012E9B9 /* TestFairy.h */,
+				350307EE215D2E4E0012E9B9 /* upload-dsym.sh */,
+				350307E1215D15670012E9B9 /* TestFairySDK-1.17.0 */,
 				350307DE215BFB660012E9B9 /* Model */,
 				3598E02020EBB8B400E595EE /* Custom Classes */,
 				35207DCA20E3D5A300BA838A /* View Controller */,
@@ -494,6 +523,11 @@
 		6B775CAF13FDA178458EA8F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				350307EB215D15C00012E9B9 /* OpenGLES.framework */,
+				350307E9215D15B60012E9B9 /* SystemConfiguration.framework */,
+				350307E7215D15A90012E9B9 /* AVFoundation.framework */,
+				350307E5215D159A0012E9B9 /* CoreMotion.framework */,
+				350307E3215D15920012E9B9 /* CoreMedia.framework */,
 				8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */,
 				9263BEA10EEAAA0FCFCD2694 /* Pods_Mph_ClubTests.framework */,
 				014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */,
@@ -625,10 +659,12 @@
 			files = (
 				355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */,
 				35CC0D7F20F7A33800575225 /* dontknowcar.jpg in Resources */,
+				350307F1215D2E500012E9B9 /* upload-dsym.sh in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */,
+				350307E2215D15670012E9B9 /* TestFairySDK-1.17.0 in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
@@ -1007,8 +1043,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mph\\ Club",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alexcruz/Desktop/Alex/Mph Club/Mph Club/Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1026,8 +1067,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mph\\ Club",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mphclub.Mph-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

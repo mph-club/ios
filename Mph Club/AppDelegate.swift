@@ -79,6 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         pool.delegate = self
         
         Fabric.with([Crashlytics.self])
+        
+        TestFairy.begin("2017b41ea85897b1d103ed70784abaf3c7e9b362")
  
         return true
     }
