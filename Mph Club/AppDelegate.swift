@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Mixpanel.initialize(token: "0d5bb533e299c39f2c8a91a09ee30807")
+        
         Thread.sleep(forTimeInterval: 1.8)
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             
@@ -78,11 +78,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         self.storyboard = UIStoryboard(name: "TabView", bundle: nil)
         pool.delegate = self
         
-        Fabric.with([Crashlytics.self])
-        
-        TestFairy.begin("2017b41ea85897b1d103ed70784abaf3c7e9b362")
+        toolsInitialization()
+
  
         return true
+    }
+    
+    
+    func toolsInitialization() {
+        Mixpanel.initialize(token: "0d5bb533e299c39f2c8a91a09ee30807")
+        Fabric.with([Crashlytics.self])
+       // TestFairy.begin("2017b41ea85897b1d103ed70784abaf3c7e9b362")
     }
     
 

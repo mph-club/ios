@@ -1,0 +1,39 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+lane :beta do
+
+#    get_certificates           # invokes cert
+#    get_provisioning_profile   # invokes sigh
+
+testfairy(
+  api_key: "a78d5fc24c90f87a624831c7c1ae935b7af6db7c",
+  ipa: "./Users/alexcruz/Desktop/Alex/Mph Club/ipa_file.ipa",
+  comment: "Build #{lane_context[SharedValues::BUILD_NUMBER]}",
+)
+
+gym(scheme: "My Scheme", export_method: "development")
+
+
+    build_app(scheme: "Mph Club",
+          workspace: "Mph Club.xcworkspace",
+          include_bitcode: true)
+
+
+
+end
+
