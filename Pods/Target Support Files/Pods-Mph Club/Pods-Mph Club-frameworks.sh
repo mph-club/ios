@@ -150,6 +150,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Mixpanel-swift/Mixpanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -160,6 +161,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Mixpanel-swift/Mixpanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

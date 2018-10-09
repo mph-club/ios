@@ -19,6 +19,7 @@ target 'Mph Club' do
   pod 'Crashlytics'
   
   pod 'SwiftLint'
+  pod 'PromiseKit/CorePromise', '~> 6.0'
 
   target 'Mph ClubTests' do
     inherit! :search_paths
