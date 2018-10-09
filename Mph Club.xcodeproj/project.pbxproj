@@ -553,11 +553,12 @@
 			buildConfigurationList = 3591B8E120DAC06D00BA0CF9 /* Build configuration list for PBXNativeTarget "Mph Club" */;
 			buildPhases = (
 				754CCB652FFD30B1F6B6C234 /* [CP] Check Pods Manifest.lock */,
+				0043567F216D32EA00424A5C /* Swift Lint */,
 				3591B8B520DAC06C00BA0CF9 /* Sources */,
 				3591B8B620DAC06C00BA0CF9 /* Frameworks */,
 				3591B8B720DAC06C00BA0CF9 /* Resources */,
 				BB480A94EE8B96B122414D3E /* [CP] Embed Pods Frameworks */,
-				350307D6215ADE190012E9B9 /* ShellScript */,
+				350307D6215ADE190012E9B9 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -689,6 +690,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0043567F216D32EA00424A5C /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		2AB3111B996CF4C64BBF7A30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -725,7 +744,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		350307D6215ADE190012E9B9 /* ShellScript */ = {
+		350307D6215ADE190012E9B9 /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
 			files = (
@@ -735,6 +754,7 @@
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(/Users/alexcruz/Desktop/Alex/Mph\\ Club/Mph\\ Club/Info.plist)",
 			);
+			name = Fabric;
 			outputFileListPaths = (
 			);
 			outputPaths = (

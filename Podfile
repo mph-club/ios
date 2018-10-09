@@ -17,6 +17,8 @@ target 'Mph Club' do
   
   pod 'Fabric'
   pod 'Crashlytics'
+  
+  pod 'SwiftLint'
 
   target 'Mph ClubTests' do
     inherit! :search_paths

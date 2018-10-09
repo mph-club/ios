@@ -14,6 +14,7 @@ PODS:
   - Mixpanel-swift (2.5.2):
     - Mixpanel-swift/Complete (= 2.5.2)
   - Mixpanel-swift/Complete (2.5.2)
+  - SwiftLint (0.27.0)
   - UICKeyChainStore (2.0.7)
 
 DEPENDENCIES:
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Fabric
   - JTAppleCalendar (~> 7.0)
   - Mixpanel-swift
+  - SwiftLint
   - UICKeyChainStore (~> 2.0.6)
 
 SPEC REPOS:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - Fabric
     - JTAppleCalendar
     - Mixpanel-swift
+    - SwiftLint
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
@@ -50,8 +53,9 @@ SPEC CHECKSUMS:
   Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
   Mixpanel-swift: d73eb439ccf8631b7aaa7d21cf4f2f7b654aec86
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: f0f0859e179108fee7cbced9b53890570b99bba0
+PODFILE CHECKSUM: 01133108337732e0b40483184d44bb93af8b208e
 
 COCOAPODS: 1.5.3
