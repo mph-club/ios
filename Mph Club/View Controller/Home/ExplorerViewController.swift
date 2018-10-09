@@ -166,7 +166,7 @@ class ExplorerViewController: UITableViewController {
         let x = scrollView.contentOffset.y
         let elapsed = Date().timeIntervalSince(previousScrollMoment)
         let distance = (x - previousScrollX)
-        let velocity = (elapsed == 0) ? 0 : fabs(distance / CGFloat(elapsed))
+        let velocity = (elapsed == 0) ? 0 : abs(distance / CGFloat(elapsed))
         previousScrollMoment = d
         previousScrollX = x
         print("vel \(velocity)")

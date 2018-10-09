@@ -1,19 +1,19 @@
 PODS:
-  - APJTextPickerView (0.0.7)
-  - AWSCognito (2.6.28):
-    - AWSCore (= 2.6.28)
-  - AWSCognitoIdentityProvider (2.6.28):
+  - APJTextPickerView (0.0.8)
+  - AWSCognito (2.6.31):
+    - AWSCore (= 2.6.31)
+  - AWSCognitoIdentityProvider (2.6.31):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.28)
+    - AWSCore (= 2.6.31)
   - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.28)
-  - Crashlytics (3.10.7):
-    - Fabric (~> 1.7.11)
-  - Fabric (1.7.11)
-  - JTAppleCalendar (7.1.5)
-  - Mixpanel-swift (2.4.5):
-    - Mixpanel-swift/Complete (= 2.4.5)
-  - Mixpanel-swift/Complete (2.4.5)
+  - AWSCore (2.6.31)
+  - Crashlytics (3.10.9):
+    - Fabric (~> 1.7.13)
+  - Fabric (1.7.13)
+  - JTAppleCalendar (7.1.6)
+  - Mixpanel-swift (2.5.2):
+    - Mixpanel-swift/Complete (= 2.5.2)
+  - Mixpanel-swift/Complete (2.5.2)
   - UICKeyChainStore (2.0.7)
 
 DEPENDENCIES:
@@ -41,17 +41,17 @@ SPEC REPOS:
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
-  APJTextPickerView: 2c2b6ca0f2a8076b8e10e3d6f2e92add429118e5
-  AWSCognito: 7e4b529f1e19ce04a00dec4de175509dd5001d5f
-  AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
+  APJTextPickerView: 4c6e9addfe05d1cca3fabb06575b1d791590bca1
+  AWSCognito: c6bc1f7814ca3484b8ed76ba7f319ffea7c19e68
+  AWSCognitoIdentityProvider: c74a83c8226a9f43607f2772742000bccb5cc58a
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
-  Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
-  Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
-  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
-  Mixpanel-swift: a9ed3dd197d8f2837920cec6be1acdb51d07b31a
+  AWSCore: c7abfb87ef802d1c4b5dd56db64ac8b4a7823ef0
+  Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
+  Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
+  JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  Mixpanel-swift: d73eb439ccf8631b7aaa7d21cf4f2f7b654aec86
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: 5074cff774ef3be5b3830ef1d65b1a6a8f4f168e
+PODFILE CHECKSUM: f0f0859e179108fee7cbced9b53890570b99bba0
 
 COCOAPODS: 1.5.3

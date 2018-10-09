@@ -32,8 +32,8 @@ class CarEligibilityViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc func close() {
@@ -61,8 +61,8 @@ class CarEligibilityViewController: UIViewController {
     func setUpTextField(color: CGColor) {
         self.makeLabel.textColor = UIColor.lightGray
         self.modelLabel.textColor = UIColor.lightGray
-        self.makePickerView.setBottomSingleBorder(color: color)
-        self.modelPickerView.setBottomSingleBorder(color: color)
+//        self.makePickerView.setBottomSingleBorder(color: color)
+//        self.modelPickerView.setBottomSingleBorder(color: color)
     }
     
     fileprivate var yearStrings = ["2018", "2017", "2016", "2015"]
@@ -140,13 +140,13 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
         } else if textPickerView.tag == 2 {
             if self.makeLabel.text != "" {
                 self.makeLabel.textColor = UIColor.black
-                self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+//                self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             }
             return makeStrings[row]
         } else {
             if self.modelLabel.text != "" {
                 self.modelLabel.textColor = UIColor.black
-                self.modelPickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+//                self.modelPickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             }
             return modelStrings[row]
         }

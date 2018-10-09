@@ -74,13 +74,13 @@ extension UIScrollView {
         cover.image = image
         cover.maxHeight = maxHeight
         cover.scrollView = self
-        cover.contentMode = UIViewContentMode.scaleAspectFill
+        cover.contentMode = UIView.ContentMode.scaleAspectFill
 
         addSubview(cover)
-        sendSubview(toBack: cover)
+        sendSubviewToBack(cover)
 
         self.scalableCover = cover
-        self.contentInset = UIEdgeInsetsMake(maxHeight, 0, 0, 0)
+        self.contentInset = UIEdgeInsets.init(top: maxHeight, left: 0, bottom: 0, right: 0)
     }
 
     public func removeScalableCover() {

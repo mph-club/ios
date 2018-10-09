@@ -189,13 +189,13 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         self.textView.textColor = UIColor.black
         
         let linkAttributes: [String : Any] = [
-            NSAttributedStringKey.foregroundColor.rawValue: UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0),
-            NSAttributedStringKey.underlineColor.rawValue: UIColor.lightGray,
-            NSAttributedStringKey.underlineStyle.rawValue: NSUnderlineStyle.styleSingle.rawValue
+            NSAttributedString.Key.foregroundColor.rawValue: UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0),
+            NSAttributedString.Key.underlineColor.rawValue: UIColor.lightGray,
+            NSAttributedString.Key.underlineStyle.rawValue: NSUnderlineStyle.single.rawValue
         ]
         
         // textView is a UITextView
-        textView.linkTextAttributes = linkAttributes
+        textView.linkTextAttributes = convertToOptionalNSAttributedStringKeyDictionary(linkAttributes)
         textView.attributedText = attributedOriginalText
     }
     
@@ -291,3 +291,9 @@ extension UIApplication {
     
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}

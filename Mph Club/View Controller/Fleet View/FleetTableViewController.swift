@@ -40,7 +40,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
         carList.append(Vehicle(title: "Mercedes-Benz G-Class 2014", img: "gwagon", price: 440, trips: 5, miles: 6))
         
         tableView.estimatedRowHeight = 363
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     
         addShadowToTripBox()
         customBackButton()
@@ -89,7 +89,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
-        if self.isMovingFromParentViewController {
+        if self.isMovingFromParent {
             bookingMapVC.dismiss(animated: true, completion: nil)
         }
     }
@@ -140,7 +140,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func hidePreferenceBox() {
-        UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 1.0, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
             if self.tripPreferenceBox.frame.maxY > 149.5 {
                 
@@ -148,7 +148,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
             
         }, completion: nil)
       
-        UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.tripPreferenceBox.frame = CGRect(x: 15, y: 40, width: self.view.frame.width-25, height: 90)
             self.tableView.frame = CGRect(x: 15, y: 150, width: self.view.frame.width-25, height: self.view.frame.height-150)
         }, completion: nil)
@@ -156,11 +156,11 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func unHidePreferenceBox() {
-        UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions(), animations: {
             self.tripPreferenceBox.frame = CGRect(x: 15, y: 105, width: self.view.frame.width-25, height: 90)
             self.tableView.frame = CGRect(x: 15, y: 210, width: self.view.frame.width-25, height: self.view.frame.height-210)
         }, completion: nil)

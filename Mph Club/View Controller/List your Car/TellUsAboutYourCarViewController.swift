@@ -60,8 +60,8 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         scrollView.delegate = self
         
         // Observe keyboard change
-        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         // Add touch gesture for contentView
         self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_returnTextView(gesture:))))
@@ -154,7 +154,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
     func setUpTextField(color: CGColor) {
         self.stateLabel.textColor = UIColor.lightGray
         self.carDescriptionLabel.textColor = UIColor.lightGray
-        self.statePickerView.setBottomSingleBorder(color: color)
+//        self.statePickerView.setBottomSingleBorder(color: color)
     }
     
     fileprivate var stateStrings = ["Florida", "California", "New York", "Atlanta", "Dallas", "New Jersey"]
@@ -196,7 +196,7 @@ extension TellUsAboutYourCarViewController: APJTextPickerViewDelegate {
     func textPickerView(_ textPickerView: APJTextPickerView, titleForRow row: Int) -> String? {
         if textPickerView.tag == 2 {
             self.stateLabel.textColor = UIColor.black
-            self.statePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+//            self.statePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             return stateStrings[row]
         } else {
             return ""
@@ -293,7 +293,7 @@ extension TellUsAboutYourCarViewController {
                 return
             }
             
-            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 
                 if keyboardSize.height > 250 {
                     keyboardHeight = keyboardSize.height - 144

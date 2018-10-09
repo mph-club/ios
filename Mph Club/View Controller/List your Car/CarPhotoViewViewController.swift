@@ -122,22 +122,25 @@ class CarPhotoViewViewController: UIViewController, UIImagePickerControllerDeleg
 //        takePhoto()
 //    }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         
         if image2Bool == true {
-            image2.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            image2.image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
             image2Bool = false
         } else if image3Bool == true {
-            image3.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            image3.image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
             image3Bool = false
         } else if image4Bool == true {
-            image4.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            image4.image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
             image4Bool = false
         } else if image5Bool == true {
-            image5.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            image5.image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
             image5Bool = false
         } else {
-            imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            imageView.image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
             imageCoverBool = false
         }
         
@@ -156,4 +159,14 @@ class CarPhotoViewViewController: UIViewController, UIImagePickerControllerDeleg
     }
     */
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

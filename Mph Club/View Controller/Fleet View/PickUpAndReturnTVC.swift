@@ -27,10 +27,10 @@ class PickUpAndReturnTVC: UITableViewController {
     @IBAction func button1(_ sender: UIButton) {
         if button1.isSelected == false {
             button1.isSelected = true
-            button1.setImage(UIImage(named : "group7"), for: UIControlState.normal)
+            button1.setImage(UIImage(named : "group7"), for: UIControl.State.normal)
             
             button2.isSelected = false
-            button2.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
+            button2.setImage(UIImage(named : "group7-1"), for: UIControl.State.normal)
   
         }
         
@@ -39,10 +39,10 @@ class PickUpAndReturnTVC: UITableViewController {
     @IBAction func button2(_ sender: UIButton) {
         if button2.isSelected == false {
             button2.isSelected = true
-            button2.setImage(UIImage(named : "group7"), for: UIControlState.normal)
+            button2.setImage(UIImage(named : "group7"), for: UIControl.State.normal)
             
             button1.isSelected = false
-            button1.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
+            button1.setImage(UIImage(named : "group7-1"), for: UIControl.State.normal)
         }
     }
 
