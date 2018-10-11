@@ -10,8 +10,7 @@ import UIKit
 import AWSCognitoIdentityProvider
 import Crashlytics
 
-
-class ExplorerViewController: UITableViewController {
+final class ExplorerViewController: UITableViewController {
     
     var response: AWSCognitoIdentityUserGetDetailsResponse?
     var user: AWSCognitoIdentityUser?

@@ -62,8 +62,8 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SimilarCarCell
-            cell.title.text = similarCarList[indexPath.row].title!
-            cell.img.image = UIImage(named: similarCarList[indexPath.row].img!)
+            cell.title.text = similarCarList[indexPath.row].title
+            cell.img.image = similarCarList[indexPath.row].img
             cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price!))"
             cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips!)) Trips"
             
@@ -82,7 +82,7 @@ struct CarAttribute {
 
 struct SimilarCar {
     let title: String?
-    let img: String?
+    let img: UIImage?
     let price: Float?
     let trips: Int?
 }
@@ -205,9 +205,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         carAttributes.append(CarAttribute(title: "13 MPG", img: "gas64Px"))
         carAttributes.append(CarAttribute(title: "GPS", img: "satellite64Px"))
         
-        similarCarList.append(SimilarCar(title: "Ferrari California 2013", img: "dontknowcar", price: 200, trips: 4))
-        similarCarList.append(SimilarCar(title: "Ferrari California 2014", img: "dontknowcar", price: 200, trips: 4))
-        similarCarList.append(SimilarCar(title: "Ferrari California 2015", img: "dontknowcar", price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2013", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2014", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2015", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
     }
 
 
