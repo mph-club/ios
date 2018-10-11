@@ -15,6 +15,7 @@
 		0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC79216F9691005FCC70 /* TableViewExtension.swift */; };
 		0064CC7D216F9691005FCC70 /* ReusableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */; };
 		0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */; };
+		0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */; };
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
 		350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */; };
@@ -135,6 +136,7 @@
 		0064CC79216F9691005FCC70 /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtension.swift; sourceTree = "<group>"; };
 		0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
+		0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mph_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */,
 				0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */,
 				0064CC79216F9691005FCC70 /* TableViewExtension.swift */,
+				0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -977,6 +980,7 @@
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */,
+				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				35CC0D7D20F7A31800575225 /* ExplorerViewController.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
 				358DB0B2212CA5CC00E3822B /* FeatureContainerVC.swift in Sources */,
