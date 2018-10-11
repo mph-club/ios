@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00435674216D1CC800424A5C /* upload-dsym.sh */; };
 		00435678216D1CCA00424A5C /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00435675216D1CC900424A5C /* libTestFairy.a */; };
+		0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064CC71216F94F2005FCC70 /* Explore.storyboard */; };
+		0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC75216F967D005FCC70 /* NibLoadable.swift */; };
+		0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC76216F967E005FCC70 /* ReusableView.swift */; };
+		0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC79216F9691005FCC70 /* TableViewExtension.swift */; };
+		0064CC7D216F9691005FCC70 /* ReusableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */; };
+		0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */; };
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
 		350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */; };
@@ -124,6 +130,12 @@
 		00435675216D1CC900424A5C /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
 		00435676216D1CCA00424A5C /* TestFairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
 		0043567D216D221C00424A5C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0064CC71216F94F2005FCC70 /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
+		0064CC75216F967D005FCC70 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		0064CC76216F967E005FCC70 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		0064CC79216F9691005FCC70 /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewExtension.swift; sourceTree = "<group>"; };
+		0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
 		014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mph_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +288,8 @@
 		0064CC6A216F905D005FCC70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0064CC74216F9668005FCC70 /* Protocol */,
+				0064CC73216F9660005FCC70 /* Extension */,
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
 				0064CC6B216F906A005FCC70 /* BridgeFile */,
 			);
@@ -288,6 +302,68 @@
 				0043567D216D221C00424A5C /* Header.h */,
 			);
 			path = BridgeFile;
+			sourceTree = "<group>";
+		};
+		0064CC6C216F9157005FCC70 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */,
+				3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */,
+				353D3BF4210A5BEB00CF748C /* InfoPlist.strings */,
+				3591B8C820DAC06D00BA0CF9 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0064CC6D216F91FA005FCC70 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0064CC6E216F9226005FCC70 /* Explore */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0064CC6E216F9226005FCC70 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				0064CC6F216F9231005FCC70 /* Views */,
+				0064CC70216F923B005FCC70 /* Controllers */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		0064CC6F216F9231005FCC70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0064CC71216F94F2005FCC70 /* Explore.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0064CC70216F923B005FCC70 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0064CC73216F9660005FCC70 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */,
+				0064CC7A216F9691005FCC70 /* ReusableViewExtension.swift */,
+				0064CC79216F9691005FCC70 /* TableViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0064CC74216F9668005FCC70 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0064CC75216F967D005FCC70 /* NibLoadable.swift */,
+				0064CC76216F967E005FCC70 /* ReusableView.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
@@ -364,13 +440,11 @@
 			isa = PBXGroup;
 			children = (
 				0064CC6A216F905D005FCC70 /* Common */,
-				00435673216D1CB100424A5C /* TestFairy */,
+				0064CC6D216F91FA005FCC70 /* Modules */,
 				3598E02020EBB8B400E595EE /* Custom Classes */,
 				35207DCA20E3D5A300BA838A /* View Controller */,
-				3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */,
-				3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */,
-				353D3BF4210A5BEB00CF748C /* InfoPlist.strings */,
-				3591B8C820DAC06D00BA0CF9 /* Info.plist */,
+				0064CC6C216F9157005FCC70 /* Resource */,
+				00435673216D1CB100424A5C /* TestFairy */,
 			);
 			path = "Mph Club";
 			sourceTree = "<group>";
@@ -677,6 +751,7 @@
 				355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */,
 				35CC0D7F20F7A33800575225 /* dontknowcar.jpg in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
+				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */,
@@ -839,6 +914,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */,
+				0064CC7D216F9691005FCC70 /* ReusableViewExtension.swift in Sources */,
 				35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */,
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
@@ -853,6 +929,7 @@
 				355D02BD2121F6F300B681D4 /* CellView.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
+				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
@@ -863,7 +940,9 @@
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
 				358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */,
 				35D639262151495400B912AA /* ProfileVC.swift in Sources */,
+				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,
 				35CC0D8320F7A34E00575225 /* TableViewCell.swift in Sources */,
+				0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetTableViewController.swift in Sources */,
 				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
 				35CC0D8720F7A41F00575225 /* UINavigationBar+Alpha.swift in Sources */,
@@ -881,6 +960,7 @@
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
 				358DB0B0212CA43E00E3822B /* FeaturesTableViewController.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
+				0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */,
 				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				35DAA31A20F403C80083CA93 /* FleetTableViewCell.swift in Sources */,
@@ -1076,7 +1156,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V25FP97PQT;
-				INFOPLIST_FILE = "Mph Club/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mph Club/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1104,7 +1184,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V25FP97PQT;
-				INFOPLIST_FILE = "Mph Club/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Mph Club/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
