@@ -1,5 +1,5 @@
 //
-//  nextButton.swift
+//  NextButton.swift
 //  Mph Club
 //
 //  Created by Alex Cruz on 7/6/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class nextButton: UIButton {
+class NextButton: UIButton {
 
     /*
     // Only override draw() if you perform custom drawing.

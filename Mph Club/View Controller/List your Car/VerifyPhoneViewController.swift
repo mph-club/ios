@@ -11,7 +11,7 @@ import UIKit
 class VerifyPhoneViewController: UIViewController {
 
     @IBOutlet weak var phoneTextField: MphTextField!
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class VerifyPhoneViewController: UIViewController {
         self.present(fireAction, animated: true)
     }
     
-    @IBAction func next(_ sender: nextButton) {
+    @IBAction func next(_ sender: NextButton) {
         // pop confirming number is correct.
         confirmNumber()
     }

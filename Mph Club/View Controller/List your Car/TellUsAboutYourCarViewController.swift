@@ -32,7 +32,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
     @IBOutlet weak var statePickerView: APJTextPickerView!
     
 
-    @IBOutlet weak var nextButtton: nextButton!
+    @IBOutlet weak var nextButtton: NextButton!
 
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var carDescriptionLabel: UILabel!

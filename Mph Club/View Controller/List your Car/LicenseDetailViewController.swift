@@ -20,7 +20,7 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     // Constraints
     @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!

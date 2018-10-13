@@ -11,7 +11,7 @@ import UIKit
 class EnterCodeViewController: UIViewController {
 
     @IBOutlet weak var codeTextField: MphTextField!
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

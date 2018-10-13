@@ -15,7 +15,7 @@ class CarEligibilityViewController: UIViewController {
     @IBOutlet weak var makePickerView: APJTextPickerView!
     @IBOutlet weak var modelPickerView: APJTextPickerView!
     
-    @IBOutlet weak var nextButtton: nextButton!
+    @IBOutlet weak var nextButtton: NextButton!
     
     @IBOutlet weak var makeLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!

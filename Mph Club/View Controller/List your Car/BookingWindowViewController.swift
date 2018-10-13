@@ -13,7 +13,7 @@ import APJTextPickerView
 class BookingWindowViewController: UIViewController {
     
     @IBOutlet weak var windowPickerView: APJTextPickerView!
-    @IBOutlet weak var nextButtton: nextButton!
+    @IBOutlet weak var nextButtton: NextButton!
     
     
     override func viewDidLoad() {

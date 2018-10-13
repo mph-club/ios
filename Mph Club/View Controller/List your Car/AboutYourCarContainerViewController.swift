@@ -17,7 +17,7 @@ extension AboutYourCarContainerViewController: ChangeButtonColorDelegate {
 
 class AboutYourCarContainerViewController: UIViewController {
     
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
