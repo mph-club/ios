@@ -16,7 +16,6 @@ final class ExploreViewController: UIViewController {
         case showMapView
     }
     
-    
     private enum Section: String {
         case topRentals = "Top rentals"
         case luxurySUVs = "Luxury SUVs"
@@ -33,18 +32,20 @@ final class ExploreViewController: UIViewController {
         didSet {
             // Register Header View
             registerHeaderTableView()
+            // Register Cell View
+            registerTableView()
         }
     }
     
     // MARK: View
     @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var footerView: UIView!
     
     // MARK: Image View
     @IBOutlet private weak var headerImageView: UIImageView!
     
     // MARK: Button
     @IBOutlet private weak var searchButton: UIButton!
-    
     
     // ==================
     // MARK: - Properties
@@ -99,6 +100,10 @@ private extension ExploreViewController {
     func registerHeaderTableView() {
         tableView.register(ExploreHeaderTableViewCell.self)
     }
+    
+    func registerTableView() {
+        tableView.register(ExploreTableViewCell.self)
+    }
 }
 
 // ===================
@@ -131,7 +136,8 @@ extension ExploreViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: ExploreTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
 }
 

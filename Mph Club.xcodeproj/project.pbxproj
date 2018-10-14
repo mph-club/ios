@@ -20,6 +20,8 @@
 		0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */; };
 		0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */; };
 		0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC82216F9E19005FCC70 /* UIColorExtension.swift */; };
+		00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */; };
+		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -145,6 +147,8 @@
 		0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
 		0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		0064CC82216F9E19005FCC70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarCollectionViewCell.swift; sourceTree = "<group>"; };
+		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -383,12 +387,30 @@
 		0064CC7F216F98CF005FCC70 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				00D06E452173D00A004A668F /* CollectionViewCell */,
+				00D06E442173CA41004A668F /* TableViewCell */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		00D06E442173CA41004A668F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */,
 				00F6E2ED216FBC440065EF2B /* ExploreHeaderTableViewCell.xib */,
 				0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */,
 				0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */,
 			);
-			path = CustomCells;
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		00D06E452173D00A004A668F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */,
+				00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
@@ -760,6 +782,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */,
 				355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
 				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
@@ -995,6 +1018,7 @@
 				358DB0AE212C8DE900E3822B /* EndTimeTVC.swift in Sources */,
 				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
+				00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */,
 				357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */,
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
