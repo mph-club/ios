@@ -55,11 +55,10 @@ class TakeRegistrationPicViewController: UIViewController {
         self.present(fireAction, animated: true)
     }
 
-    
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "regisPhotoView" {
             if let destinationVC = segue.destination as? RegisPhotoViewController {
-                if sender as! String == "library" {
+                if sender as? String == "library" {
                     destinationVC.typeOfPicker = "library"
                 } else {
                     destinationVC.typeOfPicker = "camera"

@@ -52,26 +52,25 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView.tag == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeatureAttributesCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? FeatureAttributesCell else { return UICollectionViewCell() }
             cell.img.image = UIImage(named: featureItems[indexPath.row])
             return cell
         } else if collectionView.tag == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarAttributesCell
-            cell.img.image = UIImage(named: carAttributes[indexPath.row].img!)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CarAttributesCell else { return UICollectionViewCell() }
+            cell.img.image = UIImage(named: carAttributes[indexPath.row].img ?? "")
             cell.titleLabel.text = carAttributes[indexPath.row].title
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SimilarCarCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SimilarCarCell else { return UICollectionViewCell() }
             cell.title.text = similarCarList[indexPath.row].title
             cell.img.image = similarCarList[indexPath.row].img
-            cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price!))"
-            cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips!)) Trips"
+            cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price ?? 0))"
+            cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips ?? 0)) Trips"
             
             return cell
         }
 
     }
-    
 
 }
 
@@ -129,20 +128,21 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.isDirectionalLockEnabled = false
         
-        print(vehicle!)
         
-        self.vehicleImg.image = UIImage(named: vehicle!.img)
-        self.titleLabel.text = vehicle!.title
-        self.tripLabel.text = "\(String(describing: vehicle!.trips)) trips"
-        self.milesLabel.text = "\(String(describing: vehicle!.miles)) mi"
+        guard let vehicle = vehicle else { return }
+        print(vehicle)
         
+        self.vehicleImg.image = UIImage(named: vehicle.img)
+        self.titleLabel.text = vehicle.title
+        self.tripLabel.text = "\(String(describing: vehicle.trips)) trips"
+        self.milesLabel.text = "\(String(describing: vehicle.miles)) mi"
         
         setDummyData()
         reviews()
         
         scrollView.delegate = self
         
-        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black

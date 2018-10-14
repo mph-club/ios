@@ -13,7 +13,7 @@ class AddAPhotoOfCarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImg: UIImage = UIImage(named: Constant.closeIcon)!
+        let backImg: UIImage = UIImage(named: Constant.closeIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(AddAPhotoOfCarViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
@@ -60,7 +60,7 @@ class AddAPhotoOfCarViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "carPhotoView" {
             if let destinationVC = segue.destination as? CarPhotoViewViewController {
-                if sender as! String == "library" {
+                if sender as? String == "library" {
                     destinationVC.typeOfPicker = "library"
                 } else {
                     destinationVC.typeOfPicker = "camera"

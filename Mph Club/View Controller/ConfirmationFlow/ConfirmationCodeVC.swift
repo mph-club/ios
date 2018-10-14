@@ -18,15 +18,15 @@ class ConfirmationCodeVC: UIViewController {
 
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
     
-    @IBOutlet weak var sentToLabel: UILabel!
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var code: UITextField!
+    @IBOutlet private weak var sentToLabel: UILabel!
+    @IBOutlet private weak var username: UITextField!
+    @IBOutlet private weak var code: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customNavBar()
-        self.username.text = self.user!.username;
-        self.sentToLabel.text = "Code sent to: \(self.sentTo!)"
+        self.username.text = self.user?.username
+        self.sentToLabel.text = "Code sent to: \(self.sentTo ?? "")"
     }
     
     func customNavBar() {
@@ -58,7 +58,7 @@ class ConfirmationCodeVC: UIViewController {
             self.present(alertController, animated: true, completion:  nil)
             return
         }
-        self.user?.confirmSignUp(self.code.text!, forceAliasCreation: true).continueWith {[weak self] (task: AWSTask) -> AnyObject? in
+        self.user?.confirmSignUp(self.code.text ?? "", forceAliasCreation: true).continueWith { [weak self] (task: AWSTask) -> AnyObject? in
             guard let strongSelf = self else { return nil }
             DispatchQueue.main.async(execute: {
                 if let error = task.error as NSError? {
@@ -77,12 +77,14 @@ class ConfirmationCodeVC: UIViewController {
                   //   self?.performSegue(withIdentifier: "TabView", sender: nil)
                     
                     // LOGIN USER
-                    if (self!.username.text != nil && self?.password! != nil) {
-                        let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self!.username.text!, password: (self?.password!)! )
+                    
+                    if let username = self?.username.text, let password = self?.password {
+                        let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: username,
+                                                                                          password: password)
                         self?.passwordAuthenticationCompletion?.set(result: authDetails)
                      //   self?.performSegue(withIdentifier: "TabView", sender: nil)
                         self?.dismiss(animated: true, completion: nil)
-                        print(authDetails!)
+//                        print(authDetails!)
                         
                     } else {
                         let alertController = UIAlertController(title: "Missing information",
@@ -99,7 +101,7 @@ class ConfirmationCodeVC: UIViewController {
     }
     
     // handle code resend action
-    @IBAction func resend(_ sender: AnyObject) {
+    @IBAction private func resend(_ sender: AnyObject) {
         self.user?.resendConfirmationCode().continueWith {[weak self] (task: AWSTask) -> AnyObject? in
             guard let _ = self else { return nil }
             DispatchQueue.main.async(execute: {
@@ -110,10 +112,10 @@ class ConfirmationCodeVC: UIViewController {
                     let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alertController.addAction(okAction)
                     
-                    self?.present(alertController, animated: true, completion:  nil)
+                    self?.present(alertController, animated: true, completion: nil)
                 } else if let result = task.result {
                     let alertController = UIAlertController(title: "Code Resent",
-                                                            message: "Code resent to \(result.codeDeliveryDetails?.destination! ?? " no message")",
+                                                            message: "Code resent to \(result.codeDeliveryDetails?.destination ?? "no message")",
                         preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alertController.addAction(okAction)

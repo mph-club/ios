@@ -48,7 +48,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func customBackButton() {
-         let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+         let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(FleetTableViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
@@ -111,7 +111,7 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
 
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! FleetTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? FleetTableViewCell else { return UITableViewCell() }
         cell.carImage.image = UIImage(named: carList[indexPath.row].img)
         cell.titleLabel.text = carList[indexPath.row].title
         cell.priceLabel.text = "\(carList[indexPath.row].price)"
@@ -170,8 +170,8 @@ class FleetTableViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "carDetailView" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = segue.destination as! DetailViewController
-                controller.vehicle = carList[indexPath.row]
+                let controller = segue.destination as? DetailViewController
+                controller?.vehicle = carList[indexPath.row]
             }
         
         }

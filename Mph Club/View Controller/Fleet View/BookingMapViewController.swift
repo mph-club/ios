@@ -13,13 +13,13 @@ protocol BookingHandleMapSearch: class {
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String)
 }
 
-protocol BookingLocationSearchTableDelegate {
+protocol BookingLocationSearchTableDelegate: class {
     func displayAddressSelected(_ locationDetail: Location)
 }
 
 class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate {
     
-    var addressDelegate: BookingLocationSearchTableDelegate?
+    weak var addressDelegate: BookingLocationSearchTableDelegate?
     var locationDetailProperty = Location()
     var selectedPin: CLPlacemark?
     var resultSearchController: UISearchController!
@@ -42,12 +42,12 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         locationManager.startUpdatingLocation()
         
        
-        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as! BookingLocationSearchTable
+        let locationSearchTable = storyboard?.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as? BookingLocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
         
-        searchBar = resultSearchController!.searchBar
-        searchBar.frame = CGRect(x: 0, y: 0, width: (navigationController?.view.bounds.size.width)!, height: self.searchBarContainer.bounds.size.height)
+        searchBar = resultSearchController?.searchBar
+        searchBar.frame = CGRect(x: 0, y: 0, width: navigationController?.view.bounds.size.width ?? 0, height: self.searchBarContainer.bounds.size.height)
         searchBar.backgroundImage = UIImage()
         searchBar.barTintColor = .white
         searchBar.sizeToFit()
@@ -57,13 +57,13 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
    
         searchBar.setValue("Clear", forKey:"_cancelButtonText")
         
-        self.searchBarContainer.addSubview((resultSearchController?.searchBar)!)
+        self.searchBarContainer.addSubview((resultSearchController?.searchBar) ?? UIView())
         setBottomBorder()
         
         resultSearchController.hidesNavigationBarDuringPresentation = false
         resultSearchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        locationSearchTable.handleMapSearchDelegate = self
+        locationSearchTable?.handleMapSearchDelegate = self
         
         
 //        self.resultSearchController.isActive = true
@@ -133,7 +133,8 @@ extension BookingMapViewController : CLLocationManagerDelegate {
         
         let geocoder = CLGeocoder()
         
-        geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response , error in
+        // swiftlint:disable:next force_unwrapping
+        geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response, error in
       
             if let unwrapped = response {
                 if let address = unwrapped.first {
@@ -159,13 +160,13 @@ extension BookingMapViewController : CLLocationManagerDelegate {
 extension BookingMapViewController: BookingHandleMapSearch {
     
     func searchBarNotEmpty() {
-        let searchBar = resultSearchController!.searchBar
-        if searchBar.text != "" {
+        let searchBar = resultSearchController?.searchBar
+        if searchBar?.text != "" {
            // doneButton.isEnabled = true
         }
     }
     
-    func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String){
+    func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
         
         performSegue(withIdentifier: "goToFeed", sender: nil)
 //        searchBarNotEmpty()
@@ -191,25 +192,23 @@ extension BookingMapViewController: BookingHandleMapSearch {
 //        mapView.setRegion(region, animated: true)
     }
     
-    
-    func saveCarLocation(_ placemark: CLPlacemark)  {
+    func saveCarLocation(_ placemark: CLPlacemark) {
         
         do {
             let location = try locationDetailModel.createLocation(placemark)
             print("Success! location created. \(location)")
             locationDetailProperty = location
-        } catch LocationDetail.InputError.InputMissing {
+        } catch LocationDetail.InputError.inputMissing {
             print("Input Missing")
         } catch {
             print("Something went wrong, please try again!")
         }
         
-        
     }
     
 }
 
-var BookinglocationDetailModel = BookingLocationDetail()
+var bookinglocationDetailModel = BookingLocationDetail()
 
 struct BookingLocation {
     var title: String?
@@ -230,7 +229,7 @@ struct BookingLocationDetail {
     var country: String?
     
     enum InputError: Error {
-        case InputMissing
+        case inputMissing
     }
     
     func createLocation(_ placemark: CLPlacemark) throws -> Location {
@@ -239,11 +238,11 @@ struct BookingLocationDetail {
         if placemark.subThoroughfare == nil {
             
             guard let unwrappedCity = placemark.locality else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedState = placemark.administrativeArea else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             
@@ -258,31 +257,31 @@ struct BookingLocationDetail {
         } else {
             
             guard let unwrappedCity = placemark.locality else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedState = placemark.administrativeArea else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedSubThoroughfare = placemark.subThoroughfare else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedThoroughfare = placemark.thoroughfare else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedZip = placemark.postalCode else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedPlace = placemark.name else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedCountry = placemark.country else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             return Location(title: unwrappedPlace,

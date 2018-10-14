@@ -9,9 +9,7 @@
 import UIKit
 import MapKit
 
-
-
-class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+final class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     
     weak var handleMapSearchDelegate: BookingHandleMapSearch?
@@ -51,18 +49,17 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
         return addressLine
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! BookingSearchCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? BookingSearchCell else { return UITableViewCell() }
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
         
-        if (selectedItem.name?.contains("Airport"))! {
+        if selectedItem.name?.contains("Airport") ?? false {
             cell.iconImage.image = UIImage(named: "plane")
-        } else if (selectedItem.name?.contains("mph club"))! {
+        } else if selectedItem.name?.contains("mph club") ?? false {
             cell.iconImage.image = UIImage(named: "lion-28px")
         } else {
             cell.iconImage.image = UIImage(named: "pin")
@@ -78,9 +75,9 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
         
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
         
-        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name!
+        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name ?? ""
 
-        if selectedItem.administrativeArea! == "FL" {
+        if selectedItem.administrativeArea == "FL" {
             print("exists")
             
             handleMapSearchDelegate?.dropPinZoomIn(selectedItem, locationName: selectedItem2)
@@ -91,7 +88,6 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
            
         }
         
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,12 +96,7 @@ class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITable
     
 }
 
-
-
 extension BookingLocationSearchTable: UISearchResultsUpdating {
-    
-   
-    
     func updateSearchResults(for searchController: UISearchController) {
         
         searchController.searchBar.setShowsCancelButton(false, animated: false)
@@ -124,12 +115,6 @@ extension BookingLocationSearchTable: UISearchResultsUpdating {
             self.matchingItems = response.mapItems
             self.tableView.reloadData()
         }
-        
-        
     }
     
 }
-
-
-
-

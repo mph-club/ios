@@ -9,69 +9,60 @@
 import UIKit
 import APJTextPickerView
 
-
-protocol ChangeButtonColorDelegate {
+protocol ChangeButtonColorDelegate: class {
     func setColor(color: UIColor)
 }
 
-class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
+final class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
     
-    var delegate: ChangeButtonColorDelegate?
-    
-//    init(withDelegate delegate: ChangeButtonColorDelegate?) {
-//        self.delegate = delegate
-//    }
-    
+    weak var delegate: ChangeButtonColorDelegate?
     
     var isState = true
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var contentView: UIView!
     
-    @IBOutlet weak var plateTextField: MphTextField!
-    @IBOutlet weak var statePickerView: APJTextPickerView!
+    @IBOutlet private weak var plateTextField: MphTextField!
+    @IBOutlet private weak var statePickerView: APJTextPickerView!
     
-
-    @IBOutlet weak var nextButtton: NextButton!
-
-    @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var carDescriptionLabel: UILabel!
-    @IBOutlet weak var carDescTextView: UITextView!
+    @IBOutlet private weak var nextButtton: NextButton!
+    
+    @IBOutlet private weak var stateLabel: UILabel!
+    @IBOutlet private weak var carDescriptionLabel: UILabel!
+    @IBOutlet private weak var carDescTextView: UITextView!
     
     var activeField: UITextView?
     var lastOffset: CGPoint!
     var keyboardHeight: CGFloat!
     
     // Constraints
-    @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
+    @IBOutlet private weak var constraintContentHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         plateTextField.delegate = self
         statePickerView.delegate = self
         
         initStatePickerView()
-        
         
         carDescTextView.delegate = self
         
         scrollView.delegate = self
         
         // Observe keyboard change
-        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AboutYourCarViewKeyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(aboutYourCarViewKeyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(aboutYourCarViewKeyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         // Add touch gesture for contentView
-        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_returnTextView(gesture:))))
+        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(returnTextView(gesture:))))
         
         self.setUpTextField(color: UIColor.lightGray.cgColor)
         
         self.carDescTextView.layer.borderWidth = 1
         self.carDescTextView.layer.borderColor = UIColor.lightGray.cgColor
         
-        let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        let numberToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         numberToolbar.barStyle = .default
         numberToolbar.items = [
             UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(TellUsAboutYourCarViewController.cancelNumberPad)),
@@ -81,8 +72,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         carDescTextView.inputAccessoryView = numberToolbar
     }
     
-    
-    @objc func _returnTextView(gesture: UIGestureRecognizer) {
+    @objc func returnTextView(gesture: UIGestureRecognizer) {
         guard activeField != nil else {
             return
         }
@@ -90,19 +80,18 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         activeField?.resignFirstResponder()
         activeField = nil
     }
-
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.setBottomBorder()
         if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
             print("reach bottom")
         }
-
+        
         if (scrollView.contentOffset.y <= 0){
             print("reach top")
             self.removeBottomBorder()
         }
-
+        
         if (scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)){
             //not top and not bottom
         }
@@ -117,7 +106,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         self.navigationController?.navigationBar.layer.shadowOpacity = 1.0
         self.navigationController?.navigationBar.layer.shadowRadius = 0.0
     }
-
+    
     func removeBottomBorder() {
         self.navigationController?.navigationBar.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.navigationBar.layer.masksToBounds = false
@@ -127,8 +116,6 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         self.navigationController?.navigationBar.layer.shadowRadius = 0.0
     }
     
-    
-    
     @objc func cancelNumberPad() {
         carDescTextView.resignFirstResponder()
     }
@@ -137,14 +124,12 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         carDescTextView.resignFirstResponder()
     }
     
-    
     func normalState() {
-        if self.plateTextField.text! != "" && self.statePickerView.text! != "" && self.carDescTextView.text! != "" {
+        if !(plateTextField.text?.isEmpty ?? true) && !(statePickerView.text?.isEmpty ?? true) && !carDescTextView.text.isEmpty {
             // turn btn black
             delegate?.setColor(color: UIColor.black)
         }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -154,7 +139,7 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
     func setUpTextField(color: CGColor) {
         self.stateLabel.textColor = UIColor.lightGray
         self.carDescriptionLabel.textColor = UIColor.lightGray
-//        self.statePickerView.setBottomSingleBorder(color: color)
+        //        self.statePickerView.setBottomSingleBorder(color: color)
     }
     
     fileprivate var stateStrings = ["Florida", "California", "New York", "Atlanta", "Dallas", "New Jersey"]
@@ -164,20 +149,19 @@ class TellUsAboutYourCarViewController: UIViewController, UITextViewDelegate, UI
         statePickerView.dataSource = self
     }
     
-    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.tag == 3 {
             self.carDescriptionLabel.textColor = UIColor.black
             self.carDescTextView.layer.borderColor = UIColor.black.cgColor
         }
     }
-
+    
     
 }
 
 
 extension TellUsAboutYourCarViewController: APJTextPickerViewDelegate {
-
+    
     
     func textPickerView(_ textPickerView: APJTextPickerView, didSelectString row: Int) {
         if textPickerView.tag == 2 {
@@ -196,7 +180,7 @@ extension TellUsAboutYourCarViewController: APJTextPickerViewDelegate {
     func textPickerView(_ textPickerView: APJTextPickerView, titleForRow row: Int) -> String? {
         if textPickerView.tag == 2 {
             self.stateLabel.textColor = UIColor.black
-//            self.statePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+            //            self.statePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             return stateStrings[row]
         } else {
             return ""
@@ -222,7 +206,6 @@ extension TellUsAboutYourCarViewController: UITextFieldDelegate {
     }
 }
 
-
 extension TellUsAboutYourCarViewController: APJTextPickerViewDataSource {
     func numberOfRows(in pickerView: APJTextPickerView) -> Int {
         
@@ -235,27 +218,21 @@ extension TellUsAboutYourCarViewController: APJTextPickerViewDataSource {
     }
 }
 
-
-
 // MARK: UITextFieldDelegate
 extension TellUsAboutYourCarViewController {
-
+    
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         print("test")
         
-
-        
         if textView.tag == 3 {
             carDescTextView.text = textView.text
         }
-
+        
         activeField = textView
         lastOffset = self.scrollView.contentOffset
         return true
     }
-    
-    
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         normalState()
@@ -266,17 +243,11 @@ extension TellUsAboutYourCarViewController {
     
 }
 
-
 var isCarDescTextView = false
 
 // MARK: Keyboard Handling
 extension TellUsAboutYourCarViewController {
-    
-    
-    @objc func AboutYourCarViewKeyboardWillShow(notification: NSNotification) {
-        
-        
-
+    @objc func aboutYourCarViewKeyboardWillShow(notification: NSNotification) {
         if activeField?.tag == 3 {
             setBottomBorder()
             isCarDescTextView = true
@@ -284,11 +255,8 @@ extension TellUsAboutYourCarViewController {
             self.statePickerView.isUserInteractionEnabled = false
         }
         
-
-        
         if isCarDescTextView == true {
-            
-            
+            //
             if keyboardHeight != nil {
                 return
             }
@@ -301,11 +269,10 @@ extension TellUsAboutYourCarViewController {
                     keyboardHeight = keyboardSize.height
                 }
                 
-                
                 // so increase contentView's height by keyboard height
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3) {
                     self.constraintContentHeight.constant += self.keyboardHeight
-                })
+                }
                 
                 // move if keyboard hide input field
                 
@@ -322,28 +289,24 @@ extension TellUsAboutYourCarViewController {
                 let distanceToBottom = self.scrollView.frame.size.height - unwrappedActiveFieldY - unwrappedActiveFieldHeight
                 let collapseSpace = keyboardHeight - distanceToBottom
                 
-                
                 // set new offset for scroll view
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3) {
                     self.scrollView.contentOffset = CGPoint(x: self.lastOffset.x, y: collapseSpace + 105)
-                })
+                }
             }
         } //
         
     }
     
-    
-    
-    @objc func AboutYourCarViewKeyboardWillHide(notification: NSNotification) {
-        
+    @objc func aboutYourCarViewKeyboardWillHide(notification: NSNotification) {
         self.normalState()
         
         self.plateTextField.isUserInteractionEnabled = true
         self.statePickerView.isUserInteractionEnabled = true
         self.carDescTextView.isUserInteractionEnabled = true
         
-       if isCarDescTextView == true {
-
+        if isCarDescTextView == true {
+            
             UIView.animate(withDuration: 0.3) {
                 
                 if self.keyboardHeight != nil {
@@ -352,16 +315,13 @@ extension TellUsAboutYourCarViewController {
                         self.scrollView.contentOffset = self.lastOffset
                     }
                 }
-
                 
                 self.keyboardHeight = nil
                 isCarDescTextView = false
                 
             }
-
-       }
+            
+        }
         
     }
 }
-
-

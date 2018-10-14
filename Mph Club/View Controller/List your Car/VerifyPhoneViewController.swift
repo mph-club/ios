@@ -46,15 +46,12 @@ class VerifyPhoneViewController: UIViewController {
 
 
 extension VerifyPhoneViewController: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        
         print("Begin")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if phoneTextField.text! != "" {
+        if !(phoneTextField.text?.isEmpty ?? true) {
             nextButton.backgroundColor = UIColor.black
         }
          print("End")

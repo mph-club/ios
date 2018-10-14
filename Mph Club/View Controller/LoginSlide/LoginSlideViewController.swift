@@ -8,13 +8,9 @@
 
 import UIKit
 
-class LoginSlideViewController: UIPageViewController {
+final class LoginSlideViewController: UIPageViewController {
     
-    
-    
-    var loginSlideDelegate: LoginSlideViewControllerDelegate?
-    
-
+    weak var loginSlideDelegate: LoginSlideViewControllerDelegate?
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newSlideViewController(slideNumber: "slide1"),
@@ -34,8 +30,7 @@ class LoginSlideViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
-        loginSlideDelegate?.loginSlideViewController(LoginSlidePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
-    
+        loginSlideDelegate?.loginSlideViewController(loginSlidePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -43,9 +38,6 @@ class LoginSlideViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
-
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,15 +49,9 @@ class LoginSlideViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-
-
 }
 
-
 // MARK: UIPageViewControllerDataSource
-
 extension LoginSlideViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -106,29 +92,23 @@ extension LoginSlideViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
-    
-    
-    
 }
 
 
 extension LoginSlideViewController: UIPageViewControllerDelegate {
-    
-    
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.index(of: firstViewController) {
-            loginSlideDelegate?.loginSlideViewController(LoginSlidePageViewController: self, didUpdatePageIndex: index)
+            loginSlideDelegate?.loginSlideViewController(loginSlidePageViewController: self, didUpdatePageIndex: index)
         }
     }
     
 }
 
-
-protocol LoginSlideViewControllerDelegate {
+protocol LoginSlideViewControllerDelegate: class {
     
     /**
      Called when the number of pages is updated.
@@ -136,7 +116,7 @@ protocol LoginSlideViewControllerDelegate {
      - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
      - parameter count: the total number of pages.
      */
-    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController, didUpdatePageCount count: Int)
+    func loginSlideViewController(loginSlidePageViewController: LoginSlideViewController, didUpdatePageCount count: Int)
     
     /**
      Called when the current index is updated.
@@ -144,6 +124,6 @@ protocol LoginSlideViewControllerDelegate {
      - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
      - parameter index: the index of the currently visible page.
      */
-    func loginSlideViewController(LoginSlidePageViewController: LoginSlideViewController, didUpdatePageIndex index: Int)
+    func loginSlideViewController(loginSlidePageViewController: LoginSlideViewController, didUpdatePageIndex index: Int)
     
 }

@@ -12,7 +12,7 @@ class FeatureContainerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(EndTimeTVC.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }

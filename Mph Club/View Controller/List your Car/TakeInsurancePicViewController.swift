@@ -73,7 +73,7 @@ class TakeInsurancePicViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "photoView" {
             if let destinationVC = segue.destination as? PhotoViewController {
-                if sender as! String == "library" {
+                if sender as? String == "library" {
                     destinationVC.typeOfPicker = "library"
                 } else {
                     destinationVC.typeOfPicker = "camera"

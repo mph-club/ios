@@ -22,8 +22,8 @@ class ConfirmForgotPasswordViewController: UIViewController {
     
     var user: AWSCognitoIdentityUser?
     
-    @IBOutlet weak var confirmationCode: UITextField!
-    @IBOutlet weak var proposedPassword: UITextField!
+    @IBOutlet private weak var confirmationCode: UITextField!
+    @IBOutlet private weak var proposedPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +56,12 @@ class ConfirmForgotPasswordViewController: UIViewController {
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(okAction)
             
-            self.present(alertController, animated: true, completion:  nil)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         
         //confirm forgot password with input from ui.
-        self.user?.confirmForgotPassword(confirmationCodeValue, password: self.proposedPassword.text!).continueWith {[weak self] (task: AWSTask) -> AnyObject? in
+        self.user?.confirmForgotPassword(confirmationCodeValue, password: self.proposedPassword.text ?? "").continueWith { [weak self] (task: AWSTask) -> AnyObject? in
             guard let strongSelf = self else { return nil }
             DispatchQueue.main.async(execute: {
                 if let error = task.error as NSError? {
@@ -73,13 +73,11 @@ class ConfirmForgotPasswordViewController: UIViewController {
                     
                     self?.present(alertController, animated: true, completion:  nil)
                 } else {
-                    let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
+                    strongSelf.navigationController?.popToRootViewController(animated: true)
                 }
             })
             return nil
         }
     }
-    
-    
     
 }

@@ -13,6 +13,7 @@ import Mixpanel
 import Fabric
 import Crashlytics
 
+// swiftlint:disable all
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
@@ -24,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>?
     
     enum ShortcutIdentifier: String {
-        case ListCar
-        case BookCar
-        case OpenTopRated
+        case listCar
+        case bookCar
+        case openTopRated
         
         init?(fullIdentifier: String) {
             guard let shortIdentifier = fullIdentifier.components(separatedBy: ".").last else {
@@ -35,8 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             self.init(rawValue: shortIdentifier)
         }
     }
-    
-
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -47,28 +46,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             return false
         }
         
-        
         // Warn user if configuration not updated
-        if (CognitoIdentityUserPoolId == "us-east-1_RKsJA9wua") {
+        if cognitoIdentityUserPoolId == "us-east-1_RKsJA9wua" {
             let alertController = UIAlertController(title: "Invalid Configuration",
                                                     message: "Please configure user pool constants in Constants.swift file.",
                                                     preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertController.addAction(okAction)
             
-            self.window?.rootViewController!.present(alertController, animated: true, completion:  nil)
+            self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         }
         
         // setup logging
         AWSDDLog.sharedInstance.logLevel = .verbose
         
         // setup service configuration
-        let serviceConfiguration = AWSServiceConfiguration(region: CognitoIdentityUserPoolRegion, credentialsProvider: nil)
+        let serviceConfiguration = AWSServiceConfiguration(region: cognitoIdentityUserPoolRegion, credentialsProvider: nil)
         
         // create pool configuration
-        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
-                                                                        clientSecret: CognitoIdentityUserPoolAppClientSecret,
-                                                                        poolId: CognitoIdentityUserPoolId)
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: cognitoIdentityUserPoolAppClientId,
+                                                                        clientSecret: cognitoIdentityUserPoolAppClientSecret,
+                                                                        poolId: cognitoIdentityUserPoolId)
         
         // initialize user pool client
         AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
@@ -79,21 +77,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         pool.delegate = self
         
         toolsInitialization()
-
- 
+        
         return true
     }
-    
     
     func toolsInitialization() {
         Mixpanel.initialize(token: "0d5bb533e299c39f2c8a91a09ee30807")
         Fabric.with([Crashlytics.self])
-       // TestFairy.begin("2017b41ea85897b1d103ed70784abaf3c7e9b362")
+        // TestFairy.begin("2017b41ea85897b1d103ed70784abaf3c7e9b362")
     }
-    
-
-
-
     
     func application(_ application: UIApplication,
                      performActionFor shortcutItem: UIApplicationShortcutItem,
@@ -113,48 +105,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     fileprivate func selectTabBarItemForIdentifier(_ identifier: ShortcutIdentifier) -> Bool {
-    
-        self.window?.rootViewController!.performSegue(withIdentifier: "goToTabView", sender: nil)
-
+        self.window?.rootViewController?.performSegue(withIdentifier: "goToTabView", sender: nil)
         
         guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
             return false
         }
         
-        switch (identifier) {
-        case .BookCar:
+        switch identifier {
+        case .bookCar:
             tabBarController.selectedIndex = 0
-            return true
-        case .OpenTopRated:
+        case .openTopRated:
             tabBarController.selectedIndex = 1
-            return true
-        case .ListCar:
-            
+        case .listCar:
             tabBarController.selectedIndex = 2
-            return true
         }
+        
+        return true
     }
 }
 
-
-
-// MARK:- AWSCognitoIdentityInteractiveAuthenticationDelegate protocol delegate
-
+// MARK: - AWSCognitoIdentityInteractiveAuthenticationDelegate protocol delegate
 extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
-    
     func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
-        if (self.navigationController == nil) {
+        if self.navigationController == nil {
             self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
         }
         
-        if (self.signInViewController == nil) {
+        if self.signInViewController == nil {
             self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
         }
         
         DispatchQueue.main.async {
-            self.navigationController!.popToRootViewController(animated: true)
-            if (!self.navigationController!.isViewLoaded
-                || self.navigationController!.view.window == nil) {
+            self.navigationController?.popToRootViewController(animated: true)
+            if !self.navigationController!.isViewLoaded
+                || self.navigationController!.view.window == nil {
                 self.window?.rootViewController?.present(self.navigationController!,
                                                          animated: true,
                                                          completion: nil)
@@ -165,13 +149,13 @@ extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
     }
     
     func startMultiFactorAuthentication() -> AWSCognitoIdentityMultiFactorAuthentication {
-        if (self.mfaViewController == nil) {
+        if self.mfaViewController == nil {
             self.mfaViewController = MfaViewController()
             self.mfaViewController?.modalPresentationStyle = .popover
         }
         DispatchQueue.main.async {
-            if (!self.mfaViewController!.isViewLoaded
-                || self.mfaViewController!.view.window == nil) {
+            if !self.mfaViewController!.isViewLoaded
+                || self.mfaViewController!.view.window == nil {
                 //display mfa as popover on current view controller
                 let viewController = self.window?.rootViewController!
                 viewController?.present(self.mfaViewController!,
@@ -179,13 +163,13 @@ extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
                                         completion: nil)
                 
                 // configure popover vc
-                let presentationController = self.mfaViewController!.popoverPresentationController
+                let presentationController = self.mfaViewController?.popoverPresentationController
                 presentationController?.permittedArrowDirections = UIPopoverArrowDirection.left
-                presentationController?.sourceView = viewController!.view
-                presentationController?.sourceRect = viewController!.view.bounds
+                presentationController?.sourceView = viewController?.view
+                presentationController?.sourceRect = viewController?.view.bounds ?? .zero
             }
         }
-        return self.mfaViewController! as! AWSCognitoIdentityMultiFactorAuthentication
+        return self.mfaViewController as! AWSCognitoIdentityMultiFactorAuthentication
     }
     
     func startRememberDevice() -> AWSCognitoIdentityRememberDevice {
@@ -193,26 +177,24 @@ extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
     }
 }
 
-
-// MARK:- AWSCognitoIdentityRememberDevice protocol delegate
-
+// MARK: - AWSCognitoIdentityRememberDevice protocol delegate
 extension AppDelegate: AWSCognitoIdentityRememberDevice {
     
     func getRememberDevice(_ rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>) {
         self.rememberDeviceCompletionSource = rememberDeviceCompletionSource
         DispatchQueue.main.async {
             // dismiss the view controller being present before asking to remember device
-            self.window?.rootViewController!.presentedViewController?.dismiss(animated: true, completion: nil)
+            self.window?.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
             let alertController = UIAlertController(title: "Remember Device",
                                                     message: "Do you want to remember this device?.",
                                                     preferredStyle: .actionSheet)
             
-            let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
                 self.rememberDeviceCompletionSource?.set(result: true)
-            })
-            let noAction = UIAlertAction(title: "No", style: .default, handler: { (action) in
+            }
+            let noAction = UIAlertAction(title: "No", style: .default) { _ in
                 self.rememberDeviceCompletionSource?.set(result: false)
-            })
+            }
             alertController.addAction(yesAction)
             alertController.addAction(noAction)
             

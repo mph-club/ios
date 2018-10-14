@@ -182,7 +182,6 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     func setBottomBorder() {
         self.navigationController?.navigationBar.layer.backgroundColor = UIColor.white.cgColor
         self.navigationController?.navigationBar.layer.masksToBounds = false
@@ -202,7 +201,6 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
     }
 
 }
-
 
 extension LicenseDetailViewController: APJTextPickerViewDelegate {
     private func textPickerView(_ textPickerView: APJTextPickerView, didSelectDate date: Date) {
@@ -247,12 +245,11 @@ extension LicenseDetailViewController: APJTextPickerViewDataSource {
     }
 }
 
+// ==================
+// MARK: - Text Field
+// ==================
 
-//////////////////
-
-
-
-// MARK: UITextFieldDelegate
+// MARK: Delegate
 extension LicenseDetailViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
@@ -270,7 +267,6 @@ extension LicenseDetailViewController: UITextFieldDelegate {
             firstNameTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
         }
         
-        
         activeField = textField
         lastOffset = self.scrollView.contentOffset
         return true
@@ -285,7 +281,6 @@ extension LicenseDetailViewController: UITextFieldDelegate {
         
     }
     
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         activeField?.resignFirstResponder()
         activeField = nil
@@ -293,17 +288,9 @@ extension LicenseDetailViewController: UITextFieldDelegate {
     }
 }
 
-
-
-
 // MARK: Keyboard Handling
 extension LicenseDetailViewController {
-    
-    
     @objc func keyboardWillShow(notification: NSNotification) {
-    
-        
-        
         if activeField?.tag == 3 {
             setBottomBorder()
             isState = false
@@ -320,27 +307,23 @@ extension LicenseDetailViewController {
             self.firstNameTextField.isUserInteractionEnabled = false
         }
         
-        
         if isState == false {
             if keyboardHeight != nil {
                 return
             }
             
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                
-            
+                //
                 if keyboardSize.height > 250 {
                     keyboardHeight = keyboardSize.height - 144
                 } else {
                     keyboardHeight = keyboardSize.height
                 }
                 
-      
-                
                 // so increase contentView's height by keyboard height
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3) {
                     self.constraintContentHeight.constant += self.keyboardHeight
-                })
+                }
                 
                 // move if keyboard hide input field
                 
@@ -363,17 +346,14 @@ extension LicenseDetailViewController {
 //                }
                 
                 // set new offset for scroll view
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3) {
                     // scroll to the position above keyboard 10 points
-                    
                     self.scrollView.contentOffset = CGPoint(x: self.lastOffset.x, y: collapseSpace + 40)
-                })
+                }
             }
         }
 
     }
-    
-
     
     @objc func keyboardWillHide(notification: NSNotification) {
         
@@ -396,7 +376,7 @@ extension LicenseDetailViewController {
     }
     
     func normalState() {
-        if self.stateTextField.text! != "" && self.licenseNumberTextField.text! != "" && self.firstNameTextField.text! != "" {
+        if !(stateTextField.text?.isEmpty ?? true) && !(licenseNumberTextField.text?.isEmpty ?? true) && !(firstNameTextField.text?.isEmpty ?? true) {
             self.nextButton.backgroundColor = UIColor.black
         }
     }
