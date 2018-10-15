@@ -70,7 +70,7 @@ extension BookingMapViewController {
         searchBar.placeholder = "Enter any city, airport or address in FL"
         searchBar.delegate = self
         resultSearchController.delegate = self
-   
+        
         searchBar.setValue("Clear", forKey:"_cancelButtonText")
         
         self.searchBarContainer.addSubview((resultSearchController?.searchBar) ?? UIView())
@@ -81,17 +81,17 @@ extension BookingMapViewController {
         definesPresentationContext = true
         locationSearchTable?.handleMapSearchDelegate = self
         
-//        self.resultSearchController.isActive = true
-//        self.resultSearchController.searchBar.becomeFirstResponder()
-      
+        //        self.resultSearchController.isActive = true
+        //        self.resultSearchController.searchBar.becomeFirstResponder()
+        
     }
     
     func didPresentSearchController(_ resultSearchController: UISearchController) {
-     //   resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
+        //   resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-       // resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
+        // resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
     }
     
     private func setBottomBorder() {
@@ -103,7 +103,6 @@ extension BookingMapViewController {
     
     @objc func getDirections() {
         self.performSegue(withIdentifier: "goToFeed", sender: self)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -136,24 +135,24 @@ extension BookingMapViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        //        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        //        print("locations = \(locValue.latitude) \(locValue.longitude)")
         
         let geocoder = CLGeocoder()
         
         // swiftlint:disable:next force_unwrapping
         geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response, _ in
-      
+            
             if let unwrapped = response {
                 if let address = unwrapped.first {
                     if let uw = address.areasOfInterest {
                         self.userLocation = uw[0]
                     }
-                   // self.userLocation = address.areasOfInterest![0]
+                    // self.userLocation = address.areasOfInterest![0]
                 }
             }
         })
-    
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -167,7 +166,7 @@ extension BookingMapViewController: BookingHandleMapSearch {
     func searchBarNotEmpty() {
         let searchBar = resultSearchController?.searchBar
         if !(searchBar?.text?.isEmpty ?? true) {
-           // doneButton.isEnabled = true
+            // doneButton.isEnabled = true
         }
     }
     

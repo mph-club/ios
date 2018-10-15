@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum Endpoints {
-    static var baseUrl: String = ""
+    static var baseUrl: String = InfoDictionary.main.baseURL
 }
 
 extension URLConvertible where Self: Endpoint {

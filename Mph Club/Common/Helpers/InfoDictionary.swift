@@ -35,5 +35,5 @@ final class InfoDictionary {
     // ==============
     
     // MARK: Base URL
-//    lazy private(set) var baseURL: String = self.dictionary[InfoDictionaryKey.baseURL]
+    lazy private(set) var baseURL: String = self.dictionary[InfoDictionaryKey.baseURL]
 }
