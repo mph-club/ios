@@ -10,6 +10,7 @@
 		0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037352E2174FE6800164AA7 /* InfoDictionary.swift */; };
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
+		003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735372175240A00164AA7 /* CustomNavigationBar.swift */; };
 		00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00435674216D1CC800424A5C /* upload-dsym.sh */; };
 		00435678216D1CCA00424A5C /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00435675216D1CC900424A5C /* libTestFairy.a */; };
 		0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAA217274F70041B687 /* UIViewExtension.swift */; };
@@ -144,6 +145,7 @@
 		0037352E2174FE6800164AA7 /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		003735372175240A00164AA7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		00435674216D1CC800424A5C /* upload-dsym.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-dsym.sh"; sourceTree = "<group>"; };
 		00435675216D1CC900424A5C /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
 		00435676216D1CCA00424A5C /* TestFairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				00C01DCE2174FB7300473AE6 /* Helpers */,
 				0064CC74216F9668005FCC70 /* Protocol */,
 				0064CC73216F9660005FCC70 /* Extension */,
+				3598E02020EBB8B400E595EE /* Custom Classes */,
 				0064CC6B216F906A005FCC70 /* BridgeFile */,
 			);
 			path = Common;
@@ -605,7 +608,6 @@
 			children = (
 				0064CC6A216F905D005FCC70 /* Common */,
 				0064CC6D216F91FA005FCC70 /* Modules */,
-				3598E02020EBB8B400E595EE /* Custom Classes */,
 				35207DCA20E3D5A300BA838A /* View Controller */,
 				0064CC6C216F9157005FCC70 /* Resource */,
 				00435673216D1CB100424A5C /* TestFairy */,
@@ -638,6 +640,7 @@
 				35DAA30D20EFBEC80083CA93 /* NextButton.swift */,
 				35CC0D8020F7A34600575225 /* Helpers.swift */,
 				353D3BF0210A12C000CF748C /* Constant.swift */,
+				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -1096,6 +1099,7 @@
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
+				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */,
 				35D639262151495400B912AA /* ProfileVC.swift in Sources */,
 				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,

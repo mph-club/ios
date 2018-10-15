@@ -71,7 +71,7 @@ extension BookingMapViewController {
         searchBar.delegate = self
         resultSearchController.delegate = self
         
-        searchBar.setValue("Clear", forKey:"_cancelButtonText")
+        searchBar.setValue("Clear", forKey: "_cancelButtonText")
         
         self.searchBarContainer.addSubview((resultSearchController?.searchBar) ?? UIView())
         setBottomBorder()

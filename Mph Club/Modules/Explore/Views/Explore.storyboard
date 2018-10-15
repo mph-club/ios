@@ -92,9 +92,61 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="IqA-84-xmH">
-                                    <rect key="frame" x="0.0" y="327" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="327" width="375" height="340"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximize the return on your luxury vehicle investment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BCc-TL-QQB">
+                                            <rect key="frame" x="16" y="56" width="343" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="6ha-Y0-Zos"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn over $50,000 a year by renting out your vehicle to our selective luxury clientele." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JKJ-Di-srA">
+                                            <rect key="frame" x="16" y="128" width="343" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="LyO-7j-UO1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJi-Tt-aTF">
+                                            <rect key="frame" x="16" y="220" width="343" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="E29-6K-fAY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <state key="normal" title="List your luxury vehicle">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="luxurayVehicleTouchUpInside:" destination="Bq5-BN-MRh" eventType="touchUpInside" id="bcJ-0h-icE"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="BCc-TL-QQB" firstAttribute="top" secondItem="IqA-84-xmH" secondAttribute="top" constant="56" id="DGP-Jh-8ua"/>
+                                        <constraint firstItem="cJi-Tt-aTF" firstAttribute="leading" secondItem="IqA-84-xmH" secondAttribute="leading" constant="16" id="Q0F-sG-WLg"/>
+                                        <constraint firstAttribute="trailing" secondItem="cJi-Tt-aTF" secondAttribute="trailing" constant="16" id="Zkt-f3-Xbv"/>
+                                        <constraint firstAttribute="trailing" secondItem="BCc-TL-QQB" secondAttribute="trailing" constant="16" id="agl-zm-bJY"/>
+                                        <constraint firstItem="BCc-TL-QQB" firstAttribute="leading" secondItem="IqA-84-xmH" secondAttribute="leading" constant="16" id="bN6-Tm-MRp"/>
+                                        <constraint firstItem="cJi-Tt-aTF" firstAttribute="top" secondItem="JKJ-Di-srA" secondAttribute="bottom" constant="32" id="dIM-K2-IzM"/>
+                                        <constraint firstAttribute="trailing" secondItem="JKJ-Di-srA" secondAttribute="trailing" constant="16" id="fjl-fx-5Ir"/>
+                                        <constraint firstItem="JKJ-Di-srA" firstAttribute="top" secondItem="BCc-TL-QQB" secondAttribute="bottom" constant="8" id="pqE-Tt-RU7"/>
+                                        <constraint firstItem="JKJ-Di-srA" firstAttribute="leading" secondItem="IqA-84-xmH" secondAttribute="leading" constant="16" id="tlC-Ku-1K1"/>
+                                    </constraints>
                                 </view>
                                 <connections>
                                     <outlet property="dataSource" destination="Bq5-BN-MRh" id="HYp-qq-iJn"/>

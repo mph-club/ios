@@ -52,7 +52,6 @@ final class ExploreViewController: UIViewController {
     // MARK: - Properties
     // ==================
     
-
     // MARK: Private
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
     
@@ -73,6 +72,18 @@ extension ExploreViewController {
         // Do any additional setup after loading the view.
         configView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hidden navigation bar
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 // MARK: - Navigation
@@ -90,6 +101,12 @@ private extension ExploreViewController {
     @IBAction func searchTouchUpInside(_ sender: UIButton) {
         performSegue(withIdentifier: Segue.showMapView)
     }
+    
+    @IBAction func luxurayVehicleTouchUpInside(_ sender: UIButton) {
+        performSegue(withIdentifier: Segue.presentListCar)
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
 }
 
 // ===============
@@ -97,8 +114,6 @@ private extension ExploreViewController {
 // ===============
 private extension ExploreViewController {
     func configView() {
-        // Hidden navigation bar
-        navigationController?.setNavigationBarHidden(true, animated: false)
         // Set header View height
         headerView.frame.size.height = view.frame.height / 2
     }
