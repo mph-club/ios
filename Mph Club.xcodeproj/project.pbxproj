@@ -303,6 +303,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0037353221750BB600164AA7 /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				0037353421750BF200164AA7 /* Views */,
+				0037353321750BE900164AA7 /* Controllers */,
+			);
+			path = SearchLocation;
+			sourceTree = "<group>";
+		};
+		0037353321750BE900164AA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
+				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0037353421750BF200164AA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		00435673216D1CB100424A5C /* TestFairy */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				0064CC6E216F9226005FCC70 /* Explore */,
+				0037353221750BB600164AA7 /* SearchLocation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -699,16 +726,13 @@
 		35DAA31120F3DA000083CA93 /* Fleet View */ = {
 			isa = PBXGroup;
 			children = (
-				350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */,
 				350307DF215BFDE80012E9B9 /* Booking.storyboard */,
 				35DAA31920F403C80083CA93 /* FleetTableViewCell.swift */,
 				35DAA31720F401280083CA93 /* FleetTableViewController.swift */,
 				35DAA31B20F40A320083CA93 /* DetailViewController.swift */,
-				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
 				3562EB80211B7D56001C8A3B /* CarAttributesCell.swift */,
 				355D02B0211DDF9200B681D4 /* TripDatesViewController.swift */,
 				355D02B2211DE30100B681D4 /* PickUpAndReturnViewController.swift */,
-				35789D1820F4418C00A07445 /* BookingLocationSearchTable.swift */,
 				358DB0A9212C826F00E3822B /* BookingSearchCell.swift */,
 				358DB0AB212C8DC900E3822B /* StartTimeTVC.swift */,
 				358DB0AD212C8DE900E3822B /* EndTimeTVC.swift */,

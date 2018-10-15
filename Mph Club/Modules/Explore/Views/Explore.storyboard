@@ -46,6 +46,9 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="searchTouchUpInside:" destination="Bq5-BN-MRh" eventType="touchUpInside" id="ssE-a5-x4Z"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search, and rent thousands of high end luxuary vehicles in all of Florida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vi-n6-GwA">
                                                     <rect key="frame" x="0.0" y="63" width="343" height="41"/>
@@ -155,21 +158,13 @@
             </objects>
             <point key="canvasLocation" x="754" y="-507"/>
         </scene>
-        <!--UIViewController-d0D-7M-Dkr-->
+        <!--SearchResult-->
         <scene sceneID="5e1-c0-W8m">
             <objects>
-                <viewControllerPlaceholder storyboardName="SearchResult" referencedIdentifier="UIViewController-d0D-7M-Dkr" id="lRk-OP-hvP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SearchResult" id="lRk-OP-hvP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncf-e7-ygf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="-578"/>
-        </scene>
-        <!--UIViewController-rMU-0Z-KFA-->
-        <scene sceneID="qHz-z8-3jk">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-rMU-0Z-KFA" storyboardName="SearchResult" referencedIdentifier="UIViewController-rMU-0Z-KFA" id="8Ud-dT-Bmp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JYs-nq-Dvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2358" y="-508"/>
+            <point key="canvasLocation" x="2273" y="-589"/>
         </scene>
     </scenes>
     <resources>

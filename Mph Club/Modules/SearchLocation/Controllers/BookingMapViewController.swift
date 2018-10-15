@@ -17,23 +17,40 @@ protocol BookingLocationSearchTableDelegate: class {
     func displayAddressSelected(_ locationDetail: Location)
 }
 
-class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate {
+final class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate {
+    // ===============
+    // MARK: - Outlets
+    // ===============
     
+    // MARK: View
+    @IBOutlet private weak var searchBarContainer: UIView!
+    
+    // MARK: Search Bar
+    @IBOutlet private weak var searchBar: UISearchBar!
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Private
+    private let locationManager = CLLocationManager()
+    private var locationDetailProperty = Location()
+    private var selectedPin: CLPlacemark?
+    private var resultSearchController: UISearchController!
+    private var userLocation = String()
+    
+    // MARK: Delegate
     weak var addressDelegate: BookingLocationSearchTableDelegate?
-    var locationDetailProperty = Location()
-    var selectedPin: CLPlacemark?
-    var resultSearchController: UISearchController!
-    let locationManager = CLLocationManager()
-    var userLocation = String()
-    @IBOutlet weak var searchBar: UISearchBar!
+}
 
-    
-    @IBOutlet weak var searchBarContainer: UIView!
-    
+// =======================
+// MARK: - View Controller
+// =======================
+
+// MARK: Life Cycle
+extension BookingMapViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         //doneButton.isEnabled = false
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -41,13 +58,12 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         
-       
         let locationSearchTable = storyboard?.instantiateViewController(withIdentifier: "BookingLocationSearchTable") as? BookingLocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
         
         searchBar = resultSearchController?.searchBar
-        searchBar.frame = CGRect(x: 0, y: 0, width: navigationController?.view.bounds.size.width ?? 0, height: self.searchBarContainer.bounds.size.height)
+        searchBar.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.searchBarContainer.bounds.size.height)
         searchBar.backgroundImage = UIImage()
         searchBar.barTintColor = .white
         searchBar.sizeToFit()
@@ -65,7 +81,6 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         definesPresentationContext = true
         locationSearchTable?.handleMapSearchDelegate = self
         
-        
 //        self.resultSearchController.isActive = true
 //        self.resultSearchController.searchBar.becomeFirstResponder()
       
@@ -79,8 +94,6 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
        // resultSearchController.searchBar.setShowsCancelButton(false, animated: false)
     }
     
-    
-    
     private func setBottomBorder() {
         let border = CALayer()
         border.backgroundColor = UIColor.black.cgColor
@@ -88,25 +101,7 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
         self.searchBarContainer.layer.addSublayer(border)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        
-    }
-    
-    @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "unwindToHome", sender: self)
-    }
-    
-    @IBAction func goToFeed(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "goToFeed", sender: self)
-    }
-    
-    @objc func getDirections(){
+    @objc func getDirections() {
         self.performSegue(withIdentifier: "goToFeed", sender: self)
 
     }
@@ -119,7 +114,20 @@ class BookingMapViewController: UIViewController, UISearchBarDelegate, UISearchC
     
 }
 
-extension BookingMapViewController : CLLocationManagerDelegate {
+// ===============
+// MARK: - Actions
+// ===============
+private extension BookingMapViewController {
+    @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
+    }
+    
+    @IBAction func goToFeed(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "goToFeed", sender: self)
+    }
+}
+
+extension BookingMapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -134,7 +142,7 @@ extension BookingMapViewController : CLLocationManagerDelegate {
         let geocoder = CLGeocoder()
         
         // swiftlint:disable:next force_unwrapping
-        geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response, error in
+        geocoder.reverseGeocodeLocation(manager.location!, completionHandler: { response, _ in
       
             if let unwrapped = response {
                 if let address = unwrapped.first {
@@ -144,9 +152,6 @@ extension BookingMapViewController : CLLocationManagerDelegate {
                    // self.userLocation = address.areasOfInterest![0]
                 }
             }
-
-         
-
         })
     
     }
@@ -161,35 +166,13 @@ extension BookingMapViewController: BookingHandleMapSearch {
     
     func searchBarNotEmpty() {
         let searchBar = resultSearchController?.searchBar
-        if searchBar?.text != "" {
+        if !(searchBar?.text?.isEmpty ?? true) {
            // doneButton.isEnabled = true
         }
     }
     
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
-        
         performSegue(withIdentifier: "goToFeed", sender: nil)
-//        searchBarNotEmpty()
-//
-//        saveCarLocation(placemark)
-//
-//        // cache the pin
-//        selectedPin = placemark
-//        // clear existing pins
-//        mapView.removeAnnotations(mapView.annotations)
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = (placemark.location?.coordinate)!
-//        annotation.title = placemark.name
-//
-//        if let city = placemark.locality,
-//            let state = placemark.administrativeArea {
-//            annotation.subtitle = "\(city) \(state)"
-//        }
-//
-//        mapView.addAnnotation(annotation)
-//        let span = MKCoordinateSpanMake(0.05, 0.05)
-//        let region = MKCoordinateRegionMake((placemark.location?.coordinate)!, span)
-//        mapView.setRegion(region, animated: true)
     }
     
     func saveCarLocation(_ placemark: CLPlacemark) {
@@ -233,8 +216,6 @@ struct BookingLocationDetail {
     }
     
     func createLocation(_ placemark: CLPlacemark) throws -> Location {
-        
-        
         if placemark.subThoroughfare == nil {
             
             guard let unwrappedCity = placemark.locality else {
@@ -245,14 +226,12 @@ struct BookingLocationDetail {
                 throw InputError.inputMissing
             }
             
-            
             return Location(title: "",
                             address: "",
                             city: unwrappedCity,
                             state: unwrappedState,
                             zipCode: "",
                             country: "")
-            
             
         } else {
             
@@ -292,31 +271,5 @@ struct BookingLocationDetail {
                             country: unwrappedCountry)
             
         }
-        
-        
     }
-    
-    
 }
-
-//extension BookingMapViewController : MKMapViewDelegate {
-//
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-//
-//        guard !(annotation is MKUserLocation) else { return nil }
-//
-//        let reuseId = "pin"
-//        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
-//
-//        //        pinView.pinTintColor = UIColor.orange
-//        //        pinView.canShowCallout = true
-//        //        let smallSquare = CGSize(width: 30, height: 30)
-//        //        var button: UIButton?
-//        //        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-//        //        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
-//        //        button?.addTarget(self, action: #selector(MapViewController.getDirections), for: .touchUpInside)
-//        //        pinView.leftCalloutAccessoryView = button
-//
-//        return pinView
-//    }
-//}

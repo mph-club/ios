@@ -9,14 +9,34 @@
 import UIKit
 import MapKit
 
-final class BookingLocationSearchTable: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+final class BookingLocationSearchTable: UIViewController {
+    // ===============
+    // MARK: - Outlets
+    // ===============
     
+    // MARK: Table View
+    @IBOutlet private weak var tableView: UITableView!
     
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: private
+    private var matchingItems: [MKMapItem] = []
+    
+    // MAR: Delegate
     weak var handleMapSearchDelegate: BookingHandleMapSearch?
-    var matchingItems: [MKMapItem] = []
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+}
+
+// ===============
+// MARK: - Actions
+// ===============
+private extension BookingLocationSearchTable {}
+
+// ===============
+// MARK: - Methods
+// ===============
+private extension BookingLocationSearchTable {
     func parseAddress(_ selectedItem: CLPlacemark) -> String {
         
         // put a space between "4" and "Melrose Place"
@@ -49,6 +69,14 @@ final class BookingLocationSearchTable: UIViewController, UITableViewDelegate, U
         return addressLine
     }
     
+}
+
+// ==================
+// MARK: - Table View
+// ==================
+
+// MARK: Data Source
+extension BookingLocationSearchTable: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
@@ -69,14 +97,20 @@ final class BookingLocationSearchTable: UIViewController, UITableViewDelegate, U
         cell.addressLabel.text = parseAddress(selectedItem)
         return cell
     }
+}
+
+// MARK: Delegate
+extension BookingLocationSearchTable: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // if not Fl show alert
-        
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
         
         let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name ?? ""
-
+        
         if selectedItem.administrativeArea == "FL" {
             print("exists")
             
@@ -85,17 +119,14 @@ final class BookingLocationSearchTable: UIViewController, UITableViewDelegate, U
         } else {
             // pop up not allowed
             self.present(fireAlert(title: "mph club message", message: "Sorry, currently only servicing FL"), animated: true)
-           
+            
         }
-        
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
-    }
-    
 }
 
+// ===============================
+// MARK: - Search Results Updating
+// ===============================
 extension BookingLocationSearchTable: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         
@@ -105,7 +136,7 @@ extension BookingLocationSearchTable: UISearchResultsUpdating {
         
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchBarText
-      //  request.region = mapView.region
+        //  request.region = mapView.region
         let search = MKLocalSearch(request: request)
         
         search.start { response, _ in

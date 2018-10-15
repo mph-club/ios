@@ -14,6 +14,7 @@ final class ExploreViewController: UIViewController {
     // =============
     private enum Segue: String {
         case showMapView
+        case presentListCar
     }
     
     private enum Section: String {
@@ -51,6 +52,7 @@ final class ExploreViewController: UIViewController {
     // MARK: - Properties
     // ==================
     
+
     // MARK: Private
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
     
@@ -84,7 +86,11 @@ extension ExploreViewController {
 // ===============
 // MARK: - Actions
 // ===============
-private extension ExploreViewController {}
+private extension ExploreViewController {
+    @IBAction func searchTouchUpInside(_ sender: UIButton) {
+        performSegue(withIdentifier: Segue.showMapView)
+    }
+}
 
 // ===============
 // MARK: - Methods
