@@ -1,24 +1,26 @@
 PODS:
+  - Alamofire (4.7.3)
   - APJTextPickerView (0.0.8)
-  - AWSCognito (2.6.31):
-    - AWSCore (= 2.6.31)
-  - AWSCognitoIdentityProvider (2.6.31):
+  - AWSCognito (2.6.32):
+    - AWSCore (= 2.6.32)
+  - AWSCognitoIdentityProvider (2.6.32):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.31)
+    - AWSCore (= 2.6.32)
   - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.31)
+  - AWSCore (2.6.32)
   - Crashlytics (3.10.9):
     - Fabric (~> 1.7.13)
   - Fabric (1.7.13)
   - JTAppleCalendar (7.1.6)
-  - Mixpanel-swift (2.5.2):
-    - Mixpanel-swift/Complete (= 2.5.2)
-  - Mixpanel-swift/Complete (2.5.2)
-  - PromiseKit/CorePromise (6.5.1)
+  - Mixpanel-swift (2.5.3):
+    - Mixpanel-swift/Complete (= 2.5.3)
+  - Mixpanel-swift/Complete (2.5.3)
+  - PromiseKit/CorePromise (6.5.2)
   - SwiftLint (0.27.0)
   - UICKeyChainStore (2.0.7)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - APJTextPickerView
   - AWSCognito (~> 2.6.28)
   - AWSCognitoIdentityProvider (~> 2.6.0)
@@ -33,6 +35,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - APJTextPickerView
     - AWSCognito
     - AWSCognitoIdentityProvider
@@ -47,19 +50,20 @@ SPEC REPOS:
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   APJTextPickerView: 4c6e9addfe05d1cca3fabb06575b1d791590bca1
-  AWSCognito: c6bc1f7814ca3484b8ed76ba7f319ffea7c19e68
-  AWSCognitoIdentityProvider: c74a83c8226a9f43607f2772742000bccb5cc58a
+  AWSCognito: 68f76e8e72ec28845fb60f88f6a76c65caf68aef
+  AWSCognitoIdentityProvider: 1ac74ed3ddc96a1e072868c10d43f8630eebdfed
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: c7abfb87ef802d1c4b5dd56db64ac8b4a7823ef0
+  AWSCore: bfb49938a3a4eb190bc68edf1fa9e90969de8fa2
   Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
   Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
-  Mixpanel-swift: d73eb439ccf8631b7aaa7d21cf4f2f7b654aec86
-  PromiseKit: 162f56c89aae9989ffc14476a5f821af17c3f4ba
+  Mixpanel-swift: 29c1f1d055d325534c47654cdbcd37109bb1fc61
+  PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: 1744b14b88558e5a963c8d9cde9080fcfaaf6921
+PODFILE CHECKSUM: 38038b381a36926d7c247f936932608eebd1b3c6
 
 COCOAPODS: 1.5.3

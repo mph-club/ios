@@ -15,8 +15,7 @@ extension UIColor {
     static let Palette: [String: UIColor] = [
         "yellow": #colorLiteral(red: 1, green: 0.8164650798, blue: 0.03998695686, alpha: 1),                    // #FECF33
         "lightOrange": #colorLiteral(red: 1, green: 0.746743083, blue: 0.1352950335, alpha: 1),               // #FDBD39
-        "peach": #colorLiteral(red: 1, green: 0.4046171308, blue: 0.0813671127, alpha: 1),                     // #EE6723
-        
+        "peach": #colorLiteral(red: 1, green: 0.4046171308, blue: 0.0813671127, alpha: 1)                     // #EE6723
     ]
     
     /// Enum
@@ -32,7 +31,6 @@ extension UIColor {
         
     }
     
-    
     /// Create random color
     ///
     /// - Returns: UIColor
@@ -45,5 +43,3 @@ extension UIColor {
     }
     
 }
-
-

@@ -8,11 +8,10 @@
 
 import UIKit
 
-struct Car {
-    let carImage: String
-    let carTitle: String
-}
-
+// struct Car {
+//    let carImage: String
+//    let carTitle: String
+// }
 
 struct Vehicle {
     var title: String
@@ -22,12 +21,11 @@ struct Vehicle {
     var miles: Int
 }
 
-
 class FleetTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var carList = [Vehicle]()
-    @IBOutlet weak var tripPreferenceBox: UIView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tripPreferenceBox: UIView!
+    @IBOutlet private weak var tableView: UITableView!
     
     var bookingMapVC: BookingMapViewController!
     
