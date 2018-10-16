@@ -13,13 +13,13 @@ final class CustomNavigationBar: UINavigationBar {
     // MARK: - Enums
     // =============
     enum StyleType {
-        case blackWithZeroAlpha
+        case transparent(alpha: CGFloat)
     }
     
     // ==================
     // MARK: - Properties
     // ==================
-    var styleView: StyleType = .blackWithZeroAlpha {
+    var styleView: StyleType = .transparent(alpha: 0.0) {
         didSet {
             updateNavigationBar()
         }
@@ -42,18 +42,20 @@ extension CustomNavigationBar {
     private func updateNavigationBar() {
         //
         switch styleView {
-        case .blackWithZeroAlpha:
-            blackWithZeroAlphaNavigationBar()
+        case .transparent(let alpha):
+            transparentNavigationBarWithAlpha(alpha)
         }
     }
     
-    private func blackWithZeroAlphaNavigationBar() {
+    private func transparentNavigationBarWithAlpha(_ alpha: CGFloat) {
         isTranslucent = true
         //
-        barTintColor = UIColor.black.withAlphaComponent(0)
-        tintColor = .white
-        // Set title attributes
-        setTitleStyle(.white)
+        setBackgroundImage(UIImage(), for: .default)
+        shadowImage = UIImage()
+        //
+        setTitleStyle(UIColor.white.withAlphaComponent(alpha))
+        // set color with alpha
+        backgroundColor = UIColor.black.withAlphaComponent(alpha)
     }
     
     func setTitleStyle(_ color: UIColor) {

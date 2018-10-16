@@ -8,12 +8,11 @@
 
 import UIKit
 
-class FeatureAttributesCell: UICollectionViewCell {
+final class FeatureAttributesCell: UICollectionViewCell {
     @IBOutlet weak var img: UIImageView!
 }
 
-class SimilarCarCell: UICollectionViewCell {
-    
+final class SimilarCarCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var pricePerDay: UILabel!
@@ -22,7 +21,6 @@ class SimilarCarCell: UICollectionViewCell {
 }
 
 extension UIColor {
-    
     /// Converts this `UIColor` instance to a 1x1 `UIImage` instance and returns it.
     ///
     /// - Returns: `self` as a 1x1 `UIImage`.
@@ -37,7 +35,6 @@ extension UIColor {
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
             return featureItems.count
@@ -85,7 +82,6 @@ struct SimilarCar {
     let price: Float?
     let trips: Int?
 }
-
 
 extension DetailViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
@@ -264,9 +260,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
 //
 //    }
     
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -281,16 +274,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
 
 }
-
-
-extension UIApplication {
-    
-    var statusBarView: UIView? {
-        return value(forKey: "statusBar") as? UIView
-    }
-    
-}
-
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {

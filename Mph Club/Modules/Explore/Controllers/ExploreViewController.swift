@@ -54,6 +54,8 @@ final class ExploreViewController: UIViewController {
     
     // MARK: Private
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
+    //
+    private var searchButtonPosition = CGPoint.zero
     
     // MARK: Overrides
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -73,16 +75,11 @@ extension ExploreViewController {
         configView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hidden navigation bar
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Show navigation bar
-        navigationController?.setNavigationBarHidden(false, animated: false)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // Get search bar position
+        searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+
     }
 }
 
@@ -133,7 +130,14 @@ private extension ExploreViewController {
 
 // MARK: Delegate
 extension ExploreViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {}
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentSearchBarPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        let alpha = (searchButtonPosition.y - currentSearchBarPosition.y) / searchButtonPosition.y
+        // change navigation bar view color
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: alpha)
+        // change status bar view color
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(alpha)
+    }
 }
 
 // ==================

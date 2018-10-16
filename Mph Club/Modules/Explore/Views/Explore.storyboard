@@ -192,7 +192,7 @@
                 <navigationController id="bjs-j7-GEn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="search" id="mdf-wu-PhG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cku-Zt-WIn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cku-Zt-WIn" customClass="CustomNavigationBar" customModule="Mph_Club" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
