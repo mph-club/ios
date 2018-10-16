@@ -34,16 +34,16 @@ class AddPriceViewController: UIViewController, UIScrollViewDelegate {
         
         fixedPriceTextField.delegate = self
         
-        button1.setImage(UIImage(named : "group7"), for: UIControlState.normal)
-        button2.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
+        button1.setImage(UIImage(named : "group7"), for: UIControl.State.normal)
+        button2.setImage(UIImage(named : "group7-1"), for: UIControl.State.normal)
         fixedPriceTextField.setBottomSingleBorder(color: UIColor.lightGray.cgColor)
         
 
         self.fixedPriceTextField.keyboardType = UIKeyboardType.decimalPad
 
         // Observe keyboard change
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
@@ -68,10 +68,10 @@ class AddPriceViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func button1(_ sender: UIButton) {
         if button1.isSelected == false {
             button1.isSelected = true
-            button1.setImage(UIImage(named : "group7"), for: UIControlState.normal)
+            button1.setImage(UIImage(named : "group7"), for: UIControl.State.normal)
             
             button2.isSelected = false
-            button2.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
+            button2.setImage(UIImage(named : "group7-1"), for: UIControl.State.normal)
             
             fixedPriceTextField.isEnabled = false
             
@@ -85,10 +85,10 @@ class AddPriceViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func button2(_ sender: UIButton) {
         if button2.isSelected == false {
             button2.isSelected = true
-            button2.setImage(UIImage(named : "group7"), for: UIControlState.normal)
+            button2.setImage(UIImage(named : "group7"), for: UIControl.State.normal)
             
             button1.isSelected = false
-            button1.setImage(UIImage(named : "group7-1"), for: UIControlState.normal)
+            button1.setImage(UIImage(named : "group7-1"), for: UIControl.State.normal)
             
             fixedPriceTextField.isEnabled = true
             
@@ -161,7 +161,7 @@ extension AddPriceViewController {
             return
         }
         
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             
             if keyboardSize.height > 250 {
                 keyboardHeight = keyboardSize.height - 144

@@ -8,27 +8,38 @@
 
 import UIKit
 
-class MainTabBar: UITabBarController {
+final class MainTabBar: UITabBarController {
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Private Lazy
+    private lazy var defaultTabBarHeight = { tabBar.frame.size.height }()
+}
 
+// ===============================
+// MARK: - Tab Bar View Controller
+// ===============================
+
+// MARK: Life Cycle
+extension MainTabBar {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.barTintColor = UIColor.white
-        self.tabBar.tintColor = UIColor.black
+        
+        tabBar.barTintColor = UIColor.white
+        tabBar.tintColor = UIColor.black
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     override func viewWillLayoutSubviews() {
-        var tabFrame = self.tabBar.frame
-        // - 40 is editable , the default value is 49 px, below lowers the tabbar and above increases the tab bar size
-        tabFrame.size.height = 95
-        tabFrame.origin.y = self.view.frame.size.height-80
-        self.tabBar.frame = tabFrame
+        super.viewWillLayoutSubviews()
+        
+        let newTabBarHeight = defaultTabBarHeight + 16.0
+        
+        var newFrame = tabBar.frame
+        newFrame.size.height = newTabBarHeight
+        newFrame.origin.y = view.frame.size.height - newTabBarHeight
+        
+        tabBar.frame = newFrame
     }
-
-
+    
 }

@@ -52,26 +52,25 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView.tag == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeatureAttributesCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? FeatureAttributesCell else { return UICollectionViewCell() }
             cell.img.image = UIImage(named: featureItems[indexPath.row])
             return cell
         } else if collectionView.tag == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarAttributesCell
-            cell.img.image = UIImage(named: carAttributes[indexPath.row].img!)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CarAttributesCell else { return UICollectionViewCell() }
+            cell.img.image = UIImage(named: carAttributes[indexPath.row].img ?? "")
             cell.titleLabel.text = carAttributes[indexPath.row].title
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SimilarCarCell
-            cell.title.text = similarCarList[indexPath.row].title!
-            cell.img.image = UIImage(named: similarCarList[indexPath.row].img!)
-            cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price!))"
-            cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips!)) Trips"
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SimilarCarCell else { return UICollectionViewCell() }
+            cell.title.text = similarCarList[indexPath.row].title
+            cell.img.image = similarCarList[indexPath.row].img
+            cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price ?? 0))"
+            cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips ?? 0)) Trips"
             
             return cell
         }
 
     }
-    
 
 }
 
@@ -82,7 +81,7 @@ struct CarAttribute {
 
 struct SimilarCar {
     let title: String?
-    let img: String?
+    let img: UIImage?
     let price: Float?
     let trips: Int?
 }
@@ -129,20 +128,21 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.isDirectionalLockEnabled = false
         
-        print(vehicle!)
         
-        self.vehicleImg.image = UIImage(named: vehicle!.img)
-        self.titleLabel.text = vehicle!.title
-        self.tripLabel.text = "\(String(describing: vehicle!.trips)) trips"
-        self.milesLabel.text = "\(String(describing: vehicle!.miles)) mi"
+        guard let vehicle = vehicle else { return }
+        print(vehicle)
         
+        self.vehicleImg.image = UIImage(named: vehicle.img)
+        self.titleLabel.text = vehicle.title
+        self.tripLabel.text = "\(String(describing: vehicle.trips)) trips"
+        self.milesLabel.text = "\(String(describing: vehicle.miles)) mi"
         
         setDummyData()
         reviews()
         
         scrollView.delegate = self
         
-        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         newBackButton = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(DetailViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
@@ -189,13 +189,13 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         self.textView.textColor = UIColor.black
         
         let linkAttributes: [String : Any] = [
-            NSAttributedStringKey.foregroundColor.rawValue: UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0),
-            NSAttributedStringKey.underlineColor.rawValue: UIColor.lightGray,
-            NSAttributedStringKey.underlineStyle.rawValue: NSUnderlineStyle.styleSingle.rawValue
+            NSAttributedString.Key.foregroundColor.rawValue: UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0),
+            NSAttributedString.Key.underlineColor.rawValue: UIColor.lightGray,
+            NSAttributedString.Key.underlineStyle.rawValue: NSUnderlineStyle.single.rawValue
         ]
         
         // textView is a UITextView
-        textView.linkTextAttributes = linkAttributes
+        textView.linkTextAttributes = convertToOptionalNSAttributedStringKeyDictionary(linkAttributes)
         textView.attributedText = attributedOriginalText
     }
     
@@ -205,9 +205,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         carAttributes.append(CarAttribute(title: "13 MPG", img: "gas64Px"))
         carAttributes.append(CarAttribute(title: "GPS", img: "satellite64Px"))
         
-        similarCarList.append(SimilarCar(title: "Ferrari California 2013", img: "dontknowcar", price: 200, trips: 4))
-        similarCarList.append(SimilarCar(title: "Ferrari California 2014", img: "dontknowcar", price: 200, trips: 4))
-        similarCarList.append(SimilarCar(title: "Ferrari California 2015", img: "dontknowcar", price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2013", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2014", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
+        similarCarList.append(SimilarCar(title: "Ferrari California 2015", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
     }
 
 
@@ -291,3 +291,9 @@ extension UIApplication {
     
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}

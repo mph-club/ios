@@ -13,7 +13,7 @@ class AddProfilePhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImg: UIImage = UIImage(named: Constant.closeIcon)!
+        let backImg: UIImage = UIImage(named: Constant.closeIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(AddProfilePhotoViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         
@@ -42,7 +42,6 @@ class AddProfilePhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func next(_ sender: UIButton) {
         let fireAction = fireActionSheet(title: "Select one", message: "")
         
@@ -58,8 +57,6 @@ class AddProfilePhotoViewController: UIViewController {
         
         self.present(fireAction, animated: true)
     }
-
-
     
     // MARK: - Navigation
     
@@ -67,7 +64,7 @@ class AddProfilePhotoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "addSelfie" {
             if let destinationVC = segue.destination as? PhotoReviewViewController {
-                if sender as! String == "library" {
+                if sender as? String == "library" {
                     destinationVC.typeOfPicker = "library"
                 } else {
                     destinationVC.typeOfPicker = "camera"

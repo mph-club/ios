@@ -9,7 +9,7 @@
 import UIKit
 import AWSCognitoIdentityProvider
 
-class CreateAccountViewController: UIViewController, UITextFieldDelegate {
+final class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
     var pool: AWSCognitoIdentityUserPool?
     var sentTo: String?
@@ -17,7 +17,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var phone: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,27 +56,25 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alertController.addAction(okAction)
                 
-                self.present(alertController, animated: true, completion:  nil)
+                self.present(alertController, animated: true, completion: nil)
                 return
         }
         
         var attributes = [AWSCognitoIdentityUserAttributeType]()
         
         if let phoneValue = self.phone.text, !phoneValue.isEmpty {
-            let phone = AWSCognitoIdentityUserAttributeType()
-            phone?.name = "phone_number"
-            phone?.value = phoneValue
-            attributes.append(phone!)
+            guard let phone = AWSCognitoIdentityUserAttributeType() else { return }
+            phone.name = "phone_number"
+            phone.value = phoneValue
+            attributes.append(phone)
         }
         
         if let emailValue = self.email.text, !emailValue.isEmpty {
-            let email = AWSCognitoIdentityUserAttributeType()
-            email?.name = "email"
-            email?.value = emailValue
-            attributes.append(email!)
+            guard let email = AWSCognitoIdentityUserAttributeType() else { return }
+            email.name = "email"
+            email.value = emailValue
+            attributes.append(email)
         }
-        
-        
         
         //sign up the user
         self.pool?.signUp(emailNameValue, password: passwordValue, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in
@@ -92,13 +89,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                     let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
                     alertController.addAction(retryAction)
                     
-                    self?.present(alertController, animated: true, completion:  nil)
+                    self?.present(alertController, animated: true, completion: nil)
                 } else if let result = task.result  {
                     // handle the case where user has to confirm his identity via email / SMS
-                    if (result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed) {
-                        self?.performSegue(withIdentifier: "confirmSignUpSegue", sender:result)
+                    if result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed {
+                        self?.performSegue(withIdentifier: "confirmSignUpSegue", sender: result)
                     } else {
-                        let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
+                        _ = strongSelf.navigationController?.popToRootViewController(animated: true)
                     }
                 }
                 
@@ -107,15 +104,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! != "unwindToSignIn" {
-            let sender = sender as! AWSCognitoIdentityUserPoolSignUpResponse
+        if segue.identifier != "unwindToSignIn" {
+            let sender = sender as? AWSCognitoIdentityUserPoolSignUpResponse
             if let confirmationCodeVC = segue.destination as? ConfirmationCodeVC {
-                confirmationCodeVC.user = sender.user
-                confirmationCodeVC.sentTo = sender.codeDeliveryDetails?.destination
-                confirmationCodeVC.password = self.password.text!
+                confirmationCodeVC.user = sender?.user
+                confirmationCodeVC.sentTo = sender?.codeDeliveryDetails?.destination
+                confirmationCodeVC.password = self.password.text
             }
         }
 

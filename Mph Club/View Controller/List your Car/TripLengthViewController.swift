@@ -13,7 +13,7 @@ class TripLengthViewController: UIViewController {
 
     @IBOutlet weak var shortTripPickerView: APJTextPickerView!
     @IBOutlet weak var longTripPickerView: APJTextPickerView!
-    @IBOutlet weak var nextButtton: nextButton!
+    @IBOutlet weak var nextButtton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

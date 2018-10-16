@@ -11,7 +11,7 @@ import UIKit
 class EnterCodeViewController: UIViewController {
 
     @IBOutlet weak var codeTextField: MphTextField!
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,6 @@ class EnterCodeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -45,7 +44,6 @@ class EnterCodeViewController: UIViewController {
 
 }
 
-
 extension EnterCodeViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -54,7 +52,7 @@ extension EnterCodeViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if codeTextField.text! != "" {
+        if !(codeTextField.text?.isEmpty ?? true) {
             nextButton.backgroundColor = UIColor.black
         }
         print("End")

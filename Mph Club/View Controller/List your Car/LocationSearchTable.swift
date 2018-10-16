@@ -59,7 +59,7 @@ extension LocationSearchTable : UISearchResultsUpdating {
         guard let mapView = mapView,
             let searchBarText = searchController.searchBar.text else { return }
         
-        let request = MKLocalSearchRequest()
+        let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchBarText
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
@@ -83,7 +83,7 @@ extension LocationSearchTable {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { return UITableViewCell() }
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
         cell.textLabel?.text = selectedItem.name
         cell.detailTextLabel?.text = parseAddress(selectedItem)
@@ -97,10 +97,9 @@ extension LocationSearchTable {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark as CLPlacemark
         
-        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name!
+        let selectedItem2 = matchingItems[(indexPath as NSIndexPath).row].name ?? ""
         print(selectedItem2)
-        
-        
+        //
         print(selectedItem)
         handleMapSearchDelegate?.dropPinZoomIn(selectedItem, locationName: selectedItem2)
         dismiss(animated: true, completion: nil)

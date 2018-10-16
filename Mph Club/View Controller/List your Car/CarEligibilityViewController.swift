@@ -10,15 +10,15 @@ import UIKit
 import APJTextPickerView
 
 class CarEligibilityViewController: UIViewController {
-
-    @IBOutlet weak var yearPickerView: APJTextPickerView!
-    @IBOutlet weak var makePickerView: APJTextPickerView!
-    @IBOutlet weak var modelPickerView: APJTextPickerView!
     
-    @IBOutlet weak var nextButtton: nextButton!
+    @IBOutlet private weak var yearPickerView: APJTextPickerView!
+    @IBOutlet private weak var makePickerView: APJTextPickerView!
+    @IBOutlet private weak var modelPickerView: APJTextPickerView!
     
-    @IBOutlet weak var makeLabel: UILabel!
-    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet private weak var nextButtton: NextButton!
+    
+    @IBOutlet private weak var makeLabel: UILabel!
+    @IBOutlet private weak var modelLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,12 @@ class CarEligibilityViewController: UIViewController {
         
         setUpTextField(color: UIColor.lightGray.cgColor)
         
-        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc func close() {
@@ -61,8 +61,8 @@ class CarEligibilityViewController: UIViewController {
     func setUpTextField(color: CGColor) {
         self.makeLabel.textColor = UIColor.lightGray
         self.modelLabel.textColor = UIColor.lightGray
-        self.makePickerView.setBottomSingleBorder(color: color)
-        self.modelPickerView.setBottomSingleBorder(color: color)
+        //        self.makePickerView.setBottomSingleBorder(color: color)
+        //        self.modelPickerView.setBottomSingleBorder(color: color)
     }
     
     fileprivate var yearStrings = ["2018", "2017", "2016", "2015"]
@@ -78,22 +78,22 @@ class CarEligibilityViewController: UIViewController {
         makePickerView.pickerDelegate = self
         makePickerView.dataSource = self
     }
-
+    
     fileprivate var modelStrings = ["A1", "A2", "A3"]
     private func initModelPickerView() {
         modelPickerView.type = .strings
         modelPickerView.pickerDelegate = self
         modelPickerView.dataSource = self
     }
-
     
     
-
+    
+    
 }
 
 
 extension CarEligibilityViewController: UITextFieldDelegate {
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("ending")
     }
@@ -101,9 +101,6 @@ extension CarEligibilityViewController: UITextFieldDelegate {
 
 
 extension CarEligibilityViewController: APJTextPickerViewDelegate {
-    
-    
-    
     private func textPickerView(_ textPickerView: APJTextPickerView, didSelectDate date: Date) {
         print("Date Selected: \(date)")
     }
@@ -121,43 +118,31 @@ extension CarEligibilityViewController: APJTextPickerViewDelegate {
         }
         
         checkAllSelected()
-        
-        
     }
     
     func checkAllSelected() {
-        if yearPickerView.text! != "" && makePickerView.text! != "" && modelPickerView.text! != ""  {
+        if (yearPickerView.text?.isEmpty ?? true) && !(makePickerView.text?.isEmpty ?? true) && !(modelPickerView.text?.isEmpty ?? true) {
             nextButtton.backgroundColor = UIColor.black
         }
     }
     
     func textPickerView(_ textPickerView: APJTextPickerView, titleForRow row: Int) -> String? {
-        
-        
-        
         if textPickerView.tag == 1 {
             return yearStrings[row]
         } else if textPickerView.tag == 2 {
             if self.makeLabel.text != "" {
                 self.makeLabel.textColor = UIColor.black
-                self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+//                self.makePickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             }
             return makeStrings[row]
         } else {
             if self.modelLabel.text != "" {
                 self.modelLabel.textColor = UIColor.black
-                self.modelPickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
+//                self.modelPickerView.setBottomSingleBorder(color: UIColor.black.cgColor)
             }
             return modelStrings[row]
         }
-        
-        
     }
-    
-    
-    
-    
-    
 }
 
 extension CarEligibilityViewController: APJTextPickerViewDataSource {

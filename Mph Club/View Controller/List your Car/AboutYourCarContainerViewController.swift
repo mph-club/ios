@@ -17,12 +17,12 @@ extension AboutYourCarContainerViewController: ChangeButtonColorDelegate {
 
 class AboutYourCarContainerViewController: UIViewController {
     
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImg: UIImage = UIImage(named: Constant.backArrowIcon)!
+        let backImg: UIImage = UIImage(named: Constant.backArrowIcon) ?? UIImage()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImg, style: .done, target: self, action: #selector(CarEligibilityViewController.close))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }

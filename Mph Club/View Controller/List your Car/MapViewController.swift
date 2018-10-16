@@ -13,29 +13,31 @@ protocol HandleMapSearch: class {
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String)
 }
 
-protocol LocationSearchTableDelegate {
+protocol LocationSearchTableDelegate: class {
     func displayAddressSelected(_ locationDetail: Location)
 }
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
+    // ===============
+    // MARK: - Outlets
+    // ===============
     
-    var addressDelegate: LocationSearchTableDelegate?
-    
-    var locationDetailProperty = Location()
-    
-    var selectedPin: CLPlacemark?
-    var resultSearchController: UISearchController!
-    
-    let locationManager = CLLocationManager()
-    
+    // MARK: Map View
     @IBOutlet weak var mapView: MKMapView!
     
+    // MARK: Button
     @IBOutlet weak var doneButton: UIButton!
     
-    // Done btn
-    @IBAction func button3(_ sender: AnyObject) {
-        getDirections()
-    }
+    // ==================
+    // MARK: - Properties
+    // ==================
+    var locationDetailProperty = Location()
+    var selectedPin: CLPlacemark?
+    var resultSearchController: UISearchController!
+    let locationManager = CLLocationManager()
+    
+    // MARK: Delegate
+    weak var addressDelegate: LocationSearchTableDelegate?
     
     
     override func viewDidLoad() {
@@ -46,18 +48,18 @@ class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        let locationSearchTable = storyboard?.instantiateViewController(withIdentifier: "LocationSearchTable") as? LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
-        let searchBar = resultSearchController!.searchBar
-        searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
+        let searchBar = resultSearchController?.searchBar
+        searchBar?.sizeToFit()
+        searchBar?.placeholder = "Search for places"
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController.hidesNavigationBarDuringPresentation = false
         resultSearchController.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
-        locationSearchTable.mapView = mapView
-        locationSearchTable.handleMapSearchDelegate = self
+        locationSearchTable?.mapView = mapView
+        locationSearchTable?.handleMapSearchDelegate = self
         
         
     }
@@ -67,18 +69,24 @@ class MapViewController: UIViewController {
 
     }
     
-    @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
-    }
-    
-    
-    @objc func getDirections(){
+    @objc func getDirections() {
         addressDelegate?.displayAddressSelected(locationDetailProperty)
         self.performSegue(withIdentifier: "unwindToMenu", sender: self)
     }
 }
 
-extension MapViewController : CLLocationManagerDelegate {
+private extension MapViewController {
+    @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+    }
+    
+    // Done btn
+    @IBAction func button3(_ sender: AnyObject) {
+        getDirections()
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -88,7 +96,7 @@ extension MapViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
@@ -102,14 +110,14 @@ extension MapViewController : CLLocationManagerDelegate {
 extension MapViewController: HandleMapSearch {
     
     func searchBarNotEmpty() {
-        let searchBar = resultSearchController!.searchBar
-        if searchBar.text != "" {
+        let searchBar = resultSearchController?.searchBar
+        if !(searchBar?.text?.isEmpty ?? true) {
             doneButton.isEnabled = true
             doneButton.tintColor = UIColor.black
         }
     }
 
-    func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String){
+    func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
         searchBarNotEmpty()
 
         saveCarLocation(placemark)
@@ -119,7 +127,8 @@ extension MapViewController: HandleMapSearch {
         // clear existing pins
         mapView.removeAnnotations(mapView.annotations)
         let annotation = MKPointAnnotation()
-        annotation.coordinate = (placemark.location?.coordinate)!
+        // swiftlint:disable:next force_unwrapping
+        annotation.coordinate = placemark.location!.coordinate
         annotation.title = placemark.name
         
         if let city = placemark.locality,
@@ -128,19 +137,19 @@ extension MapViewController: HandleMapSearch {
         }
         
         mapView.addAnnotation(annotation)
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegionMake((placemark.location?.coordinate)!, span)
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        // swiftlint:disable:next force_unwrapping
+        let region = MKCoordinateRegion.init(center: placemark.location!.coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
-    
     
     func saveCarLocation(_ placemark: CLPlacemark)  {
         
         do {
-            let location = try BookinglocationDetailModel.createLocation(placemark)
+            let location = try bookinglocationDetailModel.createLocation(placemark)
             print("Success! location created. \(location)")
             locationDetailProperty = location
-        } catch LocationDetail.InputError.InputMissing {
+        } catch LocationDetail.InputError.inputMissing {
             print("Input Missing")
         } catch {
             print("Something went wrong, please try again!")
@@ -172,20 +181,19 @@ struct LocationDetail {
     var country: String?
     
     enum InputError: Error {
-        case InputMissing
+        case inputMissing
     }
     
     func createLocation(_ placemark: CLPlacemark) throws -> Location {
-        
 
         if placemark.subThoroughfare == nil {
             
             guard let unwrappedCity = placemark.locality else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedState = placemark.administrativeArea else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             
@@ -200,31 +208,31 @@ struct LocationDetail {
         } else {
             
             guard let unwrappedCity = placemark.locality else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedState = placemark.administrativeArea else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedSubThoroughfare = placemark.subThoroughfare else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedThoroughfare = placemark.thoroughfare else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedZip = placemark.postalCode else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedPlace = placemark.name else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             guard let unwrappedCountry = placemark.country else {
-                throw InputError.InputMissing
+                throw InputError.inputMissing
             }
             
             return Location(title: unwrappedPlace,

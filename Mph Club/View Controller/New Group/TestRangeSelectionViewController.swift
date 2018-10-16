@@ -22,7 +22,7 @@ class TestRangeSelectionViewController: UIViewController {
         self.save.layer.cornerRadius = 4
         
         calendarView.visibleDates() { visibleDates in
-            self.setupMonthLabel(date: visibleDates.monthDates.first!.date)
+            self.setupMonthLabel(date: visibleDates.monthDates.first?.date ?? Date())
         }
         
         calendarView.isRangeSelectionUsed = true
@@ -76,7 +76,6 @@ class TestRangeSelectionViewController: UIViewController {
         
         }
     
-    
     }
 }
 
@@ -87,14 +86,14 @@ extension TestRangeSelectionViewController: JTAppleCalendarViewDelegate, JTApple
     }
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "cell", for: indexPath) as! TestRangeSelectionViewControllerCell
+        guard let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "cell", for: indexPath) as? TestRangeSelectionViewControllerCell else { return JTAppleCell() }
         cell.label.text = cellState.text
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
         return cell
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        setupMonthLabel(date: visibleDates.monthDates.first!.date)
+        setupMonthLabel(date: visibleDates.monthDates.first?.date ?? Date())
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
@@ -109,8 +108,8 @@ extension TestRangeSelectionViewController: JTAppleCalendarViewDelegate, JTApple
         let df = DateFormatter()
         df.dateFormat = "yyyy MM dd"
         
-        let startDate = df.date(from: "2017 01 01")!
-        let endDate = df.date(from: "2017 12 31")!
+        let startDate = df.date(from: "2017 01 01") ?? Date()
+        let endDate = df.date(from: "2017 12 31") ?? Date()
         
         let parameter = ConfigurationParameters(startDate: startDate,
                                                 endDate: endDate,

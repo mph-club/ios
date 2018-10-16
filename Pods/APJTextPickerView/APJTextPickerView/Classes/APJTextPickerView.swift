@@ -95,26 +95,8 @@ open class APJTextPickerView: UITextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setBottomBorder()
         _initialize()
     }
-    
-    // Custom
-    private func setBottomBorder() {
-        self.borderStyle = .none
-        self.layer.backgroundColor = UIColor.white.cgColor
-        
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 0.0
-    }
-    
-    public func setBottomSingleBorder(color: CGColor) {
-        self.layer.shadowColor = color
-    }
-    
     
     private func _initialize() {
         _updateType()
@@ -164,6 +146,7 @@ open class APJTextPickerView: UITextField {
             pickerDelegate?.textPickerView(self, didSelectDate: currentDate)
             _updateDateText()
         } else if currentDate == nil {
+            _oldDateValue = nil
             text = nil
         }
         datePicker?.setDate(currentDate ?? Date(), animated: true)
@@ -203,6 +186,7 @@ open class APJTextPickerView: UITextField {
             _oldIndexSelected = currentIndexSelected
             _updateDataText()
         } else if currentIndexSelected == nil {
+            _oldIndexSelected = nil
             text = nil
         }
         dataPicker?.selectRow(currentIndexSelected ?? 0, inComponent: 0, animated: true)
@@ -266,4 +250,3 @@ extension APJTextPickerView: UIPickerViewDelegate {
         return pickerDelegate?.textPickerView(self, titleForRow: row)
     }
 }
-

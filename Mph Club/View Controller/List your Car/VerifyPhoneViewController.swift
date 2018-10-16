@@ -11,7 +11,7 @@ import UIKit
 class VerifyPhoneViewController: UIViewController {
 
     @IBOutlet weak var phoneTextField: MphTextField!
-    @IBOutlet weak var nextButton: nextButton!
+    @IBOutlet weak var nextButton: NextButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class VerifyPhoneViewController: UIViewController {
         self.present(fireAction, animated: true)
     }
     
-    @IBAction func next(_ sender: nextButton) {
+    @IBAction func next(_ sender: NextButton) {
         // pop confirming number is correct.
         confirmNumber()
     }
@@ -46,15 +46,12 @@ class VerifyPhoneViewController: UIViewController {
 
 
 extension VerifyPhoneViewController: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        
         print("Begin")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if phoneTextField.text! != "" {
+        if !(phoneTextField.text?.isEmpty ?? true) {
             nextButton.backgroundColor = UIColor.black
         }
          print("End")
