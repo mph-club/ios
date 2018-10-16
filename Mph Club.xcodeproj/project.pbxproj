@@ -432,6 +432,9 @@
 				00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */,
 				0062EDAA217274F70041B687 /* UIViewExtension.swift */,
 				003735352175189400164AA7 /* DictionaryExtension.swift */,
+				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
+				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
+				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -647,9 +650,6 @@
 				35CC0D8020F7A34600575225 /* Helpers.swift */,
 				353D3BF0210A12C000CF748C /* Constant.swift */,
 				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
-				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
-				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
-				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
