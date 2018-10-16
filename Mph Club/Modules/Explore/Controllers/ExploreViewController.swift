@@ -47,6 +47,7 @@ final class ExploreViewController: UIViewController {
     
     // MARK: Button
     @IBOutlet private weak var searchButton: UIButton!
+    @IBOutlet private weak var searchBarButton: UIButton!
     
     // ==================
     // MARK: - Properties
@@ -79,7 +80,8 @@ extension ExploreViewController {
         super.viewDidAppear(true)
         // Get search bar position
         searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
-
+        //
+        searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
     }
 }
 
@@ -137,6 +139,12 @@ extension ExploreViewController: UIScrollViewDelegate {
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: alpha)
         // change status bar view color
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(alpha)
+        //
+        if currentSearchBarPosition.y >= 0 {
+            searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: currentSearchBarPosition.y)
+        } else {
+            searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: 0)
+        }
     }
 }
 

@@ -56,6 +56,8 @@ extension CustomNavigationBar {
         setTitleStyle(UIColor.white.withAlphaComponent(alpha))
         // set color with alpha
         backgroundColor = UIColor.black.withAlphaComponent(alpha)
+        // enable clips to bounds
+        clipsToBounds = true
     }
     
     func setTitleStyle(_ color: UIColor) {

@@ -163,11 +163,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7oF-It-Ss7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="mph club" id="sDh-6a-gw1"/>
+                    <navigationItem key="navigationItem" title="mph club" id="sDh-6a-gw1">
+                        <barButtonItem key="rightBarButtonItem" id="Rsl-oP-UOG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwG-CK-Szr">
+                                <rect key="frame" x="323" y="4" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="search-white"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="IqA-84-xmH" id="PyZ-NO-Pi4"/>
                         <outlet property="headerImageView" destination="KC0-fU-B4q" id="lkJ-VB-oLx"/>
                         <outlet property="headerView" destination="6df-zp-pWs" id="haP-Fi-Dgf"/>
+                        <outlet property="searchBarButton" destination="gwG-CK-Szr" id="vsU-og-1rP"/>
                         <outlet property="searchButton" destination="u51-a8-8Af" id="bEO-Wp-QuU"/>
                         <outlet property="tableView" destination="ouW-Jh-icx" id="3tI-90-KRh"/>
                         <segue destination="lRk-OP-hvP" kind="show" identifier="showMapView" id="U0q-g0-RQc"/>
@@ -222,6 +231,7 @@
     <resources>
         <image name="search" width="36" height="36"/>
         <image name="search-small" width="17" height="17"/>
+        <image name="search-white" width="33" height="33"/>
         <image name="searchBg" width="375" height="400"/>
     </resources>
 </document>
