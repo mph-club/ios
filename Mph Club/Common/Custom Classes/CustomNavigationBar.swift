@@ -14,6 +14,7 @@ final class CustomNavigationBar: UINavigationBar {
     // =============
     enum StyleType {
         case transparent(alpha: CGFloat)
+        case defaultNavigationBar
     }
     
     // ==================
@@ -44,6 +45,8 @@ extension CustomNavigationBar {
         switch styleView {
         case .transparent(let alpha):
             transparentNavigationBarWithAlpha(alpha)
+        case .defaultNavigationBar:
+            defaultNavigationBar()
         }
     }
     
@@ -58,6 +61,12 @@ extension CustomNavigationBar {
         backgroundColor = UIColor.black.withAlphaComponent(alpha)
         // enable clips to bounds
         clipsToBounds = true
+    }
+    
+    private func defaultNavigationBar() {
+        setTitleStyle(.black)
+        // set color with alpha
+        backgroundColor = .white
     }
     
     func setTitleStyle(_ color: UIColor) {

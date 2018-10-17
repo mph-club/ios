@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBg" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-fU-B4q">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-background-min" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-fU-B4q">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="327" identifier="height" id="4HS-aQ-uQ2"/>
@@ -71,25 +71,23 @@
                                                 <constraint firstAttribute="trailing" secondItem="u51-a8-8Af" secondAttribute="trailing" id="rlN-nV-5lL"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mph club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYF-VT-gEu">
-                                            <rect key="frame" x="114" y="105" width="147" height="45"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mph-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="Ad1-X8-BHM">
+                                            <rect key="frame" x="131.5" y="105" width="112" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="45" id="ddr-vQ-Yrv"/>
+                                                <constraint firstAttribute="height" constant="44" id="FgJ-7j-RSH"/>
+                                                <constraint firstAttribute="width" constant="112" id="qiy-2F-Ws8"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="sxT-yk-nx6" secondAttribute="trailing" constant="16" id="76J-fJ-Fyj"/>
                                         <constraint firstAttribute="bottom" secondItem="sxT-yk-nx6" secondAttribute="bottom" id="LI3-iO-9MY"/>
                                         <constraint firstAttribute="trailing" secondItem="KC0-fU-B4q" secondAttribute="trailing" id="Qj8-dn-bmJ"/>
+                                        <constraint firstItem="Ad1-X8-BHM" firstAttribute="centerX" secondItem="KC0-fU-B4q" secondAttribute="centerX" id="S0O-f6-u3y"/>
                                         <constraint firstItem="sxT-yk-nx6" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" constant="16" id="Wip-5h-h67"/>
                                         <constraint firstItem="KC0-fU-B4q" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" id="azb-hG-AGF"/>
-                                        <constraint firstItem="JYF-VT-gEu" firstAttribute="centerX" secondItem="6df-zp-pWs" secondAttribute="centerX" id="dKd-nM-XXu"/>
-                                        <constraint firstItem="JYF-VT-gEu" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" constant="105" id="nni-mG-vcV"/>
+                                        <constraint firstItem="Ad1-X8-BHM" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" constant="105" id="cFe-gi-gQS"/>
                                         <constraint firstAttribute="bottom" secondItem="KC0-fU-B4q" secondAttribute="bottom" identifier="bottom" id="xxn-Nu-CJ0"/>
                                     </constraints>
                                 </view>
@@ -234,9 +232,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="explore-background-min" width="1280" height="853"/>
+        <image name="mph-logo-white" width="833" height="236"/>
         <image name="search" width="36" height="36"/>
         <image name="search-small" width="17" height="17"/>
         <image name="search-white" width="33" height="33"/>
-        <image name="searchBg" width="375" height="400"/>
     </resources>
 </document>
