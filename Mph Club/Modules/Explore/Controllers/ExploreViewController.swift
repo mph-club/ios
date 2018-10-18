@@ -41,6 +41,7 @@ final class ExploreViewController: UIViewController {
     // MARK: View
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var footerView: UIView!
+    @IBOutlet private weak var headerGradientView: UIView!
     
     // MARK: Image View
     @IBOutlet private weak var headerImageView: UIImageView!
@@ -57,6 +58,16 @@ final class ExploreViewController: UIViewController {
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
     //
     private var searchButtonPosition = CGPoint.zero
+    
+    // MARK: Lazy var
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.0).cgColor,
+                                UIColor.black.withAlphaComponent(0.09).cgColor,
+                                UIColor.black.withAlphaComponent(0.0).cgColor,
+                                UIColor.black.withAlphaComponent(0.80).cgColor]
+        return gradientLayer
+    }()
     
     // MARK: Overrides
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -82,6 +93,10 @@ extension ExploreViewController {
         searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
         //
         searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
+        // add gradient layer
+        headerGradientView.layer.addSublayer(gradientLayer)
+        // update gradient layer
+        gradientLayer.frame = headerGradientView.bounds
     }
 }
 
