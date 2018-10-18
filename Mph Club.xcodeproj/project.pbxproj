@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184785217667F5000B0ED3 /* UIApplicationExtension.swift */; };
+		0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */; };
+		0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */; };
+		0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478B2176873B000B0ED3 /* ParallaxTableView.swift */; };
 		0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037352E2174FE6800164AA7 /* InfoDictionary.swift */; };
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
@@ -142,6 +146,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00184785217667F5000B0ED3 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
+		0018478B2176873B000B0ED3 /* ParallaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxTableView.swift; sourceTree = "<group>"; };
 		0037352E2174FE6800164AA7 /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -307,6 +315,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0018478D21768C30000B0ED3 /* CustomClase */ = {
+			isa = PBXGroup;
+			children = (
+				0018478B2176873B000B0ED3 /* ParallaxTableView.swift */,
+			);
+			path = CustomClase;
+			sourceTree = "<group>";
+		};
 		0037353221750BB600164AA7 /* SearchLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +406,7 @@
 			children = (
 				0064CC6F216F9231005FCC70 /* Views */,
 				0064CC70216F923B005FCC70 /* Controllers */,
+				0018478D21768C30000B0ED3 /* CustomClase */,
 				00C01DB72174F04700473AE6 /* Extension */,
 				00C01DB42174F02C00473AE6 /* Models */,
 				00C01DB82174F05000473AE6 /* Facade */,
@@ -426,6 +443,9 @@
 				00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */,
 				0062EDAA217274F70041B687 /* UIViewExtension.swift */,
 				003735352175189400164AA7 /* DictionaryExtension.swift */,
+				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
+				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
+				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1097,8 +1117,10 @@
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
+				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
+				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */,
 				35D639262151495400B912AA /* ProfileVC.swift in Sources */,
@@ -1111,6 +1133,7 @@
 				3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */,
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
+				00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */,
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				00C01DC02174F17800473AE6 /* Explore.swift in Sources */,
 				3547E61D212DE244006CC56F /* PickUpAndReturnTVC.swift in Sources */,
@@ -1120,6 +1143,7 @@
 				355D02B3211DE30100B681D4 /* PickUpAndReturnViewController.swift in Sources */,
 				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
 				35789D1920F4418C00A07445 /* BookingLocationSearchTable.swift in Sources */,
+				0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */,
 				358DB0B0212CA43E00E3822B /* FeaturesTableViewController.swift in Sources */,
 				35DAA31C20F40A320083CA93 /* DetailViewController.swift in Sources */,
 				0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */,

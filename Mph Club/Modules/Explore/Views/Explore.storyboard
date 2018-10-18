@@ -18,15 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ouW-Jh-icx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ouW-Jh-icx" customClass="ParallaxTableView" customModule="Mph_Club" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="6df-zp-pWs">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBg" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-fU-B4q">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-background-min" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-fU-B4q">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="327" identifier="height" id="4HS-aQ-uQ2"/>
+                                            </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-yk-nx6">
                                             <rect key="frame" x="16" y="205" width="343" height="122"/>
@@ -68,27 +71,24 @@
                                                 <constraint firstAttribute="trailing" secondItem="u51-a8-8Af" secondAttribute="trailing" id="rlN-nV-5lL"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mph club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYF-VT-gEu">
-                                            <rect key="frame" x="114" y="105" width="147" height="45"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mph-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="Ad1-X8-BHM">
+                                            <rect key="frame" x="131.5" y="105" width="112" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="45" id="ddr-vQ-Yrv"/>
+                                                <constraint firstAttribute="height" constant="44" id="FgJ-7j-RSH"/>
+                                                <constraint firstAttribute="width" constant="112" id="qiy-2F-Ws8"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="sxT-yk-nx6" secondAttribute="trailing" constant="16" id="76J-fJ-Fyj"/>
                                         <constraint firstAttribute="bottom" secondItem="sxT-yk-nx6" secondAttribute="bottom" id="LI3-iO-9MY"/>
-                                        <constraint firstItem="KC0-fU-B4q" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" id="T9N-yV-FKZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="KC0-fU-B4q" secondAttribute="trailing" id="Qj8-dn-bmJ"/>
+                                        <constraint firstItem="Ad1-X8-BHM" firstAttribute="centerX" secondItem="KC0-fU-B4q" secondAttribute="centerX" id="S0O-f6-u3y"/>
                                         <constraint firstItem="sxT-yk-nx6" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" constant="16" id="Wip-5h-h67"/>
-                                        <constraint firstItem="JYF-VT-gEu" firstAttribute="centerX" secondItem="6df-zp-pWs" secondAttribute="centerX" id="dKd-nM-XXu"/>
-                                        <constraint firstItem="JYF-VT-gEu" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" constant="105" id="nni-mG-vcV"/>
-                                        <constraint firstItem="KC0-fU-B4q" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" id="waM-su-fQq"/>
-                                        <constraint firstAttribute="bottom" secondItem="KC0-fU-B4q" secondAttribute="bottom" id="xgC-CB-WVT"/>
-                                        <constraint firstAttribute="trailing" secondItem="KC0-fU-B4q" secondAttribute="trailing" id="xl4-aV-Y4v"/>
+                                        <constraint firstItem="KC0-fU-B4q" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" id="azb-hG-AGF"/>
+                                        <constraint firstItem="Ad1-X8-BHM" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" constant="105" id="cFe-gi-gQS"/>
+                                        <constraint firstAttribute="bottom" secondItem="KC0-fU-B4q" secondAttribute="bottom" identifier="bottom" id="xxn-Nu-CJ0"/>
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="IqA-84-xmH">
@@ -163,11 +163,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7oF-It-Ss7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="mph club" id="sDh-6a-gw1"/>
+                    <navigationItem key="navigationItem" title="mph club" id="sDh-6a-gw1">
+                        <barButtonItem key="rightBarButtonItem" id="Rsl-oP-UOG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwG-CK-Szr">
+                                <rect key="frame" x="323" y="4" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="search-white"/>
+                                <connections>
+                                    <action selector="searchTouchUpInside:" destination="Bq5-BN-MRh" eventType="touchUpInside" id="Bot-R5-U9z"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="IqA-84-xmH" id="PyZ-NO-Pi4"/>
                         <outlet property="headerImageView" destination="KC0-fU-B4q" id="lkJ-VB-oLx"/>
-                        <outlet property="headerView" destination="6df-zp-pWs" id="haP-Fi-Dgf"/>
+                        <outlet property="headerView" destination="6df-zp-pWs" id="xyB-ed-D0s"/>
+                        <outlet property="searchBarButton" destination="gwG-CK-Szr" id="vsU-og-1rP"/>
                         <outlet property="searchButton" destination="u51-a8-8Af" id="bEO-Wp-QuU"/>
                         <outlet property="tableView" destination="ouW-Jh-icx" id="3tI-90-KRh"/>
                         <segue destination="lRk-OP-hvP" kind="show" identifier="showMapView" id="U0q-g0-RQc"/>
@@ -192,7 +204,7 @@
                 <navigationController id="bjs-j7-GEn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="search" id="mdf-wu-PhG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cku-Zt-WIn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cku-Zt-WIn" customClass="CustomNavigationBar" customModule="Mph_Club" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,8 +232,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="explore-background-min" width="1280" height="853"/>
+        <image name="mph-logo-white" width="833" height="236"/>
         <image name="search" width="36" height="36"/>
         <image name="search-small" width="17" height="17"/>
-        <image name="searchBg" width="375" height="400"/>
+        <image name="search-white" width="33" height="33"/>
     </resources>
 </document>
