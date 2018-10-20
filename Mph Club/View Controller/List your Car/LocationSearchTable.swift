@@ -9,8 +9,6 @@
 import UIKit
 import MapKit
 
-
-
 class LocationSearchTable: UITableViewController {
     
     

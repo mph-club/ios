@@ -191,7 +191,7 @@
                         <outlet property="searchBarButton" destination="gwG-CK-Szr" id="vsU-og-1rP"/>
                         <outlet property="searchButton" destination="u51-a8-8Af" id="bEO-Wp-QuU"/>
                         <outlet property="tableView" destination="ouW-Jh-icx" id="3tI-90-KRh"/>
-                        <segue destination="lRk-OP-hvP" kind="show" identifier="showMapView" id="U0q-g0-RQc"/>
+                        <segue destination="lRk-OP-hvP" kind="showDetail" identifier="showMapView" id="U0q-g0-RQc"/>
                         <segue destination="yGI-vH-kOj" kind="presentation" identifier="presentListCar" id="6mw-2w-g2b"/>
                     </connections>
                 </viewController>

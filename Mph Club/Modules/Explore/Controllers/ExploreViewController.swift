@@ -90,10 +90,6 @@ extension ExploreViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        // change navigation bar view color
-        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: currentAlpha)
         // change status bar view color
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
     }
@@ -115,15 +111,7 @@ extension ExploreViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
-        //
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        //
-        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .defaultNavigationBar
+        UIApplication.shared.statusBarView?.backgroundColor = .clear
     }
 }
 
