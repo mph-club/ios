@@ -23,10 +23,10 @@ final class MapViewController: UIViewController {
     // ===============
     
     // MARK: Map View
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private weak var mapView: MKMapView!
     
     // MARK: Button
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet private weak var doneButton: UIButton!
     
     // ==================
     // MARK: - Properties
@@ -35,11 +35,19 @@ final class MapViewController: UIViewController {
     var selectedPin: CLPlacemark?
     var resultSearchController: UISearchController!
     let locationManager = CLLocationManager()
+    var bookinglocationDetailModel = BookingLocationDetail()
+
     
     // MARK: Delegate
     weak var addressDelegate: LocationSearchTableDelegate?
-    
-    
+}
+
+// =======================
+// MARK: - View Controller
+// =======================
+
+// MARK: Life Cycle
+extension MapViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,21 +68,12 @@ final class MapViewController: UIViewController {
         definesPresentationContext = true
         locationSearchTable?.mapView = mapView
         locationSearchTable?.handleMapSearchDelegate = self
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-    }
-    
-    @objc func getDirections() {
-        addressDelegate?.displayAddressSelected(locationDetailProperty)
-        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
     }
 }
 
+// ===============
+// MARK: - Actions
+// ===============
 private extension MapViewController {
     @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "unwindToMenu", sender: self)
@@ -86,6 +85,19 @@ private extension MapViewController {
     }
 }
 
+// ===============
+// MARK: - Methods
+// ===============
+private extension MapViewController {
+    @objc func getDirections() {
+        addressDelegate?.displayAddressSelected(locationDetailProperty)
+        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+    }
+}
+
+// ===================================
+// MARK: - CLLocation Manager Delegate
+// ===================================
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -104,11 +116,13 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error)")
     }
-
+    
 }
 
+// =========================
+// MARK: - Handle Map Search
+// =========================
 extension MapViewController: HandleMapSearch {
-    
     func searchBarNotEmpty() {
         let searchBar = resultSearchController?.searchBar
         if !(searchBar?.text?.isEmpty ?? true) {
@@ -116,10 +130,10 @@ extension MapViewController: HandleMapSearch {
             doneButton.tintColor = UIColor.black
         }
     }
-
+    
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
         searchBarNotEmpty()
-
+        
         saveCarLocation(placemark)
         
         // cache the pin
@@ -133,7 +147,7 @@ extension MapViewController: HandleMapSearch {
         
         if let city = placemark.locality,
             let state = placemark.administrativeArea {
-                annotation.subtitle = "\(city) \(state)"
+            annotation.subtitle = "\(city) \(state)"
         }
         
         mapView.addAnnotation(annotation)
@@ -143,8 +157,7 @@ extension MapViewController: HandleMapSearch {
         mapView.setRegion(region, animated: true)
     }
     
-    func saveCarLocation(_ placemark: CLPlacemark)  {
-        
+    func saveCarLocation(_ placemark: CLPlacemark) {
         do {
             let location = try bookinglocationDetailModel.createLocation(placemark)
             print("Success! location created. \(location)")
@@ -154,10 +167,31 @@ extension MapViewController: HandleMapSearch {
         } catch {
             print("Something went wrong, please try again!")
         }
-    
-        
     }
     
+}
+
+// ===========================
+// MARK: - MKMap View Delegate
+// ===========================
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else { return nil }
+        
+        let reuseId = "pin"
+        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
+        
+        //        pinView.pinTintColor = UIColor.orange
+        //        pinView.canShowCallout = true
+        //        let smallSquare = CGSize(width: 30, height: 30)
+        //        var button: UIButton?
+        //        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
+        //        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
+        //        button?.addTarget(self, action: #selector(MapViewController.getDirections), for: .touchUpInside)
+        //        pinView.leftCalloutAccessoryView = button
+        
+        return pinView
+    }
 }
 
 var locationDetailModel = BookingLocationDetail()
@@ -185,7 +219,7 @@ struct LocationDetail {
     }
     
     func createLocation(_ placemark: CLPlacemark) throws -> Location {
-
+        
         if placemark.subThoroughfare == nil {
             
             guard let unwrappedCity = placemark.locality else {
@@ -196,15 +230,12 @@ struct LocationDetail {
                 throw InputError.inputMissing
             }
             
-            
             return Location(title: "",
                             address: "",
                             city: unwrappedCity,
                             state: unwrappedState,
                             zipCode: "",
                             country: "")
-            
-
         } else {
             
             guard let unwrappedCity = placemark.locality else {
@@ -243,36 +274,5 @@ struct LocationDetail {
                             country: unwrappedCountry)
             
         }
-        
-
-        
-
-    
-        
-
-    }
-    
-    
-}
-
-extension MapViewController : MKMapViewDelegate {
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-        
-        guard !(annotation is MKUserLocation) else { return nil }
-        
-        let reuseId = "pin"
-        guard let pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView else { return nil }
-        
-//        pinView.pinTintColor = UIColor.orange
-//        pinView.canShowCallout = true
-//        let smallSquare = CGSize(width: 30, height: 30)
-//        var button: UIButton?
-//        button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-//        button?.setBackgroundImage(UIImage(named: "car"), for: UIControlState())
-//        button?.addTarget(self, action: #selector(MapViewController.getDirections), for: .touchUpInside)
-//        pinView.leftCalloutAccessoryView = button
-        
-        return pinView
     }
 }

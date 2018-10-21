@@ -64,6 +64,12 @@ extension CustomNavigationBar {
     }
     
     private func defaultNavigationBar() {
+        //
+        setBackgroundImage(nil, for: .default)
+        shadowImage = nil
+        //
+        barTintColor = .white
+        //
         setTitleStyle(.black)
         // set color with alpha
         backgroundColor = .white

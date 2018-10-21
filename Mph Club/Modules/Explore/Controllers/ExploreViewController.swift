@@ -41,6 +41,7 @@ final class ExploreViewController: UIViewController {
     // MARK: View
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var footerView: UIView!
+    @IBOutlet private weak var headerGradientView: UIView!
     
     // MARK: Image View
     @IBOutlet private weak var headerImageView: UIImageView!
@@ -57,6 +58,17 @@ final class ExploreViewController: UIViewController {
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
     //
     private var searchButtonPosition = CGPoint.zero
+    private var currentAlpha: CGFloat = 0.0
+    
+    // MARK: Lazy var
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.0).cgColor,
+                                UIColor.black.withAlphaComponent(0.09).cgColor,
+                                UIColor.black.withAlphaComponent(0.0).cgColor,
+                                UIColor.black.withAlphaComponent(0.80).cgColor]
+        return gradientLayer
+    }()
     
     // MARK: Overrides
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -76,12 +88,30 @@ extension ExploreViewController {
         configView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // change status bar view color
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         // Get search bar position
-        searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        if searchButtonPosition == .zero {
+            searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        }
         //
-        searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
+        if searchButton.convert(searchButton.frame.origin, to: nil).y >= 0 {
+            searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
+        }
+        // update gradient layer
+        gradientLayer.frame = headerGradientView.bounds
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //
+        UIApplication.shared.statusBarView?.backgroundColor = .clear
     }
 }
 
@@ -115,6 +145,8 @@ private extension ExploreViewController {
     func configView() {
         // Set header View height
         headerView.frame.size.height = view.frame.height / 2
+        // add gradient layer
+        headerGradientView.layer.addSublayer(gradientLayer)
     }
     
     func registerHeaderTableView() {
@@ -134,11 +166,12 @@ private extension ExploreViewController {
 extension ExploreViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentSearchBarPosition = searchButton.convert(searchButton.frame.origin, to: nil)
-        let alpha = (searchButtonPosition.y - currentSearchBarPosition.y) / searchButtonPosition.y
+        // set current alpha
+        currentAlpha = (searchButtonPosition.y - currentSearchBarPosition.y) / searchButtonPosition.y
         // change navigation bar view color
-        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: alpha)
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: currentAlpha)
         // change status bar view color
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(alpha)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
         //
         if currentSearchBarPosition.y >= 0 {
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: currentSearchBarPosition.y)

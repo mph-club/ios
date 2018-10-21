@@ -31,6 +31,10 @@
                                                 <constraint firstAttribute="height" constant="327" identifier="height" id="4HS-aQ-uQ2"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZC6-Rb-KIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-yk-nx6">
                                             <rect key="frame" x="16" y="205" width="343" height="122"/>
                                             <subviews>
@@ -81,13 +85,17 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="ZC6-Rb-KIr" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" id="2J6-3z-DGI"/>
                                         <constraint firstAttribute="trailing" secondItem="sxT-yk-nx6" secondAttribute="trailing" constant="16" id="76J-fJ-Fyj"/>
                                         <constraint firstAttribute="bottom" secondItem="sxT-yk-nx6" secondAttribute="bottom" id="LI3-iO-9MY"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZC6-Rb-KIr" secondAttribute="bottom" id="LzI-Iz-4v3"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZC6-Rb-KIr" secondAttribute="trailing" id="MhH-EL-idb"/>
                                         <constraint firstAttribute="trailing" secondItem="KC0-fU-B4q" secondAttribute="trailing" id="Qj8-dn-bmJ"/>
                                         <constraint firstItem="Ad1-X8-BHM" firstAttribute="centerX" secondItem="KC0-fU-B4q" secondAttribute="centerX" id="S0O-f6-u3y"/>
                                         <constraint firstItem="sxT-yk-nx6" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" constant="16" id="Wip-5h-h67"/>
                                         <constraint firstItem="KC0-fU-B4q" firstAttribute="leading" secondItem="6df-zp-pWs" secondAttribute="leading" id="azb-hG-AGF"/>
                                         <constraint firstItem="Ad1-X8-BHM" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" constant="105" id="cFe-gi-gQS"/>
+                                        <constraint firstItem="ZC6-Rb-KIr" firstAttribute="top" secondItem="6df-zp-pWs" secondAttribute="top" id="oSt-fh-IoC"/>
                                         <constraint firstAttribute="bottom" secondItem="KC0-fU-B4q" secondAttribute="bottom" identifier="bottom" id="xxn-Nu-CJ0"/>
                                     </constraints>
                                 </view>
@@ -177,12 +185,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="IqA-84-xmH" id="PyZ-NO-Pi4"/>
+                        <outlet property="headerGradientView" destination="ZC6-Rb-KIr" id="asW-4s-2DS"/>
                         <outlet property="headerImageView" destination="KC0-fU-B4q" id="lkJ-VB-oLx"/>
                         <outlet property="headerView" destination="6df-zp-pWs" id="xyB-ed-D0s"/>
                         <outlet property="searchBarButton" destination="gwG-CK-Szr" id="vsU-og-1rP"/>
                         <outlet property="searchButton" destination="u51-a8-8Af" id="bEO-Wp-QuU"/>
                         <outlet property="tableView" destination="ouW-Jh-icx" id="3tI-90-KRh"/>
-                        <segue destination="lRk-OP-hvP" kind="show" identifier="showMapView" id="U0q-g0-RQc"/>
+                        <segue destination="lRk-OP-hvP" kind="showDetail" identifier="showMapView" id="U0q-g0-RQc"/>
                         <segue destination="yGI-vH-kOj" kind="presentation" identifier="presentListCar" id="6mw-2w-g2b"/>
                     </connections>
                 </viewController>
