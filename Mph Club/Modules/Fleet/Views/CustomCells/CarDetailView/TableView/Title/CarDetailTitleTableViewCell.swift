@@ -12,6 +12,11 @@ final class CarDetailTitleTableViewCell: UITableViewCell {
     // ===============
     // MARK: - Outlets
     // ===============
+    
+    // MARK: Label
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var tripLabel: UILabel!
+    @IBOutlet private weak var milesLabel: UILabel!
 }
 
 // =========================
@@ -30,7 +35,11 @@ extension CarDetailTitleTableViewCell {
 // MARK: - Methods
 // ===============
 extension CarDetailTitleTableViewCell {
-    func setContent() {}
+    func setContent(_ vehicle: Vehicle?) {
+        titleLabel.text = vehicle?.title
+        tripLabel.text = "\(vehicle?.trips ?? 0) trips"
+        milesLabel.text = "\(vehicle?.miles ?? 0) mi"
+    }
 }
 
 // =====================

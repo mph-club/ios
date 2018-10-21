@@ -142,6 +142,7 @@ extension CarDetailViewController: UITableViewDataSource {
         switch section {
         case .title:
             let cell: CarDetailTitleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setContent(currentVehicle)
             return cell
         case .tripDate:
             let cell: CarDetailDateTableViewCell = tableView.dequeueReusableCell(for: indexPath)

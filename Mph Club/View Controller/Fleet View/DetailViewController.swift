@@ -97,9 +97,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     var vehicle: Vehicle?
     
     @IBOutlet weak var vehicleImg: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var tripLabel: UILabel!
-    @IBOutlet weak var milesLabel: UILabel!
+//    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var tripLabel: UILabel!
+//    @IBOutlet weak var milesLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -114,9 +114,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         print(vehicle)
         
         self.vehicleImg.image = UIImage(named: vehicle.img)
-        self.titleLabel.text = vehicle.title
-        self.tripLabel.text = "\(String(describing: vehicle.trips)) trips"
-        self.milesLabel.text = "\(String(describing: vehicle.miles)) mi"
+//        self.titleLabel.text = vehicle.title
+//        self.tripLabel.text = "\(String(describing: vehicle.trips)) trips"
+//        self.milesLabel.text = "\(String(describing: vehicle.miles)) mi"
         
         setDummyData()
         reviews()
