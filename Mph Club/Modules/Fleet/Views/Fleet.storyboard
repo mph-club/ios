@@ -90,6 +90,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ZV-ur-Ojp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Wef-Zb-RWB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ETM-IL-cxh"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="OiR-rD-Tmn" id="5A4-1S-Xre"/>

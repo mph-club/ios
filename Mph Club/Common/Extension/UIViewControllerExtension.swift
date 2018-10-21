@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIViewController {
     /// Performs segue with specified identifier and sends the sender
@@ -33,5 +34,28 @@ extension UIViewController {
     ///   - sender: _(optional)_ The object that you want to use to initiate the segue.
     func performSegue<IdentifierType: RawRepresentable>(withIdentifier identifier: IdentifierType, sender: Any? = nil) where IdentifierType.RawValue == String {
         performSegue(withIdentifier: identifier.rawValue, sender: sender)
+    }
+    
+    /// Description
+    ///
+    /// - Parameters:
+    ///   - title: title description
+    ///   - message: message description
+    /// - Returns: return value description
+    func fireAlert(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        return alert
+    }
+    
+    /// Description
+    ///
+    /// - Parameters:
+    ///   - title: title description
+    ///   - message: message description
+    /// - Returns: return value description
+    func fireActionSheet(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        return alert
     }
 }

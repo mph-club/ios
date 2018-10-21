@@ -80,7 +80,6 @@
 		350307E8215D15A90012E9B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E7215D15A90012E9B9 /* AVFoundation.framework */; };
 		350307EA215D15B60012E9B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E9215D15B60012E9B9 /* SystemConfiguration.framework */; };
 		350307EC215D15C00012E9B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307EB215D15C00012E9B9 /* OpenGLES.framework */; };
-		350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350881A520EA71D500ED2B5E /* CustomNavController.swift */; };
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
 		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
@@ -132,7 +131,6 @@
 		3591B8DD20DAC06D00BA0CF9 /* Mph_ClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8DC20DAC06D00BA0CF9 /* Mph_ClubUITests.swift */; };
 		3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E02120EBB8E100E595EE /* MphTextField.swift */; };
 		3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3598E02420EBBADF00E595EE /* TabView.storyboard */; };
-		35CC0D8120F7A34600575225 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8020F7A34600575225 /* Helpers.swift */; };
 		35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */; };
 		35D63911215009A900B912AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63910215009A900B912AA /* SignInViewController.swift */; };
 		35D63914215009F800B912AA /* MfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63913215009F800B912AA /* MfaViewController.swift */; };
@@ -251,7 +249,6 @@
 		350307E7215D15A90012E9B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		350307E9215D15B60012E9B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		350307EB215D15C00012E9B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		350881A520EA71D500ED2B5E /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
@@ -309,7 +306,6 @@
 		3591B8DE20DAC06D00BA0CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3598E02120EBB8E100E595EE /* MphTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MphTextField.swift; sourceTree = "<group>"; };
 		3598E02420EBBADF00E595EE /* TabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabView.storyboard; sourceTree = "<group>"; };
-		35CC0D8020F7A34600575225 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		35D63910215009A900B912AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		35D63913215009F800B912AA /* MfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MfaViewController.swift; sourceTree = "<group>"; };
@@ -896,7 +892,6 @@
 			children = (
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
 				35DAA30D20EFBEC80083CA93 /* NextButton.swift */,
-				35CC0D8020F7A34600575225 /* Helpers.swift */,
 				353D3BF0210A12C000CF748C /* Constant.swift */,
 				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
 				0018478B2176873B000B0ED3 /* ParallaxTableView.swift */,
@@ -1008,7 +1003,6 @@
 		35DBE65F20E3E1A80041325A /* LoginSlide */ = {
 			isa = PBXGroup;
 			children = (
-				350881A520EA71D500ED2B5E /* CustomNavController.swift */,
 				35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */,
 				35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */,
 			);
@@ -1362,7 +1356,6 @@
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
-				35CC0D8120F7A34600575225 /* Helpers.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				358DB0AC212C8DC900E3822B /* StartTimeTVC.swift in Sources */,
@@ -1429,7 +1422,6 @@
 				00C01DC92174FB3E00473AE6 /* Endpoint.swift in Sources */,
 				0047B159217CDD3C00941D9C /* CarDetailRenterTableViewCell.swift in Sources */,
 				358DB0AE212C8DE900E3822B /* EndTimeTVC.swift in Sources */,
-				350881A620EA71D500ED2B5E /* CustomNavController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */,
 				00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */,

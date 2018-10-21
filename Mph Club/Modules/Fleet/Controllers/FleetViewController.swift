@@ -56,9 +56,9 @@ extension FleetViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        //
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.backgroundColor = UIColor.white
         //

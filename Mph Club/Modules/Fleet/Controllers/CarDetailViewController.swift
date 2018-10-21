@@ -49,6 +49,11 @@ final class CarDetailViewController: UIViewController {
     
     // MARK: Public
     var currentVehicle: Vehicle?
+    
+    // MARK: Overrides
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 // =======================
@@ -61,6 +66,16 @@ extension CarDetailViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setContent()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        //
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: 0.0)
+        //
+        UIApplication.shared.statusBarView?.backgroundColor = nil
     }
 }
 

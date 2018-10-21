@@ -69,7 +69,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oc1-nQ-2fD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rgj-Fz-3Ep">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rgj-Fz-3Ep" customClass="CustomNavigationBar" customModule="Mph_Club" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

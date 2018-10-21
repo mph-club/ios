@@ -92,6 +92,8 @@ extension ExploreViewController {
         super.viewWillAppear(animated)
         // change status bar view color
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
+        // change navigation bar view color
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: currentAlpha)
     }
     
     override func viewDidAppear(_ animated: Bool) {
