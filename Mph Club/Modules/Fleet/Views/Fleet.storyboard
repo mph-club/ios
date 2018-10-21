@@ -21,6 +21,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-rD-Tmn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="usJ-gZ-RJt" userLabel="Footer View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximize the return on your luxury vehicle investment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-Zh-8jG">
+                                            <rect key="frame" x="16" y="56" width="343" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="zwf-Ov-GAy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn over $50,000 a year by renting out your vehicle to our selective luxury clientele." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-Z2-C2U">
+                                            <rect key="frame" x="16" y="128" width="343" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="m80-yF-qmn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFq-Eo-Ggm">
+                                            <rect key="frame" x="16" y="220" width="343" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="DXd-5b-LCA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <state key="normal" title="List your luxury vehicle">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="CFq-Eo-Ggm" firstAttribute="leading" secondItem="usJ-gZ-RJt" secondAttribute="leading" constant="16" id="H0Q-ht-tmC"/>
+                                        <constraint firstItem="CFq-Eo-Ggm" firstAttribute="top" secondItem="eAr-Z2-C2U" secondAttribute="bottom" constant="32" id="M9C-1T-ykG"/>
+                                        <constraint firstItem="eAr-Z2-C2U" firstAttribute="leading" secondItem="usJ-gZ-RJt" secondAttribute="leading" constant="16" id="NgV-nU-FXy"/>
+                                        <constraint firstItem="dfL-Zh-8jG" firstAttribute="top" secondItem="usJ-gZ-RJt" secondAttribute="top" constant="56" id="U2Y-t9-d5n"/>
+                                        <constraint firstItem="eAr-Z2-C2U" firstAttribute="top" secondItem="dfL-Zh-8jG" secondAttribute="bottom" constant="8" id="UH3-en-EGl"/>
+                                        <constraint firstAttribute="trailing" secondItem="CFq-Eo-Ggm" secondAttribute="trailing" constant="16" id="gc3-k9-Nlc"/>
+                                        <constraint firstItem="dfL-Zh-8jG" firstAttribute="leading" secondItem="usJ-gZ-RJt" secondAttribute="leading" constant="16" id="mjp-FS-Sm8"/>
+                                        <constraint firstAttribute="trailing" secondItem="dfL-Zh-8jG" secondAttribute="trailing" constant="16" id="oBy-B9-D5R"/>
+                                        <constraint firstAttribute="trailing" secondItem="eAr-Z2-C2U" secondAttribute="trailing" constant="16" id="yYh-b2-dRe"/>
+                                    </constraints>
+                                </view>
                                 <connections>
                                     <outlet property="dataSource" destination="2j0-OG-tmS" id="B2a-ZA-CFq"/>
                                     <outlet property="delegate" destination="2j0-OG-tmS" id="OFq-Wh-EyM"/>
@@ -39,8 +93,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="OiR-rD-Tmn" id="5A4-1S-Xre"/>
-                        <segue destination="q68-hg-S1q" kind="show" identifier="showCarDetailView" id="FWk-yt-HXz"/>
                         <segue destination="iiE-6Z-hW7" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="NhL-Cy-DP2"/>
+                        <segue destination="2iM-wt-tl3" kind="show" identifier="showCarDetailView" id="5WS-EC-4Tf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oc-v8-grA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,13 +102,60 @@
             </objects>
             <point key="canvasLocation" x="6296.8000000000002" y="-1273.313343328336"/>
         </scene>
-        <!--Booking-->
-        <scene sceneID="5VE-we-MYr">
+        <!--Car Detail View Controller-->
+        <scene sceneID="Lmk-ry-L26">
             <objects>
-                <viewControllerPlaceholder storyboardName="Booking" id="q68-hg-S1q" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aTr-UP-dQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2iM-wt-tl3" customClass="CarDetailViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwt-Tg-hCM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yO2-dU-oem" customClass="ParallaxTableView" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Cjx-gJ-Cmx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vhg-CR-iqq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="259" identifier="height" id="yWL-kU-K6g"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="vhg-CR-iqq" secondAttribute="trailing" id="3mK-xo-Pwm"/>
+                                        <constraint firstItem="vhg-CR-iqq" firstAttribute="leading" secondItem="Cjx-gJ-Cmx" secondAttribute="leading" id="O3e-Qq-cwm"/>
+                                        <constraint firstAttribute="bottom" secondItem="vhg-CR-iqq" secondAttribute="bottom" identifier="bottom" id="lo8-ce-Xhg"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="2iM-wt-tl3" id="Q7g-Lw-95I"/>
+                                    <outlet property="delegate" destination="2iM-wt-tl3" id="YPI-Wz-8ol"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yO2-dU-oem" firstAttribute="bottom" secondItem="1c9-Yc-up6" secondAttribute="bottom" id="Hgg-Z3-sP6"/>
+                            <constraint firstItem="yO2-dU-oem" firstAttribute="leading" secondItem="1c9-Yc-up6" secondAttribute="leading" id="OaG-YB-jjp"/>
+                            <constraint firstItem="yO2-dU-oem" firstAttribute="trailing" secondItem="1c9-Yc-up6" secondAttribute="trailing" id="buD-Js-wiL"/>
+                            <constraint firstItem="yO2-dU-oem" firstAttribute="top" secondItem="nwt-Tg-hCM" secondAttribute="top" id="kYE-8z-qKu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1c9-Yc-up6"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerImageView" destination="vhg-CR-iqq" id="z6K-qb-tto"/>
+                        <outlet property="headerView" destination="Cjx-gJ-Cmx" id="8BR-EX-kvr"/>
+                        <outlet property="tableView" destination="yO2-dU-oem" id="MVf-oe-EKT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fg-FV-PJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6888" y="-1274"/>
+            <point key="canvasLocation" x="7120.8000000000002" y="-1273.313343328336"/>
         </scene>
     </scenes>
 </document>

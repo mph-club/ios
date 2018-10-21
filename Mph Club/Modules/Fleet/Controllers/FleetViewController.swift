@@ -82,17 +82,17 @@ extension FleetViewController {
         guard let identifier = Segue(rawValue: segue.identifier ?? "") else { return }
         switch identifier {
         case .showCarDetailView:
-            willShowCarDetail(viewController: segue.destination as? DetailViewController, sender: sender)
+            willShowCarDetail(viewController: segue.destination as? CarDetailViewController, sender: sender)
         case .unwindToHome:
             break
         }
     }
     
-    private func willShowCarDetail(viewController: DetailViewController?, sender: Any?) {
+    private func willShowCarDetail(viewController: CarDetailViewController?, sender: Any?) {
         guard let viewController = viewController else {
-            fatalError("Could not cast destination to \(DetailViewController.self)")
+            fatalError("Could not cast destination to \(CarDetailViewController.self)")
         }
-        viewController.vehicle = sender as? Vehicle
+        viewController.currentVehicle = sender as? Vehicle
     }
 }
 

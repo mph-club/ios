@@ -14,24 +14,9 @@ final class FeatureAttributesCell: UICollectionViewCell {
 
 final class SimilarCarCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var pricePerDay: UILabel!
     @IBOutlet weak var trips: UILabel!
     
-}
-
-extension UIColor {
-    /// Converts this `UIColor` instance to a 1x1 `UIImage` instance and returns it.
-    ///
-    /// - Returns: `self` as a 1x1 `UIImage`.
-    func as1ptImage() -> UIImage {
-        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
-        setFill()
-        UIGraphicsGetCurrentContext()?.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
-        let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
-        UIGraphicsEndImageContext()
-        return image
-    }
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -60,7 +45,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SimilarCarCell else { return UICollectionViewCell() }
             cell.title.text = similarCarList[indexPath.row].title
-            cell.img.image = similarCarList[indexPath.row].img
+//            cell.img.image = similarCarList[indexPath.row].img
             cell.pricePerDay.text = "\(String(describing: similarCarList[indexPath.row].price ?? 0))"
             cell.trips.text = "\(String(describing: similarCarList[indexPath.row].trips ?? 0)) Trips"
             
@@ -158,8 +143,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     }
     
-    
-    
+
     func setNavigationBarStyle() {
         let color = UIColor.white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
