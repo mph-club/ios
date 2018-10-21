@@ -9,6 +9,14 @@
 import UIKit
 
 final class FleetViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case showCarDetailView
+        case unwindToHome
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -44,37 +52,47 @@ extension FleetViewController {
         customBackButton()
         //
         createFackData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.backgroundColor = UIColor.white
         //
         UIApplication.shared.statusBarView?.backgroundColor = .white
         //
         navigationController?.hidesBarsOnSwipe = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.shadowImage = UIColor.gray.as1ptImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor.white
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        //
         self.navigationController?.navigationBar.shadowImage = UIColor.clear.as1ptImage()
+        //
+        navigationController?.hidesBarsOnSwipe = false
     }
 }
 
 // MARK: Navigation
 extension FleetViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "carDetailView" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = segue.destination as? DetailViewController
-                controller?.vehicle = carList[indexPath.row]
-            }
-            
+        guard let identifier = Segue(rawValue: segue.identifier ?? "") else { return }
+        switch identifier {
+        case .showCarDetailView:
+            willShowCarDetail(viewController: segue.destination as? DetailViewController, sender: sender)
+        case .unwindToHome:
+            break
         }
+    }
+    
+    private func willShowCarDetail(viewController: DetailViewController?, sender: Any?) {
+        guard let viewController = viewController else {
+            fatalError("Could not cast destination to \(DetailViewController.self)")
+        }
+        viewController.vehicle = sender as? Vehicle
     }
 }
 
@@ -83,11 +101,7 @@ extension FleetViewController {
 // ===============
 private extension FleetViewController {
     @IBAction func close() {
-        performSegue(withIdentifier: "unwindToHome", sender: self)
-    }
-    
-    @IBAction func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: Segue.unwindToHome)
     }
     
     @IBAction func unwindToFleet(segue: UIStoryboardSegue) {}
@@ -154,5 +168,7 @@ extension FleetViewController: UITableViewDelegate {
         return 420
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segue.showCarDetailView, sender: carList[indexPath.row])
+    }
 }

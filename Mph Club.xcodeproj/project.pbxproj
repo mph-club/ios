@@ -506,9 +506,9 @@
 		00AEE9DD217C58D800AD7348 /* Fleet */ = {
 			isa = PBXGroup;
 			children = (
-				00AEE9EB217C6BC300AD7348 /* Models */,
 				00AEE9DE217C58F000AD7348 /* Views */,
 				00AEE9E2217C599700AD7348 /* Controllers */,
+				00AEE9EB217C6BC300AD7348 /* Models */,
 			);
 			path = Fleet;
 			sourceTree = "<group>";

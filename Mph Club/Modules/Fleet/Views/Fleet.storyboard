@@ -39,7 +39,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="OiR-rD-Tmn" id="5A4-1S-Xre"/>
-                        <segue destination="q68-hg-S1q" kind="show" identifier="carDetailView" id="FWk-yt-HXz"/>
+                        <segue destination="q68-hg-S1q" kind="show" identifier="showCarDetailView" id="FWk-yt-HXz"/>
                         <segue destination="iiE-6Z-hW7" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="NhL-Cy-DP2"/>
                     </connections>
                 </viewController>
