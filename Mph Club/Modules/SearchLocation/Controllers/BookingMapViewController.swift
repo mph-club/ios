@@ -98,11 +98,7 @@ extension BookingMapViewController {
 
 // MARK: Navigation
 extension BookingMapViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? FleetTableViewController {
-            destinationVC.bookingMapVC = self
-        }
-    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
 }
 
 // ===============

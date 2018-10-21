@@ -111,7 +111,7 @@ extension ExploreViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //
-        UIApplication.shared.statusBarView?.backgroundColor = .clear
+        UIApplication.shared.statusBarView?.backgroundColor = nil
     }
 }
 
