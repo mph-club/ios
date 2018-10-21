@@ -205,7 +205,7 @@
                 <viewControllerPlaceholder storyboardName="ListCar" id="yGI-vH-kOj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5X-OO-QKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245" y="-425"/>
+            <point key="canvasLocation" x="2234" y="-416"/>
         </scene>
         <!--Explore-->
         <scene sceneID="OW5-qY-Ldj">
@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="754" y="-507"/>
         </scene>
-        <!--SearchResult-->
+        <!--SearchLocation-->
         <scene sceneID="5e1-c0-W8m">
             <objects>
-                <viewControllerPlaceholder storyboardName="SearchResult" id="lRk-OP-hvP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SearchLocation" id="lRk-OP-hvP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncf-e7-ygf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2274" y="-582"/>

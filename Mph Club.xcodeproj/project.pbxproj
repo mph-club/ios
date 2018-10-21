@@ -30,6 +30,8 @@
 		0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC82216F9E19005FCC70 /* UIColorExtension.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
+		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
+		00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */; };
 		00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBA2174F08E00473AE6 /* ExploreService.swift */; };
 		00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */; };
 		00C01DC02174F17800473AE6 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBF2174F17800473AE6 /* Explore.swift */; };
@@ -44,7 +46,7 @@
 		00F6E2EF216FBC440065EF2B /* ExploreHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F6E2ED216FBC440065EF2B /* ExploreHeaderTableViewCell.xib */; };
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
-		350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */; };
+		350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */; };
 		350307E0215BFDE80012E9B9 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DF215BFDE80012E9B9 /* Booking.storyboard */; };
 		350307E4215D15920012E9B9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E3215D15920012E9B9 /* CoreMedia.framework */; };
 		350307E6215D159A0012E9B9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E5215D159A0012E9B9 /* CoreMotion.framework */; };
@@ -171,6 +173,8 @@
 		0064CC82216F9E19005FCC70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
+		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
+		00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocationDetail.swift; sourceTree = "<group>"; };
 		00C01DBA2174F08E00473AE6 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFacade.swift; sourceTree = "<group>"; };
 		00C01DBF2174F17800473AE6 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
@@ -187,7 +191,7 @@
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
 		350307D7215BF18F0012E9B9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
+		350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocation.storyboard; sourceTree = "<group>"; };
 		350307DF215BFDE80012E9B9 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		350307E3215D15920012E9B9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		350307E5215D159A0012E9B9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -326,6 +330,7 @@
 		0037353221750BB600164AA7 /* SearchLocation */ = {
 			isa = PBXGroup;
 			children = (
+				00AEE9D7217C55E000AD7348 /* Models */,
 				0037353421750BF200164AA7 /* Views */,
 				0037353321750BE900164AA7 /* Controllers */,
 			);
@@ -343,7 +348,7 @@
 		0037353421750BF200164AA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				350307DC215BFA9F0012E9B9 /* SearchResult.storyboard */,
+				350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */,
 				0098BD4C217B99A6009E3984 /* CustomCells */,
 			);
 			path = Views;
@@ -476,6 +481,15 @@
 				0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		00AEE9D7217C55E000AD7348 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00AEE9D9217C562C00AD7348 /* BookingLocation.swift */,
+				00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		00C01DB42174F02C00473AE6 /* Models */ = {
@@ -935,7 +949,7 @@
 				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
-				350307DD215BFA9F0012E9B9 /* SearchResult.storyboard in Resources */,
+				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
@@ -1104,6 +1118,7 @@
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
+				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				3562EB81211B7D56001C8A3B /* CarAttributesCell.swift in Sources */,
 				0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */,
@@ -1184,6 +1199,7 @@
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */,
 				358DB0B2212CA5CC00E3822B /* FeatureContainerVC.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,

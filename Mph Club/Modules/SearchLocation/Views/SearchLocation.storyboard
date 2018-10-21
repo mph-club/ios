@@ -88,7 +88,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C3d-BJ-xCm">
-                                <rect key="frame" x="16" y="207" width="343" height="611"/>
+                                <rect key="frame" x="16" y="207" width="343" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -211,7 +211,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHa-aB-VOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FGz-Rn-b4c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6785" y="-1273"/>
+            <point key="canvasLocation" x="6784.8000000000002" y="-1273.313343328336"/>
         </scene>
         <!--Search-->
         <scene sceneID="9nt-qh-xlp">
