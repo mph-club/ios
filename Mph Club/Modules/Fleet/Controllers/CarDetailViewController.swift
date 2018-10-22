@@ -37,6 +37,14 @@ final class CarDetailViewController: UIViewController {
         }
     }
     
+    // MARK: Collection View
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            // Register collection view cell
+            registerCollectionViewCell()
+        }
+    }
+    
     // MARK: View
     @IBOutlet private weak var headerView: UIView!
     
@@ -49,6 +57,9 @@ final class CarDetailViewController: UIViewController {
     
     // MARK: Public
     var currentVehicle: Vehicle?
+    
+    // MARK: Private
+    private let ownedByItems = ["Guidelines", "Report this listing"]
     
     // MARK: Overrides
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -102,6 +113,10 @@ private extension CarDetailViewController {
         tableView.register(CarDetailRenterTableViewCell.self)
         tableView.register(CarDetailOwnedTitleTableViewCell.self)
         tableView.register(CarDetailOwnedItemTableViewCell.self)
+    }
+    
+    func registerCollectionViewCell() {
+        collectionView.registerCell(ExploreCarCollectionViewCell.self)
     }
     
     func setContent() {
@@ -168,6 +183,7 @@ extension CarDetailViewController: UITableViewDataSource {
                 return cell
             } else {
                 let cell: CarDetailOwnedItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+                cell.setContent(ownedByItems[indexPath.row - 1])
                 return cell
             }
         }
@@ -216,5 +232,31 @@ extension CarDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.0001
+    }
+}
+
+// =======================
+// MARK: - Collection View
+// =======================
+
+// MARK: Data Source
+extension CarDetailViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: ExploreCarCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        return cell
+    }
+}
+
+// MARK: Delegate
+extension CarDetailViewController: UICollectionViewDelegate {}
+
+// MARK: Delegate Flow Layout
+extension CarDetailViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.height * 0.9534050179, height: collectionView.frame.height)
     }
 }

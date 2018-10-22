@@ -25,6 +25,9 @@ final class CarDetailFeaturesTableViewCell: UITableViewCell {
     // MARK: - Properties
     // ==================
     
+    // MARK: Private
+    private let itemSize: CGFloat = 32
+    
     // MARK: Mock Data
     private var featureItems = ["automaticTransmission32Px",
                                 "bluetooth32Px",
@@ -75,11 +78,12 @@ extension CarDetailFeaturesTableViewCell: UICollectionViewDataSource {
 // MARK: Delegate
 extension CarDetailFeaturesTableViewCell: UICollectionViewDelegate {}
 
-//extension CarDetailFeaturesTableViewCell: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        <#code#>
-//    }
-//}
+// MARK: Delegate Flow Layout
+extension CarDetailFeaturesTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return (collectionView.frame.width - 4 * itemSize) / 4
+    }
+}
 
 // =====================
 // MARK: - Reusable View

@@ -12,6 +12,9 @@ final class CarDetailOwnedItemTableViewCell: UITableViewCell {
     // ===============
     // MARK: - Outlets
     // ===============
+    
+    // MARK: Label
+    @IBOutlet private weak var titleLabel: UILabel!
 }
 
 // ==================
@@ -30,7 +33,9 @@ extension CarDetailOwnedItemTableViewCell {
 // MARK: - Methods
 // ===============
 extension CarDetailOwnedItemTableViewCell {
-    func setContent() {}
+    func setContent(_ title: String) {
+        titleLabel.text = title
+    }
 }
 
 // =====================

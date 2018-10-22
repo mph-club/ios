@@ -25,6 +25,9 @@ final class CarDetailDescriptionTableViewCell: UITableViewCell {
     // MARK: - Properties
     // ==================
     
+    // MARK: Private
+    let itemSize: CGFloat = 71
+    
     // MARK: Mock Data
     private let carAttributes: [CarAttribute] = [CarAttribute(title: "2 Seats", image: "seat64Px"),
                                                  CarAttribute(title: "2 Door", image: "door64Px"),
@@ -74,6 +77,13 @@ extension CarDetailDescriptionTableViewCell: UICollectionViewDataSource {
 
 // MARK: Delegate
 extension CarDetailDescriptionTableViewCell: UICollectionViewDelegate {}
+
+// MARK: Delegate Flow Layout
+extension CarDetailDescriptionTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return (collectionView.frame.width - 4 * itemSize) / 4
+    }
+}
 
 // =====================
 // MARK: - Reusable View

@@ -29,6 +29,9 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="dmw-sI-gvU" id="hj9-Gk-Sdc"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="128.63568215892056"/>
         </tableViewCell>
     </objects>
