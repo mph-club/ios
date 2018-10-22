@@ -14,12 +14,27 @@ final class CarDetailFeaturesTableViewCell: UITableViewCell {
     // ===============
     
     // MARK: Collection View
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            // Ragister collection view cell
+            registerCollectionViewCell()
+        }
+    }
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Mock Data
+    private var featureItems = ["automaticTransmission32Px",
+                                "bluetooth32Px",
+                                "sun32Px",
+                                "music32Px"]
 }
 
-// =========================
-// MARK: - Table View Header
-// =========================
+// ==================
+// MARK: - Table View
+// ==================
 
 // MARK: Life Cycle
 extension CarDetailFeaturesTableViewCell {
@@ -34,6 +49,10 @@ extension CarDetailFeaturesTableViewCell {
 // ===============
 extension CarDetailFeaturesTableViewCell {
     func setContent() {}
+    
+    private func registerCollectionViewCell() {
+        collectionView.registerCell(CarDetailFeaturesCollectionViewCell.self)
+    }
 }
 
 // =======================
@@ -43,16 +62,24 @@ extension CarDetailFeaturesTableViewCell {
 // MARK: Data Source
 extension CarDetailFeaturesTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return featureItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: CarDetailFeaturesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.setContent(featureItems[indexPath.row])
+        return cell
     }
 }
 
 // MARK: Delegate
 extension CarDetailFeaturesTableViewCell: UICollectionViewDelegate {}
+
+//extension CarDetailFeaturesTableViewCell: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        <#code#>
+//    }
+//}
 
 // =====================
 // MARK: - Reusable View

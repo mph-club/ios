@@ -14,9 +14,9 @@ final class CarDetailRenterTableViewCell: UITableViewCell {
     // ===============
 }
 
-// =========================
-// MARK: - Table View Header
-// =========================
+// ==================
+// MARK: - Table View
+// ==================
 
 // MARK: Life Cycle
 extension CarDetailRenterTableViewCell {

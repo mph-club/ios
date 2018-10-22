@@ -14,9 +14,9 @@ final class CarDetailOwnedItemTableViewCell: UITableViewCell {
     // ===============
 }
 
-// =========================
-// MARK: - Table View Header
-// =========================
+// ==================
+// MARK: - Table View
+// ==================
 
 // MARK: Life Cycle
 extension CarDetailOwnedItemTableViewCell {

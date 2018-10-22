@@ -24,7 +24,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if collectionView.tag == 2 {
             return featureItems.count
         } else if collectionView.tag == 1 {
-            return carAttributes.count
+            return 0
         } else {
             return similarCarList.count
         }
@@ -39,8 +39,8 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return cell
         } else if collectionView.tag == 1 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CarAttributesCell else { return UICollectionViewCell() }
-            cell.img.image = UIImage(named: carAttributes[indexPath.row].img ?? "")
-            cell.titleLabel.text = carAttributes[indexPath.row].title
+//            cell.img.image = UIImage(named: carAttributes[indexPath.row].img ?? "")
+//            cell.titleLabel.text = carAttributes[indexPath.row].title
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SimilarCarCell else { return UICollectionViewCell() }
@@ -54,11 +54,6 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     }
 
-}
-
-struct CarAttribute {
-    let title: String?
-    let img: String?
 }
 
 struct SimilarCar {
@@ -83,7 +78,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     var featureItems = ["automaticTransmission32Px", "bluetooth32Px", "sun32Px", "music32Px"]
     
-    var carAttributes = [CarAttribute]()
+//    var carAttributes = [CarAttribute]()
     var similarCarList = [SimilarCar]()
     var newBackButton = UIBarButtonItem()
     
@@ -180,10 +175,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setDummyData() {
-        carAttributes.append(CarAttribute(title: "2 Seats", img: "seat64Px"))
-        carAttributes.append(CarAttribute(title: "2 Door", img: "door64Px"))
-        carAttributes.append(CarAttribute(title: "13 MPG", img: "gas64Px"))
-        carAttributes.append(CarAttribute(title: "GPS", img: "satellite64Px"))
+//        carAttributes.append(CarAttribute(title: "2 Seats", img: "seat64Px"))
+//        carAttributes.append(CarAttribute(title: "2 Door", img: "door64Px"))
+//        carAttributes.append(CarAttribute(title: "13 MPG", img: "gas64Px"))
+//        carAttributes.append(CarAttribute(title: "GPS", img: "satellite64Px"))
         
         similarCarList.append(SimilarCar(title: "Ferrari California 2013", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))
         similarCarList.append(SimilarCar(title: "Ferrari California 2014", img: UIImage(named: "dontknowcar"), price: 200, trips: 4))

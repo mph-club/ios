@@ -14,12 +14,27 @@ final class CarDetailDescriptionTableViewCell: UITableViewCell {
     // ===============
     
     // MARK: Collection View
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            // Ragister collection view cell
+            registerCollectionViewCell()
+        }
+    }
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Mock Data
+    private let carAttributes: [CarAttribute] = [CarAttribute(title: "2 Seats", image: "seat64Px"),
+                                                 CarAttribute(title: "2 Door", image: "door64Px"),
+                                                 CarAttribute(title: "13 MPG", image: "gas64Px"),
+                                                 CarAttribute(title: "GPS", image: "satellite64Px")]
 }
 
-// =========================
-// MARK: - Table View Header
-// =========================
+// ==================
+// MARK: - Table View
+// ==================
 
 // MARK: Life Cycle
 extension CarDetailDescriptionTableViewCell {
@@ -34,6 +49,10 @@ extension CarDetailDescriptionTableViewCell {
 // ===============
 extension CarDetailDescriptionTableViewCell {
     func setContent() {}
+    
+    private func registerCollectionViewCell() {
+        collectionView.registerCell(CarDetailDescriptionCollectionViewCell.self)
+    }
 }
 
 // =======================
@@ -43,11 +62,13 @@ extension CarDetailDescriptionTableViewCell {
 // MARK: Data Source
 extension CarDetailDescriptionTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return carAttributes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: CarDetailDescriptionCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.setContent(carAttributes[indexPath.row])
+        return cell
     }
 }
 

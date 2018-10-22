@@ -19,9 +19,9 @@ final class CarDetailTitleTableViewCell: UITableViewCell {
     @IBOutlet private weak var milesLabel: UILabel!
 }
 
-// =========================
-// MARK: - Table View Header
-// =========================
+// ==================
+// MARK: - Table View
+// ==================
 
 // MARK: Life Cycle
 extension CarDetailTitleTableViewCell {
