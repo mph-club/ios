@@ -28,6 +28,9 @@ final class ExploreViewController: UIViewController {
     // MARK: - Outlets
     // ===============
     
+    // MARK: Navigation Bar
+    @IBOutlet private weak var navigationBar: CustomNavigationBar!
+    
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -90,14 +93,22 @@ extension ExploreViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //
+        navigationController?.setNavigationBarHidden(true, animated: true)
         // change status bar view color
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
         // change navigation bar view color
-        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: currentAlpha)
+        navigationBar.styleView = .transparentWith(alpha: currentAlpha)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // update gradient layer
+        gradientLayer.frame = headerGradientView.bounds
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
         // Get search bar position
         if searchButtonPosition == .zero {
             searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
@@ -106,12 +117,12 @@ extension ExploreViewController {
         if searchButton.convert(searchButton.frame.origin, to: nil).y >= 0 {
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
         }
-        // update gradient layer
-        gradientLayer.frame = headerGradientView.bounds
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        //
+        navigationController?.setNavigationBarHidden(false, animated: true)
         //
         UIApplication.shared.statusBarView?.backgroundColor = nil
     }
@@ -167,16 +178,16 @@ private extension ExploreViewController {
 // MARK: Delegate
 extension ExploreViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let currentSearchBarPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        let currentSearchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
         // set current alpha
-        currentAlpha = (searchButtonPosition.y - currentSearchBarPosition.y) / searchButtonPosition.y
+        currentAlpha = (searchButtonPosition.y - currentSearchButtonPosition.y) / searchButtonPosition.y
         // change navigation bar view color
-        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparent(alpha: currentAlpha)
+        navigationBar.styleView = .transparentWith(alpha: currentAlpha)
         // change status bar view color
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
         //
-        if currentSearchBarPosition.y >= 0 {
-            searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: currentSearchBarPosition.y)
+        if currentSearchButtonPosition.y >= 0 {
+            searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: currentSearchButtonPosition.y)
         } else {
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: 0)
         }
@@ -221,5 +232,14 @@ extension ExploreViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.00001
+    }
+}
+
+// ===============================
+// MARK: - Navigation Bar Delegate
+// ===============================
+extension ExploreViewController: UINavigationBarDelegate {
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .top
     }
 }
