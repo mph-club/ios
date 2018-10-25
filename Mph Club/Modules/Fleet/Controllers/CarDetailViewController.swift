@@ -26,6 +26,7 @@ final class CarDetailViewController: UIViewController {
     private enum Segue: String {
         case showCarFeatures
         case showCarGuideline
+        case showRenterReviews
     }
     
     // ===============
@@ -244,6 +245,8 @@ extension CarDetailViewController: UITableViewDelegate {
         let section = Section.allCases[indexPath.section]
         //
         switch section {
+        case .renterReviews:
+            performSegue(withIdentifier: Segue.showRenterReviews)
         case .ownedBy:
             if indexPath.row == 1 {
                 performSegue(withIdentifier: Segue.showCarGuideline)

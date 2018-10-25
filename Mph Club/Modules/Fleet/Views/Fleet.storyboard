@@ -256,11 +256,106 @@
                         <outlet property="tableView" destination="yO2-dU-oem" id="MVf-oe-EKT"/>
                         <segue destination="VFc-10-Tes" kind="show" identifier="showCarFeatures" id="kti-KJ-vHQ"/>
                         <segue destination="C1k-wI-KFG" kind="show" identifier="showCarGuideline" id="r5n-cf-MNP"/>
+                        <segue destination="mQc-Gb-BbF" kind="show" identifier="showRenterReviews" id="uyp-ak-HiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fg-FV-PJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7120.8000000000002" y="-1273.313343328336"/>
+        </scene>
+        <!--Renter reviews-->
+        <scene sceneID="BzQ-UY-k8a">
+            <objects>
+                <viewController id="mQc-Gb-BbF" customClass="RenterReviewsViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lnw-Ux-3oA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-kM-IzK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="lVz-EL-G20" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dRa-uz-VlZ">
+                                            <rect key="frame" x="16" y="30" width="343" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffT-cE-N1f">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="oY4-Y9-YsW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-g0-beV" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="148" y="6" width="195" height="28"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="28"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                            <color key="value" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                            <color key="value" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="dRa-uz-VlZ" firstAttribute="centerY" secondItem="lVz-EL-G20" secondAttribute="centerY" id="Qe8-bB-3v9"/>
+                                        <constraint firstItem="dRa-uz-VlZ" firstAttribute="leading" secondItem="lVz-EL-G20" secondAttribute="leading" constant="16" id="gHk-3y-FMf"/>
+                                        <constraint firstAttribute="trailing" secondItem="dRa-uz-VlZ" secondAttribute="trailing" constant="16" id="pZV-nh-8qX"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="8ht-dc-vJ8">
+                                    <rect key="frame" x="0.0" y="100" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="mQc-Gb-BbF" id="3QF-9w-zRX"/>
+                                    <outlet property="delegate" destination="mQc-Gb-BbF" id="fGK-eP-ChL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V2d-kM-IzK" firstAttribute="top" secondItem="Lnw-Ux-3oA" secondAttribute="top" id="Lmk-Hs-GVv"/>
+                            <constraint firstItem="V2d-kM-IzK" firstAttribute="leading" secondItem="mts-Q0-flH" secondAttribute="leading" id="N1j-M1-Ngd"/>
+                            <constraint firstItem="mts-Q0-flH" firstAttribute="bottom" secondItem="V2d-kM-IzK" secondAttribute="bottom" id="TbM-HF-NGV"/>
+                            <constraint firstItem="mts-Q0-flH" firstAttribute="trailing" secondItem="V2d-kM-IzK" secondAttribute="trailing" id="g7p-Qk-qxV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mts-Q0-flH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Renter reviews" id="hLr-fD-OB4"/>
+                    <connections>
+                        <outlet property="tableView" destination="V2d-kM-IzK" id="She-Sy-XZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4f-UM-32Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8053.6000000000004" y="-933.28335832083962"/>
         </scene>
         <!--Features-->
         <scene sceneID="XGe-pr-PYQ">
@@ -301,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYx-2f-M1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8030" y="-1598"/>
+            <point key="canvasLocation" x="8054" y="-1607"/>
         </scene>
         <!--Guidelines-->
         <scene sceneID="XYv-pL-sfQ">
@@ -361,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXo-bH-zD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8029.6000000000004" y="-907.1964017991005"/>
+            <point key="canvasLocation" x="8054" y="-240"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  CarGuidelineViewController.swift
+//  RenterReviewsViewController.swift
 //  Mph Club
 //
 //  Created by behzad ardeh on 10/25/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CarGuidelineViewController: UIViewController {
+final class RenterReviewsViewController: UIViewController {
     // ===============
     // MARK: - Outlets
     // ===============
@@ -24,11 +24,6 @@ final class CarGuidelineViewController: UIViewController {
     // ==================
     // MARK: - Properties
     // ==================
-    
-    // MARK: Mock Data
-    private var guidelineItems = ["A deposit will be required.",
-                                  "A minimum of 3 days is required to rent this car.",
-                                  "No somking"]
 }
 
 // =======================
@@ -36,7 +31,7 @@ final class CarGuidelineViewController: UIViewController {
 // =======================
 
 // MARK: Life Cycle
-extension CarGuidelineViewController {
+extension RenterReviewsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,9 +57,9 @@ extension CarGuidelineViewController {
 // ===============
 // MARK: - Methods
 // ===============
-private extension CarGuidelineViewController {
+private extension RenterReviewsViewController {
     func registerTableView() {
-        tableView.register(CarGuidelineTableViewCell.self)
+        tableView.register(CarDetailRenterTableViewCell.self)
     }
 }
 
@@ -73,21 +68,20 @@ private extension CarGuidelineViewController {
 // ==================
 
 // MARK: Data Source
-extension CarGuidelineViewController: UITableViewDataSource {
+extension RenterReviewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return guidelineItems.count
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CarGuidelineTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setContent(guidelineItems[indexPath.row])
+        let cell: CarDetailRenterTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         return cell
     }
 }
 
 // MARK: Delegate
-extension CarGuidelineViewController: UITableViewDelegate {
+extension RenterReviewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 78
+        return UITableView.automaticDimension
     }
 }

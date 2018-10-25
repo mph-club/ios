@@ -81,6 +81,7 @@
 		00E1A16021821C68003BE03B /* CarGuidelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */; };
 		00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */; };
 		00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */; };
+		00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -249,6 +250,7 @@
 		00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGuidelineViewController.swift; sourceTree = "<group>"; };
 		00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGuidelineTableViewCell.swift; sourceTree = "<group>"; };
 		00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarGuidelineTableViewCell.xib; sourceTree = "<group>"; };
+		00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterReviewsViewController.swift; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 				35DAA31720F401280083CA93 /* FleetViewController.swift */,
 				00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */,
 				00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */,
+				00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */,
 				00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */,
 			);
 			path = Controllers;
@@ -1388,6 +1391,7 @@
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
+				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
