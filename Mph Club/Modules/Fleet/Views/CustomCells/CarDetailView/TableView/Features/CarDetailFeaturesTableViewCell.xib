@@ -28,6 +28,9 @@
                         <state key="normal" title="+ 2">
                             <color key="titleColor" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         </state>
+                        <connections>
+                            <action selector="showAllFeaturesTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7Z-km-7bQ"/>
+                        </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pxm-RN-o1c">
                         <rect key="frame" x="16" y="26.5" width="228" height="32"/>

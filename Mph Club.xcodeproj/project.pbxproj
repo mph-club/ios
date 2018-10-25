@@ -74,6 +74,10 @@
 		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
 		00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1522181FCC6003BE03B /* CalendarViewController.swift */; };
 		00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A1542181FCE2003BE03B /* Calendar.storyboard */; };
+		00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */; };
+		00E1A1592182059C003BE03B /* CarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1582182059C003BE03B /* CarFeature.swift */; };
+		00E1A15D218208CE003BE03B /* CarFeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A15B218208CE003BE03B /* CarFeatureTableViewCell.swift */; };
+		00E1A15E218208CE003BE03B /* CarFeatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A15C218208CE003BE03B /* CarFeatureTableViewCell.xib */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -235,6 +239,10 @@
 		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
 		00E1A1522181FCC6003BE03B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		00E1A1542181FCE2003BE03B /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeaturesViewController.swift; sourceTree = "<group>"; };
+		00E1A1582182059C003BE03B /* CarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeature.swift; sourceTree = "<group>"; };
+		00E1A15B218208CE003BE03B /* CarFeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeatureTableViewCell.swift; sourceTree = "<group>"; };
+		00E1A15C218208CE003BE03B /* CarFeatureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarFeatureTableViewCell.xib; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -655,6 +663,7 @@
 			children = (
 				00AEE9F0217CA55500AD7348 /* FleetView */,
 				00AEE9F1217CA57200AD7348 /* CarDetailView */,
+				00E1A15A2182088E003BE03B /* CarFeaturesView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -664,6 +673,7 @@
 			children = (
 				35DAA31720F401280083CA93 /* FleetViewController.swift */,
 				00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */,
+				00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -673,6 +683,7 @@
 			children = (
 				00AEE9EC217C6BDD00AD7348 /* Vehicle.swift */,
 				001D98F4217E2ECF00CEC8E3 /* CarAttribute.swift */,
+				00E1A1582182059C003BE03B /* CarFeature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -805,6 +816,15 @@
 				00E1A1542181FCE2003BE03B /* Calendar.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		00E1A15A2182088E003BE03B /* CarFeaturesView */ = {
+			isa = PBXGroup;
+			children = (
+				00E1A15B218208CE003BE03B /* CarFeatureTableViewCell.swift */,
+				00E1A15C218208CE003BE03B /* CarFeatureTableViewCell.xib */,
+			);
+			path = CarFeaturesView;
 			sourceTree = "<group>";
 		};
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
@@ -1142,6 +1162,7 @@
 				00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */,
 				0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */,
 				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
+				00E1A15E218208CE003BE03B /* CarFeatureTableViewCell.xib in Resources */,
 				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
 				001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */,
 				0047B150217CCA3C00941D9C /* CarDetailDescriptionTableViewCell.xib in Resources */,
@@ -1325,6 +1346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E1A15D218208CE003BE03B /* CarFeatureTableViewCell.swift in Sources */,
 				3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */,
 				0064CC7D216F9691005FCC70 /* ReusableViewExtension.swift in Sources */,
 				35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */,
@@ -1342,6 +1364,7 @@
 				00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
+				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
@@ -1383,6 +1406,7 @@
 				0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */,
 				0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */,
 				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
+				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */,
 				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CarDetailFeaturesTableViewCellDelegate: class {
+    func showAllFeature(_ cell: CarDetailFeaturesTableViewCell)
+}
+
 final class CarDetailFeaturesTableViewCell: UITableViewCell {
     // ===============
     // MARK: - Outlets
@@ -28,11 +32,14 @@ final class CarDetailFeaturesTableViewCell: UITableViewCell {
     // MARK: Private
     private let itemSize: CGFloat = 32
     
+    // MARK: Delegate
+    weak var delegate: CarDetailFeaturesTableViewCellDelegate?
+    
     // MARK: Mock Data
-    private var featureItems = ["automaticTransmission32Px",
-                                "bluetooth32Px",
-                                "sun32Px",
-                                "music32Px"]
+    private var featureItems = ["automaticTransmission",
+                                "bluetooth",
+                                "sun",
+                                "music"]
 }
 
 // ==================
@@ -44,6 +51,15 @@ extension CarDetailFeaturesTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+}
+
+// ===============
+// MARK: - Actions
+// ===============
+private extension CarDetailFeaturesTableViewCell {
+    @IBAction func showAllFeaturesTouchUpInside(_ sender: UIButton) {
+        delegate?.showAllFeature(self)
     }
 }
 

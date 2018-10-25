@@ -23,6 +23,10 @@ final class CarDetailViewController: UIViewController {
         case ownedBy = "OWEND BY"
     }
     
+    private enum Segue: String {
+        case showCarFeatures
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -173,6 +177,7 @@ extension CarDetailViewController: UITableViewDataSource {
             return cell
         case .features:
             let cell: CarDetailFeaturesTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         case .renterReviews:
             let cell: CarDetailRenterTableViewCell = tableView.dequeueReusableCell(for: indexPath)
@@ -233,6 +238,8 @@ extension CarDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.0001
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 }
 
 // =======================
@@ -258,5 +265,14 @@ extension CarDetailViewController: UICollectionViewDelegate {}
 extension CarDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.height * 0.9534050179, height: collectionView.frame.height)
+    }
+}
+
+// ====================================================
+// MARK: - Car Detail Features Table View Cell Delegate
+// ====================================================
+extension CarDetailViewController: CarDetailFeaturesTableViewCellDelegate {
+    func showAllFeature(_ cell: CarDetailFeaturesTableViewCell) {
+        performSegue(withIdentifier: Segue.showCarFeatures)
     }
 }

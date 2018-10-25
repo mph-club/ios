@@ -246,16 +246,61 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1c9-Yc-up6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="I0z-S1-HLw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ii7-A9-JH9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="sfB-Nr-Cd3" id="7qd-cm-xay"/>
                         <outlet property="headerImageView" destination="vhg-CR-iqq" id="z6K-qb-tto"/>
                         <outlet property="headerView" destination="Cjx-gJ-Cmx" id="8BR-EX-kvr"/>
                         <outlet property="tableView" destination="yO2-dU-oem" id="MVf-oe-EKT"/>
+                        <segue destination="VFc-10-Tes" kind="show" identifier="showCarFeatures" id="kti-KJ-vHQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fg-FV-PJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7120.8000000000002" y="-1273.313343328336"/>
+        </scene>
+        <!--Features-->
+        <scene sceneID="XGe-pr-PYQ">
+            <objects>
+                <viewController id="VFc-10-Tes" customClass="CarFeaturesViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYN-CF-hqV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wSd-88-22w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="LRE-WW-bxp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="VFc-10-Tes" id="dq8-Cw-Lyz"/>
+                                    <outlet property="delegate" destination="VFc-10-Tes" id="d9s-H5-7i0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wSd-88-22w" firstAttribute="leading" secondItem="pPU-iG-QJP" secondAttribute="leading" id="8Qj-h0-XpT"/>
+                            <constraint firstItem="wSd-88-22w" firstAttribute="trailing" secondItem="pPU-iG-QJP" secondAttribute="trailing" id="JGO-Zb-0ly"/>
+                            <constraint firstItem="wSd-88-22w" firstAttribute="bottom" secondItem="pPU-iG-QJP" secondAttribute="bottom" id="k3V-Y5-bye"/>
+                            <constraint firstItem="wSd-88-22w" firstAttribute="top" secondItem="LYN-CF-hqV" secondAttribute="top" id="rYO-9x-mBj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pPU-iG-QJP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Features" id="hap-1h-zQv"/>
+                    <connections>
+                        <outlet property="tableView" destination="wSd-88-22w" id="nu5-BQ-cqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYx-2f-M1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7970" y="-1273"/>
         </scene>
     </scenes>
 </document>
