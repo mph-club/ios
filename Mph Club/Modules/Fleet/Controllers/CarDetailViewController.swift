@@ -25,6 +25,7 @@ final class CarDetailViewController: UIViewController {
     
     private enum Segue: String {
         case showCarFeatures
+        case showCarGuideline
     }
     
     // ===============
@@ -239,7 +240,20 @@ extension CarDetailViewController: UITableViewDelegate {
         return 0.0001
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = Section.allCases[indexPath.section]
+        //
+        switch section {
+        case .ownedBy:
+            if indexPath.row == 1 {
+                performSegue(withIdentifier: Segue.showCarGuideline)
+            } else {
+                
+            }
+        default:
+            break
+        }
+    }
 }
 
 // =======================

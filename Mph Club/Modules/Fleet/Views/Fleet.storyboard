@@ -255,6 +255,7 @@
                         <outlet property="headerView" destination="Cjx-gJ-Cmx" id="8BR-EX-kvr"/>
                         <outlet property="tableView" destination="yO2-dU-oem" id="MVf-oe-EKT"/>
                         <segue destination="VFc-10-Tes" kind="show" identifier="showCarFeatures" id="kti-KJ-vHQ"/>
+                        <segue destination="C1k-wI-KFG" kind="show" identifier="showCarGuideline" id="r5n-cf-MNP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fg-FV-PJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,7 +301,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYx-2f-M1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7970" y="-1273"/>
+            <point key="canvasLocation" x="8030" y="-1598"/>
+        </scene>
+        <!--Guidelines-->
+        <scene sceneID="XYv-pL-sfQ">
+            <objects>
+                <viewController id="C1k-wI-KFG" customClass="CarGuidelineViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GDM-bI-hWY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q3v-ce-6HC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="ngC-MR-XZD" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here are a few guidelines to follow when booking Mike’s car, as well as other details to know." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upn-vu-uh4">
+                                            <rect key="frame" x="16" y="8" width="343" height="114"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Upn-vu-uh4" firstAttribute="leading" secondItem="ngC-MR-XZD" secondAttribute="leading" constant="16" id="LG1-mw-jzD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Upn-vu-uh4" secondAttribute="trailing" constant="16" id="UAc-wT-eEr"/>
+                                        <constraint firstItem="Upn-vu-uh4" firstAttribute="top" secondItem="ngC-MR-XZD" secondAttribute="top" constant="8" id="og0-uP-xZb"/>
+                                        <constraint firstAttribute="bottom" secondItem="Upn-vu-uh4" secondAttribute="bottom" constant="8" id="pPh-5m-dD9"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="6U9-fV-Rr3">
+                                    <rect key="frame" x="0.0" y="130" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="C1k-wI-KFG" id="OAE-bz-XJd"/>
+                                    <outlet property="delegate" destination="C1k-wI-KFG" id="f0D-pm-92o"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q3v-ce-6HC" firstAttribute="leading" secondItem="dHV-AL-dUW" secondAttribute="leading" id="HS6-gv-LzN"/>
+                            <constraint firstItem="dHV-AL-dUW" firstAttribute="bottom" secondItem="q3v-ce-6HC" secondAttribute="bottom" id="MQl-Zu-zSp"/>
+                            <constraint firstItem="q3v-ce-6HC" firstAttribute="top" secondItem="GDM-bI-hWY" secondAttribute="top" id="UEV-XP-jPg"/>
+                            <constraint firstItem="dHV-AL-dUW" firstAttribute="trailing" secondItem="q3v-ce-6HC" secondAttribute="trailing" id="fWa-3N-aB1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dHV-AL-dUW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guidelines" id="CBN-qR-IgN"/>
+                    <connections>
+                        <outlet property="tableView" destination="q3v-ce-6HC" id="MC0-j4-4p6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXo-bH-zD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8029.6000000000004" y="-907.1964017991005"/>
         </scene>
     </scenes>
 </document>
