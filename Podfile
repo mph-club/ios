@@ -21,6 +21,8 @@ target 'Mph Club' do
   pod 'SwiftLint'
   pod 'PromiseKit/CorePromise', '~> 6.0'
   pod 'Alamofire', '~> 4.7'
+  
+  pod 'Cosmos', '~> 17.0'
 
   target 'Mph ClubTests' do
     inherit! :search_paths

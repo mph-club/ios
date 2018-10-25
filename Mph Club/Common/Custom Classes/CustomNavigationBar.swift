@@ -13,14 +13,16 @@ final class CustomNavigationBar: UINavigationBar {
     // MARK: - Enums
     // =============
     enum StyleType {
-        case transparent(alpha: CGFloat)
-        case defaultNavigationBar
+        case whiteNavigationBar
+        case transparentWithBlackTint
+        case transparentWithWhiteTint
+        case transparentWith(alpha: CGFloat)
     }
     
     // ==================
     // MARK: - Properties
     // ==================
-    var styleView: StyleType = .transparent(alpha: 0.0) {
+    var styleView: StyleType = .whiteNavigationBar {
         didSet {
             updateNavigationBar()
         }
@@ -43,11 +45,43 @@ extension CustomNavigationBar {
     private func updateNavigationBar() {
         //
         switch styleView {
-        case .transparent(let alpha):
+        case .whiteNavigationBar:
+            whiteNavigationBar()
+        case .transparentWithBlackTint:
+            transparentNavigationBarWithBlackTint()
+        case .transparentWithWhiteTint:
+            transparentNavigationBarWithWhiteTint()
+        case .transparentWith(let alpha):
             transparentNavigationBarWithAlpha(alpha)
-        case .defaultNavigationBar:
-            defaultNavigationBar()
         }
+        //
+        setBackButtonImage()
+    }
+    
+    private func transparentNavigationBarWithBlackTint() {
+        isTranslucent = true
+        //
+        setBackgroundImage(UIImage(), for: .default)
+        shadowImage = UIImage()
+        //
+        tintColor = .black
+        //
+        backgroundColor = nil
+        //
+        setTitleStyle(.black)
+    }
+    
+    private func transparentNavigationBarWithWhiteTint() {
+        isTranslucent = true
+        //
+        setBackgroundImage(UIImage(), for: .default)
+        shadowImage = UIImage()
+        //
+        tintColor = .white
+        //
+        backgroundColor = nil
+        //
+        setTitleStyle(.white)
     }
     
     private func transparentNavigationBarWithAlpha(_ alpha: CGFloat) {
@@ -56,23 +90,30 @@ extension CustomNavigationBar {
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
         //
-        setTitleStyle(UIColor.white.withAlphaComponent(alpha))
+        tintColor = .white
         // set color with alpha
         backgroundColor = UIColor.black.withAlphaComponent(alpha)
-        // enable clips to bounds
-        clipsToBounds = true
+        //
+        setTitleStyle(UIColor.white.withAlphaComponent(alpha))
     }
     
-    private func defaultNavigationBar() {
-        //
-        setBackgroundImage(nil, for: .default)
-        shadowImage = nil
+    private func whiteNavigationBar() {
+        isTranslucent = true
         //
         barTintColor = .white
         //
-        setTitleStyle(.black)
-        // set color with alpha
+        shadowImage = UIImage()
+        //
+        tintColor = .black
+        //
         backgroundColor = .white
+        //
+        setTitleStyle(.black)
+    }
+    
+    private func setBackButtonImage() {
+        backIndicatorImage = UIImage(named: "back-arrow")
+        backIndicatorTransitionMaskImage = UIImage(named: "back-arrow")
     }
     
     func setTitleStyle(_ color: UIColor) {

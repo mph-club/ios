@@ -161,37 +161,53 @@
                                     <outlet property="delegate" destination="Bq5-BN-MRh" id="HQ1-tp-Dfc"/>
                                 </connections>
                             </tableView>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKt-Wi-0cb" customClass="CustomNavigationBar" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="mph club" id="vHk-PM-FJu">
+                                        <barButtonItem key="rightBarButtonItem" id="Rsl-oP-UOG">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwG-CK-Szr">
+                                                <rect key="frame" x="323" y="4" width="36" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="search-white"/>
+                                                <connections>
+                                                    <action selector="searchTouchUpInside:" destination="Bq5-BN-MRh" eventType="touchUpInside" id="Bot-R5-U9z"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="Bq5-BN-MRh" id="iSj-Bj-rnn"/>
+                                </connections>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ouW-Jh-icx" firstAttribute="top" secondItem="dKz-0p-h0F" secondAttribute="top" id="628-fz-STz"/>
+                            <constraint firstItem="fKt-Wi-0cb" firstAttribute="top" secondItem="7oF-It-Ss7" secondAttribute="top" id="9IG-Af-Qw6"/>
                             <constraint firstItem="ouW-Jh-icx" firstAttribute="leading" secondItem="7oF-It-Ss7" secondAttribute="leading" id="FIY-7n-pwZ"/>
                             <constraint firstItem="ouW-Jh-icx" firstAttribute="bottom" secondItem="7oF-It-Ss7" secondAttribute="bottom" id="O9h-qc-Sre"/>
                             <constraint firstItem="ouW-Jh-icx" firstAttribute="trailing" secondItem="7oF-It-Ss7" secondAttribute="trailing" id="WMB-Ja-afR"/>
+                            <constraint firstItem="fKt-Wi-0cb" firstAttribute="leading" secondItem="7oF-It-Ss7" secondAttribute="leading" id="tps-ej-I9S"/>
+                            <constraint firstItem="fKt-Wi-0cb" firstAttribute="trailing" secondItem="7oF-It-Ss7" secondAttribute="trailing" id="yQe-NL-8s5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7oF-It-Ss7"/>
                     </view>
                     <navigationItem key="navigationItem" title="mph club" id="sDh-6a-gw1">
-                        <barButtonItem key="rightBarButtonItem" id="Rsl-oP-UOG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwG-CK-Szr">
-                                <rect key="frame" x="323" y="4" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="search-white"/>
-                                <connections>
-                                    <action selector="searchTouchUpInside:" destination="Bq5-BN-MRh" eventType="touchUpInside" id="Bot-R5-U9z"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="vlE-uj-22h"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="footerView" destination="IqA-84-xmH" id="PyZ-NO-Pi4"/>
                         <outlet property="headerGradientView" destination="ZC6-Rb-KIr" id="asW-4s-2DS"/>
                         <outlet property="headerImageView" destination="KC0-fU-B4q" id="lkJ-VB-oLx"/>
                         <outlet property="headerView" destination="6df-zp-pWs" id="xyB-ed-D0s"/>
+                        <outlet property="navigationBar" destination="fKt-Wi-0cb" id="fss-G6-lAp"/>
                         <outlet property="searchBarButton" destination="gwG-CK-Szr" id="vsU-og-1rP"/>
                         <outlet property="searchButton" destination="u51-a8-8Af" id="bEO-Wp-QuU"/>
                         <outlet property="tableView" destination="ouW-Jh-icx" id="3tI-90-KRh"/>
-                        <segue destination="lRk-OP-hvP" kind="showDetail" identifier="showMapView" id="U0q-g0-RQc"/>
+                        <segue destination="lRk-OP-hvP" kind="show" identifier="showMapView" id="U0q-g0-RQc"/>
                         <segue destination="yGI-vH-kOj" kind="presentation" identifier="presentListCar" id="6mw-2w-g2b"/>
                     </connections>
                 </viewController>
@@ -205,12 +221,12 @@
                 <viewControllerPlaceholder storyboardName="ListCar" id="yGI-vH-kOj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5X-OO-QKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245" y="-425"/>
+            <point key="canvasLocation" x="2234" y="-416"/>
         </scene>
         <!--Explore-->
         <scene sceneID="OW5-qY-Ldj">
             <objects>
-                <navigationController id="bjs-j7-GEn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bjs-j7-GEn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="search" id="mdf-wu-PhG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cku-Zt-WIn" customClass="CustomNavigationBar" customModule="Mph_Club" customModuleProvider="target">
@@ -231,13 +247,13 @@
             </objects>
             <point key="canvasLocation" x="754" y="-507"/>
         </scene>
-        <!--SearchResult-->
+        <!--SearchLocation-->
         <scene sceneID="5e1-c0-W8m">
             <objects>
-                <viewControllerPlaceholder storyboardName="SearchResult" id="lRk-OP-hvP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SearchLocation" id="lRk-OP-hvP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncf-e7-ygf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="-582"/>
+            <point key="canvasLocation" x="2274" y="-587"/>
         </scene>
     </scenes>
     <resources>

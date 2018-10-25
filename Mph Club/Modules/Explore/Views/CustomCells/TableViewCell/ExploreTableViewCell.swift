@@ -16,6 +16,7 @@ final class ExploreTableViewCell: UITableViewCell {
     // MARK: Collection View
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
+            // Register collection view cell
             registerCollectionViewCell()
         }
     }
