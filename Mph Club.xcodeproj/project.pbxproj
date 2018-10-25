@@ -91,7 +91,7 @@
 		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
 		355D02BB2121F6AF00B681D4 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355D02BA2121F6AF00B681D4 /* CellView.xib */; };
 		355D02BD2121F6F300B681D4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355D02BC2121F6F300B681D4 /* CellView.swift */; };
-		35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingMapViewController.swift */; };
+		35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingSearchLoacationViewController.swift */; };
 		357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */; };
 		357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */; };
 		357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F720FD25D20033FD0E /* EnterDLViewController.swift */; };
@@ -255,7 +255,7 @@
 		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
 		355D02BA2121F6AF00B681D4 /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		355D02BC2121F6F300B681D4 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		35789D1620F4412400A07445 /* BookingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingMapViewController.swift; sourceTree = "<group>"; };
+		35789D1620F4412400A07445 /* BookingSearchLoacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSearchLoacationViewController.swift; sourceTree = "<group>"; };
 		357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
 		357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 		357E08F720FD25D20033FD0E /* EnterDLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDLViewController.swift; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 		0037353321750BE900164AA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				35789D1620F4412400A07445 /* BookingMapViewController.swift */,
+				35789D1620F4412400A07445 /* BookingSearchLoacationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1342,7 +1342,7 @@
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
-				35789D1720F4412400A07445 /* BookingMapViewController.swift in Sources */,
+				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				358DB0A8212B18B900E3822B /* TestRangeSelectionViewController.swift in Sources */,

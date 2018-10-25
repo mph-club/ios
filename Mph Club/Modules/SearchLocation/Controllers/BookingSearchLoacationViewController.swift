@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-final class BookingMapViewController: UIViewController {
+final class BookingSearchLoacationViewController: UIViewController {
     // =============
     // MARK: - Enums
     // =============
@@ -70,7 +70,7 @@ final class BookingMapViewController: UIViewController {
 // =======================
 
 // MARK: Life Cycle
-extension BookingMapViewController {
+extension BookingSearchLoacationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //
@@ -97,14 +97,14 @@ extension BookingMapViewController {
 }
 
 // MARK: Navigation
-extension BookingMapViewController {
+extension BookingSearchLoacationViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
 }
 
 // ===============
 // MARK: - Actions
 // ===============
-private extension BookingMapViewController {
+private extension BookingSearchLoacationViewController {
     @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -113,7 +113,7 @@ private extension BookingMapViewController {
 // ===============
 // MARK: - Methods
 // ===============
-private extension BookingMapViewController {
+private extension BookingSearchLoacationViewController {
     func configView() {
         navigationController?.navigationBar.prefersLargeTitles = true
         //
@@ -130,7 +130,7 @@ private extension BookingMapViewController {
 // ==================
 
 // MARK: Data Source
-extension BookingMapViewController: UITableViewDataSource {
+extension BookingSearchLoacationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
@@ -143,7 +143,7 @@ extension BookingMapViewController: UITableViewDataSource {
 }
 
 // MARK: Delegate
-extension BookingMapViewController: UITableViewDelegate {
+extension BookingSearchLoacationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
@@ -166,7 +166,7 @@ extension BookingMapViewController: UITableViewDelegate {
 // ===============================
 // MARK: - Search Results Updating
 // ===============================
-extension BookingMapViewController: UISearchResultsUpdating {
+extension BookingSearchLoacationViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         searchController.searchBar.setShowsCancelButton(false, animated: false)
         
@@ -190,7 +190,7 @@ extension BookingMapViewController: UISearchResultsUpdating {
 // ===========================
 // MARK: - Search Bar Delegate
 // ===========================
-extension BookingMapViewController: UISearchBarDelegate {
+extension BookingSearchLoacationViewController: UISearchBarDelegate {
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchController.isActive = false
     }
@@ -199,12 +199,12 @@ extension BookingMapViewController: UISearchBarDelegate {
 // =================================
 // MARK: - Search Controller Delegat
 // =================================
-extension BookingMapViewController: UISearchControllerDelegate {}
+extension BookingSearchLoacationViewController: UISearchControllerDelegate {}
 
 // =================================
 // MARK: - Location Manager Delegate
 // =================================
-extension BookingMapViewController: CLLocationManagerDelegate {
+extension BookingSearchLoacationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
@@ -228,7 +228,7 @@ extension BookingMapViewController: CLLocationManagerDelegate {
 // =================================
 // MARK: - Booking Handle Map Search
 // =================================
-private extension BookingMapViewController {
+private extension BookingSearchLoacationViewController {
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
         performSegue(withIdentifier: Segue.showFleetView)
     }
