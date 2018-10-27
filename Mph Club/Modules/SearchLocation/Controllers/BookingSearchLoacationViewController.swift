@@ -29,27 +29,18 @@ final class BookingSearchLoacationViewController: UIViewController {
         }
     }
     
+    // MARK: Search Bar
+    @IBOutlet private weak var searchBar: UISearchBar!
+    
     // ==================
     // MARK: - Properties
     // ==================
     
     // MARK: Private
     private var userLocation = String()
+    private var timer: Timer?
     
     // MARK: Lazy Var
-    private lazy var searchController: UISearchController = {
-        let searchController = UISearchController(searchResultsController: nil)
-        // Setup the Search Controller
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
-        definesPresentationContext = true
-        // Setup the Scope Bar
-        searchController.searchBar.delegate = self
-        
-        return searchController
-    }()
-    //
     private lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
         
@@ -79,14 +70,10 @@ extension BookingSearchLoacationViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //
-        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //
-        navigationItem.hidesSearchBarWhenScrolling = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -104,11 +91,7 @@ extension BookingSearchLoacationViewController {
 // ===============
 // MARK: - Actions
 // ===============
-private extension BookingSearchLoacationViewController {
-    @IBAction func dismissMapView(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
-}
+private extension BookingSearchLoacationViewController {}
 
 // ===============
 // MARK: - Methods
@@ -117,7 +100,6 @@ private extension BookingSearchLoacationViewController {
     func configView() {
         navigationController?.navigationBar.prefersLargeTitles = true
         //
-        navigationItem.searchController = searchController
     }
     
     func registerTableView() {
@@ -163,36 +145,28 @@ extension BookingSearchLoacationViewController: UITableViewDelegate {
     }
 }
 
-// ===============================
-// MARK: - Search Results Updating
-// ===============================
-extension BookingSearchLoacationViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        searchController.searchBar.setShowsCancelButton(false, animated: false)
-        
-        guard let searchBarText = searchController.searchBar.text else { return }
-        
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = searchBarText
-        //  request.region = mapView.region
-        let search = MKLocalSearch(request: request)
-        
-        search.start { response, _ in
-            guard let response = response else {
-                return
-            }
-            self.matchingItems = response.mapItems
-            self.tableView.reloadData()
-        }
-    }
-}
+// ==================
+// MARK: - Search Bar
+// ==================
 
-// ===========================
-// MARK: - Search Bar Delegate
-// ===========================
+// MARK: Delegate
 extension BookingSearchLoacationViewController: UISearchBarDelegate {
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchController.isActive = false
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = searchText
+            //  request.region = mapView.region
+            let search = MKLocalSearch(request: request)
+            
+            search.start { response, _ in
+                guard let response = response else {
+                    return
+                }
+                self.matchingItems = response.mapItems
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
