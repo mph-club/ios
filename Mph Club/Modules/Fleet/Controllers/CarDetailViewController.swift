@@ -27,6 +27,7 @@ final class CarDetailViewController: UIViewController {
         case showCarFeatures
         case showCarGuideline
         case showRenterReviews
+        case showOwnedProfile
     }
     
     // ===============
@@ -248,7 +249,9 @@ extension CarDetailViewController: UITableViewDelegate {
         case .renterReviews:
             performSegue(withIdentifier: Segue.showRenterReviews)
         case .ownedBy:
-            if indexPath.row == 1 {
+            if indexPath.row == 0 {
+                performSegue(withIdentifier: Segue.showOwnedProfile)
+            } else if indexPath.row == 1 {
                 performSegue(withIdentifier: Segue.showCarGuideline)
             } else {
                 

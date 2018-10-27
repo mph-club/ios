@@ -14,6 +14,7 @@ final class CustomNavigationBar: UINavigationBar {
     // =============
     enum StyleType {
         case whiteNavigationBar
+        case blackNavigationBar
         case transparentWithBlackTint
         case transparentWithWhiteTint
         case transparentWith(alpha: CGFloat)
@@ -47,6 +48,8 @@ extension CustomNavigationBar {
         switch styleView {
         case .whiteNavigationBar:
             whiteNavigationBar()
+        case .blackNavigationBar:
+            blackNavigationBar()
         case .transparentWithBlackTint:
             transparentNavigationBarWithBlackTint()
         case .transparentWithWhiteTint:
@@ -109,6 +112,20 @@ extension CustomNavigationBar {
         backgroundColor = .white
         //
         setTitleStyle(.black)
+    }
+    
+    private func blackNavigationBar() {
+        isTranslucent = true
+        //
+        barTintColor = .black
+        //
+        shadowImage = UIImage()
+        //
+        tintColor = .white
+        //
+        backgroundColor = .black
+        //
+        setTitleStyle(.white)
     }
     
     private func setBackButtonImage() {

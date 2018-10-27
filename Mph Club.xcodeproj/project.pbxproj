@@ -51,6 +51,8 @@
 		0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */; };
 		0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */; };
 		0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC82216F9E19005FCC70 /* UIColorExtension.swift */; };
+		007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */; };
+		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -82,6 +84,7 @@
 		00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */; };
 		00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */; };
 		00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */; };
+		00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -220,6 +223,8 @@
 		0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
 		0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		0064CC82216F9E19005FCC70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedInfoTableViewCell.swift; sourceTree = "<group>"; };
+		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -251,6 +256,7 @@
 		00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGuidelineTableViewCell.swift; sourceTree = "<group>"; };
 		00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarGuidelineTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterReviewsViewController.swift; sourceTree = "<group>"; };
+		00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedProfileViewController.swift; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -629,6 +635,15 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		007B47B92184C25A0016FEE7 /* OwnedProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */,
+				007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */,
+			);
+			path = OwnedProfileView;
+			sourceTree = "<group>";
+		};
 		0098BD4C217B99A6009E3984 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +688,7 @@
 				00AEE9F1217CA57200AD7348 /* CarDetailView */,
 				00E1A15A2182088E003BE03B /* CarFeaturesView */,
 				00E1A16121821DC1003BE03B /* CarGuidelineView */,
+				007B47B92184C25A0016FEE7 /* OwnedProfileView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -684,6 +700,7 @@
 				00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */,
 				00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */,
 				00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */,
+				00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */,
 				00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */,
 			);
 			path = Controllers;
@@ -1204,6 +1221,7 @@
 				0047B148217CC13300941D9C /* CarDetailLocationTableViewCell.xib in Resources */,
 				00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */,
 				0047B15A217CDD3C00941D9C /* CarDetailRenterTableViewCell.xib in Resources */,
+				007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */,
 				0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */,
 				0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */,
 				00AEE9F5217CACE500AD7348 /* CarDetailTitleTableViewCell.xib in Resources */,
@@ -1386,6 +1404,7 @@
 				00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
+				00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */,
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
@@ -1463,6 +1482,7 @@
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
 				00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */,
+				007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */,
 				0047B14B217CC57D00941D9C /* CarDetailMilesTableViewCell.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
