@@ -106,7 +106,7 @@
         <!--Car Detail View Controller-->
         <scene sceneID="Lmk-ry-L26">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2iM-wt-tl3" customClass="CarDetailViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="2iM-wt-tl3" customClass="CarDetailViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nwt-Tg-hCM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
         <!--Renter reviews-->
         <scene sceneID="BzQ-UY-k8a">
             <objects>
-                <viewController id="mQc-Gb-BbF" customClass="RenterReviewsViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="mQc-Gb-BbF" customClass="RenterReviewsViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lnw-Ux-3oA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,7 +364,7 @@
         <!--Features-->
         <scene sceneID="XGe-pr-PYQ">
             <objects>
-                <viewController id="VFc-10-Tes" customClass="CarFeaturesViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="VFc-10-Tes" customClass="CarFeaturesViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LYN-CF-hqV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,7 +405,7 @@
         <!--Guidelines-->
         <scene sceneID="XYv-pL-sfQ">
             <objects>
-                <viewController id="C1k-wI-KFG" customClass="CarGuidelineViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="C1k-wI-KFG" customClass="CarGuidelineViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDM-bI-hWY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,12 +465,12 @@
         <!--Mike L.-->
         <scene sceneID="X6R-5E-Jeb">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2IY-6K-Ijb" customClass="OwnedProfileViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="2IY-6K-Ijb" customClass="OwnedProfileViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MoL-Ub-x1q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sm1-ni-ZQK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sm1-ni-ZQK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Te2-Qq-wA4">
@@ -505,11 +505,19 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-sR-IhW" userLabel="Seperator">
+                                            <rect key="frame" x="16" y="292" width="343" height="0.5"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="vJ3-Gg-UEG"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="DWS-NK-Ua1" secondAttribute="trailing" constant="16" id="4ZY-wj-kQa"/>
                                         <constraint firstAttribute="bottom" secondItem="DWS-NK-Ua1" secondAttribute="bottom" constant="16" id="9hA-i5-ur2"/>
+                                        <constraint firstAttribute="trailing" secondItem="b0S-sR-IhW" secondAttribute="trailing" constant="16" id="DHq-fy-bgf"/>
                                         <constraint firstItem="xJf-4B-w63" firstAttribute="height" secondItem="Te2-Qq-wA4" secondAttribute="height" multiplier="1:2" id="SKs-zP-cUe"/>
                                         <constraint firstItem="xJf-4B-w63" firstAttribute="leading" secondItem="Te2-Qq-wA4" secondAttribute="leading" id="iwa-eV-h6V"/>
                                         <constraint firstItem="eb5-57-V0O" firstAttribute="centerX" secondItem="Te2-Qq-wA4" secondAttribute="centerX" id="lya-kG-zIX"/>
@@ -517,7 +525,9 @@
                                         <constraint firstItem="DWS-NK-Ua1" firstAttribute="leading" secondItem="Te2-Qq-wA4" secondAttribute="leading" constant="16" id="pQ6-7L-EA9"/>
                                         <constraint firstAttribute="trailing" secondItem="xJf-4B-w63" secondAttribute="trailing" id="pg0-yT-A2W"/>
                                         <constraint firstItem="eb5-57-V0O" firstAttribute="centerY" secondItem="Te2-Qq-wA4" secondAttribute="centerY" id="sX9-Fg-ZnR"/>
+                                        <constraint firstItem="b0S-sR-IhW" firstAttribute="leading" secondItem="Te2-Qq-wA4" secondAttribute="leading" constant="16" id="vOT-Pb-W4E"/>
                                         <constraint firstItem="DWS-NK-Ua1" firstAttribute="top" secondItem="eb5-57-V0O" secondAttribute="bottom" constant="16" id="vTS-F3-dOe"/>
+                                        <constraint firstItem="b0S-sR-IhW" firstAttribute="top" secondItem="DWS-NK-Ua1" secondAttribute="bottom" constant="8" id="voR-GA-r6e"/>
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="GuZ-86-THj" userLabel="Footer View">
@@ -533,6 +543,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IvL-1i-8mr" userLabel="Seperator">
+                                            <rect key="frame" x="16" y="8" width="343" height="0.5"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="JeS-a3-taB"/>
+                                            </constraints>
+                                        </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8u5-Ys-ZxY">
                                             <rect key="frame" x="0.0" y="88" width="375" height="266"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -551,8 +568,11 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="IvL-1i-8mr" secondAttribute="trailing" constant="16" id="5Hd-JP-gg2"/>
                                         <constraint firstAttribute="bottom" secondItem="8u5-Ys-ZxY" secondAttribute="bottom" constant="40" id="7rV-pY-UnP"/>
+                                        <constraint firstItem="IvL-1i-8mr" firstAttribute="top" secondItem="GuZ-86-THj" secondAttribute="top" constant="8" id="Hx7-Oe-AQR"/>
                                         <constraint firstItem="8u5-Ys-ZxY" firstAttribute="top" secondItem="PiK-uA-vhD" secondAttribute="bottom" constant="24" id="QNY-Kt-3FR"/>
+                                        <constraint firstItem="IvL-1i-8mr" firstAttribute="leading" secondItem="GuZ-86-THj" secondAttribute="leading" constant="16" id="U60-GO-maH"/>
                                         <constraint firstItem="PiK-uA-vhD" firstAttribute="top" secondItem="GuZ-86-THj" secondAttribute="top" constant="24" id="geX-7i-OLD"/>
                                         <constraint firstAttribute="trailing" secondItem="PiK-uA-vhD" secondAttribute="trailing" constant="16" id="hKn-SN-3OC"/>
                                         <constraint firstItem="PiK-uA-vhD" firstAttribute="leading" secondItem="GuZ-86-THj" secondAttribute="leading" constant="16" id="mOF-cd-fDh"/>

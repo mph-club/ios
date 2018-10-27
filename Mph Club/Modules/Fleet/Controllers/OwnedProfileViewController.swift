@@ -24,6 +24,8 @@ final class OwnedProfileViewController: UIViewController {
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
+            // Register Header View
+            registerHeaderTableView()
             // Register Cell View
             registerTableView()
         }
@@ -102,6 +104,10 @@ extension OwnedProfileViewController {
 // MARK: - Methods
 // ===============
 private extension OwnedProfileViewController {
+    func registerHeaderTableView() {
+        tableView.register(CarDetailHeaderTableViewCell.self)
+    }
+    
     func registerTableView() {
         tableView.register(CarDetailRenterTableViewCell.self)
         tableView.register(VerifiedInfoTableViewCell.self)
@@ -160,6 +166,12 @@ extension OwnedProfileViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: CarDetailHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView()
+        header.setContent(Section.allCases[section].rawValue)
+        return header
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = Section.allCases[indexPath.section]
         //
@@ -177,6 +189,10 @@ extension OwnedProfileViewController: UITableViewDataSource {
 
 // MARK: Delegate
 extension OwnedProfileViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
