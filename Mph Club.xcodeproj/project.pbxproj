@@ -95,6 +95,7 @@
 		00F938882185B4A70075386D /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F938872185B4A70075386D /* Report.swift */; };
 		00F9388B2185CAD00075386D /* ReportOtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F938892185CAD00075386D /* ReportOtherTableViewCell.swift */; };
 		00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F9388A2185CAD00075386D /* ReportOtherTableViewCell.xib */; };
+		00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */; };
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
 		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
 		350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */; };
@@ -273,6 +274,7 @@
 		00F938872185B4A70075386D /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		00F938892185CAD00075386D /* ReportOtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportOtherTableViewCell.swift; sourceTree = "<group>"; };
 		00F9388A2185CAD00075386D /* ReportOtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportOtherTableViewCell.xib; sourceTree = "<group>"; };
+		00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksReportViewController.swift; sourceTree = "<group>"; };
 		014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mph_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 				00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */,
 				00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */,
 				00F938802185A9400075386D /* ReportListingViewController.swift */,
+				00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1443,6 +1446,7 @@
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
+				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,

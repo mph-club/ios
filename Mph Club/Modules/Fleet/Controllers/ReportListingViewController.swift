@@ -9,6 +9,13 @@
 import UIKit
 
 final class ReportListingViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case showThanksReport
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -60,6 +67,15 @@ extension ReportListingViewController {
         super.viewWillDisappear(animated)
         //
         navigationController?.navigationBar.prefersLargeTitles = false
+    }
+}
+
+// ===============
+// MARK: - Actions
+// ===============
+private extension ReportListingViewController {
+    @IBAction func submitTouchUpInside(_ sender: UIButton) {
+        performSegue(withIdentifier: Segue.showThanksReport)
     }
 }
 
