@@ -56,6 +56,8 @@
 		007508EE2185F42200C13F4A /* PickUpLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */; };
 		007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */; };
 		007508F22186023400C13F4A /* PickUpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508F12186023400C13F4A /* PickUpLocation.swift */; };
+		007508F621861B1600C13F4A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508F421861B1600C13F4A /* CalendarCollectionViewCell.swift */; };
+		007508F721861B1600C13F4A /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */; };
 		007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */; };
 		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
@@ -240,6 +242,8 @@
 		007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLocationTableViewCell.swift; sourceTree = "<group>"; };
 		007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickUpLocationTableViewCell.xib; sourceTree = "<group>"; };
 		007508F12186023400C13F4A /* PickUpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLocation.swift; sourceTree = "<group>"; };
+		007508F421861B1600C13F4A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -711,6 +715,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		007508F321861AD100C13F4A /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				007508F421861B1600C13F4A /* CalendarCollectionViewCell.swift */,
+				007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		007B47B92184C25A0016FEE7 /* OwnedProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +936,7 @@
 			isa = PBXGroup;
 			children = (
 				00E1A1542181FCE2003BE03B /* Calendar.storyboard */,
+				007508F321861AD100C13F4A /* CustomCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1296,6 +1310,7 @@
 				001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */,
 				0047B150217CCA3C00941D9C /* CarDetailDescriptionTableViewCell.xib in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
+				007508F721861B1600C13F4A /* CalendarCollectionViewCell.xib in Resources */,
 				00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
@@ -1500,6 +1515,7 @@
 				007508F22186023400C13F4A /* PickUpLocation.swift in Sources */,
 				00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
+				007508F621861B1600C13F4A /* CalendarCollectionViewCell.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
 				00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */,
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
