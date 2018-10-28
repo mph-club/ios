@@ -113,10 +113,10 @@ extension ExploreViewController {
         super.viewDidAppear(animated)
         // Get search bar position
         if searchButtonPosition == .zero {
-            searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+            searchButtonPosition = searchButton.convert(searchButton.bounds.origin, to: nil)
         }
         //
-        if searchButton.convert(searchButton.frame.origin, to: nil).y >= 0 {
+        if searchButton.convert(searchButton.bounds.origin, to: nil).y >= 0 {
             //
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
             //
@@ -181,7 +181,7 @@ private extension ExploreViewController {
 // MARK: Delegate
 extension ExploreViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let currentSearchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        let currentSearchButtonPosition = searchButton.convert(searchButton.bounds.origin, to: nil)
         // set current alpha
         currentAlpha = (searchButtonPosition.y - currentSearchButtonPosition.y) / searchButtonPosition.y
         //
