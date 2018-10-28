@@ -51,6 +51,11 @@
 		0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */; };
 		0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */; };
 		0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC82216F9E19005FCC70 /* UIColorExtension.swift */; };
+		007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007508E72185EC9700C13F4A /* PickUpAndReturn.storyboard */; };
+		007508EA2185ED0100C13F4A /* PickUpAndReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508E92185ED0100C13F4A /* PickUpAndReturnViewController.swift */; };
+		007508EE2185F42200C13F4A /* PickUpLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */; };
+		007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */; };
+		007508F22186023400C13F4A /* PickUpLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007508F12186023400C13F4A /* PickUpLocation.swift */; };
 		007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */; };
 		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
@@ -230,6 +235,11 @@
 		0064CC7B216F9691005FCC70 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
 		0064CC80216F9D06005FCC70 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		0064CC82216F9E19005FCC70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		007508E72185EC9700C13F4A /* PickUpAndReturn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickUpAndReturn.storyboard; sourceTree = "<group>"; };
+		007508E92185ED0100C13F4A /* PickUpAndReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpAndReturnViewController.swift; sourceTree = "<group>"; };
+		007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLocationTableViewCell.swift; sourceTree = "<group>"; };
+		007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickUpLocationTableViewCell.xib; sourceTree = "<group>"; };
+		007508F12186023400C13F4A /* PickUpLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLocation.swift; sourceTree = "<group>"; };
 		007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -577,7 +587,6 @@
 				0064CC6E216F9226005FCC70 /* Explore */,
 				0037353221750BB600164AA7 /* SearchLocation */,
 				00AEE9DD217C58D800AD7348 /* Fleet */,
-				00E1A14F2181FC88003BE03B /* Calendar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -649,6 +658,59 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		007508E32185EC2600C13F4A /* PickUpAndReturn */ = {
+			isa = PBXGroup;
+			children = (
+				007508E62185EC6D00C13F4A /* Views */,
+				007508E52185EC6500C13F4A /* Controllers */,
+				007508F0218601F700C13F4A /* Models */,
+			);
+			path = PickUpAndReturn;
+			sourceTree = "<group>";
+		};
+		007508E42185EC4B00C13F4A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00E1A14F2181FC88003BE03B /* Calendar */,
+				007508E32185EC2600C13F4A /* PickUpAndReturn */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		007508E52185EC6500C13F4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				007508E92185ED0100C13F4A /* PickUpAndReturnViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		007508E62185EC6D00C13F4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				007508E72185EC9700C13F4A /* PickUpAndReturn.storyboard */,
+				007508EB2185F1AC00C13F4A /* CustomCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		007508EB2185F1AC00C13F4A /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */,
+				007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		007508F0218601F700C13F4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				007508F12186023400C13F4A /* PickUpLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		007B47B92184C25A0016FEE7 /* OwnedProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +741,7 @@
 		00AEE9DD217C58D800AD7348 /* Fleet */ = {
 			isa = PBXGroup;
 			children = (
+				007508E42185EC4B00C13F4A /* Modules */,
 				00AEE9DE217C58F000AD7348 /* Views */,
 				00AEE9E2217C599700AD7348 /* Controllers */,
 				00AEE9EB217C6BC300AD7348 /* Models */,
@@ -1237,6 +1300,7 @@
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
 				00AEE9E6217C691C00AD7348 /* FleetHeaderTableViewCell.xib in Resources */,
+				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				0047B144217CBA9F00941D9C /* CarDetailDateTableViewCell.xib in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
@@ -1244,6 +1308,7 @@
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
+				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
 				00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */,
 				0047B156217CD2EE00941D9C /* CarDetailFeaturesTableViewCell.xib in Resources */,
@@ -1432,6 +1497,7 @@
 				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
 				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
 				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
+				007508F22186023400C13F4A /* PickUpLocation.swift in Sources */,
 				00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */,
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
@@ -1476,6 +1542,7 @@
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
 				00AEE9EF217CA03600AD7348 /* CarDetailViewController.swift in Sources */,
 				35D6392B21528F5A00B912AA /* ForgotPasswordViewController.swift in Sources */,
+				007508EA2185ED0100C13F4A /* PickUpAndReturnViewController.swift in Sources */,
 				3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */,
 				0047B155217CD2EE00941D9C /* CarDetailFeaturesTableViewCell.swift in Sources */,
 				00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */,
@@ -1526,6 +1593,7 @@
 				0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */,
 				00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */,
 				003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */,
+				007508EE2185F42200C13F4A /* PickUpLocationTableViewCell.swift in Sources */,
 				00F938812185A9400075386D /* ReportListingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
