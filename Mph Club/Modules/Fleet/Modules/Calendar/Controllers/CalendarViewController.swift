@@ -25,6 +25,10 @@ final class CalendarViewController: UIViewController {
     // MARK: Label
     @IBOutlet private weak var yearAndMonthLabel: UILabel!
     
+    // MARK: Text Field
+    @IBOutlet private weak var startTimeTextField: UITextField!
+    @IBOutlet private weak var endTimeTextField: UITextField!
+    
     // ==================
     // MARK: - Properties
     // ==================
@@ -37,6 +41,37 @@ final class CalendarViewController: UIViewController {
         formatter.locale = Calendar.current.locale
         
         return formatter
+    }()
+    
+    private lazy var startTimePicker: UIDatePicker = {
+        let timePicker = UIDatePicker()
+        timePicker.datePickerMode = .time
+        timePicker.timeZone = Calendar.current.timeZone
+        timePicker.minimumDate = Date()
+        timePicker.addTarget(self, action: #selector(startTimePickerValueChanged), for: .valueChanged)
+        return timePicker
+    }()
+    
+    private lazy var endTimePicker: UIDatePicker = {
+        let timePicker = UIDatePicker()
+        timePicker.datePickerMode = .time
+        timePicker.timeZone = Calendar.current.timeZone
+        timePicker.addTarget(self, action: #selector(endTimePickerValueChanged), for: .valueChanged)
+        return timePicker
+    }()
+    
+    private lazy var toolBar: UIToolbar = {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.sizeToFit()
+        //
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePicker))
+        //
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        //
+        return toolBar
     }()
 }
 
@@ -64,7 +99,23 @@ extension CalendarViewController {
 // ===============
 // MARK: - Actions
 // ===============
-private extension CalendarViewController {}
+private extension CalendarViewController {
+    @IBAction func startTimePickerValueChanged(_ sender: UIDatePicker) {
+        endTimePicker.minimumDate = sender.date
+        //
+        dateFormatter.dateFormat = "hh:mm aa"
+        startTimeTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    @IBAction func endTimePickerValueChanged(_ sender: UIDatePicker) {
+        dateFormatter.dateFormat = "hh:mm aa"
+        endTimeTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    @IBAction func donePicker() {
+        view.endEditing(true)
+    }
+}
 
 // ===============
 // MARK: - Methods
@@ -75,6 +126,13 @@ private extension CalendarViewController {
     }
     
     func configView() {
+        //
+        startTimeTextField.inputView = startTimePicker
+        startTimeTextField.inputAccessoryView = toolBar
+        //
+        endTimeTextField.inputView = endTimePicker
+        endTimeTextField.inputAccessoryView = toolBar
+        //
         calendar.scrollToDate(Date())
     }
 }
