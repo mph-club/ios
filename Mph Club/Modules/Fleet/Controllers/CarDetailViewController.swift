@@ -24,9 +24,13 @@ final class CarDetailViewController: UIViewController {
     }
     
     private enum Segue: String {
+        case showCalendar
+        case showPickUpAndReturn
         case showCarFeatures
         case showCarGuideline
         case showRenterReviews
+        case showOwnedProfile
+        case showReportAListing
     }
     
     // ===============
@@ -52,10 +56,15 @@ final class CarDetailViewController: UIViewController {
     }
     
     // MARK: View
+    @IBOutlet private weak var customNavigationBar: UIView!
     @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var endOfHeaderView: UIView!
     
     // MARK: Image View
     @IBOutlet private weak var headerImageView: UIImageView!
+    
+    // MARK: Label
+    @IBOutlet private weak var titleLabel: UILabel!
     
     // ==================
     // MARK: - Properties
@@ -65,6 +74,7 @@ final class CarDetailViewController: UIViewController {
     var currentVehicle: Vehicle?
     
     // MARK: Private
+    private var currentAlpha: CGFloat = 0.0
     private let ownedByItems = ["Guidelines", "Report this listing"]
     
     // MARK: Overrides
@@ -93,6 +103,22 @@ extension CarDetailViewController {
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparentWithWhiteTint
         //
         UIApplication.shared.statusBarView?.backgroundColor = nil
+        //
+        customNavigationBar.alpha = currentAlpha
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //
+        if endOfHeaderView.convert(endOfHeaderView.bounds.origin, to: nil).y >= 0 {
+            //
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: headerView.bounds.height)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //
     }
 }
 
@@ -127,6 +153,29 @@ private extension CarDetailViewController {
     
     func setContent() {
         headerImageView.image = UIImage(named: currentVehicle?.img ?? "")
+        //
+        titleLabel.text = currentVehicle?.title
+    }
+}
+
+// ===================
+// MARK: - Scroll View
+// ===================
+
+// MARK: Delegate
+extension CarDetailViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let endOfHeaderViewPosition = endOfHeaderView.convert(endOfHeaderView.bounds.origin, to: nil)
+        //
+        currentAlpha = (headerView.bounds.height - endOfHeaderViewPosition.y) / headerView.bounds.height
+        //
+        customNavigationBar.alpha = currentAlpha
+        //
+        if endOfHeaderViewPosition.y >= 0 {
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: endOfHeaderViewPosition.y)
+        } else {
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: 0)
+        }
     }
 }
 
@@ -245,13 +294,19 @@ extension CarDetailViewController: UITableViewDelegate {
         let section = Section.allCases[indexPath.section]
         //
         switch section {
+        case .tripDate:
+            performSegue(withIdentifier: Segue.showCalendar)
+        case .location:
+            performSegue(withIdentifier: Segue.showPickUpAndReturn)
         case .renterReviews:
             performSegue(withIdentifier: Segue.showRenterReviews)
         case .ownedBy:
-            if indexPath.row == 1 {
+            if indexPath.row == 0 {
+                performSegue(withIdentifier: Segue.showOwnedProfile)
+            } else if indexPath.row == 1 {
                 performSegue(withIdentifier: Segue.showCarGuideline)
             } else {
-                
+                performSegue(withIdentifier: Segue.showReportAListing)
             }
         default:
             break

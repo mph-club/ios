@@ -21,6 +21,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lkn-zG-bt3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search" id="ISe-dv-4wK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="d0D-7M-Dkr" id="ygL-Vd-OOn"/>
+                                    </connections>
+                                </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="d0D-7M-Dkr" id="J1R-fC-7rr"/>
                                     <outlet property="delegate" destination="d0D-7M-Dkr" id="Wig-gj-hSH"/>
@@ -41,6 +49,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="searchBar" destination="ISe-dv-4wK" id="dPN-tt-dvW"/>
                         <outlet property="tableView" destination="Lkn-zG-bt3" id="YZl-lm-Wct"/>
                         <segue destination="SN7-J3-pUa" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="dFi-2q-z7m"/>
                         <segue destination="5A8-Xn-Erz" kind="show" identifier="showFleetView" id="MQz-l3-hzx"/>

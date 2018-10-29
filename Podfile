@@ -7,7 +7,6 @@ target 'Mph Club' do
 
   # Pods for Mph Club
   pod 'APJTextPickerView'
-  pod 'JTAppleCalendar', '~> 7.0'
   pod 'AWSCore', '~> 2.6.0'
   pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
   pod 'AWSCognito', '~> 2.6.28'
@@ -23,6 +22,7 @@ target 'Mph Club' do
   pod 'Alamofire', '~> 4.7'
   
   pod 'Cosmos', '~> 17.0'
+  pod 'JTAppleCalendar', '~> 7.0'
 
   target 'Mph ClubTests' do
     inherit! :search_paths

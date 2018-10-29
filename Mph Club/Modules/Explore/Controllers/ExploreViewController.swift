@@ -28,9 +28,6 @@ final class ExploreViewController: UIViewController {
     // MARK: - Outlets
     // ===============
     
-    // MARK: Navigation Bar
-    @IBOutlet private weak var navigationBar: CustomNavigationBar!
-    
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -45,13 +42,18 @@ final class ExploreViewController: UIViewController {
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var footerView: UIView!
     @IBOutlet private weak var headerGradientView: UIView!
+    @IBOutlet private weak var customNavigationBar: UIView!
     
     // MARK: Image View
     @IBOutlet private weak var headerImageView: UIImageView!
+    @IBOutlet private weak var logoImageView: UIImageView!
     
     // MARK: Button
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var searchBarButton: UIButton!
+    
+    // MARK: Label
+    @IBOutlet private weak var titleLabel: UILabel!
     
     // ==================
     // MARK: - Properties
@@ -60,7 +62,7 @@ final class ExploreViewController: UIViewController {
     // MARK: Private
     private let sections: [Section] = [.topRentals, .luxurySUVs, .luxurySedans, .exotics]
     //
-    private var searchButtonPosition = CGPoint.zero
+    private var searchButtonPosition: CGPoint = .zero
     private var currentAlpha: CGFloat = 0.0
     
     // MARK: Lazy var
@@ -95,10 +97,10 @@ extension ExploreViewController {
         super.viewWillAppear(animated)
         //
         navigationController?.setNavigationBarHidden(true, animated: true)
-        // change status bar view color
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
-        // change navigation bar view color
-        navigationBar.styleView = .transparentWith(alpha: currentAlpha)
+        //
+        UIApplication.shared.statusBarView?.backgroundColor = nil
+        //
+        customNavigationBar.alpha = currentAlpha
     }
     
     override func viewDidLayoutSubviews() {
@@ -111,11 +113,14 @@ extension ExploreViewController {
         super.viewDidAppear(animated)
         // Get search bar position
         if searchButtonPosition == .zero {
-            searchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+            searchButtonPosition = searchButton.convert(searchButton.bounds.origin, to: nil)
         }
         //
-        if searchButton.convert(searchButton.frame.origin, to: nil).y >= 0 {
+        if searchButton.convert(searchButton.bounds.origin, to: nil).y >= 0 {
+            //
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: searchButtonPosition.y)
+            //
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: searchButtonPosition.y)
         }
     }
     
@@ -123,8 +128,6 @@ extension ExploreViewController {
         super.viewWillDisappear(animated)
         //
         navigationController?.setNavigationBarHidden(false, animated: true)
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
     }
 }
 
@@ -178,18 +181,20 @@ private extension ExploreViewController {
 // MARK: Delegate
 extension ExploreViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let currentSearchButtonPosition = searchButton.convert(searchButton.frame.origin, to: nil)
+        let currentSearchButtonPosition = searchButton.convert(searchButton.bounds.origin, to: nil)
         // set current alpha
         currentAlpha = (searchButtonPosition.y - currentSearchButtonPosition.y) / searchButtonPosition.y
-        // change navigation bar view color
-        navigationBar.styleView = .transparentWith(alpha: currentAlpha)
-        // change status bar view color
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
+        //
+        customNavigationBar.alpha = currentAlpha
         //
         if currentSearchButtonPosition.y >= 0 {
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: currentSearchButtonPosition.y)
+            //
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: currentSearchButtonPosition.y)
         } else {
             searchBarButton.frame.origin = CGPoint(x: searchBarButton.frame.origin.x, y: 0)
+            //
+            titleLabel.frame.origin = CGPoint(x: titleLabel.frame.origin.x, y: 0)
         }
     }
 }
