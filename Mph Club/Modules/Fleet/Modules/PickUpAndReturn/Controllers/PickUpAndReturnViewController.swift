@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 final class PickUpAndReturnViewController: UIViewController {
     // =============
@@ -19,6 +20,9 @@ final class PickUpAndReturnViewController: UIViewController {
     // ===============
     // MARK: - Outlets
     // ===============
+    
+    // MARK: MapView
+    @IBOutlet private weak var mapView: MKMapView!
     
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
@@ -37,8 +41,8 @@ final class PickUpAndReturnViewController: UIViewController {
     
     // MARK: Mock Data
     private var locationItems = [PickUpLocation(title: "CAR LOCATION", address: "Miami Lakes, FL, 33015", description: "Exact location provided after you book your trip.", price: nil, isSelected: false),
-                               PickUpLocation(title: "AIRPORT", address: "MIA - Miami, FL", description: "Miami International Airport.", price: "$50", isSelected: false),
-                               PickUpLocation(title: "DELIVERY", address: "Enter a delivery address", description: "Mike doesn’t deliver this car more than 10 miles.", price: "$80", isSelected: false)]
+                                 PickUpLocation(title: "AIRPORT", address: "MIA - Miami, FL", description: "Miami International Airport.", price: "$50", isSelected: false),
+                                 PickUpLocation(title: "DELIVERY", address: "Enter a delivery address", description: "Mike doesn’t deliver this car more than 10 miles.", price: "$80", isSelected: false)]
 }
 
 // =======================
@@ -122,5 +126,18 @@ extension PickUpAndReturnViewController: UITableViewDelegate {
             //
             tableView.reloadData()
         }
+    }
+}
+
+// ================
+// MARK: - Map View
+// ================
+
+// MARK: Delegate
+extension PickUpAndReturnViewController: MKMapViewDelegate {
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        // Show user location
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
     }
 }
