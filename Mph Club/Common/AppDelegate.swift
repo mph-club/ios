@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         // fetch the user pool client we initialized in above step
         let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
-        self.storyboard = UIStoryboard(name: "TabView", bundle: nil)
+        self.storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
         pool.delegate = self
         
         toolsInitialization()
