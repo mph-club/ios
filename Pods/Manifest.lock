@@ -16,7 +16,18 @@ PODS:
   - Mixpanel-swift (2.5.4):
     - Mixpanel-swift/Complete (= 2.5.4)
   - Mixpanel-swift/Complete (2.5.4)
+  - PromiseKit (6.5.2):
+    - PromiseKit/CorePromise (= 6.5.2)
+    - PromiseKit/Foundation (= 6.5.2)
+    - PromiseKit/UIKit (= 6.5.2)
+  - PromiseKit/Alamofire (6.5.2):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
   - PromiseKit/CorePromise (6.5.2)
+  - PromiseKit/Foundation (6.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.5.2):
+    - PromiseKit/CorePromise
   - SwiftLint (0.27.0)
   - UICKeyChainStore (2.0.7)
 
@@ -31,6 +42,8 @@ DEPENDENCIES:
   - Fabric
   - JTAppleCalendar (~> 7.0)
   - Mixpanel-swift
+  - PromiseKit (~> 6.0)
+  - PromiseKit/Alamofire (~> 6.0)
   - PromiseKit/CorePromise (~> 6.0)
   - SwiftLint
   - UICKeyChainStore (~> 2.0.6)
@@ -68,6 +81,6 @@ SPEC CHECKSUMS:
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: cf99bcd52ab9c898d70323091dbf9b3a7b7695d9
+PODFILE CHECKSUM: 894f79a6111d67e2e8308819ca3719c14bd6d940
 
 COCOAPODS: 1.5.3
