@@ -9,6 +9,13 @@
 import UIKit
 
 final class PickUpAndReturnViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case showDeliveryLocation
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -102,15 +109,18 @@ extension PickUpAndReturnViewController: UITableViewDelegate {
             }
             //
             tableView.reloadData()
-        } else
+            //
+            performSegue(withIdentifier: Segue.showDeliveryLocation)
+        } else {
             if let currentIndexPath = self.currentIndexPath {
                 locationItems[currentIndexPath.row].isSelected = false
+            }
+            //
+            currentIndexPath = indexPath
+            //
+            locationItems[indexPath.row].isSelected = true
+            //
+            tableView.reloadData()
         }
-        //
-        currentIndexPath = indexPath
-        //
-        locationItems[indexPath.row].isSelected = true
-        //
-        tableView.reloadData()
     }
 }

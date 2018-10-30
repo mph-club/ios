@@ -20,6 +20,9 @@
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
 		003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735372175240A00164AA7 /* CustomNavigationBar.swift */; };
+		004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004095FE218775890065660D /* DeliveryLocationViewController.swift */; };
+		00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00409602218779D80065660D /* CurrentLocationTableViewCell.swift */; };
+		00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00409603218779D80065660D /* CurrentLocationTableViewCell.xib */; };
 		00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00435674216D1CC800424A5C /* upload-dsym.sh */; };
 		00435678216D1CCA00424A5C /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00435675216D1CC900424A5C /* libTestFairy.a */; };
 		0047B13F217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047B13D217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift */; };
@@ -204,6 +207,9 @@
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		003735372175240A00164AA7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		004095FE218775890065660D /* DeliveryLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryLocationViewController.swift; sourceTree = "<group>"; };
+		00409602218779D80065660D /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
+		00409603218779D80065660D /* CurrentLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocationTableViewCell.xib; sourceTree = "<group>"; };
 		00435674216D1CC800424A5C /* upload-dsym.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-dsym.sh"; sourceTree = "<group>"; };
 		00435675216D1CC900424A5C /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
 		00435676216D1CCA00424A5C /* TestFairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
@@ -430,6 +436,24 @@
 				0098BD4C217B99A6009E3984 /* CustomCells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		00409600218779980065660D /* PickUpAndReturnView */ = {
+			isa = PBXGroup;
+			children = (
+				007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */,
+				007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */,
+			);
+			path = PickUpAndReturnView;
+			sourceTree = "<group>";
+		};
+		00409601218779A80065660D /* DeliveryLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				00409602218779D80065660D /* CurrentLocationTableViewCell.swift */,
+				00409603218779D80065660D /* CurrentLocationTableViewCell.xib */,
+			);
+			path = DeliveryLocationView;
 			sourceTree = "<group>";
 		};
 		00435673216D1CB100424A5C /* TestFairy */ = {
@@ -685,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				007508E92185ED0100C13F4A /* PickUpAndReturnViewController.swift */,
+				004095FE218775890065660D /* DeliveryLocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -701,8 +726,8 @@
 		007508EB2185F1AC00C13F4A /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */,
-				007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */,
+				00409600218779980065660D /* PickUpAndReturnView */,
+				00409601218779A80065660D /* DeliveryLocationView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -1321,6 +1346,7 @@
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
+				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
@@ -1527,6 +1553,7 @@
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
+				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
@@ -1576,6 +1603,7 @@
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
+				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
 				35D63914215009F800B912AA /* MfaViewController.swift in Sources */,
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,

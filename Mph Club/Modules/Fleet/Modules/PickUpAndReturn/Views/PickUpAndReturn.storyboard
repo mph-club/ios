@@ -70,15 +70,62 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q53-IP-CDj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pick up and return" id="wup-bU-Ja9"/>
+                    <navigationItem key="navigationItem" title="Pick up and return" id="wup-bU-Ja9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="5G5-8k-E7Q"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="9uX-fk-G1W" id="y29-qG-Ku0"/>
+                        <segue destination="Dj9-OF-bca" kind="show" identifier="showDeliveryLocation" id="cwP-UT-yRz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wg9-gI-5X7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="84" y="55.322338830584712"/>
+        </scene>
+        <!--Delivery Location View Controller-->
+        <scene sceneID="2AP-j3-jt7">
+            <objects>
+                <viewController id="Dj9-OF-bca" customClass="DeliveryLocationViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xlr-0F-Tvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T45-hS-jjp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search" id="cvP-mz-C5I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Dj9-OF-bca" id="mKA-bx-YbZ"/>
+                                    </connections>
+                                </searchBar>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dj9-OF-bca" id="UiQ-R6-hZO"/>
+                                    <outlet property="delegate" destination="Dj9-OF-bca" id="bkO-92-wtp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DK0-YA-44z" firstAttribute="trailing" secondItem="T45-hS-jjp" secondAttribute="trailing" id="Ve5-mU-yEC"/>
+                            <constraint firstItem="T45-hS-jjp" firstAttribute="bottom" secondItem="DK0-YA-44z" secondAttribute="bottom" id="dyd-va-CRI"/>
+                            <constraint firstItem="T45-hS-jjp" firstAttribute="leading" secondItem="DK0-YA-44z" secondAttribute="leading" id="qIm-Qv-BGS"/>
+                            <constraint firstItem="T45-hS-jjp" firstAttribute="top" secondItem="xlr-0F-Tvh" secondAttribute="top" id="xLM-RW-hMG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DK0-YA-44z"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="cvP-mz-C5I" id="SFw-qL-Hvt"/>
+                        <outlet property="tableView" destination="T45-hS-jjp" id="ckQ-Qe-bcp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBP-Jc-ZEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.60000000000002" y="54.422788605697157"/>
         </scene>
     </scenes>
 </document>
