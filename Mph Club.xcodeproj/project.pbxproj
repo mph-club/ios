@@ -85,6 +85,8 @@
 		00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */; };
 		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
 		00D642C12188CA1B0015DAD7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C02188CA1B0015DAD7 /* Profile.storyboard */; };
+		00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D642C52188CFB30015DAD7 /* TripsViewController.swift */; };
+		00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C72188D0740015DAD7 /* Trips.storyboard */; };
 		00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1522181FCC6003BE03B /* CalendarViewController.swift */; };
 		00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A1542181FCE2003BE03B /* Calendar.storyboard */; };
 		00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */; };
@@ -275,6 +277,8 @@
 		00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarCollectionViewCell.swift; sourceTree = "<group>"; };
 		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
 		00D642C02188CA1B0015DAD7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		00D642C52188CFB30015DAD7 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		00D642C72188D0740015DAD7 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
 		00E1A1522181FCC6003BE03B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		00E1A1542181FCE2003BE03B /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeaturesViewController.swift; sourceTree = "<group>"; };
@@ -618,6 +622,7 @@
 				0064CC6E216F9226005FCC70 /* Explore */,
 				0037353221750BB600164AA7 /* SearchLocation */,
 				00AEE9DD217C58D800AD7348 /* Fleet */,
+				00D642C22188CF7F0015DAD7 /* Trips */,
 				35D639242151493B00B912AA /* Profile */,
 			);
 			path = Modules;
@@ -956,6 +961,31 @@
 			isa = PBXGroup;
 			children = (
 				00D642C02188CA1B0015DAD7 /* Profile.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00D642C22188CF7F0015DAD7 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C42188CF970015DAD7 /* Views */,
+				00D642C32188CF8C0015DAD7 /* Controllers */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		00D642C32188CF8C0015DAD7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C52188CFB30015DAD7 /* TripsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00D642C42188CF970015DAD7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C72188D0740015DAD7 /* Trips.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1369,6 +1399,7 @@
 				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
+				00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
 				00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */,
@@ -1639,6 +1670,7 @@
 				003735362175189400164AA7 /* DictionaryExtension.swift in Sources */,
 				00C01DC92174FB3E00473AE6 /* Endpoint.swift in Sources */,
 				0047B159217CDD3C00941D9C /* CarDetailRenterTableViewCell.swift in Sources */,
+				00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */,
 				00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */,
