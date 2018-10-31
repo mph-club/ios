@@ -1,5 +1,5 @@
 //
-//  OwnedProfileViewController.swift
+//  ProfileViewController.swift
 //  Mph Club
 //
 //  Created by behzad ardeh on 10/25/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class OwnedProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     // =============
     // MARK: - Enums
     // =============
@@ -70,7 +70,7 @@ final class OwnedProfileViewController: UIViewController {
 // =======================
 
 // MARK: Life Cycle
-extension OwnedProfileViewController {
+extension ProfileViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -103,7 +103,7 @@ extension OwnedProfileViewController {
 // ===============
 // MARK: - Methods
 // ===============
-private extension OwnedProfileViewController {
+private extension ProfileViewController {
     func registerHeaderTableView() {
         tableView.register(CarDetailHeaderTableViewCell.self)
     }
@@ -127,7 +127,7 @@ private extension OwnedProfileViewController {
 // ===================
 
 // MARK: Delegate
-extension OwnedProfileViewController: UIScrollViewDelegate {
+extension ProfileViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y <= 0 {
             tableView.backgroundColor = .black
@@ -150,7 +150,7 @@ extension OwnedProfileViewController: UIScrollViewDelegate {
 // ==================
 
 // MARK: Data Source
-extension OwnedProfileViewController: UITableViewDataSource {
+extension ProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
     }
@@ -188,7 +188,7 @@ extension OwnedProfileViewController: UITableViewDataSource {
 }
 
 // MARK: Delegate
-extension OwnedProfileViewController: UITableViewDelegate {
+extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
@@ -203,7 +203,7 @@ extension OwnedProfileViewController: UITableViewDelegate {
 // =======================
 
 // MARK: Data Source
-extension OwnedProfileViewController: UICollectionViewDataSource {
+extension ProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
@@ -215,10 +215,10 @@ extension OwnedProfileViewController: UICollectionViewDataSource {
 }
 
 // MARK: Delegate
-extension OwnedProfileViewController: UICollectionViewDelegate {}
+extension ProfileViewController: UICollectionViewDelegate {}
 
 // MARK: Delegate Flow Layout
-extension OwnedProfileViewController: UICollectionViewDelegateFlowLayout {
+extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.height * 0.9534050179, height: collectionView.frame.height)
     }

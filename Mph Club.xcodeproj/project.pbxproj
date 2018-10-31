@@ -99,7 +99,7 @@
 		00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */; };
 		00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */; };
 		00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */; };
-		00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */; };
+		00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* ProfileViewController.swift */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -293,7 +293,7 @@
 		00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGuidelineTableViewCell.swift; sourceTree = "<group>"; };
 		00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarGuidelineTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterReviewsViewController.swift; sourceTree = "<group>"; };
-		00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedProfileViewController.swift; sourceTree = "<group>"; };
+		00E1A1682182334C003BE03B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -762,13 +762,13 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
-		007B47B92184C25A0016FEE7 /* OwnedProfileView */ = {
+		007B47B92184C25A0016FEE7 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
 				007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */,
 				007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */,
 			);
-			path = OwnedProfileView;
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		0098BD4C217B99A6009E3984 /* CustomCells */ = {
@@ -816,7 +816,6 @@
 				00AEE9F1217CA57200AD7348 /* CarDetailView */,
 				00E1A15A2182088E003BE03B /* CarFeaturesView */,
 				00E1A16121821DC1003BE03B /* CarGuidelineView */,
-				007B47B92184C25A0016FEE7 /* OwnedProfileView */,
 				00F938822185AB4B0075386D /* ReportListingView */,
 			);
 			path = CustomCells;
@@ -829,7 +828,6 @@
 				00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */,
 				00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */,
 				00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */,
-				00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */,
 				00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */,
 				00F938802185A9400075386D /* ReportListingViewController.swift */,
 				00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */,
@@ -957,6 +955,7 @@
 			isa = PBXGroup;
 			children = (
 				35D639252151495400B912AA /* AccountViewController.swift */,
+				00E1A1682182334C003BE03B /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1000,6 +999,7 @@
 			children = (
 				00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */,
 				00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */,
+				007B47B92184C25A0016FEE7 /* ProfileView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -1609,7 +1609,7 @@
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				007508F621861B1600C13F4A /* CalendarCollectionViewCell.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
-				00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */,
+				00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */,
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,

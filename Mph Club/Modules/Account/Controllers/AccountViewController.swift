@@ -69,6 +69,14 @@ extension AccountViewController {
         super.viewWillAppear(animated)
         // hide navigation bar
         navigationController?.setNavigationBarHidden(true, animated: true)
+        //
+        UIApplication.shared.statusBarView?.backgroundColor = nil
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // show navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
@@ -76,7 +84,7 @@ extension AccountViewController {
 // MARK: - Actions
 // ===============
 private extension AccountViewController {
-    @IBAction func signOut(_ sender: UIButton) {
+    @IBAction func signOutTouchUpInside(_ sender: UIButton) {
         //
         tabBarController?.selectedIndex = 0
         //
