@@ -84,9 +84,11 @@
 		00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DD02174FC0E00473AE6 /* Endpoints.swift */; };
 		00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */; };
 		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
-		00D642C12188CA1B0015DAD7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C02188CA1B0015DAD7 /* Profile.storyboard */; };
+		00D642C12188CA1B0015DAD7 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C02188CA1B0015DAD7 /* Account.storyboard */; };
 		00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D642C52188CFB30015DAD7 /* TripsViewController.swift */; };
 		00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C72188D0740015DAD7 /* Trips.storyboard */; };
+		00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */; };
+		00D642CD2188F0510015DAD7 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */; };
 		00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1522181FCC6003BE03B /* CalendarViewController.swift */; };
 		00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A1542181FCE2003BE03B /* Calendar.storyboard */; };
 		00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */; };
@@ -161,7 +163,7 @@
 		35D63911215009A900B912AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63910215009A900B912AA /* SignInViewController.swift */; };
 		35D63914215009F800B912AA /* MfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63913215009F800B912AA /* MfaViewController.swift */; };
 		35D6391721502D1F00B912AA /* ConfirmationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */; };
-		35D639262151495400B912AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D639252151495400B912AA /* ProfileViewController.swift */; };
+		35D639262151495400B912AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D639252151495400B912AA /* AccountViewController.swift */; };
 		35D6392B21528F5A00B912AA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */; };
 		35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */; };
 		35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30120ED0EC60083CA93 /* AddressViewController.swift */; };
@@ -276,9 +278,11 @@
 		00C01DD02174FC0E00473AE6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarCollectionViewCell.swift; sourceTree = "<group>"; };
 		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
-		00D642C02188CA1B0015DAD7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		00D642C02188CA1B0015DAD7 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		00D642C52188CFB30015DAD7 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		00D642C72188D0740015DAD7 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1522181FCC6003BE03B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		00E1A1542181FCE2003BE03B /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeaturesViewController.swift; sourceTree = "<group>"; };
@@ -361,7 +365,7 @@
 		35D63910215009A900B912AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		35D63913215009F800B912AA /* MfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MfaViewController.swift; sourceTree = "<group>"; };
 		35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeVC.swift; sourceTree = "<group>"; };
-		35D639252151495400B912AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		35D639252151495400B912AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35DAA30120ED0EC60083CA93 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
@@ -623,7 +627,7 @@
 				0037353221750BB600164AA7 /* SearchLocation */,
 				00AEE9DD217C58D800AD7348 /* Fleet */,
 				00D642C22188CF7F0015DAD7 /* Trips */,
-				35D639242151493B00B912AA /* Profile */,
+				35D639242151493B00B912AA /* Account */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -952,7 +956,7 @@
 		00D642BE2188C9F30015DAD7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				35D639252151495400B912AA /* ProfileViewController.swift */,
+				35D639252151495400B912AA /* AccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -960,7 +964,8 @@
 		00D642BF2188CA000015DAD7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				00D642C02188CA1B0015DAD7 /* Profile.storyboard */,
+				00D642C02188CA1B0015DAD7 /* Account.storyboard */,
+				00D642C92188F0220015DAD7 /* CustomCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -988,6 +993,15 @@
 				00D642C72188D0740015DAD7 /* Trips.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		00D642C92188F0220015DAD7 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */,
+				00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		00E1A14F2181FC88003BE03B /* Calendar */ = {
@@ -1208,13 +1222,13 @@
 			path = ConfirmationFlow;
 			sourceTree = "<group>";
 		};
-		35D639242151493B00B912AA /* Profile */ = {
+		35D639242151493B00B912AA /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				00D642BF2188CA000015DAD7 /* Views */,
 				00D642BE2188C9F30015DAD7 /* Controllers */,
 			);
-			path = Profile;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		35D6392921528F4100B912AA /* Forgot Password */ = {
@@ -1378,7 +1392,7 @@
 			files = (
 				00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */,
 				0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */,
-				00D642C12188CA1B0015DAD7 /* Profile.storyboard in Resources */,
+				00D642C12188CA1B0015DAD7 /* Account.storyboard in Resources */,
 				3598E02520EBBADF00E595EE /* MainTabBar.storyboard in Resources */,
 				00E1A15E218208CE003BE03B /* CarFeatureTableViewCell.xib in Resources */,
 				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
@@ -1393,6 +1407,7 @@
 				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				0047B144217CBA9F00941D9C /* CarDetailDateTableViewCell.xib in Resources */,
+				00D642CD2188F0510015DAD7 /* AccountTableViewCell.xib in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
@@ -1615,7 +1630,7 @@
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
-				35D639262151495400B912AA /* ProfileViewController.swift in Sources */,
+				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,
 				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,
 				0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */,
@@ -1686,6 +1701,7 @@
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
 				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* NextButton.swift in Sources */,
+				00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */,
 				0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */,
 				00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */,
 				003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */,

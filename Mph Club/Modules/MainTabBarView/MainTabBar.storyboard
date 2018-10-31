@@ -201,15 +201,15 @@
             </objects>
             <point key="canvasLocation" x="5805.6000000000004" y="3868.5157421289359"/>
         </scene>
-        <!--Profile-->
+        <!--Account-->
         <scene sceneID="JVT-cJ-FT4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="Mtd-CI-oAP" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Account" id="Mtd-CI-oAP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="U0A-kZ-dDL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3e-2f-UfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="29"/>
+            <point key="canvasLocation" x="451" y="29"/>
         </scene>
         <!--Trips-->
         <scene sceneID="Voq-sk-vFK">
