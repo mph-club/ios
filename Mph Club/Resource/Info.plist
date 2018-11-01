@@ -40,6 +40,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Please allow mph club to access your camera to take picture of the document requested.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to access your photo library to upload your profile pictures</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

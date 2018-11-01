@@ -73,6 +73,9 @@
 		00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */; };
 		00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */; };
 		00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */; };
+		0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */; };
+		00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */; };
+		00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -277,6 +280,9 @@
 		00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChnageYourPhoneViewController.swift; sourceTree = "<group>"; };
 		00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourPasswordViewController.swift; sourceTree = "<group>"; };
+		0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePhoto.storyboard; sourceTree = "<group>"; };
+		0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -697,6 +703,7 @@
 				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
 				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 				00874472218B217D007E8E13 /* StringExtension.swift */,
+				00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -822,6 +829,7 @@
 			isa = PBXGroup;
 			children = (
 				0087446B218B08E3007E8E13 /* ContactInfo */,
+				0087447A218B391C007E8E13 /* ProfilePhoto */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -852,6 +860,31 @@
 			isa = PBXGroup;
 			children = (
 				0087446E218B0946007E8E13 /* ContactInfo.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0087447A218B391C007E8E13 /* ProfilePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				0087447C218B3931007E8E13 /* Views */,
+				0087447B218B3928007E8E13 /* Controllers */,
+			);
+			path = ProfilePhoto;
+			sourceTree = "<group>";
+		};
+		0087447B218B3928007E8E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0087447C218B3931007E8E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1513,6 +1546,7 @@
 				0047B15A217CDD3C00941D9C /* CarDetailRenterTableViewCell.xib in Resources */,
 				00F938862185ABE10075386D /* ReportTableViewCell.xib in Resources */,
 				007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */,
+				0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */,
 				0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */,
 				0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */,
 				00AEE9F5217CACE500AD7348 /* CarDetailTitleTableViewCell.xib in Resources */,
@@ -1705,6 +1739,7 @@
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
+				00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */,
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
 				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
@@ -1718,6 +1753,7 @@
 				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,
 				00F9388B2185CAD00075386D /* ReportOtherTableViewCell.swift in Sources */,
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
+				00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
 				35D639262151495400B912AA /* AccountViewController.swift in Sources */,

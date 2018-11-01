@@ -15,6 +15,7 @@ final class AccountViewController: UIViewController {
     // =============
     private enum Segue: String {
         case showContactInfo
+        case showProfilePhoto
     }
     
     private enum CellItems: String, CaseIterable {
@@ -159,6 +160,8 @@ extension AccountViewController: UITableViewDelegate {
         switch row {
         case .contactInfo:
             performSegue(withIdentifier: Segue.showContactInfo)
+        case .profilePhoto:
+            performSegue(withIdentifier: Segue.showProfilePhoto)
         default:
             break
         }
