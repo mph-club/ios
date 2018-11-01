@@ -65,6 +65,7 @@
 		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
 		007F18E2218B59D600B48470 /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007F18E1218B59D600B48470 /* ContactUs.storyboard */; };
 		007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F18E3218B59F000B48470 /* ContactUsViewController.swift */; };
+		007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */; };
 		00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */; };
 		00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */; };
 		00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */; };
@@ -274,6 +275,7 @@
 		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		007F18E1218B59D600B48470 /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
 		007F18E3218B59F000B48470 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksContactUsViewController.swift; sourceTree = "<group>"; };
 		0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 		00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -624,7 +626,7 @@
 				00C01DCE2174FB7300473AE6 /* Helpers */,
 				0064CC74216F9668005FCC70 /* Protocol */,
 				0064CC73216F9660005FCC70 /* Extension */,
-				3598E02020EBB8B400E595EE /* Custom Classes */,
+				3598E02020EBB8B400E595EE /* CustomClasses */,
 				0064CC6B216F906A005FCC70 /* BridgeFile */,
 			);
 			path = Common;
@@ -816,6 +818,7 @@
 			isa = PBXGroup;
 			children = (
 				007F18E3218B59F000B48470 /* ContactUsViewController.swift */,
+				007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1291,7 +1294,7 @@
 			path = "Mph ClubUITests";
 			sourceTree = "<group>";
 		};
-		3598E02020EBB8B400E595EE /* Custom Classes */ = {
+		3598E02020EBB8B400E595EE /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
@@ -1300,7 +1303,7 @@
 				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
 				0018478B2176873B000B0ED3 /* ParallaxTableView.swift */,
 			);
-			path = "Custom Classes";
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 		3598E02320EBBAC100E595EE /* MainTabBarView */ = {
@@ -1787,6 +1790,7 @@
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
 				00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
+				007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
 				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,

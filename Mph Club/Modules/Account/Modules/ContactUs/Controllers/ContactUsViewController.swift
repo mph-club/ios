@@ -40,7 +40,7 @@ extension ContactUsViewController {
 // ===============
 private extension ContactUsViewController {
     @IBAction func callNumberTouchUpInside(_ sender: UIButton) {
-        guard let number = URL(string: "tel://" + "1-800-454-4369") else { return }
+        guard let number = URL(string: "tel://" + "18004544369") else { return }
         UIApplication.shared.open(number)
     }
 }
