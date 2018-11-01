@@ -69,6 +69,9 @@
 		00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874468218AFA99007E8E13 /* ContactInfo.swift */; };
 		0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087446E218B0946007E8E13 /* ContactInfo.storyboard */; };
 		00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */; };
+		00874473218B217D007E8E13 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874472218B217D007E8E13 /* StringExtension.swift */; };
+		00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */; };
+		00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -269,6 +272,9 @@
 		00874468218AFA99007E8E13 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		0087446E218B0946007E8E13 /* ContactInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactInfo.storyboard; sourceTree = "<group>"; };
 		00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourEmailViewController.swift; sourceTree = "<group>"; };
+		00874472218B217D007E8E13 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChnageYourPhoneViewController.swift; sourceTree = "<group>"; };
+		00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -688,6 +694,7 @@
 				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
 				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
 				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
+				00874472218B217D007E8E13 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -832,6 +839,8 @@
 			children = (
 				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
 				00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */,
+				00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */,
+				00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1696,10 +1705,12 @@
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
 				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
+				00874473218B217D007E8E13 /* StringExtension.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
+				00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,
 				00F9388B2185CAD00075386D /* ReportOtherTableViewCell.swift in Sources */,
@@ -1739,6 +1750,7 @@
 				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */,
+				00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */,
 				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,
 				35D63911215009A900B912AA /* SignInViewController.swift in Sources */,
 				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
