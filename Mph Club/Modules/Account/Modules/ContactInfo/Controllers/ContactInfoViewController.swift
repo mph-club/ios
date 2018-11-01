@@ -12,6 +12,10 @@ final class ContactInfoViewController: UIViewController {
     // =============
     // MARK: - Enums
     // =============
+    private enum Segue: String {
+        case showChangeYourEmail
+    }
+    
     private enum CellItems: Int {
         case email
         case phoneNumber
@@ -95,7 +99,7 @@ extension ContactInfoViewController: UITableViewDelegate {
         //
         switch row {
         case .email:
-            break
+            performSegue(withIdentifier: Segue.showChangeYourEmail)
         case .phoneNumber:
             break
         case .password:

@@ -42,15 +42,112 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="268-JG-Rc4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contact info" id="mFG-Vd-Zsu"/>
+                    <navigationItem key="navigationItem" title="Contact info" id="mFG-Vd-Zsu">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TOk-JR-Rc9"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="hlY-Xg-un5" id="50S-NA-780"/>
+                        <segue destination="6lJ-uH-rgZ" kind="show" identifier="showChangeYourEmail" id="Xbf-H4-7yx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uT8-dY-HRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="693.60000000000002" y="1254.4227886056972"/>
+        </scene>
+        <!--Change your email-->
+        <scene sceneID="wMR-tY-5Qh">
+            <objects>
+                <viewController id="6lJ-uH-rgZ" customClass="ChangeYourEmailViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlL-tA-yFv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMa-iI-x9p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-oq-yTp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A confirmation link will be sent once you update your email. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-jn-fbG">
+                                                <rect key="frame" x="16" y="32" width="343" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="XLO-hC-4Aa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-V9-kk8">
+                                                <rect key="frame" x="16" y="124" width="35" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="C1r-Bj-qoV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-JR-jzr">
+                                                <rect key="frame" x="16" y="158" width="343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TJ5-cB-Neh"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddi-yN-8Xe" userLabel="Seperator">
+                                                <rect key="frame" x="16" y="206" width="343" height="1"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="8cR-2s-ZkS"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="liD-jn-fbG" firstAttribute="top" secondItem="Nel-oq-yTp" secondAttribute="top" constant="32" id="AGh-ge-oxg"/>
+                                            <constraint firstAttribute="trailing" secondItem="liD-jn-fbG" secondAttribute="trailing" constant="16" id="B7g-tk-wy2"/>
+                                            <constraint firstItem="Ddi-yN-8Xe" firstAttribute="leading" secondItem="fuY-JR-jzr" secondAttribute="leading" id="CZJ-O7-ckP"/>
+                                            <constraint firstAttribute="trailing" secondItem="fuY-JR-jzr" secondAttribute="trailing" constant="16" id="P6f-qt-gD3"/>
+                                            <constraint firstItem="liD-jn-fbG" firstAttribute="leading" secondItem="Nel-oq-yTp" secondAttribute="leading" constant="16" id="UYG-iu-7fv"/>
+                                            <constraint firstItem="fuY-JR-jzr" firstAttribute="top" secondItem="tZM-V9-kk8" secondAttribute="bottom" constant="18" id="ape-FU-g20"/>
+                                            <constraint firstItem="tZM-V9-kk8" firstAttribute="leading" secondItem="Nel-oq-yTp" secondAttribute="leading" constant="16" id="mfL-nm-oDd"/>
+                                            <constraint firstItem="fuY-JR-jzr" firstAttribute="leading" secondItem="tZM-V9-kk8" secondAttribute="leading" id="t60-X6-Da3"/>
+                                            <constraint firstItem="Ddi-yN-8Xe" firstAttribute="trailing" secondItem="fuY-JR-jzr" secondAttribute="trailing" id="yxx-DN-NmA"/>
+                                            <constraint firstItem="tZM-V9-kk8" firstAttribute="top" secondItem="liD-jn-fbG" secondAttribute="bottom" constant="32" id="zJX-kg-fwW"/>
+                                            <constraint firstItem="Ddi-yN-8Xe" firstAttribute="top" secondItem="fuY-JR-jzr" secondAttribute="bottom" constant="8" id="zTR-er-ELd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nel-oq-yTp" firstAttribute="leading" secondItem="IMa-iI-x9p" secondAttribute="leading" id="3AI-VG-ajh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nel-oq-yTp" secondAttribute="bottom" id="BJ2-qe-QpY"/>
+                                    <constraint firstItem="Nel-oq-yTp" firstAttribute="width" secondItem="IMa-iI-x9p" secondAttribute="width" id="KKa-Gu-vxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nel-oq-yTp" secondAttribute="trailing" id="Xwz-d5-LEw"/>
+                                    <constraint firstItem="Nel-oq-yTp" firstAttribute="top" secondItem="IMa-iI-x9p" secondAttribute="top" id="ZsD-hq-AFv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IMa-iI-x9p" firstAttribute="top" secondItem="hlL-tA-yFv" secondAttribute="top" id="GEw-r9-riW"/>
+                            <constraint firstItem="Nel-oq-yTp" firstAttribute="height" secondItem="sXC-AL-53W" secondAttribute="height" id="Ib7-KX-hA8"/>
+                            <constraint firstItem="IMa-iI-x9p" firstAttribute="trailing" secondItem="sXC-AL-53W" secondAttribute="trailing" id="TJH-yq-dvj"/>
+                            <constraint firstItem="IMa-iI-x9p" firstAttribute="bottom" secondItem="sXC-AL-53W" secondAttribute="bottom" id="UVb-75-50x"/>
+                            <constraint firstItem="IMa-iI-x9p" firstAttribute="leading" secondItem="sXC-AL-53W" secondAttribute="leading" id="r7e-RU-Pcq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sXC-AL-53W"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change your email" id="Tap-1V-R6c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="stB-xF-0JC">
+                            <color key="tintColor" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmU-w0-0ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="1253.5232383808097"/>
         </scene>
     </scenes>
 </document>

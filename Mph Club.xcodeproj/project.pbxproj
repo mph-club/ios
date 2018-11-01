@@ -68,6 +68,7 @@
 		00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */; };
 		00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874468218AFA99007E8E13 /* ContactInfo.swift */; };
 		0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087446E218B0946007E8E13 /* ContactInfo.storyboard */; };
+		00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -267,6 +268,7 @@
 		00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
 		00874468218AFA99007E8E13 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		0087446E218B0946007E8E13 /* ContactInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactInfo.storyboard; sourceTree = "<group>"; };
+		00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourEmailViewController.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -829,6 +831,7 @@
 			isa = PBXGroup;
 			children = (
 				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
+				00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1744,6 +1747,7 @@
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
 				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
+				00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */,
 				35D63914215009F800B912AA /* MfaViewController.swift in Sources */,
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
