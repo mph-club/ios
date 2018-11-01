@@ -67,6 +67,7 @@
 		00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */; };
 		00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */; };
 		00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874468218AFA99007E8E13 /* ContactInfo.swift */; };
+		0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087446E218B0946007E8E13 /* ContactInfo.storyboard */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -265,6 +266,7 @@
 		00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
 		00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
 		00874468218AFA99007E8E13 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		0087446E218B0946007E8E13 /* ContactInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactInfo.storyboard; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -805,6 +807,40 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0087446A218B08CD007E8E13 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0087446B218B08E3007E8E13 /* ContactInfo */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0087446B218B08E3007E8E13 /* ContactInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0087446D218B08FE007E8E13 /* Views */,
+				0087446C218B08F3007E8E13 /* Controllers */,
+				00874467218AFA77007E8E13 /* Models */,
+			);
+			path = ContactInfo;
+			sourceTree = "<group>";
+		};
+		0087446C218B08F3007E8E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0087446D218B08FE007E8E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0087446E218B0946007E8E13 /* ContactInfo.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0098BD4C217B99A6009E3984 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,7 +1026,6 @@
 			children = (
 				35D639252151495400B912AA /* AccountViewController.swift */,
 				00E1A1682182334C003BE03B /* ProfileViewController.swift */,
-				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1260,9 +1295,9 @@
 		35D639242151493B00B912AA /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				0087446A218B08CD007E8E13 /* Modules */,
 				00D642BF2188CA000015DAD7 /* Views */,
 				00D642BE2188C9F30015DAD7 /* Controllers */,
-				00874467218AFA77007E8E13 /* Models */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1451,6 +1486,7 @@
 				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
+				0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */,
 				00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
