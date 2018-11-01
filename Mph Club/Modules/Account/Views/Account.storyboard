@@ -137,6 +137,7 @@
                         <outlet property="tableView" destination="hn7-Vc-5Pp" id="Keb-m5-cFz"/>
                         <segue destination="VnG-uI-t6b" kind="show" identifier="showContactInfo" id="3Gh-Ih-EZg"/>
                         <segue destination="YM3-YH-E4W" kind="show" identifier="showProfilePhoto" id="qBc-ph-ICU"/>
+                        <segue destination="Gsm-j7-gBq" kind="show" identifier="showContactUs" id="1iG-u5-AJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-gE-VQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,6 +159,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jb0-c3-RyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203" y="855"/>
+        </scene>
+        <!--ContactUs-->
+        <scene sceneID="Zr5-4b-37H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactUs" id="Gsm-j7-gBq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-Cx-e4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="855"/>
         </scene>
         <!--Mike L.-->
         <scene sceneID="WLQ-oE-Hnc">
