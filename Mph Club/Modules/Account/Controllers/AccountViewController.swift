@@ -92,11 +92,14 @@ extension AccountViewController {
 private extension AccountViewController {
     @IBAction func signOutTouchUpInside(_ sender: UIButton) {
         //
-        tabBarController?.selectedIndex = 0
+        let alertView = fireAlert(title: nil, message: "Are you sure?")
         //
-        user?.signOut()
+        let logoutAction = UIAlertAction(title: "Logout", style: .default, handler: logout)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         //
-        refresh()
+        alertView.addActions([logoutAction, cancelAction])
+        //
+        present(alertView, animated: true, completion: nil)
     }
 }
 
@@ -106,6 +109,15 @@ private extension AccountViewController {
 private extension AccountViewController {
     func registerTableViewCell() {
         tableView.register(AccountTableViewCell.self)
+    }
+    
+    func logout(_ alertAction: UIAlertAction) {
+        //
+        tabBarController?.selectedIndex = 0
+        //
+        user?.signOut()
+        //
+        refresh()
     }
     
     func refresh() {
