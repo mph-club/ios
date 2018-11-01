@@ -72,6 +72,7 @@
 		00874473218B217D007E8E13 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874472218B217D007E8E13 /* StringExtension.swift */; };
 		00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */; };
 		00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */; };
+		00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -275,6 +276,7 @@
 		00874472218B217D007E8E13 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChnageYourPhoneViewController.swift; sourceTree = "<group>"; };
 		00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourPasswordViewController.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -841,6 +843,7 @@
 				00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */,
 				00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */,
 				00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */,
+				00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1759,6 +1762,7 @@
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
 				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
+				00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */,
 				00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */,
 				35D63914215009F800B912AA /* MfaViewController.swift in Sources */,
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,

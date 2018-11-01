@@ -15,6 +15,7 @@ final class ContactInfoViewController: UIViewController {
     private enum Segue: String {
         case showChangeYourEmail
         case showYourPhone
+        case showChangeYourPass
     }
     
     private enum CellItems: Int {
@@ -104,7 +105,7 @@ extension ContactInfoViewController: UITableViewDelegate {
         case .phoneNumber:
             performSegue(withIdentifier: Segue.showYourPhone)
         case .password:
-            break
+            performSegue(withIdentifier: Segue.showChangeYourPass)
         }
     }
 }
