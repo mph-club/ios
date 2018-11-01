@@ -13,6 +13,10 @@ final class AccountViewController: UIViewController {
     // =============
     // MARK: - Enums
     // =============
+    private enum Segue: String {
+        case showContactInfo
+    }
+    
     private enum CellItems: String, CaseIterable {
         case contactInfo = "Contact info"
         case profilePhoto = "Profile photo"
@@ -147,5 +151,16 @@ extension AccountViewController: UITableViewDataSource {
 extension AccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = CellItems.allCases[indexPath.row]
+        //
+        switch row {
+        case .contactInfo:
+            performSegue(withIdentifier: Segue.showContactInfo)
+        default:
+            break
+        }
     }
 }

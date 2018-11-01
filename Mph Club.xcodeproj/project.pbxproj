@@ -63,6 +63,10 @@
 		007508F721861B1600C13F4A /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */; };
 		007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */; };
 		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
+		00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */; };
+		00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */; };
+		00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */; };
+		00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874468218AFA99007E8E13 /* ContactInfo.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
@@ -257,6 +261,10 @@
 		007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
+		0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
+		00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
+		00874468218AFA99007E8E13 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
@@ -771,6 +779,32 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		00874461218AEE16007E8E13 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */,
+				00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		00874462218AF0EA007E8E13 /* ContactInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */,
+				00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */,
+			);
+			path = ContactInfoView;
+			sourceTree = "<group>";
+		};
+		00874467218AFA77007E8E13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00874468218AFA99007E8E13 /* ContactInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0098BD4C217B99A6009E3984 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -956,6 +990,7 @@
 			children = (
 				35D639252151495400B912AA /* AccountViewController.swift */,
 				00E1A1682182334C003BE03B /* ProfileViewController.swift */,
+				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -997,9 +1032,9 @@
 		00D642C92188F0220015DAD7 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */,
-				00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */,
+				00874461218AEE16007E8E13 /* AccountView */,
 				007B47B92184C25A0016FEE7 /* ProfileView */,
+				00874462218AF0EA007E8E13 /* ContactInfoView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -1227,6 +1262,7 @@
 			children = (
 				00D642BF2188CA000015DAD7 /* Views */,
 				00D642BE2188C9F30015DAD7 /* Controllers */,
+				00874467218AFA77007E8E13 /* Models */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1411,6 +1447,7 @@
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
+				00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */,
 				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
@@ -1633,6 +1670,7 @@
 				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,
 				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,
+				00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */,
 				0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetViewController.swift in Sources */,
 				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
@@ -1701,7 +1739,9 @@
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
 				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* NextButton.swift in Sources */,
+				00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */,
 				00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */,
+				00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */,
 				0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */,
 				00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */,
 				003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */,

@@ -34,16 +34,57 @@
             </objects>
             <point key="canvasLocation" x="696" y="332"/>
         </scene>
+        <!--Contact info-->
+        <scene sceneID="rTF-w2-ccr">
+            <objects>
+                <viewController id="xEW-7a-Uco" customClass="ContactInfoViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6f-Yc-tEa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3cD-Xr-yxz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="j2J-VQ-XLL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="xEW-7a-Uco" id="Bce-ve-hP5"/>
+                                    <outlet property="delegate" destination="xEW-7a-Uco" id="Vae-vi-58I"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GxU-wn-OAe" firstAttribute="trailing" secondItem="3cD-Xr-yxz" secondAttribute="trailing" id="Ccb-3w-zHu"/>
+                            <constraint firstItem="3cD-Xr-yxz" firstAttribute="top" secondItem="I6f-Yc-tEa" secondAttribute="top" id="lhB-0D-bjg"/>
+                            <constraint firstItem="3cD-Xr-yxz" firstAttribute="leading" secondItem="GxU-wn-OAe" secondAttribute="leading" id="pX5-YM-vgm"/>
+                            <constraint firstAttribute="bottom" secondItem="3cD-Xr-yxz" secondAttribute="bottom" id="qhS-nx-yZz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GxU-wn-OAe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact info" id="qUG-HC-cFr"/>
+                    <connections>
+                        <outlet property="tableView" destination="3cD-Xr-yxz" id="BYd-xf-YTH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cso-zu-rX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.60000000000002" y="1254.4227886056972"/>
+        </scene>
         <!--Account View Controller-->
         <scene sceneID="iPd-ah-d3x">
             <objects>
                 <viewController id="U1Z-qX-Rde" customClass="AccountViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m3I-NZ-WIb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-Vc-5Pp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-Vc-5Pp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="B9s-16-YmX" userLabel="Header View">
@@ -133,9 +174,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="IcK-KF-bY9"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" id="PD9-Rc-BYc"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="hn7-Vc-5Pp" id="Keb-m5-cFz"/>
+                        <segue destination="xEW-7a-Uco" kind="show" identifier="showContactInfo" id="NA4-Da-YBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-gE-VQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -147,11 +188,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" hidesBottomBarWhenPushed="YES" id="10W-yr-dQs" customClass="ProfileViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sha-OW-1Sk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jeT-pf-CMw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="aCT-lC-Jth">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
