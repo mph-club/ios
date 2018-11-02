@@ -81,6 +81,15 @@
 		00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
+		00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A910D0218C332400A991BB /* TransactionHistory.storyboard */; };
+		00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */; };
+		00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */; };
+		00A910D7218C36C600A991BB /* CompletedPayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */; };
+		00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */; };
+		00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */; };
+		00A910DD218C3B1900A991BB /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */; };
+		00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */; };
+		00A910E2218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
 		00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */; };
 		00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE9DF217C590100AD7348 /* Fleet.storyboard */; };
@@ -291,6 +300,15 @@
 		00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
+		00A910D0218C332400A991BB /* TransactionHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionHistory.storyboard; sourceTree = "<group>"; };
+		00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
+		00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPayoutViewController.swift; sourceTree = "<group>"; };
+		00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPayoutViewController.swift; sourceTree = "<group>"; };
+		00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryPageViewController.swift; sourceTree = "<group>"; };
+		00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
+		00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiableExtension.swift; sourceTree = "<group>"; };
+		00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+TransactionHistory.swift"; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
 		00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocationDetail.swift; sourceTree = "<group>"; };
 		00AEE9DF217C590100AD7348 /* Fleet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fleet.storyboard; sourceTree = "<group>"; };
@@ -710,6 +728,8 @@
 				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 				00874472218B217D007E8E13 /* StringExtension.swift */,
 				00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */,
+				00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */,
+				00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -720,6 +740,7 @@
 				0064CC75216F967D005FCC70 /* NibLoadable.swift */,
 				0064CC76216F967E005FCC70 /* ReusableView.swift */,
 				00C01DC82174FB3D00473AE6 /* Endpoint.swift */,
+				00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -862,6 +883,7 @@
 			children = (
 				0087446B218B08E3007E8E13 /* ContactInfo */,
 				0087447A218B391C007E8E13 /* ProfilePhoto */,
+				00A910CD218C32D900A991BB /* TransactionHistory */,
 				007F18DD218B59A800B48470 /* ContactUs */,
 			);
 			path = Modules;
@@ -929,6 +951,43 @@
 				0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		00A910CD218C32D900A991BB /* TransactionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				00A910E0218C3C5A00A991BB /* Extensions */,
+				00A910CF218C330100A991BB /* Views */,
+				00A910CE218C32F900A991BB /* Controllers */,
+			);
+			path = TransactionHistory;
+			sourceTree = "<group>";
+		};
+		00A910CE218C32F900A991BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */,
+				00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */,
+				00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */,
+				00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00A910CF218C330100A991BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00A910D0218C332400A991BB /* TransactionHistory.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00A910E0218C3C5A00A991BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		00AEE9D7217C55E000AD7348 /* Models */ = {
@@ -1580,6 +1639,7 @@
 				00F938862185ABE10075386D /* ReportTableViewCell.xib in Resources */,
 				007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */,
 				0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */,
+				00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */,
 				0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */,
 				0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */,
 				00AEE9F5217CACE500AD7348 /* CarDetailTitleTableViewCell.xib in Resources */,
@@ -1752,10 +1812,12 @@
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */,
+				00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */,
+				00A910E2218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift in Sources */,
 				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
 				0047B13F217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift in Sources */,
 				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
@@ -1780,6 +1842,7 @@
 				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
 				00874473218B217D007E8E13 /* StringExtension.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
+				00A910D7218C36C600A991BB /* CompletedPayoutViewController.swift in Sources */,
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
@@ -1808,6 +1871,7 @@
 				00F938882185B4A70075386D /* Report.swift in Sources */,
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
+				00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */,
 				00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */,
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				00C01DC02174F17800473AE6 /* Explore.swift in Sources */,
@@ -1824,6 +1888,7 @@
 				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
+				00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */,
 				00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */,
 				00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */,
 				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,
@@ -1831,6 +1896,7 @@
 				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
 				3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
+				00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
 				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
@@ -1859,8 +1925,10 @@
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				00A910DD218C3B1900A991BB /* StoryboardInitiable.swift in Sources */,
 				00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */,
 				007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */,
+				00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */,
 				0047B14B217CC57D00941D9C /* CarDetailMilesTableViewCell.swift in Sources */,
 				00F938852185ABE10075386D /* ReportTableViewCell.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
