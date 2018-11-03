@@ -9,9 +9,9 @@ PODS:
   - AWSCognitoIdentityProviderASF (1.0.1)
   - AWSCore (2.6.33)
   - Cosmos (17.0.0)
-  - Crashlytics (3.11.0):
-    - Fabric (~> 1.8.0)
-  - Fabric (1.8.0)
+  - Crashlytics (3.11.1):
+    - Fabric (~> 1.8.1)
+  - Fabric (1.8.2)
   - JTAppleCalendar (7.1.6)
   - Mixpanel-swift (2.5.4):
     - Mixpanel-swift/Complete (= 2.5.4)
@@ -73,14 +73,14 @@ SPEC CHECKSUMS:
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: ed83f7e36fb6c0211b04a439d8e564aa23bfe37d
   Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
-  Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
-  Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
+  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
   Mixpanel-swift: d0e7838607990bba137ed459cd72e3d2d1e7501c
   PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: 894f79a6111d67e2e8308819ca3719c14bd6d940
+PODFILE CHECKSUM: cfca6734fb38bcdeca8bba445607dbcad7993f91
 
 COCOAPODS: 1.5.3
