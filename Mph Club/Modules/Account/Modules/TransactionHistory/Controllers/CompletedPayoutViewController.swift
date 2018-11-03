@@ -16,10 +16,36 @@ final class CompletedPayoutViewController: UIViewController {
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            // Register table view cell
+            // Register Header View
+            registerHeaderTableView()
+            // Register Cell View
             registerTableViewCell()
         }
     }
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Mock Data
+    private let transactions = [Transaction(fullName: "Mike L.",
+                                            price: "$966.00",
+                                            carName: "Maserati Granturism",
+                                            year: "2016",
+                                            payoutStatus: .complete,
+                                            payoutAccount: "(******2329)"),
+                                Transaction(fullName: "Ciara S.",
+                                            price: "$1,345.00",
+                                            carName: "Maserati Granturism",
+                                            year: "2016",
+                                            payoutStatus: .complete,
+                                            payoutAccount: "(******2329)"),
+                                Transaction(fullName: "Ciara S.",
+                                            price: "$1,345.00",
+                                            carName: "Maserati Granturism",
+                                            year: "2016",
+                                            payoutStatus: .complete,
+                                            payoutAccount: "(******2329)")]
 }
 
 // =======================
@@ -44,26 +70,51 @@ private extension CompletedPayoutViewController {}
 // MARK: - Methods
 // ===============
 private extension CompletedPayoutViewController {
-    func registerTableViewCell() {}
+    func registerHeaderTableView() {
+        tableView.register(TransactionHistoryHeaderTableViewCell.self)
+    }
+    
+    func registerTableViewCell() {
+        tableView.register(TransactionHistoryTableViewCell.self)
+    }
 }
 
 // ==================
 // MARK: - Table View
 // ==================
 
-// MARK: Data Source
+// MARK: Data source
 extension CompletedPayoutViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 5
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: TransactionHistoryHeaderTableViewCell = tableView.dequeueReusableHeaderFooterView()
+        return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: TransactionHistoryTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.setContent(transactions[indexPath.row])
+        return cell
     }
 }
 
 // MARK: Delegate
-extension CompletedPayoutViewController: UITableViewDelegate {}
+extension CompletedPayoutViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 56
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
 
 // ===========================
 // MARK: - StoryboardInitiable

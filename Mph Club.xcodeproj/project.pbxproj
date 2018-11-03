@@ -16,6 +16,7 @@
 		001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D98F7217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib */; };
 		001D98FC217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */; };
 		001D98FD217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */; };
+		0028F33D218E288D0018AA6D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028F33C218E288D0018AA6D /* Transaction.swift */; };
 		0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037352E2174FE6800164AA7 /* InfoDictionary.swift */; };
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
@@ -81,6 +82,10 @@
 		00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
+		009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */; };
+		009C431A218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */; };
+		009C431D218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */; };
+		009C431E218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */; };
 		00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A910D0218C332400A991BB /* TransactionHistory.storyboard */; };
 		00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */; };
 		00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */; };
@@ -233,6 +238,7 @@
 		001D98F7217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailDescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailFeaturesCollectionViewCell.xib; sourceTree = "<group>"; };
+		0028F33C218E288D0018AA6D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		0037352E2174FE6800164AA7 /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -300,6 +306,10 @@
 		00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
+		009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		00A910D0218C332400A991BB /* TransactionHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionHistory.storyboard; sourceTree = "<group>"; };
 		00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
 		00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPayoutViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +481,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0028F33B218E28770018AA6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0028F33C218E288D0018AA6D /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0037353221750BB600164AA7 /* SearchLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,12 +971,24 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		009C4316218E133F00E1AC18 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */,
+				009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */,
+				009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */,
+				009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		00A910CD218C32D900A991BB /* TransactionHistory */ = {
 			isa = PBXGroup;
 			children = (
-				00A910E0218C3C5A00A991BB /* Extensions */,
 				00A910CF218C330100A991BB /* Views */,
 				00A910CE218C32F900A991BB /* Controllers */,
+				00A910E0218C3C5A00A991BB /* Extensions */,
+				0028F33B218E28770018AA6D /* Models */,
 			);
 			path = TransactionHistory;
 			sourceTree = "<group>";
@@ -978,6 +1008,7 @@
 			isa = PBXGroup;
 			children = (
 				00A910D0218C332400A991BB /* TransactionHistory.storyboard */,
+				009C4316218E133F00E1AC18 /* CustomCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1631,9 +1662,11 @@
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
 				00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */,
+				009C431A218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib in Resources */,
 				0047B156217CD2EE00941D9C /* CarDetailFeaturesTableViewCell.xib in Resources */,
 				3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */,
 				0047B148217CC13300941D9C /* CarDetailLocationTableViewCell.xib in Resources */,
+				009C431E218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib in Resources */,
 				00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */,
 				0047B15A217CDD3C00941D9C /* CarDetailRenterTableViewCell.xib in Resources */,
 				00F938862185ABE10075386D /* ReportTableViewCell.xib in Resources */,
@@ -1813,6 +1846,7 @@
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */,
 				00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */,
+				009C431D218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
@@ -1834,6 +1868,7 @@
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
+				009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */,
 				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */,
@@ -1930,6 +1965,7 @@
 				007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */,
 				00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */,
 				0047B14B217CC57D00941D9C /* CarDetailMilesTableViewCell.swift in Sources */,
+				0028F33D218E288D0018AA6D /* Transaction.swift in Sources */,
 				00F938852185ABE10075386D /* ReportTableViewCell.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,

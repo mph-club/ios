@@ -16,6 +16,7 @@ final class AccountViewController: UIViewController {
     private enum Segue: String {
         case showContactInfo
         case showProfilePhoto
+        case showTransactionHistory
         case showContactUs
     }
     
@@ -77,6 +78,12 @@ extension AccountViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         //
         UIApplication.shared.statusBarView?.backgroundColor = nil
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -175,6 +182,8 @@ extension AccountViewController: UITableViewDelegate {
             performSegue(withIdentifier: Segue.showContactInfo)
         case .profilePhoto:
             performSegue(withIdentifier: Segue.showProfilePhoto)
+        case .transactionHistory:
+            performSegue(withIdentifier: Segue.showTransactionHistory)
         case .contactSupport:
             performSegue(withIdentifier: Segue.showContactUs)
         default:
