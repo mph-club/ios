@@ -8,24 +8,22 @@
 
 import UIKit
 
-class NextButton: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
+final class NextButton: UIButton {
+    // ===============
+    // MARK: - Initial
+    // ===============
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        //
         setNextButton()
     }
-    
-    
-    private func setNextButton() {
-        self.backgroundColor = UIColor.lightGray
-    }
+}
 
+// ===============
+// MARK: - Methods
+// ===============
+private extension NextButton {
+    func setNextButton() {
+        self.backgroundColor = .lightGray
+    }
 }

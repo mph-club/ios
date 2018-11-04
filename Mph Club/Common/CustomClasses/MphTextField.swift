@@ -8,23 +8,31 @@
 
 import UIKit
 
-class MphTextField: UITextField {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
+final class MphTextField: UITextField {
+    // ===============
+    // MARK: - Initial
+    // ===============
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        //
         setBottomBorder()
     }
-    
-    
-    private func setBottomBorder() {
+}
+
+// ===============
+// MARK: - Methods
+// ===============
+
+// MARK: Public
+extension MphTextField {
+    func setBottomSingleBorder(color: CGColor) {
+        self.layer.shadowColor = color
+    }
+}
+
+// MARK: Private
+private extension MphTextField {
+    func setBottomBorder() {
         self.borderStyle = .none
         self.layer.backgroundColor = UIColor.white.cgColor
         
@@ -34,12 +42,4 @@ class MphTextField: UITextField {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
-    
-    
-    public func setBottomSingleBorder(color: CGColor) {
-        self.layer.shadowColor = color
-    }
-    
-
-
 }
