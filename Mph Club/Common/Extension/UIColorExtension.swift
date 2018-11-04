@@ -17,12 +17,13 @@ extension UIColor {
         "lightOrange": #colorLiteral(red: 1, green: 0.746743083, blue: 0.1352950335, alpha: 1),               // #FDBD39
         "peach": #colorLiteral(red: 1, green: 0.4046171308, blue: 0.0813671127, alpha: 1),                     // #EE6723
         "red": #colorLiteral(red: 1, green: 0.007843137255, blue: 0.1176470588, alpha: 1),                       // #FF021E
-        "gray": #colorLiteral(red: 0.6054732203, green: 0.6055628657, blue: 0.6054536104, alpha: 1)                       // #999999
+        "gray": #colorLiteral(red: 0.6054732203, green: 0.6055628657, blue: 0.6054536104, alpha: 1),                      // #999999
+        "green": #colorLiteral(red: 0, green: 0.8588126898, blue: 0.3436958194, alpha: 1)                      // #31DA62
     ]
     
     /// Enum
     enum PaletteName: String {
-        case yellow, lightOrange, peach, red, gray
+        case yellow, lightOrange, peach, red, gray, green
         
         var color: UIColor {
             guard let color = UIColor.Palette[self.rawValue] else {

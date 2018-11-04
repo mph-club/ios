@@ -17,6 +17,7 @@
 		001D98FC217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */; };
 		001D98FD217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */; };
 		0028F33D218E288D0018AA6D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028F33C218E288D0018AA6D /* Transaction.swift */; };
+		0028F33F218E38840018AA6D /* CustomSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028F33E218E38830018AA6D /* CustomSegmentView.swift */; };
 		0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037352E2174FE6800164AA7 /* InfoDictionary.swift */; };
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
@@ -239,6 +240,7 @@
 		001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailFeaturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		0028F33C218E288D0018AA6D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		0028F33E218E38830018AA6D /* CustomSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentView.swift; sourceTree = "<group>"; };
 		0037352E2174FE6800164AA7 /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -1392,6 +1394,7 @@
 				353D3BF0210A12C000CF748C /* Constant.swift */,
 				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
 				0018478B2176873B000B0ED3 /* ParallaxTableView.swift */,
+				0028F33E218E38830018AA6D /* CustomSegmentView.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -1889,6 +1892,7 @@
 				00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */,
+				0028F33F218E38840018AA6D /* CustomSegmentView.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
 				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,

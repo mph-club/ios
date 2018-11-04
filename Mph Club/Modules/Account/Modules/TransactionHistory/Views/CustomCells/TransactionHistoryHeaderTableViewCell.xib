@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-Xa-ulI">
-                        <rect key="frame" x="16" y="26.5" width="102" height="29"/>
+                        <rect key="frame" x="16" y="18.5" width="102" height="29"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="7KA-Xa-ulI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Qck-ie-veR"/>
-                    <constraint firstAttribute="bottom" secondItem="7KA-Xa-ulI" secondAttribute="bottom" id="ota-7Z-tut"/>
+                    <constraint firstAttribute="bottom" secondItem="7KA-Xa-ulI" secondAttribute="bottom" constant="8" id="ota-7Z-tut"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
