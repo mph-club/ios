@@ -49,6 +49,7 @@
 		0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAA217274F70041B687 /* UIViewExtension.swift */; };
 		0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */; };
 		0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */; };
+		00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00639107218F4F9000E25152 /* KeyboardManager.swift */; };
 		0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064CC71216F94F2005FCC70 /* Explore.storyboard */; };
 		0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC75216F967D005FCC70 /* NibLoadable.swift */; };
 		0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC76216F967E005FCC70 /* ReusableView.swift */; };
@@ -275,6 +276,7 @@
 		0062EDAA217274F70041B687 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
+		00639107218F4F9000E25152 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		0064CC71216F94F2005FCC70 /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		0064CC75216F967D005FCC70 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		0064CC76216F967E005FCC70 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -683,10 +685,35 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		00639105218F4F4D00E25152 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00639106218F4F5B00E25152 /* KeyboardManager */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		00639106218F4F5B00E25152 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				00639109218F58EC00E25152 /* Controller */,
+			);
+			path = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		00639109218F58EC00E25152 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00639107218F4F9000E25152 /* KeyboardManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0064CC6A216F905D005FCC70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
+				00639105218F4F4D00E25152 /* Modules */,
 				00C01DCF2174FBF400473AE6 /* Constants */,
 				00C01DCE2174FB7300473AE6 /* Helpers */,
 				0064CC74216F9668005FCC70 /* Protocol */,
@@ -1912,6 +1939,7 @@
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
+				00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */,
 				00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,

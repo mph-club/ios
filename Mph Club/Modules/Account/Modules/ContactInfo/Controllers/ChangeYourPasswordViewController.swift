@@ -8,4 +8,21 @@
 
 import UIKit
 
-final class ChangeYourPasswordViewController: UIViewController {}
+final class ChangeYourPasswordViewController: UIViewController {
+    // ===============
+    // MARK: - Outlets
+    // ===============
+}
+
+// =======================
+// MARK: - View Controller
+// =======================
+
+// MARK: Life Cycle
+extension ChangeYourPasswordViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+}

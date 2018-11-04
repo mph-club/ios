@@ -288,7 +288,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXB-qu-imI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="CXB-qu-imI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agH-4a-qjd">
@@ -466,6 +466,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCe-YS-Z02" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6bP-Rt-nz7" customClass="KeyboardManager" customModule="Mph_Club" customModuleProvider="target">
+                    <connections>
+                        <outlet property="scrollView" destination="CXB-qu-imI" id="cR9-Jl-wVJ"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1573.5999999999999" y="1852.6236881559221"/>
         </scene>
