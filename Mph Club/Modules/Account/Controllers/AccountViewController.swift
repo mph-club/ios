@@ -76,9 +76,7 @@ extension AccountViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // hide navigation bar
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {

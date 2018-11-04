@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184785217667F5000B0ED3 /* UIApplicationExtension.swift */; };
 		0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */; };
 		0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */; };
 		0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478B2176873B000B0ED3 /* ParallaxTableView.swift */; };
@@ -232,7 +231,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00184785217667F5000B0ED3 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
 		0018478B2176873B000B0ED3 /* ParallaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxTableView.swift; sourceTree = "<group>"; };
@@ -772,7 +770,6 @@
 				00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */,
 				0062EDAA217274F70041B687 /* UIViewExtension.swift */,
 				003735352175189400164AA7 /* DictionaryExtension.swift */,
-				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
 				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
 				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
 				00874472218B217D007E8E13 /* StringExtension.swift */,
@@ -1942,7 +1939,6 @@
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */,
-				00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */,
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				00C01DC02174F17800473AE6 /* Explore.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,

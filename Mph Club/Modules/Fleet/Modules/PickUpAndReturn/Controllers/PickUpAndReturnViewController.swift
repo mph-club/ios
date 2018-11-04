@@ -60,8 +60,6 @@ extension PickUpAndReturnViewController {
         super.viewWillAppear(animated)
         //
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = .white
     }
 }
 

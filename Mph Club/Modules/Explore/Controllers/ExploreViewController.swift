@@ -96,9 +96,7 @@ extension ExploreViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
+        navigationController?.setNavigationBarHidden(true, animated: false)
         //
         customNavigationBar.alpha = currentAlpha
     }

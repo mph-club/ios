@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-Xg-un5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="tjc-kW-jxO">
@@ -35,7 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hlY-Xg-un5" firstAttribute="top" secondItem="QM3-XZ-ktP" secondAttribute="top" id="Qp1-09-Xw3"/>
+                            <constraint firstItem="hlY-Xg-un5" firstAttribute="top" secondItem="268-JG-Rc4" secondAttribute="top" id="Qp1-09-Xw3"/>
                             <constraint firstAttribute="bottom" secondItem="hlY-Xg-un5" secondAttribute="bottom" id="eth-uu-F6V"/>
                             <constraint firstItem="268-JG-Rc4" firstAttribute="trailing" secondItem="hlY-Xg-un5" secondAttribute="trailing" id="l4f-Hj-8Lb"/>
                             <constraint firstItem="hlY-Xg-un5" firstAttribute="leading" secondItem="268-JG-Rc4" secondAttribute="leading" id="mOQ-nj-HPH"/>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="693.60000000000002" y="1254.4227886056972"/>
         </scene>
-        <!--Change your email-->
+        <!--Change Your Email View Controller-->
         <scene sceneID="wMR-tY-5Qh">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="6lJ-uH-rgZ" customClass="ChangeYourEmailViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,8 +71,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-oq-yTp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change your email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-2G-FWy">
+                                                <rect key="frame" x="16" y="8" width="343" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="3E5-eY-wZP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A confirmation link will be sent once you update your email. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liD-jn-fbG">
-                                                <rect key="frame" x="16" y="32" width="343" height="60"/>
+                                                <rect key="frame" x="16" y="88" width="343" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="XLO-hC-4Aa"/>
                                                 </constraints>
@@ -81,7 +90,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-V9-kk8">
-                                                <rect key="frame" x="16" y="124" width="35" height="16"/>
+                                                <rect key="frame" x="16" y="180" width="35" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="C1r-Bj-qoV"/>
                                                 </constraints>
@@ -90,7 +99,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-JR-jzr">
-                                                <rect key="frame" x="16" y="158" width="343" height="40"/>
+                                                <rect key="frame" x="16" y="214" width="343" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="TJ5-cB-Neh"/>
                                                 </constraints>
@@ -99,7 +108,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddi-yN-8Xe" userLabel="Seperator">
-                                                <rect key="frame" x="16" y="206" width="343" height="1"/>
+                                                <rect key="frame" x="16" y="262" width="343" height="1"/>
                                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="8cR-2s-ZkS"/>
@@ -108,13 +117,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="liD-jn-fbG" firstAttribute="top" secondItem="Nel-oq-yTp" secondAttribute="top" constant="32" id="AGh-ge-oxg"/>
+                                            <constraint firstItem="liD-jn-fbG" firstAttribute="top" secondItem="Auz-2G-FWy" secondAttribute="bottom" constant="32" id="3DE-aO-8gS"/>
+                                            <constraint firstItem="Auz-2G-FWy" firstAttribute="leading" secondItem="Nel-oq-yTp" secondAttribute="leading" constant="16" id="927-9J-FMS"/>
                                             <constraint firstAttribute="trailing" secondItem="liD-jn-fbG" secondAttribute="trailing" constant="16" id="B7g-tk-wy2"/>
                                             <constraint firstItem="Ddi-yN-8Xe" firstAttribute="leading" secondItem="fuY-JR-jzr" secondAttribute="leading" id="CZJ-O7-ckP"/>
                                             <constraint firstAttribute="trailing" secondItem="fuY-JR-jzr" secondAttribute="trailing" constant="16" id="P6f-qt-gD3"/>
                                             <constraint firstItem="liD-jn-fbG" firstAttribute="leading" secondItem="Nel-oq-yTp" secondAttribute="leading" constant="16" id="UYG-iu-7fv"/>
                                             <constraint firstItem="fuY-JR-jzr" firstAttribute="top" secondItem="tZM-V9-kk8" secondAttribute="bottom" constant="18" id="ape-FU-g20"/>
+                                            <constraint firstAttribute="trailing" secondItem="Auz-2G-FWy" secondAttribute="trailing" constant="16" id="dVB-Sk-pxJ"/>
                                             <constraint firstItem="tZM-V9-kk8" firstAttribute="leading" secondItem="Nel-oq-yTp" secondAttribute="leading" constant="16" id="mfL-nm-oDd"/>
+                                            <constraint firstItem="Auz-2G-FWy" firstAttribute="top" secondItem="Nel-oq-yTp" secondAttribute="top" constant="8" id="sdP-wJ-9fw"/>
                                             <constraint firstItem="fuY-JR-jzr" firstAttribute="leading" secondItem="tZM-V9-kk8" secondAttribute="leading" id="t60-X6-Da3"/>
                                             <constraint firstItem="Ddi-yN-8Xe" firstAttribute="trailing" secondItem="fuY-JR-jzr" secondAttribute="trailing" id="yxx-DN-NmA"/>
                                             <constraint firstItem="tZM-V9-kk8" firstAttribute="top" secondItem="liD-jn-fbG" secondAttribute="bottom" constant="32" id="zJX-kg-fwW"/>
@@ -141,7 +153,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sXC-AL-53W"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Change your email" id="Tap-1V-R6c">
+                    <navigationItem key="navigationItem" id="Tap-1V-R6c">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="stB-xF-0JC">
                             <color key="tintColor" red="0.027450980390000001" green="0.49019607840000001" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         </barButtonItem>
@@ -266,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSu-L0-2qJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="1173"/>
+            <point key="canvasLocation" x="1573.5999999999999" y="1172.5637181409297"/>
         </scene>
         <!--Change Your Password View Controller-->
         <scene sceneID="jjC-lv-1s5">

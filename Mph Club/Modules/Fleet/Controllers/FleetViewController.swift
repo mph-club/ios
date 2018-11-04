@@ -50,13 +50,11 @@ extension FleetViewController {
         //
         createFackData()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // Set navigation bar style
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
-        // Set status bar view color to white
-        UIApplication.shared.statusBarView?.backgroundColor = .white
     }
 }
 

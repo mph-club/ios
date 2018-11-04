@@ -102,8 +102,6 @@ extension CarDetailViewController {
         //
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparentWithWhiteTint
         //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
-        //
         customNavigationBar.alpha = currentAlpha
     }
     

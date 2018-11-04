@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tNJ-Kw-sfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tNJ-Kw-sfh">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +30,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4c-UV-tyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-260"/>
+            <point key="canvasLocation" x="-275" y="-325"/>
         </scene>
         <!--Explore-->
         <scene sceneID="VHM-qZ-u7L">
@@ -40,7 +40,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1T-GV-MSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="-783"/>
+            <point key="canvasLocation" x="445" y="-889"/>
         </scene>
         <!--LISTINGS-->
         <scene sceneID="XVI-Ny-jGR">
@@ -209,7 +209,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3e-2f-UfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="29"/>
+            <point key="canvasLocation" x="449" y="118"/>
         </scene>
         <!--Trips-->
         <scene sceneID="Voq-sk-vFK">
@@ -219,7 +219,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h23-9z-ETf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="-709"/>
+            <point key="canvasLocation" x="434" y="-751"/>
         </scene>
         <!--LISTINGS-->
         <scene sceneID="pb7-w0-PpY">
@@ -260,7 +260,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="signinController" storyboardName="Login" referencedIdentifier="signinController" id="vNp-fo-Dhx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayf-Il-dcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="-783"/>
+            <point key="canvasLocation" x="-296" y="-805"/>
         </scene>
         <!--slide3ViewController-->
         <scene sceneID="UIp-Hd-ZZZ">
@@ -268,7 +268,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="slide3ViewController" storyboardName="Login" referencedIdentifier="slide3ViewController" id="mnC-mr-6FX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUW-DE-JJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-276" y="-673"/>
+            <point key="canvasLocation" x="-275" y="-695"/>
         </scene>
         <!--slide2ViewController-->
         <scene sceneID="ayI-Rg-BXs">
@@ -276,7 +276,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="slide2ViewController" storyboardName="Login" referencedIdentifier="slide2ViewController" id="Le9-io-n04" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6o-oj-5V1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="-709"/>
+            <point key="canvasLocation" x="-275" y="-731"/>
         </scene>
         <!--slide1ViewController-->
         <scene sceneID="fEK-xn-wwE">
@@ -284,7 +284,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="slide1ViewController" storyboardName="Login" referencedIdentifier="slide1ViewController" id="ynw-sJ-LHN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpO-bV-QwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-741"/>
+            <point key="canvasLocation" x="-274" y="-763"/>
         </scene>
     </scenes>
     <resources>

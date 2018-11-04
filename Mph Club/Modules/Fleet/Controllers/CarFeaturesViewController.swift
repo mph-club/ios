@@ -51,8 +51,6 @@ extension CarFeaturesViewController {
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
         //
         navigationController?.navigationBar.prefersLargeTitles = true
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = .white
     }
     
     override func viewWillDisappear(_ animated: Bool) {

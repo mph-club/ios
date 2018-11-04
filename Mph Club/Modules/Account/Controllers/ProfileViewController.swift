@@ -81,8 +81,6 @@ extension ProfileViewController {
         super.viewWillAppear(animated)
         //
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparentWith(alpha: 0.0)
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -141,7 +139,7 @@ extension ProfileViewController: UIScrollViewDelegate {
         // change navigation bar view color
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparentWith(alpha: currentAlpha)
         // change status bar view color
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
+//        customNavigationBar.backgroundColor = UIColor.black.withAlphaComponent(currentAlpha)
     }
 }
 
