@@ -45,6 +45,8 @@
 		0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0047B167217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib */; };
 		0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047B16A217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift */; };
 		0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0047B16B217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib */; };
+		004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004E04AD218F26DF004B8BC3 /* FAQ.storyboard */; };
+		004E04B0218F27FA004B8BC3 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E04AF218F27FA004B8BC3 /* FAQViewController.swift */; };
 		0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAA217274F70041B687 /* UIViewExtension.swift */; };
 		0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */; };
 		0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */; };
@@ -270,6 +272,8 @@
 		0047B167217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailOwnedTitleTableViewCell.xib; sourceTree = "<group>"; };
 		0047B16A217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailOwnedItemTableViewCell.swift; sourceTree = "<group>"; };
 		0047B16B217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailOwnedItemTableViewCell.xib; sourceTree = "<group>"; };
+		004E04AD218F26DF004B8BC3 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		004E04AF218F27FA004B8BC3 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		0062EDAA217274F70041B687 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
@@ -656,6 +660,31 @@
 			path = OwnedBy;
 			sourceTree = "<group>";
 		};
+		004E04AA218F2681004B8BC3 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AC218F26C2004B8BC3 /* Views */,
+				004E04AB218F26B8004B8BC3 /* Controllers */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		004E04AB218F26B8004B8BC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AF218F27FA004B8BC3 /* FAQViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		004E04AC218F26C2004B8BC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AD218F26DF004B8BC3 /* FAQ.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0064CC6A216F905D005FCC70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +933,7 @@
 				0087446B218B08E3007E8E13 /* ContactInfo */,
 				0087447A218B391C007E8E13 /* ProfilePhoto */,
 				00A910CD218C32D900A991BB /* TransactionHistory */,
+				004E04AA218F2681004B8BC3 /* FAQ */,
 				007F18DD218B59A800B48470 /* ContactUs */,
 			);
 			path = Modules;
@@ -1648,6 +1678,7 @@
 				00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
+				004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */,
 				00AEE9E6217C691C00AD7348 /* FleetHeaderTableViewCell.xib in Resources */,
 				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
@@ -1945,6 +1976,7 @@
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
+				004E04B0218F27FA004B8BC3 /* FAQViewController.swift in Sources */,
 				00AEE9ED217C6BDD00AD7348 /* Vehicle.swift in Sources */,
 				00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */,
 				001D98F8217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.swift in Sources */,

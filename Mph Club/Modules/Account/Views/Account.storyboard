@@ -139,6 +139,7 @@
                         <segue destination="YM3-YH-E4W" kind="show" identifier="showProfilePhoto" id="qBc-ph-ICU"/>
                         <segue destination="Gsm-j7-gBq" kind="show" identifier="showContactUs" id="1iG-u5-AJQ"/>
                         <segue destination="UWQ-r5-PdK" kind="show" identifier="showTransactionHistory" id="R8J-Mj-Eyv"/>
+                        <segue destination="Z9l-zv-jI1" kind="show" identifier="showFAQ" id="OIR-um-Qhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-gE-VQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,13 +170,21 @@
             </objects>
             <point key="canvasLocation" x="1475" y="855"/>
         </scene>
+        <!--FAQ-->
+        <scene sceneID="i3E-KF-fgK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FAQ" id="Z9l-zv-jI1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhf-IO-qum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="855"/>
+        </scene>
         <!--ContactUs-->
         <scene sceneID="Zr5-4b-37H">
             <objects>
                 <viewControllerPlaceholder storyboardName="ContactUs" id="Gsm-j7-gBq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-Cx-e4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="855"/>
+            <point key="canvasLocation" x="1974" y="855"/>
         </scene>
         <!--Mike L.-->
         <scene sceneID="WLQ-oE-Hnc">

@@ -17,6 +17,7 @@ final class AccountViewController: UIViewController {
         case showContactInfo
         case showProfilePhoto
         case showTransactionHistory
+        case showFAQ
         case showContactUs
     }
     
@@ -182,12 +183,14 @@ extension AccountViewController: UITableViewDelegate {
             performSegue(withIdentifier: Segue.showContactInfo)
         case .profilePhoto:
             performSegue(withIdentifier: Segue.showProfilePhoto)
+        case .paymentInfo:
+            break
         case .transactionHistory:
             performSegue(withIdentifier: Segue.showTransactionHistory)
+        case .faq:
+            performSegue(withIdentifier: Segue.showFAQ)
         case .contactSupport:
             performSegue(withIdentifier: Segue.showContactUs)
-        default:
-            break
         }
     }
 }
