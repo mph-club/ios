@@ -35,7 +35,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIj-Nz-wlT">
                                 <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <connections>
-                                    <segue destination="Gqe-Ci-rK4" kind="embed" id="j9G-aH-kyX"/>
+                                    <segue destination="Gqe-Ci-rK4" kind="embed" identifier="embedPageView" id="j9G-aH-kyX"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -56,6 +56,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Transaction history" id="0x1-Hd-pHX"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="segmentView" destination="Fp8-NA-xgR" id="BpZ-za-XyB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRI-Qv-BDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

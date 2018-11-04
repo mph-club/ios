@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomSegmentViewDelegate: class {
+    func customSegmentView(_ customSegmentView: CustomSegmentView, didSelectItem index: Int)
+}
+
 @IBDesignable
 final class CustomSegmentView: UIControl {
     // ==================
@@ -29,7 +33,7 @@ final class CustomSegmentView: UIControl {
     
     // MARK: Private
     private var labels: [UILabel] = []
-    private var thumbView: UIView = UIView()
+    private var selectedLineView: UIView = UIView()
     
     // MARK: IBInspectable
     @IBInspectable var textColor: UIColor = .darkGray {
@@ -43,6 +47,9 @@ final class CustomSegmentView: UIControl {
             setColors()
         }
     }
+    
+    // MARK: Delegate
+    weak var delegate: CustomSegmentViewDelegate?
     
     // ===============
     // MARK: - Initial
@@ -60,6 +67,11 @@ final class CustomSegmentView: UIControl {
     }
 }
 
+// =================
+// MARK: - UIControl
+// =================
+
+// MARK: Life Cycle
 extension CustomSegmentView {
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -69,12 +81,17 @@ extension CustomSegmentView {
                                  width: bounds.width / CGFloat(items.count),
                                  height: 2)
         //
-        thumbView.frame = selectFrame
-        thumbView.backgroundColor = selectedTextColor
+        selectedLineView.frame = selectFrame
+        selectedLineView.backgroundColor = selectedTextColor
         //
         displayNewSelectedIndex()
     }
-    
+}
+
+// =====================
+// MARK: - Override Func
+// =====================
+extension CustomSegmentView {
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let location = touch.location(in: self)
         
@@ -93,6 +110,9 @@ extension CustomSegmentView {
     }
 }
 
+// ===============
+// MARK: - Methods
+// ===============
 private extension CustomSegmentView {
     func setColors() {
         labels.forEach { $0.textColor = textColor }
@@ -101,7 +121,7 @@ private extension CustomSegmentView {
             labels[selectedIndex].textColor = selectedTextColor
         }
         //
-        thumbView.backgroundColor = selectedTextColor
+        selectedLineView.backgroundColor = selectedTextColor
     }
     
     func setupLabels() {
@@ -129,7 +149,7 @@ private extension CustomSegmentView {
         //
         addIndividualItemConstraints(items: labels, mainView: self, padding: 8)
         //
-        insertSubview(thumbView, at: 0)
+        insertSubview(selectedLineView, at: 0)
     }
     
     func addIndividualItemConstraints(items: [UIView], mainView: UIView, padding: CGFloat) {
@@ -213,14 +233,16 @@ private extension CustomSegmentView {
         let label = labels[selectedIndex]
         label.textColor = selectedTextColor
         //
+        delegate?.customSegmentView(self, didSelectItem: selectedIndex)
+        //
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.9, options: [.curveEaseOut], animations: {
             
             let thumbFrame = CGRect(x: label.frame.minX,
                                     y: label.frame.maxY - 2,
                                     width: label.frame.width,
                                     height: 2)
-
-            self.thumbView.frame = thumbFrame
+            
+            self.selectedLineView.frame = thumbFrame
             
         }, completion: nil)
     }

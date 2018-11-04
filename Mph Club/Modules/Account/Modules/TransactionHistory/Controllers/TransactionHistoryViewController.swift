@@ -8,7 +8,32 @@
 
 import UIKit
 
-final class TransactionHistoryViewController: UIViewController {}
+final class TransactionHistoryViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case embedPageView
+    }
+    
+    // ===============
+    // MARK: - Outlets
+    // ===============
+    
+    // MARK: Segment View
+    @IBOutlet private weak var segmentView: CustomSegmentView! {
+        didSet {
+            segmentView.delegate = self
+        }
+    }
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Private
+    private weak var pageViewController: TransactionHistoryPageViewController?
+}
 
 // =======================
 // MARK: - View Controller
@@ -20,5 +45,28 @@ extension TransactionHistoryViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+}
+
+// MARK: Navigatio
+extension TransactionHistoryViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = Segue(rawValue: segue.identifier ?? "") else { return }
+        //
+        switch identifier {
+        case .embedPageView:
+            pageViewController = segue.destination as? TransactionHistoryPageViewController
+        }
+    }
+}
+
+// ====================================
+// MARK: - Custom Segment View Delegate
+// ====================================
+extension TransactionHistoryViewController: CustomSegmentViewDelegate {
+    func customSegmentView(_ customSegmentView: CustomSegmentView, didSelectItem index: Int) {
+        guard let pageViewController = self.pageViewController else { return }
+        //
+        pageViewController.currentIndex = index
     }
 }
