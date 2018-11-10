@@ -115,11 +115,16 @@ class LicenseDetailViewController: UIViewController, UIScrollViewDelegate {
     
     func checkFields() {
         if self.stateTextField.text == "" || self.licenseNumberTextField.text == "" || self.firstNameTextField.text == "" {
-            self.present(fireAlert(title: "Missing Field", message: "All fields must be entered."), animated: true)
+            // pop up not allowed
+            let alertView = fireAlert(title: "Missing Field", message: "All fields must be entered.")
+            //
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            //
+            alertView.addActions([okAction])
+            //
+            present(alertView, animated: true, completion: nil)
         } else if self.firstNameTextField.text == "Billy" {
             // Action sheet
-            
-            
             let fireAction = fireActionSheet(title: "You entered a name that doesn’t match the name on your mph profile.", message: "mph does not allow setting up an account on behalf of another person. To add another driver to your trip, just have that person sign up and get approved to drive before the trip starts.\n Are you  sure that your driver’s license information is correct?")
                 
             fireAction.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in

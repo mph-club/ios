@@ -12,14 +12,17 @@ target 'Mph Club' do
   pod 'AWSCognito', '~> 2.6.28'
   
   pod 'UICKeyChainStore', '~> 2.0.6'
-  pod 'Mixpanel-swift'
   
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Mixpanel-swift'
+  
   
   pod 'SwiftLint'
   pod 'PromiseKit/CorePromise', '~> 6.0'
   pod 'Alamofire', '~> 4.7'
+  pod 'PromiseKit', '~> 6.0'
+  pod 'PromiseKit/Alamofire', '~> 6.0'
   
   pod 'Cosmos', '~> 17.0'
   pod 'JTAppleCalendar', '~> 7.0'

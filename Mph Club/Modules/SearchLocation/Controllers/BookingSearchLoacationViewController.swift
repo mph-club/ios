@@ -140,7 +140,13 @@ extension BookingSearchLoacationViewController: UITableViewDelegate {
             dropPinZoomIn(placemark, locationName: locationName)
         } else {
             // pop up not allowed
-            self.present(fireAlert(title: "mph club message", message: "Sorry, currently only servicing FL"), animated: true)
+            let alertView = fireAlert(title: "mph club message", message: "Sorry, currently only servicing FL")
+            //
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            //
+            alertView.addActions([okAction])
+            //
+            present(alertView, animated: true, completion: nil)
         }
     }
 }

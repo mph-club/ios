@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184785217667F5000B0ED3 /* UIApplicationExtension.swift */; };
 		0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */; };
 		0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */; };
 		0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0018478B2176873B000B0ED3 /* ParallaxTableView.swift */; };
@@ -16,10 +15,15 @@
 		001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D98F7217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib */; };
 		001D98FC217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */; };
 		001D98FD217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */; };
+		0028F33D218E288D0018AA6D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028F33C218E288D0018AA6D /* Transaction.swift */; };
+		0028F33F218E38840018AA6D /* CustomSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028F33E218E38830018AA6D /* CustomSegmentView.swift */; };
 		0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037352E2174FE6800164AA7 /* InfoDictionary.swift */; };
 		003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735302175036C00164AA7 /* Endpoints+Explore.swift */; };
 		003735362175189400164AA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735352175189400164AA7 /* DictionaryExtension.swift */; };
 		003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003735372175240A00164AA7 /* CustomNavigationBar.swift */; };
+		004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004095FE218775890065660D /* DeliveryLocationViewController.swift */; };
+		00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00409602218779D80065660D /* CurrentLocationTableViewCell.swift */; };
+		00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00409603218779D80065660D /* CurrentLocationTableViewCell.xib */; };
 		00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 00435674216D1CC800424A5C /* upload-dsym.sh */; };
 		00435678216D1CCA00424A5C /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00435675216D1CC900424A5C /* libTestFairy.a */; };
 		0047B13F217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047B13D217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift */; };
@@ -40,9 +44,12 @@
 		0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0047B167217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib */; };
 		0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047B16A217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift */; };
 		0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0047B16B217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib */; };
+		004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004E04AD218F26DF004B8BC3 /* FAQ.storyboard */; };
+		004E04B0218F27FA004B8BC3 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E04AF218F27FA004B8BC3 /* FAQViewController.swift */; };
 		0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAA217274F70041B687 /* UIViewExtension.swift */; };
 		0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */; };
 		0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */; };
+		00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00639107218F4F9000E25152 /* KeyboardManager.swift */; };
 		0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064CC71216F94F2005FCC70 /* Explore.storyboard */; };
 		0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC75216F967D005FCC70 /* NibLoadable.swift */; };
 		0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064CC76216F967E005FCC70 /* ReusableView.swift */; };
@@ -60,8 +67,37 @@
 		007508F721861B1600C13F4A /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */; };
 		007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */; };
 		007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */; };
+		007F18E2218B59D600B48470 /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007F18E1218B59D600B48470 /* ContactUs.storyboard */; };
+		007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F18E3218B59F000B48470 /* ContactUsViewController.swift */; };
+		007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */; };
+		00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */; };
+		00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */; };
+		00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */; };
+		00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874468218AFA99007E8E13 /* ContactInfo.swift */; };
+		0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087446E218B0946007E8E13 /* ContactInfo.storyboard */; };
+		00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */; };
+		00874473218B217D007E8E13 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874472218B217D007E8E13 /* StringExtension.swift */; };
+		00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */; };
+		00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */; };
+		00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */; };
+		0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */; };
+		00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */; };
+		00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */; };
 		0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */; };
 		0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */; };
+		009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */; };
+		009C431A218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */; };
+		009C431D218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */; };
+		009C431E218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */; };
+		00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A910D0218C332400A991BB /* TransactionHistory.storyboard */; };
+		00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */; };
+		00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */; };
+		00A910D7218C36C600A991BB /* CompletedPayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */; };
+		00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */; };
+		00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */; };
+		00A910DD218C3B1900A991BB /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */; };
+		00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */; };
+		00A910E2218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */; };
 		00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9D9217C562C00AD7348 /* BookingLocation.swift */; };
 		00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */; };
 		00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE9DF217C590100AD7348 /* Fleet.storyboard */; };
@@ -81,6 +117,11 @@
 		00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DD02174FC0E00473AE6 /* Endpoints.swift */; };
 		00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */; };
 		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
+		00D642C12188CA1B0015DAD7 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C02188CA1B0015DAD7 /* Account.storyboard */; };
+		00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D642C52188CFB30015DAD7 /* TripsViewController.swift */; };
+		00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C72188D0740015DAD7 /* Trips.storyboard */; };
+		00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */; };
+		00D642CD2188F0510015DAD7 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */; };
 		00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1522181FCC6003BE03B /* CalendarViewController.swift */; };
 		00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A1542181FCE2003BE03B /* Calendar.storyboard */; };
 		00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */; };
@@ -91,7 +132,7 @@
 		00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */; };
 		00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */; };
 		00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */; };
-		00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */; };
+		00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* ProfileViewController.swift */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -150,12 +191,12 @@
 		3591B8D220DAC06D00BA0CF9 /* Mph_ClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8D120DAC06D00BA0CF9 /* Mph_ClubTests.swift */; };
 		3591B8DD20DAC06D00BA0CF9 /* Mph_ClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8DC20DAC06D00BA0CF9 /* Mph_ClubUITests.swift */; };
 		3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E02120EBB8E100E595EE /* MphTextField.swift */; };
-		3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3598E02420EBBADF00E595EE /* TabView.storyboard */; };
+		3598E02520EBBADF00E595EE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3598E02420EBBADF00E595EE /* MainTabBar.storyboard */; };
 		35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */; };
 		35D63911215009A900B912AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63910215009A900B912AA /* SignInViewController.swift */; };
 		35D63914215009F800B912AA /* MfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63913215009F800B912AA /* MfaViewController.swift */; };
 		35D6391721502D1F00B912AA /* ConfirmationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */; };
-		35D639262151495400B912AA /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D639252151495400B912AA /* ProfileVC.swift */; };
+		35D639262151495400B912AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D639252151495400B912AA /* AccountViewController.swift */; };
 		35D6392B21528F5A00B912AA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */; };
 		35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */; };
 		35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30120ED0EC60083CA93 /* AddressViewController.swift */; };
@@ -191,7 +232,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00184785217667F5000B0ED3 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
 		0018478B2176873B000B0ED3 /* ParallaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxTableView.swift; sourceTree = "<group>"; };
@@ -200,10 +240,15 @@
 		001D98F7217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailDescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		001D98FA217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		001D98FB217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailFeaturesCollectionViewCell.xib; sourceTree = "<group>"; };
+		0028F33C218E288D0018AA6D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		0028F33E218E38830018AA6D /* CustomSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentView.swift; sourceTree = "<group>"; };
 		0037352E2174FE6800164AA7 /* InfoDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionary.swift; sourceTree = "<group>"; };
 		003735302175036C00164AA7 /* Endpoints+Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoints+Explore.swift"; sourceTree = "<group>"; };
 		003735352175189400164AA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		003735372175240A00164AA7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		004095FE218775890065660D /* DeliveryLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryLocationViewController.swift; sourceTree = "<group>"; };
+		00409602218779D80065660D /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
+		00409603218779D80065660D /* CurrentLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocationTableViewCell.xib; sourceTree = "<group>"; };
 		00435674216D1CC800424A5C /* upload-dsym.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-dsym.sh"; sourceTree = "<group>"; };
 		00435675216D1CC900424A5C /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
 		00435676216D1CCA00424A5C /* TestFairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
@@ -226,9 +271,12 @@
 		0047B167217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailOwnedTitleTableViewCell.xib; sourceTree = "<group>"; };
 		0047B16A217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailOwnedItemTableViewCell.swift; sourceTree = "<group>"; };
 		0047B16B217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailOwnedItemTableViewCell.xib; sourceTree = "<group>"; };
+		004E04AD218F26DF004B8BC3 /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		004E04AF218F27FA004B8BC3 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		0062EDAA217274F70041B687 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0062EDAC21727D030041B687 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		0062EDAD21727D030041B687 /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
+		00639107218F4F9000E25152 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		0064CC71216F94F2005FCC70 /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		0064CC75216F967D005FCC70 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		0064CC76216F967E005FCC70 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -246,8 +294,37 @@
 		007508F521861B1600C13F4A /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifiedInfoTableViewCell.xib; sourceTree = "<group>"; };
+		007F18E1218B59D600B48470 /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
+		007F18E3218B59F000B48470 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksContactUsViewController.swift; sourceTree = "<group>"; };
+		0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
+		00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
+		00874468218AFA99007E8E13 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		0087446E218B0946007E8E13 /* ContactInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactInfo.storyboard; sourceTree = "<group>"; };
+		00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourEmailViewController.swift; sourceTree = "<group>"; };
+		00874472218B217D007E8E13 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChnageYourPhoneViewController.swift; sourceTree = "<group>"; };
+		00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeYourPasswordViewController.swift; sourceTree = "<group>"; };
+		0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePhoto.storyboard; sourceTree = "<group>"; };
+		0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		0098BD4D217B99FC009E3984 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
+		009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		00A910D0218C332400A991BB /* TransactionHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionHistory.storyboard; sourceTree = "<group>"; };
+		00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
+		00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPayoutViewController.swift; sourceTree = "<group>"; };
+		00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPayoutViewController.swift; sourceTree = "<group>"; };
+		00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryPageViewController.swift; sourceTree = "<group>"; };
+		00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
+		00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiableExtension.swift; sourceTree = "<group>"; };
+		00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+TransactionHistory.swift"; sourceTree = "<group>"; };
 		00AEE9D9217C562C00AD7348 /* BookingLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocation.swift; sourceTree = "<group>"; };
 		00AEE9DB217C566700AD7348 /* BookingLocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingLocationDetail.swift; sourceTree = "<group>"; };
 		00AEE9DF217C590100AD7348 /* Fleet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fleet.storyboard; sourceTree = "<group>"; };
@@ -267,6 +344,11 @@
 		00C01DD02174FC0E00473AE6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarCollectionViewCell.swift; sourceTree = "<group>"; };
 		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
+		00D642C02188CA1B0015DAD7 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		00D642C52188CFB30015DAD7 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		00D642C72188D0740015DAD7 /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1522181FCC6003BE03B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		00E1A1542181FCE2003BE03B /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFeaturesViewController.swift; sourceTree = "<group>"; };
@@ -277,7 +359,7 @@
 		00E1A16221821DF1003BE03B /* CarGuidelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGuidelineTableViewCell.swift; sourceTree = "<group>"; };
 		00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarGuidelineTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterReviewsViewController.swift; sourceTree = "<group>"; };
-		00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedProfileViewController.swift; sourceTree = "<group>"; };
+		00E1A1682182334C003BE03B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -344,12 +426,12 @@
 		3591B8DC20DAC06D00BA0CF9 /* Mph_ClubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mph_ClubUITests.swift; sourceTree = "<group>"; };
 		3591B8DE20DAC06D00BA0CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3598E02120EBB8E100E595EE /* MphTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MphTextField.swift; sourceTree = "<group>"; };
-		3598E02420EBBADF00E595EE /* TabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabView.storyboard; sourceTree = "<group>"; };
+		3598E02420EBBADF00E595EE /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		35D63910215009A900B912AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		35D63913215009F800B912AA /* MfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MfaViewController.swift; sourceTree = "<group>"; };
 		35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeVC.swift; sourceTree = "<group>"; };
-		35D639252151495400B912AA /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		35D639252151495400B912AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35DAA30120ED0EC60083CA93 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +487,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0028F33B218E28770018AA6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0028F33C218E288D0018AA6D /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0037353221750BB600164AA7 /* SearchLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +520,24 @@
 				0098BD4C217B99A6009E3984 /* CustomCells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		00409600218779980065660D /* PickUpAndReturnView */ = {
+			isa = PBXGroup;
+			children = (
+				007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */,
+				007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */,
+			);
+			path = PickUpAndReturnView;
+			sourceTree = "<group>";
+		};
+		00409601218779A80065660D /* DeliveryLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				00409602218779D80065660D /* CurrentLocationTableViewCell.swift */,
+				00409603218779D80065660D /* CurrentLocationTableViewCell.xib */,
+			);
+			path = DeliveryLocationView;
 			sourceTree = "<group>";
 		};
 		00435673216D1CB100424A5C /* TestFairy */ = {
@@ -552,15 +660,65 @@
 			path = OwnedBy;
 			sourceTree = "<group>";
 		};
+		004E04AA218F2681004B8BC3 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AC218F26C2004B8BC3 /* Views */,
+				004E04AB218F26B8004B8BC3 /* Controllers */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		004E04AB218F26B8004B8BC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AF218F27FA004B8BC3 /* FAQViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		004E04AC218F26C2004B8BC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				004E04AD218F26DF004B8BC3 /* FAQ.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00639105218F4F4D00E25152 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00639106218F4F5B00E25152 /* KeyboardManager */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		00639106218F4F5B00E25152 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				00639109218F58EC00E25152 /* Controller */,
+			);
+			path = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		00639109218F58EC00E25152 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00639107218F4F9000E25152 /* KeyboardManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0064CC6A216F905D005FCC70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
+				00639105218F4F4D00E25152 /* Modules */,
 				00C01DCF2174FBF400473AE6 /* Constants */,
 				00C01DCE2174FB7300473AE6 /* Helpers */,
 				0064CC74216F9668005FCC70 /* Protocol */,
 				0064CC73216F9660005FCC70 /* Extension */,
-				3598E02020EBB8B400E595EE /* Custom Classes */,
+				3598E02020EBB8B400E595EE /* CustomClasses */,
 				0064CC6B216F906A005FCC70 /* BridgeFile */,
 			);
 			path = Common;
@@ -588,9 +746,12 @@
 		0064CC6D216F91FA005FCC70 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3598E02320EBBAC100E595EE /* MainTabBarView */,
 				0064CC6E216F9226005FCC70 /* Explore */,
 				0037353221750BB600164AA7 /* SearchLocation */,
 				00AEE9DD217C58D800AD7348 /* Fleet */,
+				00D642C22188CF7F0015DAD7 /* Trips */,
+				35D639242151493B00B912AA /* Account */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -636,9 +797,12 @@
 				00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */,
 				0062EDAA217274F70041B687 /* UIViewExtension.swift */,
 				003735352175189400164AA7 /* DictionaryExtension.swift */,
-				00184785217667F5000B0ED3 /* UIApplicationExtension.swift */,
 				0018478721766BF2000B0ED3 /* UINavigationControllerExtension.swift */,
 				0018478921766C1D000B0ED3 /* UITabBarControllerExtension.swift */,
+				00874472218B217D007E8E13 /* StringExtension.swift */,
+				00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */,
+				00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */,
+				00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -649,6 +813,7 @@
 				0064CC75216F967D005FCC70 /* NibLoadable.swift */,
 				0064CC76216F967E005FCC70 /* ReusableView.swift */,
 				00C01DC82174FB3D00473AE6 /* Endpoint.swift */,
+				00A910DC218C3B1900A991BB /* StoryboardInitiable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -685,6 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				007508E92185ED0100C13F4A /* PickUpAndReturnViewController.swift */,
+				004095FE218775890065660D /* DeliveryLocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -701,8 +867,8 @@
 		007508EB2185F1AC00C13F4A /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				007508EC2185F42100C13F4A /* PickUpLocationTableViewCell.swift */,
-				007508ED2185F42100C13F4A /* PickUpLocationTableViewCell.xib */,
+				00409600218779980065660D /* PickUpAndReturnView */,
+				00409601218779A80065660D /* DeliveryLocationView */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -724,13 +890,132 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
-		007B47B92184C25A0016FEE7 /* OwnedProfileView */ = {
+		007B47B92184C25A0016FEE7 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
 				007B47BA2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift */,
 				007B47BB2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib */,
 			);
-			path = OwnedProfileView;
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		007F18DD218B59A800B48470 /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				007F18DF218B59BD00B48470 /* Views */,
+				007F18DE218B59B400B48470 /* Controllers */,
+			);
+			path = ContactUs;
+			sourceTree = "<group>";
+		};
+		007F18DE218B59B400B48470 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				007F18E3218B59F000B48470 /* ContactUsViewController.swift */,
+				007F18E7218B68F000B48470 /* ThanksContactUsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		007F18DF218B59BD00B48470 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				007F18E1218B59D600B48470 /* ContactUs.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00874461218AEE16007E8E13 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				00D642CA2188F0510015DAD7 /* AccountTableViewCell.swift */,
+				00D642CB2188F0510015DAD7 /* AccountTableViewCell.xib */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		00874462218AF0EA007E8E13 /* ContactInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				00874463218AF126007E8E13 /* ContactInfoTableViewCell.swift */,
+				00874464218AF126007E8E13 /* ContactInfoTableViewCell.xib */,
+			);
+			path = ContactInfoView;
+			sourceTree = "<group>";
+		};
+		00874467218AFA77007E8E13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00874468218AFA99007E8E13 /* ContactInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0087446A218B08CD007E8E13 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0087446B218B08E3007E8E13 /* ContactInfo */,
+				0087447A218B391C007E8E13 /* ProfilePhoto */,
+				00A910CD218C32D900A991BB /* TransactionHistory */,
+				004E04AA218F2681004B8BC3 /* FAQ */,
+				007F18DD218B59A800B48470 /* ContactUs */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0087446B218B08E3007E8E13 /* ContactInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0087446D218B08FE007E8E13 /* Views */,
+				0087446C218B08F3007E8E13 /* Controllers */,
+				00874467218AFA77007E8E13 /* Models */,
+			);
+			path = ContactInfo;
+			sourceTree = "<group>";
+		};
+		0087446C218B08F3007E8E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0087445F218AED9C007E8E13 /* ContactInfoViewController.swift */,
+				00874470218B0A5C007E8E13 /* ChangeYourEmailViewController.swift */,
+				00874474218B21F9007E8E13 /* ChnageYourPhoneViewController.swift */,
+				00874476218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift */,
+				00874478218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0087446D218B08FE007E8E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0087446E218B0946007E8E13 /* ContactInfo.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0087447A218B391C007E8E13 /* ProfilePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				0087447C218B3931007E8E13 /* Views */,
+				0087447B218B3928007E8E13 /* Controllers */,
+			);
+			path = ProfilePhoto;
+			sourceTree = "<group>";
+		};
+		0087447B218B3928007E8E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0087447F218B3995007E8E13 /* ProfilePhotoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0087447C218B3931007E8E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0087447D218B3956007E8E13 /* ProfilePhoto.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0098BD4C217B99A6009E3984 /* CustomCells */ = {
@@ -740,6 +1025,56 @@
 				0098BD4E217B99FC009E3984 /* LocationSearchTableViewCell.xib */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		009C4316218E133F00E1AC18 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				009C4317218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift */,
+				009C4318218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib */,
+				009C431B218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift */,
+				009C431C218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		00A910CD218C32D900A991BB /* TransactionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				00A910CF218C330100A991BB /* Views */,
+				00A910CE218C32F900A991BB /* Controllers */,
+				00A910E0218C3C5A00A991BB /* Extensions */,
+				0028F33B218E28770018AA6D /* Models */,
+			);
+			path = TransactionHistory;
+			sourceTree = "<group>";
+		};
+		00A910CE218C32F900A991BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00A910D2218C337B00A991BB /* TransactionHistoryViewController.swift */,
+				00A910D8218C393800A991BB /* TransactionHistoryPageViewController.swift */,
+				00A910D4218C368500A991BB /* UpcomingPayoutViewController.swift */,
+				00A910D6218C36C600A991BB /* CompletedPayoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00A910CF218C330100A991BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00A910D0218C332400A991BB /* TransactionHistory.storyboard */,
+				009C4316218E133F00E1AC18 /* CustomCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00A910E0218C3C5A00A991BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00A910E1218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		00AEE9D7217C55E000AD7348 /* Models */ = {
@@ -778,7 +1113,6 @@
 				00AEE9F1217CA57200AD7348 /* CarDetailView */,
 				00E1A15A2182088E003BE03B /* CarFeaturesView */,
 				00E1A16121821DC1003BE03B /* CarGuidelineView */,
-				007B47B92184C25A0016FEE7 /* OwnedProfileView */,
 				00F938822185AB4B0075386D /* ReportListingView */,
 			);
 			path = CustomCells;
@@ -791,7 +1125,6 @@
 				00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */,
 				00E1A1562181FD93003BE03B /* CarFeaturesViewController.swift */,
 				00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */,
-				00E1A1682182334C003BE03B /* OwnedProfileViewController.swift */,
 				00E1A15F21821C68003BE03B /* CarGuidelineViewController.swift */,
 				00F938802185A9400075386D /* ReportListingViewController.swift */,
 				00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */,
@@ -915,6 +1248,59 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		00D642BE2188C9F30015DAD7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35D639252151495400B912AA /* AccountViewController.swift */,
+				00E1A1682182334C003BE03B /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00D642BF2188CA000015DAD7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C02188CA1B0015DAD7 /* Account.storyboard */,
+				00D642C92188F0220015DAD7 /* CustomCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00D642C22188CF7F0015DAD7 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C42188CF970015DAD7 /* Views */,
+				00D642C32188CF8C0015DAD7 /* Controllers */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		00D642C32188CF8C0015DAD7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C52188CFB30015DAD7 /* TripsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00D642C42188CF970015DAD7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00D642C72188D0740015DAD7 /* Trips.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00D642C92188F0220015DAD7 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				00874461218AEE16007E8E13 /* AccountView */,
+				007B47B92184C25A0016FEE7 /* ProfileView */,
+				00874462218AF0EA007E8E13 /* ContactInfoView */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		00E1A14F2181FC88003BE03B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,9 +1365,7 @@
 				35207DCC20E3D62000BA838A /* Login */,
 				35D6391521502CFB00B912AA /* ConfirmationFlow */,
 				35D63912215009BE00B912AA /* Mfa */,
-				3598E02320EBBAC100E595EE /* Tab View */,
 				3598E02620EBD78900E595EE /* List your Car */,
-				35D639242151493B00B912AA /* Profile */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -1056,7 +1440,7 @@
 			path = "Mph ClubUITests";
 			sourceTree = "<group>";
 		};
-		3598E02020EBB8B400E595EE /* Custom Classes */ = {
+		3598E02020EBB8B400E595EE /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
@@ -1064,17 +1448,18 @@
 				353D3BF0210A12C000CF748C /* Constant.swift */,
 				003735372175240A00164AA7 /* CustomNavigationBar.swift */,
 				0018478B2176873B000B0ED3 /* ParallaxTableView.swift */,
+				0028F33E218E38830018AA6D /* CustomSegmentView.swift */,
 			);
-			path = "Custom Classes";
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
-		3598E02320EBBAC100E595EE /* Tab View */ = {
+		3598E02320EBBAC100E595EE /* MainTabBarView */ = {
 			isa = PBXGroup;
 			children = (
-				3598E02420EBBADF00E595EE /* TabView.storyboard */,
+				3598E02420EBBADF00E595EE /* MainTabBar.storyboard */,
 				35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */,
 			);
-			path = "Tab View";
+			path = MainTabBarView;
 			sourceTree = "<group>";
 		};
 		3598E02620EBD78900E595EE /* List your Car */ = {
@@ -1135,12 +1520,14 @@
 			path = ConfirmationFlow;
 			sourceTree = "<group>";
 		};
-		35D639242151493B00B912AA /* Profile */ = {
+		35D639242151493B00B912AA /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				35D639252151495400B912AA /* ProfileVC.swift */,
+				0087446A218B08CD007E8E13 /* Modules */,
+				00D642BF2188CA000015DAD7 /* Views */,
+				00D642BE2188C9F30015DAD7 /* Controllers */,
 			);
-			path = Profile;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		35D6392921528F4100B912AA /* Forgot Password */ = {
@@ -1304,7 +1691,8 @@
 			files = (
 				00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */,
 				0098BD50217B99FC009E3984 /* LocationSearchTableViewCell.xib in Resources */,
-				3598E02520EBBADF00E595EE /* TabView.storyboard in Resources */,
+				00D642C12188CA1B0015DAD7 /* Account.storyboard in Resources */,
+				3598E02520EBBADF00E595EE /* MainTabBar.storyboard in Resources */,
 				00E1A15E218208CE003BE03B /* CarFeatureTableViewCell.xib in Resources */,
 				0064CC72216F94F2005FCC70 /* Explore.storyboard in Resources */,
 				001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */,
@@ -1314,25 +1702,35 @@
 				00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */,
 				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
+				004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */,
 				00AEE9E6217C691C00AD7348 /* FleetHeaderTableViewCell.xib in Resources */,
 				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				0047B144217CBA9F00941D9C /* CarDetailDateTableViewCell.xib in Resources */,
+				00D642CD2188F0510015DAD7 /* AccountTableViewCell.xib in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
 				00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */,
 				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
+				00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */,
+				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
+				0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */,
+				00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
 				00E1A1552181FCE2003BE03B /* Calendar.storyboard in Resources */,
+				009C431A218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.xib in Resources */,
 				0047B156217CD2EE00941D9C /* CarDetailFeaturesTableViewCell.xib in Resources */,
 				3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */,
 				0047B148217CC13300941D9C /* CarDetailLocationTableViewCell.xib in Resources */,
+				009C431E218E1DC100E1AC18 /* TransactionHistoryTableViewCell.xib in Resources */,
 				00435677216D1CCA00424A5C /* upload-dsym.sh in Resources */,
 				0047B15A217CDD3C00941D9C /* CarDetailRenterTableViewCell.xib in Resources */,
 				00F938862185ABE10075386D /* ReportTableViewCell.xib in Resources */,
 				007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */,
+				0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */,
+				00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */,
 				0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */,
 				0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */,
 				00AEE9F5217CACE500AD7348 /* CarDetailTitleTableViewCell.xib in Resources */,
@@ -1340,6 +1738,7 @@
 				00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */,
 				001D98FD217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.xib in Resources */,
 				00F6E2EF216FBC440065EF2B /* ExploreHeaderTableViewCell.xib in Resources */,
+				007F18E2218B59D600B48470 /* ContactUs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,10 +1902,14 @@
 				35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */,
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
 				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
+				007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */,
+				00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */,
+				009C431D218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
 				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */,
+				00A910E2218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift in Sources */,
 				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
 				0047B13F217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift in Sources */,
 				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
@@ -1517,29 +1920,40 @@
 				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
 				007508F621861B1600C13F4A /* CalendarCollectionViewCell.swift in Sources */,
 				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
-				00E1A1692182334C003BE03B /* OwnedProfileViewController.swift in Sources */,
+				00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */,
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
 				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
+				009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */,
 				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
 				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
+				00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */,
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
+				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
+				00874473218B217D007E8E13 /* StringExtension.swift in Sources */,
 				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
+				00A910D7218C36C600A991BB /* CompletedPayoutViewController.swift in Sources */,
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
+				00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */,
+				00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */,
 				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
 				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,
 				00F9388B2185CAD00075386D /* ReportOtherTableViewCell.swift in Sources */,
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
+				00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
+				007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */,
+				0028F33F218E38840018AA6D /* CustomSegmentView.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
-				35D639262151495400B912AA /* ProfileVC.swift in Sources */,
+				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,
 				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,
+				00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */,
 				0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetViewController.swift in Sources */,
 				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
@@ -1552,7 +1966,7 @@
 				00F938882185B4A70075386D /* Report.swift in Sources */,
 				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
 				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
-				00184786217667F5000B0ED3 /* UIApplicationExtension.swift in Sources */,
+				00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */,
 				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
 				00C01DC02174F17800473AE6 /* Explore.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
@@ -1568,18 +1982,25 @@
 				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
+				00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */,
 				00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */,
+				00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */,
 				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,
 				35D63911215009A900B912AA /* SignInViewController.swift in Sources */,
 				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
 				3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */,
 				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
+				00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */,
 				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
+				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
+				00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */,
+				00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */,
 				35D63914215009F800B912AA /* MfaViewController.swift in Sources */,
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,
 				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
 				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
+				004E04B0218F27FA004B8BC3 /* FAQViewController.swift in Sources */,
 				00AEE9ED217C6BDD00AD7348 /* Vehicle.swift in Sources */,
 				00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */,
 				001D98F8217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.swift in Sources */,
@@ -1591,6 +2012,7 @@
 				003735362175189400164AA7 /* DictionaryExtension.swift in Sources */,
 				00C01DC92174FB3E00473AE6 /* Endpoint.swift in Sources */,
 				0047B159217CDD3C00941D9C /* CarDetailRenterTableViewCell.swift in Sources */,
+				00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */,
 				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */,
 				00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */,
@@ -1598,14 +2020,20 @@
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				00A910DD218C3B1900A991BB /* StoryboardInitiable.swift in Sources */,
 				00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */,
 				007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */,
+				00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */,
 				0047B14B217CC57D00941D9C /* CarDetailMilesTableViewCell.swift in Sources */,
+				0028F33D218E288D0018AA6D /* Transaction.swift in Sources */,
 				00F938852185ABE10075386D /* ReportTableViewCell.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
 				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* NextButton.swift in Sources */,
+				00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */,
+				00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */,
+				00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */,
 				0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */,
 				00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */,
 				003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */,

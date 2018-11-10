@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IGr-Xr-Uvi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transaction history-->
+        <scene sceneID="6wL-rd-DQ4">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="IGr-Xr-Uvi" customClass="TransactionHistoryViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NWm-Gc-g7g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7DB-hT-PJ4" userLabel="Seperator">
+                                <rect key="frame" x="0.0" y="111" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="sNI-xM-K9K"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp8-NA-xgR" customClass="CustomSegmentView" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HX7-Ma-coq"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIj-Nz-wlT">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <connections>
+                                    <segue destination="Gqe-Ci-rK4" kind="embed" identifier="embedPageView" id="j9G-aH-kyX"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KIj-Nz-wlT" firstAttribute="leading" secondItem="Pbj-Eg-x3r" secondAttribute="leading" id="1Lu-Gx-s8D"/>
+                            <constraint firstItem="Fp8-NA-xgR" firstAttribute="top" secondItem="Pbj-Eg-x3r" secondAttribute="top" id="65N-KZ-0vj"/>
+                            <constraint firstItem="KIj-Nz-wlT" firstAttribute="bottom" secondItem="Pbj-Eg-x3r" secondAttribute="bottom" id="6Lb-eB-Lci"/>
+                            <constraint firstItem="Pbj-Eg-x3r" firstAttribute="trailing" secondItem="7DB-hT-PJ4" secondAttribute="trailing" id="EdD-nx-IOj"/>
+                            <constraint firstItem="KIj-Nz-wlT" firstAttribute="trailing" secondItem="Pbj-Eg-x3r" secondAttribute="trailing" id="Gdu-0B-FTA"/>
+                            <constraint firstItem="7DB-hT-PJ4" firstAttribute="top" secondItem="Fp8-NA-xgR" secondAttribute="bottom" constant="-1" id="HPL-9m-vfE"/>
+                            <constraint firstItem="Fp8-NA-xgR" firstAttribute="leading" secondItem="Pbj-Eg-x3r" secondAttribute="leading" id="Uwp-Xv-MQF"/>
+                            <constraint firstItem="KIj-Nz-wlT" firstAttribute="top" secondItem="7DB-hT-PJ4" secondAttribute="bottom" id="YW2-NW-bbG"/>
+                            <constraint firstItem="7DB-hT-PJ4" firstAttribute="leading" secondItem="Pbj-Eg-x3r" secondAttribute="leading" id="YjC-9q-K6p"/>
+                            <constraint firstItem="Pbj-Eg-x3r" firstAttribute="trailing" secondItem="Fp8-NA-xgR" secondAttribute="trailing" id="zJf-Md-q7d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pbj-Eg-x3r"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transaction history" id="0x1-Hd-pHX"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="segmentView" destination="Fp8-NA-xgR" id="BpZ-za-XyB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRI-Qv-BDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.39999999999998" y="104.7976011994003"/>
+        </scene>
+        <!--Transaction History Page View Controller-->
+        <scene sceneID="RcI-eC-fEr">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Gqe-Ci-rK4" customClass="TransactionHistoryPageViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCt-S1-whS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="798"/>
+        </scene>
+        <!--Upcoming Payout View Controller-->
+        <scene sceneID="McM-nq-PQR">
+            <objects>
+                <viewController storyboardIdentifier="UpcomingPayoutViewController" id="VSX-0d-mE8" customClass="UpcomingPayoutViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tv0-Ai-BaP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qvd-Pe-DOE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="3Ur-re-hJQ" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payout Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDz-IO-v8S">
+                                            <rect key="frame" x="16" y="24" width="145" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="zIN-jp-I4Z"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="******2329" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mh4-an-CsN">
+                                            <rect key="frame" x="16" y="56" width="343" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="jo6-84-vnZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxb-n0-SDk">
+                                            <rect key="frame" x="16" y="84" width="343" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <state key="normal" title="Change your payout account">
+                                                <color key="titleColor" red="0.19215686269999999" green="0.85490196080000003" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                            </state>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auE-oB-7j5" userLabel="Seperator">
+                                            <rect key="frame" x="0.0" y="127.5" width="375" height="0.5"/>
+                                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="jao-Os-iDl"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Mh4-an-CsN" firstAttribute="top" secondItem="pDz-IO-v8S" secondAttribute="bottom" constant="8" id="8S1-OG-Ar1"/>
+                                        <constraint firstItem="yxb-n0-SDk" firstAttribute="leading" secondItem="3Ur-re-hJQ" secondAttribute="leading" constant="16" id="8jo-vU-mYA"/>
+                                        <constraint firstItem="Mh4-an-CsN" firstAttribute="leading" secondItem="3Ur-re-hJQ" secondAttribute="leading" constant="16" id="DMo-u8-YEO"/>
+                                        <constraint firstAttribute="trailing" secondItem="yxb-n0-SDk" secondAttribute="trailing" constant="16" id="EXc-7r-3u7"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mh4-an-CsN" secondAttribute="trailing" constant="16" id="EZc-ZM-mn2"/>
+                                        <constraint firstAttribute="trailing" secondItem="auE-oB-7j5" secondAttribute="trailing" id="PPk-6b-Yl7"/>
+                                        <constraint firstItem="pDz-IO-v8S" firstAttribute="top" secondItem="3Ur-re-hJQ" secondAttribute="top" constant="24" id="ZME-QY-dj5"/>
+                                        <constraint firstItem="auE-oB-7j5" firstAttribute="leading" secondItem="3Ur-re-hJQ" secondAttribute="leading" id="eVG-i4-4x8"/>
+                                        <constraint firstAttribute="bottom" secondItem="auE-oB-7j5" secondAttribute="bottom" id="gjd-U4-GNx"/>
+                                        <constraint firstItem="yxb-n0-SDk" firstAttribute="top" secondItem="Mh4-an-CsN" secondAttribute="bottom" constant="8" id="kfT-rS-mAe"/>
+                                        <constraint firstItem="pDz-IO-v8S" firstAttribute="leading" secondItem="3Ur-re-hJQ" secondAttribute="leading" constant="16" id="taD-at-fSN"/>
+                                        <constraint firstAttribute="bottom" secondItem="yxb-n0-SDk" secondAttribute="bottom" constant="12" id="uoJ-k7-LO1"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="VSX-0d-mE8" id="fO3-x2-xeb"/>
+                                    <outlet property="delegate" destination="VSX-0d-mE8" id="CcJ-Qr-G4V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qvd-Pe-DOE" firstAttribute="top" secondItem="Tv0-Ai-BaP" secondAttribute="top" id="ICN-5n-sr4"/>
+                            <constraint firstItem="qvd-Pe-DOE" firstAttribute="bottom" secondItem="ajY-dO-6kX" secondAttribute="bottom" id="VmF-2S-wzC"/>
+                            <constraint firstItem="qvd-Pe-DOE" firstAttribute="leading" secondItem="ajY-dO-6kX" secondAttribute="leading" id="p72-Vc-b0o"/>
+                            <constraint firstItem="qvd-Pe-DOE" firstAttribute="trailing" secondItem="ajY-dO-6kX" secondAttribute="trailing" id="z5p-hW-V1t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ajY-dO-6kX"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qvd-Pe-DOE" id="C9W-FE-Bru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzv-uf-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="1504"/>
+        </scene>
+        <!--Completed Payout View Controller-->
+        <scene sceneID="Ma8-uh-p5f">
+            <objects>
+                <viewController storyboardIdentifier="CompletedPayoutViewController" id="fpp-dB-Txh" customClass="CompletedPayoutViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L3V-d4-vJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-bZ-mCP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fpp-dB-Txh" id="SDH-8N-XP4"/>
+                                    <outlet property="delegate" destination="fpp-dB-Txh" id="U23-V4-fg2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dva-bZ-mCP" firstAttribute="top" secondItem="L3V-d4-vJe" secondAttribute="top" id="1Oc-lu-eHu"/>
+                            <constraint firstAttribute="bottom" secondItem="Dva-bZ-mCP" secondAttribute="bottom" id="Etd-vd-cuf"/>
+                            <constraint firstItem="Dva-bZ-mCP" firstAttribute="leading" secondItem="sWr-vX-q2F" secondAttribute="leading" id="lry-a2-uk2"/>
+                            <constraint firstItem="sWr-vX-q2F" firstAttribute="trailing" secondItem="Dva-bZ-mCP" secondAttribute="trailing" id="vID-I5-ngB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sWr-vX-q2F"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Dva-bZ-mCP" id="I1V-V5-a2M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cz-qq-vYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="1504"/>
+        </scene>
+    </scenes>
+</document>

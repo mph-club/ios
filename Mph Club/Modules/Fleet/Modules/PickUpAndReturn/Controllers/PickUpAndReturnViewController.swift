@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
 final class PickUpAndReturnViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case showDeliveryLocation
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
+    
+    // MARK: MapView
+    @IBOutlet private weak var mapView: MKMapView!
     
     // MARK: Table View
     @IBOutlet private weak var tableView: UITableView! {
@@ -30,8 +41,8 @@ final class PickUpAndReturnViewController: UIViewController {
     
     // MARK: Mock Data
     private var locationItems = [PickUpLocation(title: "CAR LOCATION", address: "Miami Lakes, FL, 33015", description: "Exact location provided after you book your trip.", price: nil, isSelected: false),
-                               PickUpLocation(title: "AIRPORT", address: "MIA - Miami, FL", description: "Miami International Airport.", price: "$50", isSelected: false),
-                               PickUpLocation(title: "DELIVERY", address: "Enter a delivery address", description: "Mike doesn’t deliver this car more than 10 miles.", price: "$80", isSelected: false)]
+                                 PickUpLocation(title: "AIRPORT", address: "MIA - Miami, FL", description: "Miami International Airport.", price: "$50", isSelected: false),
+                                 PickUpLocation(title: "DELIVERY", address: "Enter a delivery address", description: "Mike doesn’t deliver this car more than 10 miles.", price: "$80", isSelected: false)]
 }
 
 // =======================
@@ -49,8 +60,6 @@ extension PickUpAndReturnViewController {
         super.viewWillAppear(animated)
         //
         (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
-        //
-        UIApplication.shared.statusBarView?.backgroundColor = .white
     }
 }
 
@@ -102,15 +111,31 @@ extension PickUpAndReturnViewController: UITableViewDelegate {
             }
             //
             tableView.reloadData()
-        } else
+            //
+            performSegue(withIdentifier: Segue.showDeliveryLocation)
+        } else {
             if let currentIndexPath = self.currentIndexPath {
                 locationItems[currentIndexPath.row].isSelected = false
+            }
+            //
+            currentIndexPath = indexPath
+            //
+            locationItems[indexPath.row].isSelected = true
+            //
+            tableView.reloadData()
         }
-        //
-        currentIndexPath = indexPath
-        //
-        locationItems[indexPath.row].isSelected = true
-        //
-        tableView.reloadData()
+    }
+}
+
+// ================
+// MARK: - Map View
+// ================
+
+// MARK: Delegate
+extension PickUpAndReturnViewController: MKMapViewDelegate {
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        // Show user location
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
     }
 }

@@ -40,6 +40,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Please allow mph club to access your camera to take picture of the document requested.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to access your photo library to upload your profile pictures</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -76,7 +78,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>TabView</string>
+	<string>MainTabBar</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
