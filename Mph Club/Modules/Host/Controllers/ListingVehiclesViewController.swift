@@ -90,9 +90,9 @@ private extension ListingVehiclesViewController {
                     }
                     Constant.accessToken = accessToken
                     print("Access Token: \(accessToken)")
-                    // MARK: RTANetwork Initialization
+                    // RTANetwork Initialization
                     Network.set(adapter: TokenAdapter.shared)
-                    // solve promise
+                    // Solve Promise
                     seal.fulfill(())
                 } else {
                     seal.reject(getSessionTask.error ?? NSError())
@@ -179,3 +179,8 @@ extension ListingVehiclesViewController: UITableViewDelegate {
         }
     }
 }
+
+// ===========================
+// MARK: - StoryboardInitiable
+// ===========================
+extension ListingVehiclesViewController: StoryboardInitiable {}
