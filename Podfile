@@ -9,6 +9,7 @@ target 'Mph Club' do
   pod 'APJTextPickerView'
   pod 'AWSCore', '~> 2.6.0'
   pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
+  pod 'JumioMobileSDK/Netverify', '~>2.13'
   pod 'AWSCognito', '~> 2.6.28'
   
   pod 'UICKeyChainStore', '~> 2.0.6'
@@ -23,6 +24,8 @@ target 'Mph Club' do
   pod 'Alamofire', '~> 4.7'
   pod 'PromiseKit', '~> 6.0'
   pod 'PromiseKit/Alamofire', '~> 6.0'
+  pod 'ReachabilitySwift'
+  pod 'Kingfisher', '~> 4.0'
   
   pod 'Cosmos', '~> 17.0'
   pod 'JTAppleCalendar', '~> 7.0'

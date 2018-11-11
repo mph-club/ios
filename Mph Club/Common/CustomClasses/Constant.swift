@@ -17,6 +17,9 @@ let cognitoIdentityUserPoolAppClientSecret = "jlgfja8u8cl8j1ohu4b74kp2u1a3ieej19
 let AWSCognitoUserPoolsSignInProviderKey = "UserPool"
 
 struct Constant {
+    static var viewIndex = 0
     static var closeIcon = "close28Px"
     static var backArrowIcon = "arrowLeft28Px"
+    static var accessToken = ""
+    static var carKey = ""
 }

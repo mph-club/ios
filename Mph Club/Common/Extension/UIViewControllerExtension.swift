@@ -57,4 +57,14 @@ extension UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         return alert
     }
+    
+    /// Presents the error using a UIAlertController of ActionSheet type
+    ///
+    /// - Parameter error: Error to be presented
+    func presentError(_ error: Error) {
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
 }

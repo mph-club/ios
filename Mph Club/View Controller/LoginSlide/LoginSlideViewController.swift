@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoginSlideViewController: UIPageViewController {
+class LoginSlideViewController: UIPageViewController {
     
     weak var loginSlideDelegate: LoginSlideViewControllerDelegate?
     
@@ -19,7 +19,7 @@ final class LoginSlideViewController: UIPageViewController {
     }()
     
     private func newSlideViewController(slideNumber: String) -> UIViewController {
-        return UIStoryboard(name: "MainTabBar", bundle: nil) .
+        return UIStoryboard(name: "TabView", bundle: nil) .
             instantiateViewController(withIdentifier: "\(slideNumber)ViewController")
     }
 
@@ -31,6 +31,7 @@ final class LoginSlideViewController: UIPageViewController {
         delegate = self
         
         loginSlideDelegate?.loginSlideViewController(loginSlidePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+    
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -38,6 +39,9 @@ final class LoginSlideViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,9 +53,15 @@ final class LoginSlideViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+
+
 }
 
+
 // MARK: UIPageViewControllerDataSource
+
 extension LoginSlideViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -92,10 +102,15 @@ extension LoginSlideViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+    
+    
+    
 }
 
 
 extension LoginSlideViewController: UIPageViewControllerDelegate {
+    
+    
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
@@ -107,6 +122,7 @@ extension LoginSlideViewController: UIPageViewControllerDelegate {
     }
     
 }
+
 
 protocol LoginSlideViewControllerDelegate: class {
     

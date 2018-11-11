@@ -88,7 +88,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>Base URL</key>
-	<string></string>
+	<string>https://mphclub.ngrok.io</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

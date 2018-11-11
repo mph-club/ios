@@ -109,6 +109,84 @@
 		00AEE9EF217CA03600AD7348 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */; };
 		00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE9F2217CACE500AD7348 /* CarDetailTitleTableViewCell.swift */; };
 		00AEE9F5217CACE500AD7348 /* CarDetailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE9F3217CACE500AD7348 /* CarDetailTitleTableViewCell.xib */; };
+		00B50B2621974BB000B5A4A6 /* ParameterConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2221974BAF00B5A4A6 /* ParameterConvertible.swift */; };
+		00B50B2721974BB000B5A4A6 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2321974BAF00B5A4A6 /* NetworkProtocol.swift */; };
+		00B50B2821974BB000B5A4A6 /* UploadFileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2421974BAF00B5A4A6 /* UploadFileProtocol.swift */; };
+		00B50B2921974BB000B5A4A6 /* HttpGetewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2521974BAF00B5A4A6 /* HttpGetewayProtocol.swift */; };
+		00B50B2C21974BD000B5A4A6 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2B21974BCF00B5A4A6 /* AlamofireExtension.swift */; };
+		00B50B3121974BE600B5A4A6 /* HttpGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2D21974BE600B5A4A6 /* HttpGateway.swift */; };
+		00B50B3221974BE600B5A4A6 /* NetworkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2E21974BE600B5A4A6 /* NetworkConfigurator.swift */; };
+		00B50B3321974BE600B5A4A6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B2F21974BE600B5A4A6 /* Network.swift */; };
+		00B50B3421974BE600B5A4A6 /* MphErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B3021974BE600B5A4A6 /* MphErrors.swift */; };
+		00B50B3A21974C2800B5A4A6 /* NoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B50B3821974C2800B5A4A6 /* NoContentView.xib */; };
+		00B50B3B21974C2800B5A4A6 /* NoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B3921974C2800B5A4A6 /* NoContentView.swift */; };
+		00B50B3E21974C4100B5A4A6 /* ViewLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B3C21974C4100B5A4A6 /* ViewLoadingManager.swift */; };
+		00B50B3F21974C4100B5A4A6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B3D21974C4100B5A4A6 /* ActivityIndicator.swift */; };
+		00B50B4121974C8900B5A4A6 /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4021974C8900B5A4A6 /* DecodableExtension.swift */; };
+		00B50B4421974C9E00B5A4A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4221974C9E00B5A4A6 /* UIImageExtension.swift */; };
+		00B50B4521974C9E00B5A4A6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4321974C9E00B5A4A6 /* UIImageViewExtension.swift */; };
+		00B50B4821974D2B00B5A4A6 /* TokenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4721974D2B00B5A4A6 /* TokenAdapter.swift */; };
+		00B50B4A21974E1900B5A4A6 /* MphErrors+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4921974E1900B5A4A6 /* MphErrors+Network.swift */; };
+		00B50B4C21974F2300B5A4A6 /* MphClubErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4B21974F2300B5A4A6 /* MphClubErrors.swift */; };
+		00B50B4F21974F9A00B5A4A6 /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4D21974F9A00B5A4A6 /* JSONDecoderExtension.swift */; };
+		00B50B5021974F9A00B5A4A6 /* JSONEncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B4E21974F9A00B5A4A6 /* JSONEncoderExtension.swift */; };
+		00B50B5B2198889300B5A4A6 /* Enspoints+ListYourCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B5A2198889300B5A4A6 /* Enspoints+ListYourCar.swift */; };
+		00B50B60219888AB00B5A4A6 /* ObjcExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B5E219888AB00B5A4A6 /* ObjcExceptionHelper.m */; };
+		00B50B7A219888C700B5A4A6 /* AddAPhotoOfCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B61219888C300B5A4A6 /* AddAPhotoOfCarViewController.swift */; };
+		00B50B7B219888C700B5A4A6 /* TripLengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B62219888C300B5A4A6 /* TripLengthViewController.swift */; };
+		00B50B7C219888C700B5A4A6 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B63219888C300B5A4A6 /* AddressViewController.swift */; };
+		00B50B7D219888C700B5A4A6 /* AboutPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B64219888C300B5A4A6 /* AboutPriceViewController.swift */; };
+		00B50B7E219888C700B5A4A6 /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B65219888C400B5A4A6 /* PriceContainerViewController.swift */; };
+		00B50B7F219888C700B5A4A6 /* PhotoReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B66219888C400B5A4A6 /* PhotoReviewViewController.swift */; };
+		00B50B80219888C700B5A4A6 /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B67219888C400B5A4A6 /* PendingApprovalViewController.swift */; };
+		00B50B81219888C700B5A4A6 /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B68219888C400B5A4A6 /* HowGuestWillBookContainerViewController.swift */; };
+		00B50B82219888C700B5A4A6 /* AddPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B69219888C400B5A4A6 /* AddPriceViewController.swift */; };
+		00B50B83219888C700B5A4A6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6A219888C400B5A4A6 /* MapViewController.swift */; };
+		00B50B84219888C700B5A4A6 /* CarEligibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */; };
+		00B50B85219888C700B5A4A6 /* InfoCarLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6C219888C500B5A4A6 /* InfoCarLocationViewController.swift */; };
+		00B50B86219888C700B5A4A6 /* BookingWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6D219888C500B5A4A6 /* BookingWindowViewController.swift */; };
+		00B50B87219888C700B5A4A6 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6E219888C500B5A4A6 /* LocationSearchTable.swift */; };
+		00B50B88219888C700B5A4A6 /* AddProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B6F219888C500B5A4A6 /* AddProfilePhotoViewController.swift */; };
+		00B50B89219888C700B5A4A6 /* CarPhotoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B70219888C500B5A4A6 /* CarPhotoViewViewController.swift */; };
+		00B50B8A219888C700B5A4A6 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B71219888C500B5A4A6 /* PublishViewController.swift */; };
+		00B50B8B219888C700B5A4A6 /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B72219888C500B5A4A6 /* WhenReadyViewController.swift */; };
+		00B50B8C219888C700B5A4A6 /* ReviewTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B73219888C600B5A4A6 /* ReviewTermsViewController.swift */; };
+		00B50B8D219888C700B5A4A6 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B74219888C600B5A4A6 /* ProgressViewController.swift */; };
+		00B50B8E219888C700B5A4A6 /* HowBookingWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B75219888C600B5A4A6 /* HowBookingWorksViewController.swift */; };
+		00B50B8F219888C700B5A4A6 /* TellUsAboutYourCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B76219888C600B5A4A6 /* TellUsAboutYourCarViewController.swift */; };
+		00B50B90219888C700B5A4A6 /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B77219888C600B5A4A6 /* TermsOfServiceViewController.swift */; };
+		00B50B91219888C700B5A4A6 /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B78219888C700B5A4A6 /* SetPriceViewController.swift */; };
+		00B50B92219888C700B5A4A6 /* EnterDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B79219888C700B5A4A6 /* EnterDLViewController.swift */; };
+		00B50B97219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B94219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift */; };
+		00B50B98219888DE00B5A4A6 /* VPPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B95219888DE00B5A4A6 /* VPPageControl.swift */; };
+		00B50B99219888DE00B5A4A6 /* PeaceOfMindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B96219888DE00B5A4A6 /* PeaceOfMindVC.swift */; };
+		00B50B9F2198892100B5A4A6 /* UploadCarImageParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B9C2198892000B5A4A6 /* UploadCarImageParameters.swift */; };
+		00B50BA02198892100B5A4A6 /* AddOwnCarParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B9D2198892000B5A4A6 /* AddOwnCarParameters.swift */; };
+		00B50BA12198892100B5A4A6 /* ImageUploadFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50B9E2198892000B5A4A6 /* ImageUploadFileModel.swift */; };
+		00B50BA42198893000B5A4A6 /* ParentAddOwnCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BA22198893000B5A4A6 /* ParentAddOwnCarResult.swift */; };
+		00B50BA52198893000B5A4A6 /* AddOwnCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BA32198893000B5A4A6 /* AddOwnCarResult.swift */; };
+		00B50BAA2198894F00B5A4A6 /* ListCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BA82198894F00B5A4A6 /* ListCar.storyboard */; };
+		00B50BAB2198894F00B5A4A6 /* PeaceOfMind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BA92198894F00B5A4A6 /* PeaceOfMind.storyboard */; };
+		00B50BAD2198895C00B5A4A6 /* Later_Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BAC2198895C00B5A4A6 /* Later_Views.storyboard */; };
+		00B50BAF2198896600B5A4A6 /* ListYourCarFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BAE2198896600B5A4A6 /* ListYourCarFacade.swift */; };
+		00B50BB12198897000B5A4A6 /* ListYourCarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BB02198897000B5A4A6 /* ListYourCarService.swift */; };
+		00B50BB421988D9200B5A4A6 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BB321988D9200B5A4A6 /* StartViewController.m */; };
+		00B50BC1219892B100B5A4A6 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BBE219892B000B5A4A6 /* Vehicles.swift */; };
+		00B50BC2219892B100B5A4A6 /* DataVechicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BBF219892B100B5A4A6 /* DataVechicles.swift */; };
+		00B50BC3219892B100B5A4A6 /* ParentVechicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC0219892B100B5A4A6 /* ParentVechicles.swift */; };
+		00B50BC5219892BD00B5A4A6 /* UpdateUserParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */; };
+		00B50BC7219892C900B5A4A6 /* Enpoints+HostDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */; };
+		00B50BCA219892D500B5A4A6 /* ListingTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */; };
+		00B50BCB219892D500B5A4A6 /* ListedVehiclesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */; };
+		00B50BCE219892E300B5A4A6 /* HostDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */; };
+		00B50BCF219892E300B5A4A6 /* ListedVehiclesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */; };
+		00B50BD1219892F200B5A4A6 /* HostDashboardFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */; };
+		00B50BD3219892FC00B5A4A6 /* HostDashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD2219892FC00B5A4A6 /* HostDashboardService.swift */; };
+		00B50BD62198994E00B5A4A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BD42198994E00B5A4A6 /* Login.storyboard */; };
+		00B50BD72198994E00B5A4A6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD52198994E00B5A4A6 /* SignInViewController.swift */; };
+		00B50BDB2198997200B5A4A6 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD82198997100B5A4A6 /* CustomNavController.swift */; };
+		00B50BDC2198997200B5A4A6 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */; };
+		00B50BDD2198997200B5A4A6 /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */; };
 		00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBA2174F08E00473AE6 /* ExploreService.swift */; };
 		00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */; };
 		00C01DC02174F17800473AE6 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBF2174F17800473AE6 /* Explore.swift */; };
@@ -145,7 +223,6 @@
 		00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F9388A2185CAD00075386D /* ReportOtherTableViewCell.xib */; };
 		00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9388D2185D5ED0075386D /* ThanksReportViewController.swift */; };
 		05AA283BFD87F7064FFC9958 /* Pods_Mph_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD992F77823F53C2553C53 /* Pods_Mph_Club.framework */; };
-		350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307D7215BF18F0012E9B9 /* Login.storyboard */; };
 		350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */; };
 		350307E4215D15920012E9B9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E3215D15920012E9B9 /* CoreMedia.framework */; };
 		350307E6215D159A0012E9B9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307E5215D159A0012E9B9 /* CoreMotion.framework */; };
@@ -154,37 +231,8 @@
 		350307EC215D15C00012E9B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350307EB215D15C00012E9B9 /* OpenGLES.framework */; };
 		350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */; };
 		353D3BF1210A12C000CF748C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF0210A12C000CF748C /* Constant.swift */; };
-		353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */; };
 		353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 353D3BF4210A5BEB00CF748C /* InfoPlist.strings */; };
-		354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */; };
 		35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35789D1620F4412400A07445 /* BookingSearchLoacationViewController.swift */; };
-		357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */; };
-		357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */; };
-		357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F720FD25D20033FD0E /* EnterDLViewController.swift */; };
-		357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */; };
-		357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */; };
-		357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08FD20FF82D40033FD0E /* TakeInsurancePicViewController.swift */; };
-		357E090020FFB0D90033FD0E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E08FF20FFB0D90033FD0E /* PhotoViewController.swift */; };
-		357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E090120FFB88D0033FD0E /* TakeRegistrationPicViewController.swift */; };
-		357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E090320FFBE4B0033FD0E /* RegisPhotoViewController.swift */; };
-		357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357E09052100CCD90033FD0E /* ListCar.storyboard */; };
-		357E09082100D2A40033FD0E /* TellUsAboutYourCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E09072100D2A40033FD0E /* TellUsAboutYourCarViewController.swift */; };
-		3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */; };
-		3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */; };
-		3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */; };
-		3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */; };
-		3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */; };
-		3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3012102313400F4A6EF /* BookingWindowViewController.swift */; };
-		3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3032102318100F4A6EF /* TripLengthViewController.swift */; };
-		3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C305210231E500F4A6EF /* SetPriceViewController.swift */; };
-		3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C307210265F800F4A6EF /* AddPriceViewController.swift */; };
-		3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */; };
-		3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */; };
-		3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */; };
-		3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C30F21066C3100F4A6EF /* PublishViewController.swift */; };
-		3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */; };
-		3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */; };
-		3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */; };
 		3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */; };
 		3591B8C420DAC06D00BA0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */; };
 		3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3591B8C520DAC06D00BA0CF9 /* LaunchScreen.storyboard */; };
@@ -193,22 +241,13 @@
 		3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E02120EBB8E100E595EE /* MphTextField.swift */; };
 		3598E02520EBBADF00E595EE /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3598E02420EBBADF00E595EE /* MainTabBar.storyboard */; };
 		35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */; };
-		35D63911215009A900B912AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63910215009A900B912AA /* SignInViewController.swift */; };
 		35D63914215009F800B912AA /* MfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D63913215009F800B912AA /* MfaViewController.swift */; };
 		35D6391721502D1F00B912AA /* ConfirmationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */; };
 		35D639262151495400B912AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D639252151495400B912AA /* AccountViewController.swift */; };
 		35D6392B21528F5A00B912AA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */; };
 		35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */; };
-		35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30120ED0EC60083CA93 /* AddressViewController.swift */; };
-		35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */; };
-		35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30520ED11EE0083CA93 /* MapViewController.swift */; };
-		35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */; };
-		35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */; };
 		35DAA30E20EFBEC80083CA93 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30D20EFBEC80083CA93 /* NextButton.swift */; };
-		35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */; };
 		35DAA31820F401280083CA93 /* FleetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAA31720F401280083CA93 /* FleetViewController.swift */; };
-		35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */; };
-		35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */; };
 		35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */; };
 		A91F639070A65C7827B0D16E /* Pods_Mph_ClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9263BEA10EEAAA0FCFCD2694 /* Pods_Mph_ClubTests.framework */; };
 		D90F9B0B57DCDDB5DA55D579 /* Pods_Mph_ClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */; };
@@ -336,6 +375,86 @@
 		00AEE9EE217CA03600AD7348 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		00AEE9F2217CACE500AD7348 /* CarDetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTitleTableViewCell.swift; sourceTree = "<group>"; };
 		00AEE9F3217CACE500AD7348 /* CarDetailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailTitleTableViewCell.xib; sourceTree = "<group>"; };
+		00B50B2221974BAF00B5A4A6 /* ParameterConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterConvertible.swift; sourceTree = "<group>"; };
+		00B50B2321974BAF00B5A4A6 /* NetworkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		00B50B2421974BAF00B5A4A6 /* UploadFileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFileProtocol.swift; sourceTree = "<group>"; };
+		00B50B2521974BAF00B5A4A6 /* HttpGetewayProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpGetewayProtocol.swift; sourceTree = "<group>"; };
+		00B50B2B21974BCF00B5A4A6 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		00B50B2D21974BE600B5A4A6 /* HttpGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpGateway.swift; sourceTree = "<group>"; };
+		00B50B2E21974BE600B5A4A6 /* NetworkConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurator.swift; sourceTree = "<group>"; };
+		00B50B2F21974BE600B5A4A6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		00B50B3021974BE600B5A4A6 /* MphErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MphErrors.swift; sourceTree = "<group>"; };
+		00B50B3821974C2800B5A4A6 /* NoContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoContentView.xib; sourceTree = "<group>"; };
+		00B50B3921974C2800B5A4A6 /* NoContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentView.swift; sourceTree = "<group>"; };
+		00B50B3C21974C4100B5A4A6 /* ViewLoadingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLoadingManager.swift; sourceTree = "<group>"; };
+		00B50B3D21974C4100B5A4A6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		00B50B4021974C8900B5A4A6 /* DecodableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableExtension.swift; sourceTree = "<group>"; };
+		00B50B4221974C9E00B5A4A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		00B50B4321974C9E00B5A4A6 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		00B50B4721974D2B00B5A4A6 /* TokenAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenAdapter.swift; sourceTree = "<group>"; };
+		00B50B4921974E1900B5A4A6 /* MphErrors+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MphErrors+Network.swift"; sourceTree = "<group>"; };
+		00B50B4B21974F2300B5A4A6 /* MphClubErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MphClubErrors.swift; sourceTree = "<group>"; };
+		00B50B4D21974F9A00B5A4A6 /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
+		00B50B4E21974F9A00B5A4A6 /* JSONEncoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncoderExtension.swift; sourceTree = "<group>"; };
+		00B50B5A2198889300B5A4A6 /* Enspoints+ListYourCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enspoints+ListYourCar.swift"; sourceTree = "<group>"; };
+		00B50B5E219888AB00B5A4A6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcExceptionHelper.m; sourceTree = "<group>"; };
+		00B50B5F219888AB00B5A4A6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcExceptionHelper.h; sourceTree = "<group>"; };
+		00B50B61219888C300B5A4A6 /* AddAPhotoOfCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAPhotoOfCarViewController.swift; sourceTree = "<group>"; };
+		00B50B62219888C300B5A4A6 /* TripLengthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripLengthViewController.swift; sourceTree = "<group>"; };
+		00B50B63219888C300B5A4A6 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		00B50B64219888C300B5A4A6 /* AboutPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPriceViewController.swift; sourceTree = "<group>"; };
+		00B50B65219888C400B5A4A6 /* PriceContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
+		00B50B66219888C400B5A4A6 /* PhotoReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoReviewViewController.swift; sourceTree = "<group>"; };
+		00B50B67219888C400B5A4A6 /* PendingApprovalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingApprovalViewController.swift; sourceTree = "<group>"; };
+		00B50B68219888C400B5A4A6 /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
+		00B50B69219888C400B5A4A6 /* AddPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPriceViewController.swift; sourceTree = "<group>"; };
+		00B50B6A219888C400B5A4A6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarEligibilityViewController.swift; sourceTree = "<group>"; };
+		00B50B6C219888C500B5A4A6 /* InfoCarLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCarLocationViewController.swift; sourceTree = "<group>"; };
+		00B50B6D219888C500B5A4A6 /* BookingWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingWindowViewController.swift; sourceTree = "<group>"; };
+		00B50B6E219888C500B5A4A6 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		00B50B6F219888C500B5A4A6 /* AddProfilePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		00B50B70219888C500B5A4A6 /* CarPhotoViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPhotoViewViewController.swift; sourceTree = "<group>"; };
+		00B50B71219888C500B5A4A6 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		00B50B72219888C500B5A4A6 /* WhenReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
+		00B50B73219888C600B5A4A6 /* ReviewTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTermsViewController.swift; sourceTree = "<group>"; };
+		00B50B74219888C600B5A4A6 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		00B50B75219888C600B5A4A6 /* HowBookingWorksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowBookingWorksViewController.swift; sourceTree = "<group>"; };
+		00B50B76219888C600B5A4A6 /* TellUsAboutYourCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellUsAboutYourCarViewController.swift; sourceTree = "<group>"; };
+		00B50B77219888C600B5A4A6 /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
+		00B50B78219888C700B5A4A6 /* SetPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
+		00B50B79219888C700B5A4A6 /* EnterDLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDLViewController.swift; sourceTree = "<group>"; };
+		00B50B94219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeaceOfMindSlideVC.swift; sourceTree = "<group>"; };
+		00B50B95219888DE00B5A4A6 /* VPPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPPageControl.swift; sourceTree = "<group>"; };
+		00B50B96219888DE00B5A4A6 /* PeaceOfMindVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeaceOfMindVC.swift; sourceTree = "<group>"; };
+		00B50B9C2198892000B5A4A6 /* UploadCarImageParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadCarImageParameters.swift; sourceTree = "<group>"; };
+		00B50B9D2198892000B5A4A6 /* AddOwnCarParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOwnCarParameters.swift; sourceTree = "<group>"; };
+		00B50B9E2198892000B5A4A6 /* ImageUploadFileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploadFileModel.swift; sourceTree = "<group>"; };
+		00B50BA22198893000B5A4A6 /* ParentAddOwnCarResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentAddOwnCarResult.swift; sourceTree = "<group>"; };
+		00B50BA32198893000B5A4A6 /* AddOwnCarResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOwnCarResult.swift; sourceTree = "<group>"; };
+		00B50BA82198894F00B5A4A6 /* ListCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListCar.storyboard; sourceTree = "<group>"; };
+		00B50BA92198894F00B5A4A6 /* PeaceOfMind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeaceOfMind.storyboard; sourceTree = "<group>"; };
+		00B50BAC2198895C00B5A4A6 /* Later_Views.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Later_Views.storyboard; sourceTree = "<group>"; };
+		00B50BAE2198896600B5A4A6 /* ListYourCarFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListYourCarFacade.swift; sourceTree = "<group>"; };
+		00B50BB02198897000B5A4A6 /* ListYourCarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListYourCarService.swift; sourceTree = "<group>"; };
+		00B50BB221988D9200B5A4A6 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		00B50BB321988D9200B5A4A6 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		00B50BBE219892B000B5A4A6 /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		00B50BBF219892B100B5A4A6 /* DataVechicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataVechicles.swift; sourceTree = "<group>"; };
+		00B50BC0219892B100B5A4A6 /* ParentVechicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentVechicles.swift; sourceTree = "<group>"; };
+		00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserParameter.swift; sourceTree = "<group>"; };
+		00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enpoints+HostDashboard.swift"; sourceTree = "<group>"; };
+		00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTabVC.swift; sourceTree = "<group>"; };
+		00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTVC.swift; sourceTree = "<group>"; };
+		00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostDashboard.storyboard; sourceTree = "<group>"; };
+		00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTVCell.swift; sourceTree = "<group>"; };
+		00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDashboardFacade.swift; sourceTree = "<group>"; };
+		00B50BD2219892FC00B5A4A6 /* HostDashboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDashboardService.swift; sourceTree = "<group>"; };
+		00B50BD42198994E00B5A4A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		00B50BD52198994E00B5A4A6 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		00B50BD82198997100B5A4A6 /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
+		00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
+		00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
 		00C01DBA2174F08E00473AE6 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFacade.swift; sourceTree = "<group>"; };
 		00C01DBF2174F17800473AE6 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
@@ -374,7 +493,6 @@
 		014CBE9F8B115DA4729FDF23 /* Pods_Mph_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mph_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291D39155390D518EB2C20A1 /* Pods-Mph Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph Club/Pods-Mph Club.release.xcconfig"; sourceTree = "<group>"; };
 		3176405848C444407020B868 /* Pods-Mph ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubTests/Pods-Mph ClubTests.release.xcconfig"; sourceTree = "<group>"; };
-		350307D7215BF18F0012E9B9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		350307DC215BFA9F0012E9B9 /* SearchLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocation.storyboard; sourceTree = "<group>"; };
 		350307E3215D15920012E9B9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		350307E5215D159A0012E9B9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -383,37 +501,8 @@
 		350307EB215D15C00012E9B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		350881A720EA7CCA00ED2B5E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = "Mph Club/View Controller/Create Account/CreateAccount.storyboard"; sourceTree = SOURCE_ROOT; };
 		353D3BF0210A12C000CF748C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowGuestWillBookContainerViewController.swift; sourceTree = "<group>"; };
 		353D3BF4210A5BEB00CF748C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourCarContainerViewController.swift; sourceTree = "<group>"; };
 		35789D1620F4412400A07445 /* BookingSearchLoacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSearchLoacationViewController.swift; sourceTree = "<group>"; };
-		357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
-		357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
-		357E08F720FD25D20033FD0E /* EnterDLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDLViewController.swift; sourceTree = "<group>"; };
-		357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
-		357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpForDLViewController.swift; sourceTree = "<group>"; };
-		357E08FD20FF82D40033FD0E /* TakeInsurancePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeInsurancePicViewController.swift; sourceTree = "<group>"; };
-		357E08FF20FFB0D90033FD0E /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		357E090120FFB88D0033FD0E /* TakeRegistrationPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeRegistrationPicViewController.swift; sourceTree = "<group>"; };
-		357E090320FFBE4B0033FD0E /* RegisPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisPhotoViewController.swift; sourceTree = "<group>"; };
-		357E09052100CCD90033FD0E /* ListCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListCar.storyboard; sourceTree = "<group>"; };
-		357E09072100D2A40033FD0E /* TellUsAboutYourCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellUsAboutYourCarViewController.swift; sourceTree = "<group>"; };
-		3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAPhotoOfCarViewController.swift; sourceTree = "<group>"; };
-		3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPhotoViewViewController.swift; sourceTree = "<group>"; };
-		3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfilePhotoViewController.swift; sourceTree = "<group>"; };
-		3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoReviewViewController.swift; sourceTree = "<group>"; };
-		3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowBookingWorksViewController.swift; sourceTree = "<group>"; };
-		3582C3012102313400F4A6EF /* BookingWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingWindowViewController.swift; sourceTree = "<group>"; };
-		3582C3032102318100F4A6EF /* TripLengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLengthViewController.swift; sourceTree = "<group>"; };
-		3582C305210231E500F4A6EF /* SetPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
-		3582C307210265F800F4A6EF /* AddPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceViewController.swift; sourceTree = "<group>"; };
-		3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPriceViewController.swift; sourceTree = "<group>"; };
-		3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTermsViewController.swift; sourceTree = "<group>"; };
-		3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
-		3582C30F21066C3100F4A6EF /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
-		3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingApprovalViewController.swift; sourceTree = "<group>"; };
-		3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenReadyViewController.swift; sourceTree = "<group>"; };
-		3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceContainerViewController.swift; sourceTree = "<group>"; };
 		3591B8B920DAC06C00BA0CF9 /* Mph Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mph Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3591B8C320DAC06D00BA0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -428,22 +517,13 @@
 		3598E02120EBB8E100E595EE /* MphTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MphTextField.swift; sourceTree = "<group>"; };
 		3598E02420EBBADF00E595EE /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		35CC0D8A20F7BF4E00575225 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		35D63910215009A900B912AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		35D63913215009F800B912AA /* MfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MfaViewController.swift; sourceTree = "<group>"; };
 		35D6391621502D1F00B912AA /* ConfirmationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeVC.swift; sourceTree = "<group>"; };
 		35D639252151495400B912AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		35D6392A21528F5A00B912AA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		35D6392C21528F6900B912AA /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		35DAA30120ED0EC60083CA93 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
-		35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
-		35DAA30520ED11EE0083CA93 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCarLocationViewController.swift; sourceTree = "<group>"; };
-		35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEligibilityViewController.swift; sourceTree = "<group>"; };
 		35DAA30D20EFBEC80083CA93 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
-		35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		35DAA31720F401280083CA93 /* FleetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetViewController.swift; sourceTree = "<group>"; };
-		35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
-		35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
 		35FAB49F20E57A62008EED64 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		49C622BB5CBAF9FF1FF7721B /* Pods-Mph ClubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubUITests/Pods-Mph ClubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		51BAC262AF545D38A1083D6A /* Pods-Mph ClubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mph ClubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mph ClubUITests/Pods-Mph ClubUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -688,6 +768,8 @@
 		00639105218F4F4D00E25152 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				00B50B3521974BF700B5A4A6 /* ViewLoadingManager */,
+				00B50B2021974B5500B5A4A6 /* Network */,
 				00639106218F4F5B00E25152 /* KeyboardManager */,
 			);
 			path = Modules;
@@ -713,6 +795,8 @@
 			isa = PBXGroup;
 			children = (
 				3591B8BC20DAC06C00BA0CF9 /* AppDelegate.swift */,
+				00B50B4B21974F2300B5A4A6 /* MphClubErrors.swift */,
+				00B50B4621974D1700B5A4A6 /* Adapter */,
 				00639105218F4F4D00E25152 /* Modules */,
 				00C01DCF2174FBF400473AE6 /* Constants */,
 				00C01DCE2174FB7300473AE6 /* Helpers */,
@@ -803,6 +887,11 @@
 				00874481218B484D007E8E13 /* UIAlertControllerExtension.swift */,
 				00A910DA218C3AE100A991BB /* UIStoryboardExtension.swift */,
 				00A910DE218C3C2F00A991BB /* StoryboardInitiableExtension.swift */,
+				00B50B4021974C8900B5A4A6 /* DecodableExtension.swift */,
+				00B50B4221974C9E00B5A4A6 /* UIImageExtension.swift */,
+				00B50B4321974C9E00B5A4A6 /* UIImageViewExtension.swift */,
+				00B50B4D21974F9A00B5A4A6 /* JSONDecoderExtension.swift */,
+				00B50B4E21974F9A00B5A4A6 /* JSONEncoderExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1163,6 +1252,276 @@
 			path = CarDetailView;
 			sourceTree = "<group>";
 		};
+		00B50B2021974B5500B5A4A6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B2A21974BB800B5A4A6 /* Extensions */,
+				00B50B2121974B8B00B5A4A6 /* Protocols */,
+				00B50B2D21974BE600B5A4A6 /* HttpGateway.swift */,
+				00B50B2F21974BE600B5A4A6 /* Network.swift */,
+				00B50B2E21974BE600B5A4A6 /* NetworkConfigurator.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		00B50B2121974B8B00B5A4A6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B2521974BAF00B5A4A6 /* HttpGetewayProtocol.swift */,
+				00B50B2321974BAF00B5A4A6 /* NetworkProtocol.swift */,
+				00B50B2221974BAF00B5A4A6 /* ParameterConvertible.swift */,
+				00B50B2421974BAF00B5A4A6 /* UploadFileProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		00B50B2A21974BB800B5A4A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B2B21974BCF00B5A4A6 /* AlamofireExtension.swift */,
+				00B50B4921974E1900B5A4A6 /* MphErrors+Network.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00B50B3521974BF700B5A4A6 /* ViewLoadingManager */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B3621974C0E00B5A4A6 /* Views */,
+				00B50B3D21974C4100B5A4A6 /* ActivityIndicator.swift */,
+				00B50B3C21974C4100B5A4A6 /* ViewLoadingManager.swift */,
+			);
+			path = ViewLoadingManager;
+			sourceTree = "<group>";
+		};
+		00B50B3621974C0E00B5A4A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B3721974C1700B5A4A6 /* NoContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00B50B3721974C1700B5A4A6 /* NoContentView */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B3921974C2800B5A4A6 /* NoContentView.swift */,
+				00B50B3821974C2800B5A4A6 /* NoContentView.xib */,
+			);
+			path = NoContentView;
+			sourceTree = "<group>";
+		};
+		00B50B4621974D1700B5A4A6 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B4721974D2B00B5A4A6 /* TokenAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		00B50B512198883300B5A4A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BB02198897000B5A4A6 /* ListYourCarService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		00B50B522198883A00B5A4A6 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BAE2198896600B5A4A6 /* ListYourCarFacade.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		00B50B532198884500B5A4A6 /* Later_Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BAC2198895C00B5A4A6 /* Later_Views.storyboard */,
+			);
+			path = Later_Views;
+			sourceTree = "<group>";
+		};
+		00B50B542198885000B5A4A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BA82198894F00B5A4A6 /* ListCar.storyboard */,
+				00B50BA92198894F00B5A4A6 /* PeaceOfMind.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00B50B552198885500B5A4A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B9A219888FD00B5A4A6 /* Encodables */,
+				00B50B9B2198891000B5A4A6 /* Decodables */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00B50B562198886000B5A4A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B64219888C300B5A4A6 /* AboutPriceViewController.swift */,
+				00B50B61219888C300B5A4A6 /* AddAPhotoOfCarViewController.swift */,
+				00B50B69219888C400B5A4A6 /* AddPriceViewController.swift */,
+				00B50B6F219888C500B5A4A6 /* AddProfilePhotoViewController.swift */,
+				00B50B63219888C300B5A4A6 /* AddressViewController.swift */,
+				00B50B6D219888C500B5A4A6 /* BookingWindowViewController.swift */,
+				00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */,
+				00B50B70219888C500B5A4A6 /* CarPhotoViewViewController.swift */,
+				00B50B79219888C700B5A4A6 /* EnterDLViewController.swift */,
+				00B50B75219888C600B5A4A6 /* HowBookingWorksViewController.swift */,
+				00B50B68219888C400B5A4A6 /* HowGuestWillBookContainerViewController.swift */,
+				00B50B6C219888C500B5A4A6 /* InfoCarLocationViewController.swift */,
+				00B50B6E219888C500B5A4A6 /* LocationSearchTable.swift */,
+				00B50B6A219888C400B5A4A6 /* MapViewController.swift */,
+				00B50B67219888C400B5A4A6 /* PendingApprovalViewController.swift */,
+				00B50B66219888C400B5A4A6 /* PhotoReviewViewController.swift */,
+				00B50B65219888C400B5A4A6 /* PriceContainerViewController.swift */,
+				00B50B74219888C600B5A4A6 /* ProgressViewController.swift */,
+				00B50B71219888C500B5A4A6 /* PublishViewController.swift */,
+				00B50B73219888C600B5A4A6 /* ReviewTermsViewController.swift */,
+				00B50B78219888C700B5A4A6 /* SetPriceViewController.swift */,
+				00B50B76219888C600B5A4A6 /* TellUsAboutYourCarViewController.swift */,
+				00B50B77219888C600B5A4A6 /* TermsOfServiceViewController.swift */,
+				00B50B62219888C300B5A4A6 /* TripLengthViewController.swift */,
+				00B50B72219888C500B5A4A6 /* WhenReadyViewController.swift */,
+				00B50B93219888C900B5A4A6 /* Peace of mind */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00B50B572198887000B5A4A6 /* Jumio Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B5F219888AB00B5A4A6 /* ObjcExceptionHelper.h */,
+				00B50B5E219888AB00B5A4A6 /* ObjcExceptionHelper.m */,
+			);
+			path = "Jumio Bridge";
+			sourceTree = "<group>";
+		};
+		00B50B592198888200B5A4A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B5A2198889300B5A4A6 /* Enspoints+ListYourCar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00B50B93219888C900B5A4A6 /* Peace of mind */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B94219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift */,
+				00B50B96219888DE00B5A4A6 /* PeaceOfMindVC.swift */,
+				00B50B95219888DE00B5A4A6 /* VPPageControl.swift */,
+			);
+			path = "Peace of mind";
+			sourceTree = "<group>";
+		};
+		00B50B9A219888FD00B5A4A6 /* Encodables */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B9D2198892000B5A4A6 /* AddOwnCarParameters.swift */,
+				00B50B9E2198892000B5A4A6 /* ImageUploadFileModel.swift */,
+				00B50B9C2198892000B5A4A6 /* UploadCarImageParameters.swift */,
+			);
+			path = Encodables;
+			sourceTree = "<group>";
+		};
+		00B50B9B2198891000B5A4A6 /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BA32198893000B5A4A6 /* AddOwnCarResult.swift */,
+				00B50BA22198893000B5A4A6 /* ParentAddOwnCarResult.swift */,
+			);
+			path = Decodables;
+			sourceTree = "<group>";
+		};
+		00B50BB52198921C00B5A4A6 /* Host Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BBB2198927B00B5A4A6 /* Extensions */,
+				00B50BBA2198926F00B5A4A6 /* Models */,
+				00B50BB92198925A00B5A4A6 /* Controllers */,
+				00B50BB82198924F00B5A4A6 /* Views */,
+				00B50BB72198924900B5A4A6 /* Facade */,
+				00B50BB62198924300B5A4A6 /* Service */,
+			);
+			path = "Host Dashboard";
+			sourceTree = "<group>";
+		};
+		00B50BB62198924300B5A4A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BD2219892FC00B5A4A6 /* HostDashboardService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		00B50BB72198924900B5A4A6 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		00B50BB82198924F00B5A4A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */,
+				00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00B50BB92198925A00B5A4A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */,
+				00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00B50BBA2198926F00B5A4A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BBD2198929500B5A4A6 /* Decodable */,
+				00B50BBC2198928E00B5A4A6 /* Encodable */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00B50BBB2198927B00B5A4A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00B50BBC2198928E00B5A4A6 /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		00B50BBD2198929500B5A4A6 /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BBF219892B100B5A4A6 /* DataVechicles.swift */,
+				00B50BC0219892B100B5A4A6 /* ParentVechicles.swift */,
+				00B50BBE219892B000B5A4A6 /* Vehicles.swift */,
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
 		00C01DB42174F02C00473AE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,6 +1718,7 @@
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				00B50BB52198921C00B5A4A6 /* Host Dashboard */,
 				35D6392921528F4100B912AA /* Forgot Password */,
 				35DBE65F20E3E1A80041325A /* LoginSlide */,
 				3543144F20E579CB00B5F80E /* Create Account */,
@@ -1373,8 +1733,8 @@
 		35207DCC20E3D62000BA838A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				350307D7215BF18F0012E9B9 /* Login.storyboard */,
-				35D63910215009A900B912AA /* SignInViewController.swift */,
+				00B50BD42198994E00B5A4A6 /* Login.storyboard */,
+				00B50BD52198994E00B5A4A6 /* SignInViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1413,6 +1773,8 @@
 		3591B8BB20DAC06C00BA0CF9 /* Mph Club */ = {
 			isa = PBXGroup;
 			children = (
+				00B50BB221988D9200B5A4A6 /* StartViewController.h */,
+				00B50BB321988D9200B5A4A6 /* StartViewController.m */,
 				0064CC6A216F905D005FCC70 /* Common */,
 				0064CC6D216F91FA005FCC70 /* Modules */,
 				35207DCA20E3D5A300BA838A /* View Controller */,
@@ -1443,6 +1805,7 @@
 		3598E02020EBB8B400E595EE /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				00B50B3021974BE600B5A4A6 /* MphErrors.swift */,
 				3598E02120EBB8E100E595EE /* MphTextField.swift */,
 				35DAA30D20EFBEC80083CA93 /* NextButton.swift */,
 				353D3BF0210A12C000CF748C /* Constant.swift */,
@@ -1465,41 +1828,14 @@
 		3598E02620EBD78900E595EE /* List your Car */ = {
 			isa = PBXGroup;
 			children = (
-				357E09052100CCD90033FD0E /* ListCar.storyboard */,
-				35DAA30120ED0EC60083CA93 /* AddressViewController.swift */,
-				35DAA30520ED11EE0083CA93 /* MapViewController.swift */,
-				35DAA30320ED11E30083CA93 /* LocationSearchTable.swift */,
-				35DAA30720ED1FAB0083CA93 /* InfoCarLocationViewController.swift */,
-				35DAA30B20EFAAA40083CA93 /* CarEligibilityViewController.swift */,
-				35DAA30F20EFDD7E0083CA93 /* ProgressViewController.swift */,
-				357E08F320FCF9930033FD0E /* VerifyPhoneViewController.swift */,
-				357E08F520FD1D8A0033FD0E /* EnterCodeViewController.swift */,
-				357E08F720FD25D20033FD0E /* EnterDLViewController.swift */,
-				357E08F920FE7D050033FD0E /* LicenseDetailViewController.swift */,
-				357E08FB20FE830F0033FD0E /* PopUpForDLViewController.swift */,
-				357E08FD20FF82D40033FD0E /* TakeInsurancePicViewController.swift */,
-				357E08FF20FFB0D90033FD0E /* PhotoViewController.swift */,
-				357E090120FFB88D0033FD0E /* TakeRegistrationPicViewController.swift */,
-				357E090320FFBE4B0033FD0E /* RegisPhotoViewController.swift */,
-				357E09072100D2A40033FD0E /* TellUsAboutYourCarViewController.swift */,
-				354BE3E321010B690094E32F /* AboutYourCarContainerViewController.swift */,
-				3582C2F7210118B200F4A6EF /* AddAPhotoOfCarViewController.swift */,
-				3582C2F92101193E00F4A6EF /* CarPhotoViewViewController.swift */,
-				3582C2FB2101297C00F4A6EF /* AddProfilePhotoViewController.swift */,
-				3582C2FD210223DD00F4A6EF /* PhotoReviewViewController.swift */,
-				353D3BF2210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift */,
-				3582C2FF21022C2100F4A6EF /* HowBookingWorksViewController.swift */,
-				3582C3012102313400F4A6EF /* BookingWindowViewController.swift */,
-				3582C3032102318100F4A6EF /* TripLengthViewController.swift */,
-				3582C305210231E500F4A6EF /* SetPriceViewController.swift */,
-				3582C307210265F800F4A6EF /* AddPriceViewController.swift */,
-				3582C30921026DB800F4A6EF /* AboutPriceViewController.swift */,
-				3582C30B210669AD00F4A6EF /* ReviewTermsViewController.swift */,
-				3582C30D21066B3200F4A6EF /* TermsOfServiceViewController.swift */,
-				3582C30F21066C3100F4A6EF /* PublishViewController.swift */,
-				3582C31121066D9700F4A6EF /* PendingApprovalViewController.swift */,
-				3582C31321066ECB00F4A6EF /* WhenReadyViewController.swift */,
-				3582C3152108D4BC00F4A6EF /* PriceContainerViewController.swift */,
+				00B50B592198888200B5A4A6 /* Extensions */,
+				00B50B572198887000B5A4A6 /* Jumio Bridge */,
+				00B50B562198886000B5A4A6 /* Controllers */,
+				00B50B552198885500B5A4A6 /* Models */,
+				00B50B542198885000B5A4A6 /* Views */,
+				00B50B532198884500B5A4A6 /* Later_Views */,
+				00B50B522198883A00B5A4A6 /* Facade */,
+				00B50B512198883300B5A4A6 /* Service */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
@@ -1542,8 +1878,9 @@
 		35DBE65F20E3E1A80041325A /* LoginSlide */ = {
 			isa = PBXGroup;
 			children = (
-				35F204FF20E407C200A544F4 /* LoginSlideMainViewController.swift */,
-				35DBE66420E3EECD0041325A /* LoginSlideViewController.swift */,
+				00B50BD82198997100B5A4A6 /* CustomNavController.swift */,
+				00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */,
+				00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */,
 			);
 			path = LoginSlide;
 			sourceTree = "<group>";
@@ -1698,24 +2035,26 @@
 				001D98F9217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.xib in Resources */,
 				0047B150217CCA3C00941D9C /* CarDetailDescriptionTableViewCell.xib in Resources */,
 				350881A820EA7CCA00ED2B5E /* CreateAccount.storyboard in Resources */,
+				00B50B3A21974C2800B5A4A6 /* NoContentView.xib in Resources */,
 				007508F721861B1600C13F4A /* CalendarCollectionViewCell.xib in Resources */,
 				00AEE9E0217C590100AD7348 /* Fleet.storyboard in Resources */,
-				357E09062100CCD90033FD0E /* ListCar.storyboard in Resources */,
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
 				004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */,
 				00AEE9E6217C691C00AD7348 /* FleetHeaderTableViewCell.xib in Resources */,
+				00B50BCE219892E300B5A4A6 /* HostDashboard.storyboard in Resources */,
 				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				0047B144217CBA9F00941D9C /* CarDetailDateTableViewCell.xib in Resources */,
 				00D642CD2188F0510015DAD7 /* AccountTableViewCell.xib in Resources */,
 				353D3BF5210A5BED00CF748C /* InfoPlist.strings in Resources */,
+				00B50BAA2198894F00B5A4A6 /* ListCar.storyboard in Resources */,
 				00F9388C2185CAD00075386D /* ReportOtherTableViewCell.xib in Resources */,
-				350307D8215BF18F0012E9B9 /* Login.storyboard in Resources */,
 				00874466218AF126007E8E13 /* ContactInfoTableViewCell.xib in Resources */,
 				00409605218779D80065660D /* CurrentLocationTableViewCell.xib in Resources */,
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
 				0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */,
+				00B50BAB2198894F00B5A4A6 /* PeaceOfMind.storyboard in Resources */,
 				00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
 				00AEE9EA217C6AB600AD7348 /* FleetTableViewCell.xib in Resources */,
@@ -1729,7 +2068,9 @@
 				0047B15A217CDD3C00941D9C /* CarDetailRenterTableViewCell.xib in Resources */,
 				00F938862185ABE10075386D /* ReportTableViewCell.xib in Resources */,
 				007B47BD2184C2A70016FEE7 /* VerifiedInfoTableViewCell.xib in Resources */,
+				00B50BAD2198895C00B5A4A6 /* Later_Views.storyboard in Resources */,
 				0087447E218B3956007E8E13 /* ProfilePhoto.storyboard in Resources */,
+				00B50BD62198994E00B5A4A6 /* Login.storyboard in Resources */,
 				00A910D1218C332400A991BB /* TransactionHistory.storyboard in Resources */,
 				0047B16D217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.xib in Resources */,
 				0047B169217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.xib in Resources */,
@@ -1865,8 +2206,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${PODS_ROOT}/JumioMobileSDK/frameworks/JumioCore.framework",
+				"${PODS_ROOT}/JumioMobileSDK/frameworks/Netverify.framework",
+				"${PODS_ROOT}/JumioMobileSDK/frameworks/MicroBlink.framework",
+				"${PODS_ROOT}/JumioMobileSDK/frameworks/Umoove.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Mixpanel-swift/Mixpanel.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1879,8 +2226,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JumioCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Netverify.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MicroBlink.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Umoove.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1896,149 +2249,184 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E1A15D218208CE003BE03B /* CarFeatureTableViewCell.swift in Sources */,
-				3582C3022102313400F4A6EF /* BookingWindowViewController.swift in Sources */,
+				00B50B3421974BE600B5A4A6 /* MphErrors.swift in Sources */,
 				00E1A16021821C68003BE03B /* CarGuidelineViewController.swift in Sources */,
+				00B50B3F21974C4100B5A4A6 /* ActivityIndicator.swift in Sources */,
 				0064CC7D216F9691005FCC70 /* ReusableViewExtension.swift in Sources */,
+				00B50B4C21974F2300B5A4A6 /* MphClubErrors.swift in Sources */,
+				00B50B82219888C700B5A4A6 /* AddPriceViewController.swift in Sources */,
 				35D6392D21528F6900B912AA /* ConfirmForgotPasswordViewController.swift in Sources */,
+				00B50BD1219892F200B5A4A6 /* HostDashboardFacade.swift in Sources */,
 				35CC0D8B20F7BF4E00575225 /* MainTabBar.swift in Sources */,
-				35DAA30620ED11EE0083CA93 /* MapViewController.swift in Sources */,
 				007F18E4218B59F000B48470 /* ContactUsViewController.swift in Sources */,
 				00A910DF218C3C2F00A991BB /* StoryboardInitiableExtension.swift in Sources */,
 				009C431D218E1DC100E1AC18 /* TransactionHistoryTableViewCell.swift in Sources */,
+				00B50B2721974BB000B5A4A6 /* NetworkProtocol.swift in Sources */,
+				00B50B90219888C700B5A4A6 /* TermsOfServiceViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
 				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
-				357E08FC20FE830F0033FD0E /* PopUpForDLViewController.swift in Sources */,
 				0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */,
+				00B50B4521974C9E00B5A4A6 /* UIImageViewExtension.swift in Sources */,
 				00A910E2218C3C7800A991BB /* UIStoryboard+TransactionHistory.swift in Sources */,
-				357E090220FFB88D0033FD0E /* TakeRegistrationPicViewController.swift in Sources */,
 				0047B13F217CB4F600941D9C /* CarDetailHeaderTableViewCell.swift in Sources */,
-				3582C3162108D4BC00F4A6EF /* PriceContainerViewController.swift in Sources */,
-				354BE3E421010B690094E32F /* AboutYourCarContainerViewController.swift in Sources */,
-				35DAA31020EFDD7E0083CA93 /* ProgressViewController.swift in Sources */,
 				007508F22186023400C13F4A /* PickUpLocation.swift in Sources */,
 				00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */,
-				3582C30E21066B3200F4A6EF /* TermsOfServiceViewController.swift in Sources */,
+				00B50B87219888C700B5A4A6 /* LocationSearchTable.swift in Sources */,
 				007508F621861B1600C13F4A /* CalendarCollectionViewCell.swift in Sources */,
-				353D3BF3210A2FB900CF748C /* HowGuestWillBookContainerViewController.swift in Sources */,
 				00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */,
+				00B50B8D219888C700B5A4A6 /* ProgressViewController.swift in Sources */,
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
+				00B50BCB219892D500B5A4A6 /* ListedVehiclesTVC.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
-				357E08F820FD25D20033FD0E /* EnterDLViewController.swift in Sources */,
 				009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */,
 				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
-				35DAA30220ED0EC60083CA93 /* AddressViewController.swift in Sources */,
 				00874482218B484D007E8E13 /* UIAlertControllerExtension.swift in Sources */,
+				00B50B5B2198889300B5A4A6 /* Enspoints+ListYourCar.swift in Sources */,
 				0062EDAB217274F70041B687 /* UIViewExtension.swift in Sources */,
 				00C01DC22174F1B600473AE6 /* Car.swift in Sources */,
 				004095FF218775890065660D /* DeliveryLocationViewController.swift in Sources */,
 				00874473218B217D007E8E13 /* StringExtension.swift in Sources */,
-				3582C31021066C3100F4A6EF /* PublishViewController.swift in Sources */,
+				00B50BDD2198997200B5A4A6 /* LoginSlideViewController.swift in Sources */,
 				00A910D7218C36C600A991BB /* CompletedPayoutViewController.swift in Sources */,
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
-				3582C2F8210118B200F4A6EF /* AddAPhotoOfCarViewController.swift in Sources */,
+				00B50B5021974F9A00B5A4A6 /* JSONEncoderExtension.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
+				00B50BA42198893000B5A4A6 /* ParentAddOwnCarResult.swift in Sources */,
 				00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */,
 				00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */,
-				35DAA30420ED11E30083CA93 /* LocationSearchTable.swift in Sources */,
+				00B50BB421988D9200B5A4A6 /* StartViewController.m in Sources */,
 				35789D1720F4412400A07445 /* BookingSearchLoacationViewController.swift in Sources */,
+				00B50B4121974C8900B5A4A6 /* DecodableExtension.swift in Sources */,
 				00F9388B2185CAD00075386D /* ReportOtherTableViewCell.swift in Sources */,
+				00B50B3E21974C4100B5A4A6 /* ViewLoadingManager.swift in Sources */,
+				00B50B3321974BE600B5A4A6 /* Network.swift in Sources */,
 				0018478C2176873B000B0ED3 /* ParallaxTableView.swift in Sources */,
+				00B50B97219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift in Sources */,
 				00874480218B3995007E8E13 /* ProfilePhotoViewController.swift in Sources */,
+				00B50B7F219888C700B5A4A6 /* PhotoReviewViewController.swift in Sources */,
+				00B50BA52198893000B5A4A6 /* AddOwnCarResult.swift in Sources */,
 				003735382175240A00164AA7 /* CustomNavigationBar.swift in Sources */,
 				007F18E8218B68F000B48470 /* ThanksContactUsViewController.swift in Sources */,
 				0028F33F218E38840018AA6D /* CustomSegmentView.swift in Sources */,
 				0098BD4F217B99FC009E3984 /* LocationSearchTableViewCell.swift in Sources */,
+				00B50B92219888C700B5A4A6 /* EnterDLViewController.swift in Sources */,
+				00B50BDC2198997200B5A4A6 /* LoginSlideMainViewController.swift in Sources */,
+				00B50BA02198892100B5A4A6 /* AddOwnCarParameters.swift in Sources */,
+				00B50BDB2198997200B5A4A6 /* CustomNavController.swift in Sources */,
 				35D639262151495400B912AA /* AccountViewController.swift in Sources */,
 				0047B143217CBA9F00941D9C /* CarDetailDateTableViewCell.swift in Sources */,
 				0064CC7C216F9691005FCC70 /* TableViewExtension.swift in Sources */,
 				00874465218AF126007E8E13 /* ContactInfoTableViewCell.swift in Sources */,
 				0064CC78216F967E005FCC70 /* ReusableView.swift in Sources */,
 				35DAA31820F401280083CA93 /* FleetViewController.swift in Sources */,
-				3582C2FE210223DD00F4A6EF /* PhotoReviewViewController.swift in Sources */,
 				35D6391721502D1F00B912AA /* ConfirmationCodeVC.swift in Sources */,
+				00B50B7D219888C700B5A4A6 /* AboutPriceViewController.swift in Sources */,
+				00B50BCF219892E300B5A4A6 /* ListedVehiclesTVCell.swift in Sources */,
 				00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */,
 				0047B168217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.swift in Sources */,
-				3582C30C210669AD00F4A6EF /* ReviewTermsViewController.swift in Sources */,
 				001D98FC217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift in Sources */,
 				001D98F5217E2ECF00CEC8E3 /* CarAttribute.swift in Sources */,
+				00B50BB12198897000B5A4A6 /* ListYourCarService.swift in Sources */,
+				00B50B7A219888C700B5A4A6 /* AddAPhotoOfCarViewController.swift in Sources */,
 				00F938882185B4A70075386D /* Report.swift in Sources */,
-				3582C2FA2101193E00F4A6EF /* CarPhotoViewViewController.swift in Sources */,
-				35DBE66520E3EECD0041325A /* LoginSlideViewController.swift in Sources */,
 				00A910D3218C337B00A991BB /* TransactionHistoryViewController.swift in Sources */,
-				3582C30A21026DB800F4A6EF /* AboutPriceViewController.swift in Sources */,
+				00B50B4821974D2B00B5A4A6 /* TokenAdapter.swift in Sources */,
 				00C01DC02174F17800473AE6 /* Explore.swift in Sources */,
+				00B50B3B21974C2800B5A4A6 /* NoContentView.swift in Sources */,
 				3591B8BD20DAC06C00BA0CF9 /* AppDelegate.swift in Sources */,
 				00AEE9EF217CA03600AD7348 /* CarDetailViewController.swift in Sources */,
 				35D6392B21528F5A00B912AA /* ForgotPasswordViewController.swift in Sources */,
 				007508EA2185ED0100C13F4A /* PickUpAndReturnViewController.swift in Sources */,
-				3582C306210231E500F4A6EF /* SetPriceViewController.swift in Sources */,
+				00B50B2921974BB000B5A4A6 /* HttpGetewayProtocol.swift in Sources */,
 				0047B155217CD2EE00941D9C /* CarDetailFeaturesTableViewCell.swift in Sources */,
 				00E1A16421821DF1003BE03B /* CarGuidelineTableViewCell.swift in Sources */,
-				357E08F620FD1D8A0033FD0E /* EnterCodeViewController.swift in Sources */,
+				00B50B2821974BB000B5A4A6 /* UploadFileProtocol.swift in Sources */,
+				00B50BC1219892B100B5A4A6 /* Vehicles.swift in Sources */,
 				0018478A21766C1D000B0ED3 /* UITabBarControllerExtension.swift in Sources */,
 				0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */,
-				3582C31421066ECB00F4A6EF /* WhenReadyViewController.swift in Sources */,
 				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
+				00B50B86219888C700B5A4A6 /* BookingWindowViewController.swift in Sources */,
+				00B50BCA219892D500B5A4A6 /* ListingTabVC.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
+				00B50B91219888C700B5A4A6 /* SetPriceViewController.swift in Sources */,
 				00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */,
+				00B50B89219888C700B5A4A6 /* CarPhotoViewViewController.swift in Sources */,
 				00AEE9F4217CACE500AD7348 /* CarDetailTitleTableViewCell.swift in Sources */,
 				00874477218B2BDC007E8E13 /* VerifyPhoneNumberViewController.swift in Sources */,
-				357E08FE20FF82D40033FD0E /* TakeInsurancePicViewController.swift in Sources */,
-				35D63911215009A900B912AA /* SignInViewController.swift in Sources */,
-				357E090420FFBE4B0033FD0E /* RegisPhotoViewController.swift in Sources */,
-				3582C31221066D9700F4A6EF /* PendingApprovalViewController.swift in Sources */,
-				35DAA30820ED1FAC0083CA93 /* InfoCarLocationViewController.swift in Sources */,
+				00B50B81219888C700B5A4A6 /* HowGuestWillBookContainerViewController.swift in Sources */,
 				00A910D5218C368500A991BB /* UpcomingPayoutViewController.swift in Sources */,
-				357E08F420FCF9930033FD0E /* VerifyPhoneViewController.swift in Sources */,
+				00B50B85219888C700B5A4A6 /* InfoCarLocationViewController.swift in Sources */,
+				00B50B4421974C9E00B5A4A6 /* UIImageExtension.swift in Sources */,
+				00B50B7B219888C700B5A4A6 /* TripLengthViewController.swift in Sources */,
 				00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */,
 				00409604218779D80065660D /* CurrentLocationTableViewCell.swift in Sources */,
+				00B50B7C219888C700B5A4A6 /* AddressViewController.swift in Sources */,
+				00B50BD3219892FC00B5A4A6 /* HostDashboardService.swift in Sources */,
+				00B50B2621974BB000B5A4A6 /* ParameterConvertible.swift in Sources */,
 				00874479218B2EF4007E8E13 /* ChangeYourPasswordViewController.swift in Sources */,
 				00874471218B0A5C007E8E13 /* ChangeYourEmailViewController.swift in Sources */,
 				35D63914215009F800B912AA /* MfaViewController.swift in Sources */,
 				00AEE9E9217C6AB600AD7348 /* FleetTableViewCell.swift in Sources */,
-				3582C308210265F800F4A6EF /* AddPriceViewController.swift in Sources */,
-				35DAA30C20EFAAA40083CA93 /* CarEligibilityViewController.swift in Sources */,
 				004E04B0218F27FA004B8BC3 /* FAQViewController.swift in Sources */,
+				00B50B3121974BE600B5A4A6 /* HttpGateway.swift in Sources */,
 				00AEE9ED217C6BDD00AD7348 /* Vehicle.swift in Sources */,
 				00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */,
 				001D98F8217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.swift in Sources */,
-				3582C30021022C2100F4A6EF /* HowBookingWorksViewController.swift in Sources */,
-				357E09082100D2A40033FD0E /* TellUsAboutYourCarViewController.swift in Sources */,
-				357E090020FFB0D90033FD0E /* PhotoViewController.swift in Sources */,
+				00B50BC7219892C900B5A4A6 /* Enpoints+HostDashboard.swift in Sources */,
+				00B50BC2219892B100B5A4A6 /* DataVechicles.swift in Sources */,
+				00B50B8C219888C700B5A4A6 /* ReviewTermsViewController.swift in Sources */,
 				00AEE9E5217C691C00AD7348 /* FleetHeaderTableViewCell.swift in Sources */,
+				00B50B99219888DE00B5A4A6 /* PeaceOfMindVC.swift in Sources */,
 				0047B14F217CCA3C00941D9C /* CarDetailDescriptionTableViewCell.swift in Sources */,
 				003735362175189400164AA7 /* DictionaryExtension.swift in Sources */,
 				00C01DC92174FB3E00473AE6 /* Endpoint.swift in Sources */,
+				00B50B83219888C700B5A4A6 /* MapViewController.swift in Sources */,
 				0047B159217CDD3C00941D9C /* CarDetailRenterTableViewCell.swift in Sources */,
+				00B50BC3219892B100B5A4A6 /* ParentVechicles.swift in Sources */,
 				00D642C62188CFB30015DAD7 /* TripsViewController.swift in Sources */,
-				3582C2FC2101297C00F4A6EF /* AddProfilePhotoViewController.swift in Sources */,
 				0037352F2174FE6800164AA7 /* InfoDictionary.swift in Sources */,
 				00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */,
-				357E08FA20FE7D050033FD0E /* LicenseDetailViewController.swift in Sources */,
+				00B50B2C21974BD000B5A4A6 /* AlamofireExtension.swift in Sources */,
+				00B50B4F21974F9A00B5A4A6 /* JSONDecoderExtension.swift in Sources */,
+				00B50B4A21974E1900B5A4A6 /* MphErrors+Network.swift in Sources */,
+				00B50B3221974BE600B5A4A6 /* NetworkConfigurator.swift in Sources */,
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
+				00B50BAF2198896600B5A4A6 /* ListYourCarFacade.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
-				35F2050020E407C200A544F4 /* LoginSlideMainViewController.swift in Sources */,
+				00B50BA12198892100B5A4A6 /* ImageUploadFileModel.swift in Sources */,
+				00B50B8E219888C700B5A4A6 /* HowBookingWorksViewController.swift in Sources */,
+				00B50B80219888C700B5A4A6 /* PendingApprovalViewController.swift in Sources */,
 				00A910DD218C3B1900A991BB /* StoryboardInitiable.swift in Sources */,
 				00AEE9DC217C566700AD7348 /* BookingLocationDetail.swift in Sources */,
 				007B47BC2184C2A70016FEE7 /* VerifiedInfoTableViewCell.swift in Sources */,
 				00A910D9218C393800A991BB /* TransactionHistoryPageViewController.swift in Sources */,
+				00B50B9F2198892100B5A4A6 /* UploadCarImageParameters.swift in Sources */,
 				0047B14B217CC57D00941D9C /* CarDetailMilesTableViewCell.swift in Sources */,
+				00B50B60219888AB00B5A4A6 /* ObjcExceptionHelper.m in Sources */,
 				0028F33D218E288D0018AA6D /* Transaction.swift in Sources */,
 				00F938852185ABE10075386D /* ReportTableViewCell.swift in Sources */,
+				00B50B8B219888C700B5A4A6 /* WhenReadyViewController.swift in Sources */,
 				00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */,
 				353D3BF1210A12C000CF748C /* Constant.swift in Sources */,
-				3582C3042102318100F4A6EF /* TripLengthViewController.swift in Sources */,
 				35DAA30E20EFBEC80083CA93 /* NextButton.swift in Sources */,
+				00B50B98219888DE00B5A4A6 /* VPPageControl.swift in Sources */,
+				00B50B88219888C700B5A4A6 /* AddProfilePhotoViewController.swift in Sources */,
 				00874460218AED9C007E8E13 /* ContactInfoViewController.swift in Sources */,
+				00B50B8A219888C700B5A4A6 /* PublishViewController.swift in Sources */,
 				00D642CC2188F0510015DAD7 /* AccountTableViewCell.swift in Sources */,
 				00874469218AFA99007E8E13 /* ContactInfo.swift in Sources */,
+				00B50B7E219888C700B5A4A6 /* PriceContainerViewController.swift in Sources */,
 				0047B16C217CE62E00941D9C /* CarDetailOwnedItemTableViewCell.swift in Sources */,
+				00B50BD72198994E00B5A4A6 /* SignInViewController.swift in Sources */,
+				00B50B8F219888C700B5A4A6 /* TellUsAboutYourCarViewController.swift in Sources */,
 				00E1A1532181FCC6003BE03B /* CalendarViewController.swift in Sources */,
 				003735312175036C00164AA7 /* Endpoints+Explore.swift in Sources */,
+				00B50B84219888C700B5A4A6 /* CarEligibilityViewController.swift in Sources */,
 				007508EE2185F42200C13F4A /* PickUpLocationTableViewCell.swift in Sources */,
 				00F938812185A9400075386D /* ReportListingViewController.swift in Sources */,
+				00B50BC5219892BD00B5A4A6 /* UpdateUserParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
