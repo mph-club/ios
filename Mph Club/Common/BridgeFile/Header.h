@@ -9,6 +9,8 @@
 #ifndef Header_h
 #define Header_h
 
+#import "StartViewController.h"
+#import "ObjcExceptionHelper.h"
 #import "TestFairy.h"
 
 #endif /* Header_h */

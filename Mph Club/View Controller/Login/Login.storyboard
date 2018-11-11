@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-X6-mKc">
-                                <rect key="frame" x="0.0" y="123" width="227" height="36"/>
+                                <rect key="frame" x="0.0" y="99" width="227" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="p3u-PY-0DF"/>
                                 </constraints>
@@ -37,13 +41,13 @@ while in town</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w99-YZ-iun">
-                                <rect key="frame" x="8" y="156" width="227" height="36"/>
+                                <rect key="frame" x="8" y="132" width="227" height="36"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide the nice cars in town but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jqb-rV-djl">
-                                <rect key="frame" x="20" y="193" width="208" height="128"/>
+                                <rect key="frame" x="20" y="169" width="208" height="186"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -85,7 +89,7 @@ while in town</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-5m-7c6">
-                                <rect key="frame" x="25" y="123" width="183" height="37"/>
+                                <rect key="frame" x="25" y="99" width="183" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="74B-Go-2yo"/>
                                 </constraints>
@@ -96,13 +100,13 @@ while in town</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZY-Ok-WhK">
-                                <rect key="frame" x="25" y="158" width="195" height="36"/>
+                                <rect key="frame" x="25" y="134" width="195" height="36"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide the nice cars in town but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ac7-Me-VlZ">
-                                <rect key="frame" x="19" y="205" width="207" height="94"/>
+                                <rect key="frame" x="19" y="181" width="207" height="152"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -143,7 +147,7 @@ while in town</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="518"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usU-qE-4lx">
-                                <rect key="frame" x="0.0" y="124" width="227" height="38"/>
+                                <rect key="frame" x="0.0" y="100" width="227" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="G9k-RO-cbQ"/>
                                 </constraints>
@@ -154,13 +158,13 @@ while in town</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while in town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neq-dZ-4zm">
-                                <rect key="frame" x="-1" y="158" width="242" height="36"/>
+                                <rect key="frame" x="-1" y="134" width="242" height="36"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Our host not only provide the nice cars in town but they are commited to execellent service. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iGG-A9-ThH">
-                                <rect key="frame" x="20" y="195" width="208" height="88"/>
+                                <rect key="frame" x="20" y="171" width="208" height="146"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -380,7 +384,7 @@ while in town</string>
                     <toolbarItems/>
                     <size key="freeformSize" width="375" height="812"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4l6-mC-uz8">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

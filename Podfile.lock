@@ -13,6 +13,8 @@ PODS:
     - Fabric (~> 1.8.1)
   - Fabric (1.8.2)
   - JTAppleCalendar (7.1.6)
+  - JumioMobileSDK/Netverify (2.14.0)
+  - Kingfisher (4.10.1)
   - Mixpanel-swift (2.5.5):
     - Mixpanel-swift/Complete (= 2.5.5)
   - Mixpanel-swift/Complete (2.5.5)
@@ -28,6 +30,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.5.2):
     - PromiseKit/CorePromise
+  - ReachabilitySwift (4.3.0)
   - SwiftLint (0.27.0)
   - UICKeyChainStore (2.0.7)
 
@@ -41,10 +44,13 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - JTAppleCalendar (~> 7.0)
+  - JumioMobileSDK/Netverify (~> 2.13)
+  - Kingfisher (~> 4.0)
   - Mixpanel-swift
   - PromiseKit (~> 6.0)
   - PromiseKit/Alamofire (~> 6.0)
   - PromiseKit/CorePromise (~> 6.0)
+  - ReachabilitySwift
   - SwiftLint
   - UICKeyChainStore (~> 2.0.6)
 
@@ -60,8 +66,11 @@ SPEC REPOS:
     - Crashlytics
     - Fabric
     - JTAppleCalendar
+    - JumioMobileSDK
+    - Kingfisher
     - Mixpanel-swift
     - PromiseKit
+    - ReachabilitySwift
     - SwiftLint
     - UICKeyChainStore
 
@@ -76,11 +85,14 @@ SPEC CHECKSUMS:
   Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
   Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  JumioMobileSDK: b3de9803a3d9945069ceaabe3fa8619b89c3e60f
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Mixpanel-swift: 92fd02942ef4bf5a1bd0630a88223a417b8c8b39
   PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   UICKeyChainStore: 696cd35083f7c8fb5e201d909b7e6aea6b478575
 
-PODFILE CHECKSUM: cfca6734fb38bcdeca8bba445607dbcad7993f91
+PODFILE CHECKSUM: 0b7d0e1560db8a85a4443c60ab9fd676f47b7812
 
 COCOAPODS: 1.5.3

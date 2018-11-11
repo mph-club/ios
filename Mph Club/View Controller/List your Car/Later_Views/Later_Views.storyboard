@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Booking Window View Controller-->
+        <scene sceneID="uG5-E6-J3I">
+            <objects>
+                <viewController id="isb-B2-AGo" customClass="BookingWindowViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uss-qW-Rac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CO-qI-ALe" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="15" y="586" width="344" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="iZK-bq-Mw7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FnQ-eh-lyb" kind="show" id="Htn-mh-RA5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Booking window" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCq-Lp-BF7">
+                                <rect key="frame" x="16" y="81" width="359" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block trips that don’t give you enough advance notice." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUa-Ug-Xxn">
+                                <rect key="frame" x="16" y="162" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much advance notice do you need to confirm a trip request?" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9L-AD-57E">
+                                <rect key="frame" x="16" y="234" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select one" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-xa-PiJ" customClass="APJTextPickerView" customModule="APJTextPickerView">
+                                <rect key="frame" x="15" y="307" width="344" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9CO-qI-ALe" firstAttribute="leading" secondItem="Jpz-Qg-AUs" secondAttribute="leading" constant="15" id="7Lh-yz-Nox"/>
+                            <constraint firstItem="Jpz-Qg-AUs" firstAttribute="trailing" secondItem="9CO-qI-ALe" secondAttribute="trailing" constant="16" id="CRN-Yv-1Wt"/>
+                            <constraint firstItem="Jpz-Qg-AUs" firstAttribute="bottom" secondItem="9CO-qI-ALe" secondAttribute="bottom" constant="20" id="MaM-bH-Vwg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jpz-Qg-AUs"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButtton" destination="9CO-qI-ALe" id="uos-di-HDc"/>
+                        <outlet property="windowPickerView" destination="Jux-xa-PiJ" id="NK5-da-wAZ"/>
+                        <segue destination="FNb-eG-GS1" kind="unwind" identifier="unwindToHowBookingWorks" unwindAction="unwindToHowBookingWorksWithSegue:" id="XE5-4l-cw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xc-Kr-2CM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FNb-eG-GS1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="17991" y="1467"/>
+        </scene>
+        <!--Trip Length View Controller-->
+        <scene sceneID="u8Z-2v-OgS">
+            <objects>
+                <viewController id="FnQ-eh-lyb" customClass="TripLengthViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Pa-hq-lUA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o16-HC-Gm7" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="15" y="586" width="344" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="sSh-Ui-EBr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rks-ON-oVF" kind="show" id="mPQ-x7-DlF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How long would you like trips to last?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbR-1y-PAF">
+                                <rect key="frame" x="16" y="81" width="359" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block trips that don’t give you enough advance notice." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-wS-ImU">
+                                <rect key="frame" x="16" y="192" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shortest possible trip?" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-hc-S9l">
+                                <rect key="frame" x="16" y="264" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select one" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKC-kw-Shj" customClass="APJTextPickerView" customModule="APJTextPickerView">
+                                <rect key="frame" x="15" y="311" width="344" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select one" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvN-zu-0aY" customClass="APJTextPickerView" customModule="APJTextPickerView">
+                                <rect key="frame" x="15" y="405" width="344" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longest possible trip?" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nk-wR-g0Y">
+                                <rect key="frame" x="16" y="359" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c6C-iy-VrE" firstAttribute="bottom" secondItem="o16-HC-Gm7" secondAttribute="bottom" constant="20" id="IuP-Ft-B5u"/>
+                            <constraint firstItem="c6C-iy-VrE" firstAttribute="trailing" secondItem="o16-HC-Gm7" secondAttribute="trailing" constant="16" id="iHB-f6-hk7"/>
+                            <constraint firstItem="o16-HC-Gm7" firstAttribute="leading" secondItem="c6C-iy-VrE" secondAttribute="leading" constant="15" id="spA-Qp-XlK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c6C-iy-VrE"/>
+                    </view>
+                    <connections>
+                        <outlet property="longTripPickerView" destination="jvN-zu-0aY" id="DuO-W5-fT4"/>
+                        <outlet property="nextButtton" destination="o16-HC-Gm7" id="baS-KA-XPq"/>
+                        <outlet property="shortTripPickerView" destination="sKC-kw-Shj" id="1dH-1f-dkL"/>
+                        <segue destination="1Eq-iK-qxq" kind="unwind" identifier="unwindToBookingWindow" unwindAction="unwindToBookingWindowWithSegue:" id="oDK-2C-ueR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GU4-FI-Jog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Eq-iK-qxq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="18683" y="1467"/>
+        </scene>
+        <!--Set Price View Controller-->
+        <scene sceneID="ino-g9-6IR">
+            <objects>
+                <viewController id="Rks-ON-oVF" customClass="SetPriceViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G3h-AH-J6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let’s setup your daily pricing" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-PH-2Q1">
+                                <rect key="frame" x="18" y="79" width="288" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moo-hg-6Jc">
+                                <rect key="frame" x="18" y="586" width="343" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="nUh-OP-Yck"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G4E-Z2-8sv" kind="show" id="ojO-nz-psh"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Increase earnings by letting your price automatically adjust to match demand with Recommended pricing." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mR1-sI-3wG">
+                                <rect key="frame" x="16" y="194" width="336" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82969696500000001" green="0.82969696500000001" blue="0.82969696500000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="moo-hg-6Jc" firstAttribute="leading" secondItem="Ntf-rG-Aby" secondAttribute="leading" constant="18" id="9qb-AK-gW7"/>
+                            <constraint firstItem="Ntf-rG-Aby" firstAttribute="trailing" secondItem="moo-hg-6Jc" secondAttribute="trailing" constant="14" id="RAU-9O-roa"/>
+                            <constraint firstItem="Ntf-rG-Aby" firstAttribute="bottom" secondItem="moo-hg-6Jc" secondAttribute="bottom" constant="20" id="ZaN-xF-U7a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ntf-rG-Aby"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mj5-CO-50d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19354" y="1387"/>
+        </scene>
+        <!--Add Price View Controller-->
+        <scene sceneID="Lad-eL-c8g">
+            <objects>
+                <viewController id="CX6-b6-gFb" customClass="AddPriceViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1J-bA-QHM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNy-sf-Qey">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIK-QO-xW7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Increase your chances of booking your car with recommended pricing." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGv-SM-AXp">
+                                                <rect key="frame" x="18" y="118" width="323" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We adjust your listing’s daily prices automatically to maximize your earnings." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP3-Bj-QvZ">
+                                                <rect key="frame" x="18" y="254" width="252" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can set a custom per day price." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-6g-8Kh">
+                                                <rect key="frame" x="18" y="410" width="252" height="43"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recomended pricing" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGt-p6-1cP">
+                                                <rect key="frame" x="18" y="215" width="233" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fixed pricing" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-gn-6E6">
+                                                <rect key="frame" x="18" y="370" width="233" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$155" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De8-oQ-xuS">
+                                                <rect key="frame" x="18" y="315" width="233" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-Ye-GR8" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="457" width="342" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your price setup" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t51-MU-ACf">
+                                                <rect key="frame" x="18" y="-7" width="265" height="136"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-da-dQH" userLabel="Button1">
+                                                <rect key="frame" x="294" y="223" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="group7"/>
+                                                <connections>
+                                                    <action selector="button1:" destination="CX6-b6-gFb" eventType="touchUpInside" id="jlT-U6-qRW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDt-vc-2kS" userLabel="Button2">
+                                                <rect key="frame" x="294" y="375" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="group7-1"/>
+                                                <connections>
+                                                    <action selector="button2:" destination="CX6-b6-gFb" eventType="touchUpInside" id="ghV-Fs-cTz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaN-VY-9FW">
+                                                <rect key="frame" x="18" y="164" width="91" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Learn more &gt;"/>
+                                                <connections>
+                                                    <segue destination="ySM-dM-3ve" kind="presentation" id="Eon-OY-vKK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="647" id="UX1-SQ-14e"/>
+                                            <constraint firstAttribute="width" constant="375" id="hm0-KW-fpm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GIK-QO-xW7" firstAttribute="top" secondItem="jNy-sf-Qey" secondAttribute="top" id="OcG-QM-UY4"/>
+                                    <constraint firstItem="GIK-QO-xW7" firstAttribute="leading" secondItem="jNy-sf-Qey" secondAttribute="leading" id="eu6-NB-vuJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="GIK-QO-xW7" secondAttribute="bottom" id="m72-eh-ONR"/>
+                                    <constraint firstAttribute="trailing" secondItem="GIK-QO-xW7" secondAttribute="trailing" id="qGw-Re-pCz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jNy-sf-Qey" firstAttribute="trailing" secondItem="5ys-MT-fZD" secondAttribute="trailing" id="1CM-5y-eAJ"/>
+                            <constraint firstItem="jNy-sf-Qey" firstAttribute="top" secondItem="5ys-MT-fZD" secondAttribute="top" id="4rZ-SO-1pz"/>
+                            <constraint firstItem="jNy-sf-Qey" firstAttribute="leading" secondItem="5ys-MT-fZD" secondAttribute="leading" id="aWd-78-nAK"/>
+                            <constraint firstItem="jNy-sf-Qey" firstAttribute="bottom" secondItem="5ys-MT-fZD" secondAttribute="bottom" id="wzf-PA-zXz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5ys-MT-fZD"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="button1" destination="NA7-da-dQH" id="U7u-Xz-qjH"/>
+                        <outlet property="button2" destination="vDt-vc-2kS" id="sNT-aT-TsV"/>
+                        <outlet property="constraintContentHeight" destination="UX1-SQ-14e" id="79x-HK-qsN"/>
+                        <outlet property="contentView" destination="GIK-QO-xW7" id="DsN-OA-XGs"/>
+                        <outlet property="fixedPriceTextField" destination="ZxQ-Ye-GR8" id="Kfm-uq-ZaM"/>
+                        <outlet property="recommendedPriceLabel" destination="De8-oQ-xuS" id="0Yk-0P-2je"/>
+                        <outlet property="scrollView" destination="jNy-sf-Qey" id="4lB-7S-XuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtF-CC-YUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20810" y="1407"/>
+        </scene>
+        <!--About Price View Controller-->
+        <scene sceneID="VFy-Lo-aDj">
+            <objects>
+                <viewController id="ySM-dM-3ve" customClass="AboutPriceViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8V-qr-hJL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Recommended pricing" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-rY-30N">
+                                <rect key="frame" x="16" y="89" width="336" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GND-On-zPX">
+                                <rect key="frame" x="16" y="241" width="343" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <string key="text">Recommended pricing adjusts your listing’s daily price automatically based on changes in demand for your listing. This helps maximize your earning.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4A-qI-AaR">
+                                <rect key="frame" x="16" y="34" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close28Px"/>
+                                <connections>
+                                    <action selector="close:" destination="ySM-dM-3ve" eventType="touchUpInside" id="M8Z-K9-ic6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oqk-xO-Rtc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UK8-cV-mGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21553" y="1453"/>
+        </scene>
+        <!--Price Container View Controller-->
+        <scene sceneID="yeR-1U-Z2K">
+            <objects>
+                <viewController id="G4E-Z2-8sv" customClass="PriceContainerViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h7e-rL-AtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKd-H1-HDS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="CX6-b6-gFb" kind="embed" id="2V9-rk-d0l"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMd-Vf-BcX">
+                                <rect key="frame" x="16" y="586" width="343" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="6Nd-bl-YEq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="G4E-Z2-8sv" eventType="touchUpInside" id="nhF-OP-Q2L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PKd-H1-HDS" firstAttribute="trailing" secondItem="21g-6a-6oc" secondAttribute="trailing" id="BFT-qY-Z8H"/>
+                            <constraint firstAttribute="trailing" secondItem="gMd-Vf-BcX" secondAttribute="trailing" constant="16" id="NKv-cA-HlQ"/>
+                            <constraint firstAttribute="bottom" secondItem="gMd-Vf-BcX" secondAttribute="bottom" constant="20" id="Phc-X1-sf5"/>
+                            <constraint firstItem="PKd-H1-HDS" firstAttribute="top" secondItem="21g-6a-6oc" secondAttribute="top" id="X0a-iE-4lQ"/>
+                            <constraint firstItem="PKd-H1-HDS" firstAttribute="bottom" secondItem="21g-6a-6oc" secondAttribute="bottom" id="itq-CV-tWx"/>
+                            <constraint firstItem="gMd-Vf-BcX" firstAttribute="leading" secondItem="h7e-rL-AtZ" secondAttribute="leading" constant="16" id="veQ-On-NcZ"/>
+                            <constraint firstItem="PKd-H1-HDS" firstAttribute="leading" secondItem="21g-6a-6oc" secondAttribute="leading" id="xet-0D-8KI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="21g-6a-6oc"/>
+                    </view>
+                    <connections>
+                        <segue destination="07U-tf-Aqz" kind="unwind" unwindAction="unwindToProgressWithSegue:" id="gps-QJ-ctk"/>
+                        <segue destination="07U-tf-Aqz" kind="unwind" identifier="unwindToCheckList" unwindAction="unwindToCheckListWithSegue:" id="PZN-Ly-SAn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3s-5x-vYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="07U-tf-Aqz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="20025" y="1463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close28Px" width="28" height="28"/>
+        <image name="group7" width="40" height="40"/>
+        <image name="group7-1" width="40" height="40"/>
+    </resources>
+</document>

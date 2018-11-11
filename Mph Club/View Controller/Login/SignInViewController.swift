@@ -11,50 +11,35 @@ import Foundation
 import AWSCognitoIdentityProvider
 import Mixpanel
 
-final class SignInViewController: UIViewController, UIScrollViewDelegate {
-    // ===============
-    // MARK: - Outlets
-    // ===============
+class SignInViewController: UIViewController, UIScrollViewDelegate {
+     var isState = true
+     var activeField: UITextField?
+     var lastOffset: CGPoint!
+     var keyboardHeight: CGFloat!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
     
-    // MARK: View
-    @IBOutlet private weak var contentView: UIView!
-    @IBOutlet private weak var containerView: UIView!
-    
-    // MARK: Scroll View
-    @IBOutlet private weak var scrollView: UIScrollView!
-    
-    // MARK: Page Control
-    @IBOutlet private weak var pageControl: UIPageControl!
-    
-    // MARK: Text Field
-    @IBOutlet private weak var username: UITextField!
-    @IBOutlet private weak var password: UITextField!
-    
-    // MARK: Button
-    @IBOutlet private weak var createAccountBtn: UIButton!
-    
-    // MARK: Constraint
-    @IBOutlet private weak var constraintContentHeight: NSLayoutConstraint!
-    
-    // ==================
-    // MARK: - Properties
-    // ==================
-    var isState = true
-    var activeField: UITextField?
-    var lastOffset: CGPoint!
-    var keyboardHeight: CGFloat!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
     var usernameText: String?
     
-    var loginSlideViewController = LoginSlideViewController()
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var createAccountBtn: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+
+    
+    var loginSlideViewController = LoginSlideViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Mixpanel.mainInstance().track(event: "Second Event")
         self.scrollView.scrollsToTop = false
         hideKeyboardWhenTappedAround()
         pageControl.addTarget(self, action: #selector(self.didChangePageControlValue), for: .valueChanged)
-        
+
         self.username.delegate = self
         self.password.delegate = self
         
@@ -70,6 +55,7 @@ final class SignInViewController: UIViewController, UIScrollViewDelegate {
         activeField?.resignFirstResponder()
         activeField = nil
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -90,10 +76,14 @@ final class SignInViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {
-        if let userName = username.text, let password = password.text {
-            let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: userName,
-                                                                              password: password)
+        if (self.username.text != nil && self.password.text != nil) {
+            let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.username.text ?? "", password: self.password.text ?? "")
+            
+            
+            
             self.passwordAuthenticationCompletion?.set(result: authDetails)
+            print(authDetails)
+            
         } else {
             let alertController = UIAlertController(title: "Missing information",
                                                     message: "Please enter a valid user name and password",
@@ -102,8 +92,8 @@ final class SignInViewController: UIViewController, UIScrollViewDelegate {
             alertController.addAction(retryAction)
         }
     }
-    
-    
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loginSlideViewController = segue.destination as? LoginSlideViewController {
@@ -113,10 +103,10 @@ final class SignInViewController: UIViewController, UIScrollViewDelegate {
     
     
     @objc func didChangePageControlValue() {
-        //loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
+            //loginSlideViewController.scrollToViewController(index: pageControl.currentPage)
     }
     
-    
+
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView.contentOffset.y > CGPoint.zero.y else {
@@ -134,7 +124,7 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
         self.passwordAuthenticationCompletion = passwordAuthenticationCompletionSource
         DispatchQueue.main.async {
             if (self.usernameText == nil) {
-                //  self.usernameText = authenticationInput.lastKnownUsername
+              //  self.usernameText = authenticationInput.lastKnownUsername
             }
         }
     }
@@ -195,6 +185,8 @@ extension UIViewController {
     }
 }
 
+
+
 // MARK: UITextFieldDelegate
 extension SignInViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -210,7 +202,10 @@ extension SignInViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: Keyboard Handling
+
+
+
+    // MARK: Keyboard Handling
 extension SignInViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -218,7 +213,7 @@ extension SignInViewController {
         }
         view.frame.origin.y = -keyboardRect.height
     }
-    
+        
     @objc func keyboardWillHide(notification: NSNotification) {
         view.frame.origin.y = 0
     }

@@ -27,7 +27,7 @@ extension Endpoints {
         var path: String {
             switch self {
             case .version1:
-                return "/api/v1"
+                return "/app/api/v1/"
             }
         }
         
