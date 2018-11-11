@@ -11,7 +11,7 @@ import Foundation
 import AWSCognitoIdentityProvider
 import Mixpanel
 
-class SignInViewController: UIViewController, UIScrollViewDelegate {
+final class SignInViewController: UIViewController, UIScrollViewDelegate {
      var isState = true
      var activeField: UITextField?
      var lastOffset: CGPoint!

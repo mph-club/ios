@@ -155,7 +155,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3e-2f-UfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425" y="-155"/>
+            <point key="canvasLocation" x="425" y="-156"/>
         </scene>
         <!--Trips-->
         <scene sceneID="Voq-sk-vFK">
@@ -167,15 +167,15 @@
             </objects>
             <point key="canvasLocation" x="409" y="-413"/>
         </scene>
-        <!--HostDashboard-->
+        <!--Host-->
         <scene sceneID="equ-7V-VPi">
             <objects>
-                <viewControllerPlaceholder storyboardName="HostDashboard" id="11g-bx-gbF" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Host" id="11g-bx-gbF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="9h9-cU-Hlv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cq-Jn-thL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="-295"/>
+            <point key="canvasLocation" x="409" y="-294"/>
         </scene>
         <!--signinController-->
         <scene sceneID="xBR-hH-g87">

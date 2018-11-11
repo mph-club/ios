@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="216" id="KGk-i7-Jjw" customClass="ListedVehiclesTableViewCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="215.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJz-YS-l7U">
+                        <rect key="frame" x="8" y="8" width="304" height="199.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending Approval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diO-sg-L1W">
+                                <rect key="frame" x="8" y="30" width="123.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="GoK-QK-lw5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Your listing is pending approval" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-IM-Dls">
+                                <rect key="frame" x="8" y="64" width="168" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Maserati Granturismo Covertible 2016" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-JR-ZhL">
+                                <rect key="frame" x="8" y="109" width="168" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maserati" translatesAutoresizingMaskIntoConstraints="NO" id="yRZ-am-BdY">
+                                <rect key="frame" x="192" y="70" width="88" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LB5-dE-I5Y"/>
+                                    <constraint firstAttribute="width" secondItem="yRZ-am-BdY" secondAttribute="height" multiplier="22:15" id="fLy-QK-Kth"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approvals take up 72 hours." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkG-RM-p8T">
+                                <rect key="frame" x="8" y="158.5" width="280" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Qb-IM-Dls" firstAttribute="leading" secondItem="fJz-YS-l7U" secondAttribute="leading" constant="8" id="AHy-YU-BMa"/>
+                            <constraint firstItem="yRZ-am-BdY" firstAttribute="leading" secondItem="3Qb-IM-Dls" secondAttribute="trailing" constant="16" id="AdX-qL-J7V"/>
+                            <constraint firstAttribute="trailing" secondItem="yRZ-am-BdY" secondAttribute="trailing" constant="24" id="CaI-4X-gJr"/>
+                            <constraint firstAttribute="trailing" secondItem="YkG-RM-p8T" secondAttribute="trailing" constant="16" id="EON-Pc-OPe"/>
+                            <constraint firstItem="3Qb-IM-Dls" firstAttribute="top" secondItem="diO-sg-L1W" secondAttribute="bottom" constant="16" id="GB2-3A-3Yp"/>
+                            <constraint firstItem="YkG-RM-p8T" firstAttribute="leading" secondItem="fJz-YS-l7U" secondAttribute="leading" constant="8" id="LPY-TH-5OX"/>
+                            <constraint firstItem="diO-sg-L1W" firstAttribute="top" secondItem="fJz-YS-l7U" secondAttribute="top" constant="30" id="P4u-Zf-g6f"/>
+                            <constraint firstItem="YkG-RM-p8T" firstAttribute="top" secondItem="vsq-JR-ZhL" secondAttribute="bottom" constant="16" id="UYi-sG-5cA"/>
+                            <constraint firstAttribute="bottom" secondItem="YkG-RM-p8T" secondAttribute="bottom" constant="16" id="VeW-Ry-r6p"/>
+                            <constraint firstItem="yRZ-am-BdY" firstAttribute="centerY" secondItem="fJz-YS-l7U" secondAttribute="centerY" id="Vkh-yM-W6C"/>
+                            <constraint firstItem="diO-sg-L1W" firstAttribute="leading" secondItem="fJz-YS-l7U" secondAttribute="leading" constant="8" id="eo4-zK-0As"/>
+                            <constraint firstItem="vsq-JR-ZhL" firstAttribute="top" secondItem="3Qb-IM-Dls" secondAttribute="bottom" constant="4" id="jj7-vh-TWa"/>
+                            <constraint firstItem="vsq-JR-ZhL" firstAttribute="leading" secondItem="fJz-YS-l7U" secondAttribute="leading" constant="8" id="l1X-lA-Bse"/>
+                            <constraint firstItem="yRZ-am-BdY" firstAttribute="leading" secondItem="vsq-JR-ZhL" secondAttribute="trailing" constant="16" id="q4e-Td-v2Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fJz-YS-l7U" secondAttribute="trailing" constant="8" id="bs6-ju-o2g"/>
+                    <constraint firstItem="fJz-YS-l7U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="o7i-jl-mTl"/>
+                    <constraint firstAttribute="bottom" secondItem="fJz-YS-l7U" secondAttribute="bottom" constant="8" id="s7z-xN-vtI"/>
+                    <constraint firstItem="fJz-YS-l7U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="yMQ-6F-vhH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carImageView" destination="yRZ-am-BdY" id="X69-C6-7yN"/>
+                <outlet property="cellBackgroundView" destination="fJz-YS-l7U" id="qkU-CP-B6R"/>
+                <outlet property="shortDescriptionTextView" destination="vsq-JR-ZhL" id="pw7-Zu-oeo"/>
+                <outlet property="statusLabel" destination="diO-sg-L1W" id="Gt9-HI-nQC"/>
+                <outlet property="titleStatusLabel" destination="3Qb-IM-Dls" id="EOK-7q-Wep"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="111.54422788605699"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="maserati" width="343" height="230"/>
+    </resources>
+</document>

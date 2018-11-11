@@ -9,7 +9,7 @@
 import Foundation
 
 extension MphErrors {
-    public enum Backend: Error {
+    enum Backend: Error {
         /// When internet connection failes
         case connectionTimeout(error: Data?, response: HTTPURLResponse?)
         /// When session is not valid

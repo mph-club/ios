@@ -177,9 +177,8 @@
 		00B50BC5219892BD00B5A4A6 /* UpdateUserParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */; };
 		00B50BC7219892C900B5A4A6 /* Enpoints+HostDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */; };
 		00B50BCA219892D500B5A4A6 /* ListingTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */; };
-		00B50BCB219892D500B5A4A6 /* ListedVehiclesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */; };
-		00B50BCE219892E300B5A4A6 /* HostDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */; };
-		00B50BCF219892E300B5A4A6 /* ListedVehiclesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */; };
+		00B50BCE219892E300B5A4A6 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BCC219892E200B5A4A6 /* Host.storyboard */; };
+		00B50BCF219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BCD219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift */; };
 		00B50BD1219892F200B5A4A6 /* HostDashboardFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */; };
 		00B50BD3219892FC00B5A4A6 /* HostDashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD2219892FC00B5A4A6 /* HostDashboardService.swift */; };
 		00B50BD62198994E00B5A4A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BD42198994E00B5A4A6 /* Login.storyboard */; };
@@ -187,6 +186,7 @@
 		00B50BDB2198997200B5A4A6 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD82198997100B5A4A6 /* CustomNavController.swift */; };
 		00B50BDC2198997200B5A4A6 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */; };
 		00B50BDD2198997200B5A4A6 /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */; };
+		00B50BE42198B35400B5A4A6 /* ListedVehiclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BE32198B2D600B5A4A6 /* ListedVehiclesTableViewCell.xib */; };
 		00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBA2174F08E00473AE6 /* ExploreService.swift */; };
 		00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */; };
 		00C01DC02174F17800473AE6 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBF2174F17800473AE6 /* Explore.swift */; };
@@ -445,9 +445,8 @@
 		00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserParameter.swift; sourceTree = "<group>"; };
 		00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enpoints+HostDashboard.swift"; sourceTree = "<group>"; };
 		00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTabVC.swift; sourceTree = "<group>"; };
-		00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTVC.swift; sourceTree = "<group>"; };
-		00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostDashboard.storyboard; sourceTree = "<group>"; };
-		00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTVCell.swift; sourceTree = "<group>"; };
+		00B50BCC219892E200B5A4A6 /* Host.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Host.storyboard; sourceTree = "<group>"; };
+		00B50BCD219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTableViewCell.swift; sourceTree = "<group>"; };
 		00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDashboardFacade.swift; sourceTree = "<group>"; };
 		00B50BD2219892FC00B5A4A6 /* HostDashboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDashboardService.swift; sourceTree = "<group>"; };
 		00B50BD42198994E00B5A4A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -455,6 +454,7 @@
 		00B50BD82198997100B5A4A6 /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
 		00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
+		00B50BE32198B2D600B5A4A6 /* ListedVehiclesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListedVehiclesTableViewCell.xib; sourceTree = "<group>"; };
 		00C01DBA2174F08E00473AE6 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFacade.swift; sourceTree = "<group>"; };
 		00C01DBF2174F17800473AE6 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
@@ -835,6 +835,7 @@
 				0037353221750BB600164AA7 /* SearchLocation */,
 				00AEE9DD217C58D800AD7348 /* Fleet */,
 				00D642C22188CF7F0015DAD7 /* Trips */,
+				00B50BDF2198AF3900B5A4A6 /* Host */,
 				35D639242151493B00B912AA /* Account */,
 			);
 			path = Modules;
@@ -1440,19 +1441,6 @@
 			path = Decodables;
 			sourceTree = "<group>";
 		};
-		00B50BB52198921C00B5A4A6 /* Host Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				00B50BBB2198927B00B5A4A6 /* Extensions */,
-				00B50BBA2198926F00B5A4A6 /* Models */,
-				00B50BB92198925A00B5A4A6 /* Controllers */,
-				00B50BB82198924F00B5A4A6 /* Views */,
-				00B50BB72198924900B5A4A6 /* Facade */,
-				00B50BB62198924300B5A4A6 /* Service */,
-			);
-			path = "Host Dashboard";
-			sourceTree = "<group>";
-		};
 		00B50BB62198924300B5A4A6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -1467,24 +1455,6 @@
 				00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */,
 			);
 			path = Facade;
-			sourceTree = "<group>";
-		};
-		00B50BB82198924F00B5A4A6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				00B50BCC219892E200B5A4A6 /* HostDashboard.storyboard */,
-				00B50BCD219892E300B5A4A6 /* ListedVehiclesTVCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		00B50BB92198925A00B5A4A6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				00B50BC9219892D500B5A4A6 /* ListedVehiclesTVC.swift */,
-				00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		00B50BBA2198926F00B5A4A6 /* Models */ = {
@@ -1520,6 +1490,45 @@
 				00B50BBE219892B000B5A4A6 /* Vehicles.swift */,
 			);
 			path = Decodable;
+			sourceTree = "<group>";
+		};
+		00B50BDF2198AF3900B5A4A6 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BE12198AF5200B5A4A6 /* Views */,
+				00B50BE02198AF4600B5A4A6 /* Controllers */,
+				00B50BBB2198927B00B5A4A6 /* Extensions */,
+				00B50BBA2198926F00B5A4A6 /* Models */,
+				00B50BB72198924900B5A4A6 /* Facade */,
+				00B50BB62198924300B5A4A6 /* Service */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		00B50BE02198AF4600B5A4A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00B50BE12198AF5200B5A4A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BCC219892E200B5A4A6 /* Host.storyboard */,
+				00B50BE22198B0D400B5A4A6 /* CustomCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00B50BE22198B0D400B5A4A6 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BCD219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift */,
+				00B50BE32198B2D600B5A4A6 /* ListedVehiclesTableViewCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		00C01DB42174F02C00473AE6 /* Models */ = {
@@ -1718,7 +1727,6 @@
 		35207DCA20E3D5A300BA838A /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				00B50BB52198921C00B5A4A6 /* Host Dashboard */,
 				35D6392921528F4100B912AA /* Forgot Password */,
 				35DBE65F20E3E1A80041325A /* LoginSlide */,
 				3543144F20E579CB00B5F80E /* Create Account */,
@@ -2041,7 +2049,7 @@
 				350307DD215BFA9F0012E9B9 /* SearchLocation.storyboard in Resources */,
 				004E04AE218F26DF004B8BC3 /* FAQ.storyboard in Resources */,
 				00AEE9E6217C691C00AD7348 /* FleetHeaderTableViewCell.xib in Resources */,
-				00B50BCE219892E300B5A4A6 /* HostDashboard.storyboard in Resources */,
+				00B50BCE219892E300B5A4A6 /* Host.storyboard in Resources */,
 				007508E82185EC9700C13F4A /* PickUpAndReturn.storyboard in Resources */,
 				3591B8C720DAC06D00BA0CF9 /* LaunchScreen.storyboard in Resources */,
 				0047B144217CBA9F00941D9C /* CarDetailDateTableViewCell.xib in Resources */,
@@ -2054,6 +2062,7 @@
 				0062EDAF21727D030041B687 /* ExploreTableViewCell.xib in Resources */,
 				0047B140217CB4F600941D9C /* CarDetailHeaderTableViewCell.xib in Resources */,
 				0087446F218B0947007E8E13 /* ContactInfo.storyboard in Resources */,
+				00B50BE42198B35400B5A4A6 /* ListedVehiclesTableViewCell.xib in Resources */,
 				00B50BAB2198894F00B5A4A6 /* PeaceOfMind.storyboard in Resources */,
 				00D642C82188D0740015DAD7 /* Trips.storyboard in Resources */,
 				007508EF2185F42200C13F4A /* PickUpLocationTableViewCell.xib in Resources */,
@@ -2278,7 +2287,6 @@
 				00E1A1592182059C003BE03B /* CarFeature.swift in Sources */,
 				0064CC77216F967E005FCC70 /* NibLoadable.swift in Sources */,
 				0047B147217CC13300941D9C /* CarDetailLocationTableViewCell.swift in Sources */,
-				00B50BCB219892D500B5A4A6 /* ListedVehiclesTVC.swift in Sources */,
 				00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */,
 				009C4319218E138900E1AC18 /* TransactionHistoryHeaderTableViewCell.swift in Sources */,
 				00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */,
@@ -2323,7 +2331,7 @@
 				35DAA31820F401280083CA93 /* FleetViewController.swift in Sources */,
 				35D6391721502D1F00B912AA /* ConfirmationCodeVC.swift in Sources */,
 				00B50B7D219888C700B5A4A6 /* AboutPriceViewController.swift in Sources */,
-				00B50BCF219892E300B5A4A6 /* ListedVehiclesTVCell.swift in Sources */,
+				00B50BCF219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift in Sources */,
 				00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */,
 				0047B168217CE42F00941D9C /* CarDetailOwnedTitleTableViewCell.swift in Sources */,
 				001D98FC217E3D2800CEC8E3 /* CarDetailFeaturesCollectionViewCell.swift in Sources */,

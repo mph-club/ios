@@ -1,5 +1,5 @@
 //
-//  ListedVehiclesTVCell.swift
+//  ListedVehiclesTableViewCell.swift
 //  Mph Club
 //
 //  Created by Alex Cruz on 10/17/18.
@@ -8,15 +8,10 @@
 
 import UIKit
 
-class ListedVehiclesTVCell: UITableViewCell {
-
-    @IBOutlet private weak var cellBackgroundView: UIView!
-    @IBOutlet private weak var titleStatusLabel: UILabel!
-    @IBOutlet private weak var statusLabel: UILabel!
-    @IBOutlet private weak var shortDescriptionTextView: UILabel!
-    
-    @IBOutlet private weak var carImageView: UIImageView!
-    
+final class ListedVehiclesTableViewCell: UITableViewCell {
+    // =============
+    // MARK: - Enums
+    // =============
     enum Status: String {
         case pending = "P"
         case rejected = "R"
@@ -24,6 +19,28 @@ class ListedVehiclesTVCell: UITableViewCell {
         case banned = "B"
     }
     
+    // ===============
+    // MARK: - Outlets
+    // ===============
+    
+    // MARK: View
+    @IBOutlet private weak var cellBackgroundView: UIView!
+    
+    // MARK: Label
+    @IBOutlet private weak var titleStatusLabel: UILabel!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var shortDescriptionTextView: UILabel!
+    
+    // MARK: Image View
+    @IBOutlet private weak var carImageView: UIImageView!
+}
+
+// =======================
+// MARK: - Table View Cell
+// =======================
+
+// MARK: Life Cycle
+extension ListedVehiclesTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,10 +49,12 @@ class ListedVehiclesTVCell: UITableViewCell {
         cellBackgroundView.layer.shadowOffset = CGSize.zero
         cellBackgroundView.layer.shadowRadius = 6
     }
+}
 
-
-    
-    
+// ===============
+// MARK: - Methods
+// ===============
+extension ListedVehiclesTableViewCell {
     func setContent(_ vehicles: Vehicles) {
         // Configure the view for the selected state
         if vehicles.viewIndex == 0 {
@@ -62,6 +81,14 @@ class ListedVehiclesTVCell: UITableViewCell {
         //
         carImageView.setImage(with: vehicles.photos?.first)
     }
-
 }
 
+// =====================
+// MARK: - Reusable View
+// =====================
+extension ListedVehiclesTableViewCell: ReusableView {}
+
+// =========================
+// MARK: - Nib Loadable View
+// =========================
+extension ListedVehiclesTableViewCell: NibLoadableView {}

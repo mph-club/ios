@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qqc-Oq-OEF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HOST DASHBOARD-->
+        <scene sceneID="RF2-oC-Uxk">
+            <objects>
+                <viewController id="iWk-Vi-UXx" customClass="ListingTabVC" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mnn-Xq-lGH"/>
+                        <viewControllerLayoutGuide type="bottom" id="CDN-d1-B5M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwi-j8-bDy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9CD-Qw-jDM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iWk-Vi-UXx" id="05z-SN-f7z"/>
+                                    <outlet property="delegate" destination="iWk-Vi-UXx" id="KnD-4j-Sfv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xct-bi-1m9" firstAttribute="trailing" secondItem="9CD-Qw-jDM" secondAttribute="trailing" id="MEV-37-XBv"/>
+                            <constraint firstItem="9CD-Qw-jDM" firstAttribute="top" secondItem="uwi-j8-bDy" secondAttribute="top" id="OAS-1h-K7Q"/>
+                            <constraint firstItem="9CD-Qw-jDM" firstAttribute="leading" secondItem="xct-bi-1m9" secondAttribute="leading" id="Or2-ac-UdB"/>
+                            <constraint firstAttribute="bottom" secondItem="9CD-Qw-jDM" secondAttribute="bottom" id="jgp-nD-iPV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xct-bi-1m9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOST DASHBOARD" id="Esa-wc-6sl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Lh-lj-pnT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addOwnCar:" destination="iWk-Vi-UXx" id="PVU-I6-gJM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9CD-Qw-jDM" id="kLk-qm-Thh"/>
+                        <segue destination="HcZ-VE-KQj" kind="show" identifier="showAddCar" id="C77-t2-o7V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnu-Gu-NBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11271.200000000001" y="602.24887556221893"/>
+        </scene>
+        <!--PeaceOfMind-->
+        <scene sceneID="3sz-Tg-hgi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PeaceOfMind" id="HcZ-VE-KQj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcH-Zb-KYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10694" y="601"/>
+        </scene>
+        <!--Listing Tab Nav-->
+        <scene sceneID="hKK-AB-weY">
+            <objects>
+                <navigationController title="Listing Tab Nav" automaticallyAdjustsScrollViewInsets="NO" id="qqc-Oq-OEF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="LISTINGS" image="car56PxBy36Px" id="hTO-Ah-nb0"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="elg-Nc-Z3D">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iWk-Vi-UXx" kind="relationship" relationship="rootViewController" id="dTj-yC-Gi5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnP-Ex-TQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12078" y="602"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car56PxBy36Px" width="56" height="36"/>
+    </resources>
+</document>
