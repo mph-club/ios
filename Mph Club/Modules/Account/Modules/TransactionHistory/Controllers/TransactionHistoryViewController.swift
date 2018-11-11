@@ -23,6 +23,9 @@ final class TransactionHistoryViewController: UIViewController {
     // MARK: Segment View
     @IBOutlet private weak var segmentView: CustomSegmentView! {
         didSet {
+            //
+            segmentView.items = ["UPCOMING PAYOUTS", "COMPLETED PAYOUTS"]
+            //
             segmentView.delegate = self
         }
     }

@@ -176,7 +176,7 @@
 		00B50BC3219892B100B5A4A6 /* ParentVechicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC0219892B100B5A4A6 /* ParentVechicles.swift */; };
 		00B50BC5219892BD00B5A4A6 /* UpdateUserParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */; };
 		00B50BC7219892C900B5A4A6 /* Enpoints+HostDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */; };
-		00B50BCA219892D500B5A4A6 /* ListingTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */; };
+		00B50BCA219892D500B5A4A6 /* ListingVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BC8219892D500B5A4A6 /* ListingVehiclesViewController.swift */; };
 		00B50BCE219892E300B5A4A6 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BCC219892E200B5A4A6 /* Host.storyboard */; };
 		00B50BCF219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BCD219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift */; };
 		00B50BD1219892F200B5A4A6 /* HostDashboardFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */; };
@@ -187,6 +187,7 @@
 		00B50BDC2198997200B5A4A6 /* LoginSlideMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */; };
 		00B50BDD2198997200B5A4A6 /* LoginSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */; };
 		00B50BE42198B35400B5A4A6 /* ListedVehiclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B50BE32198B2D600B5A4A6 /* ListedVehiclesTableViewCell.xib */; };
+		00B50BE82198BF0E00B5A4A6 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B50BE72198BF0E00B5A4A6 /* HostViewController.swift */; };
 		00C01DBB2174F08E00473AE6 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBA2174F08E00473AE6 /* ExploreService.swift */; };
 		00C01DBE2174F0A800473AE6 /* ExploreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */; };
 		00C01DC02174F17800473AE6 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DBF2174F17800473AE6 /* Explore.swift */; };
@@ -444,7 +445,7 @@
 		00B50BC0219892B100B5A4A6 /* ParentVechicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentVechicles.swift; sourceTree = "<group>"; };
 		00B50BC4219892BD00B5A4A6 /* UpdateUserParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserParameter.swift; sourceTree = "<group>"; };
 		00B50BC6219892C900B5A4A6 /* Enpoints+HostDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enpoints+HostDashboard.swift"; sourceTree = "<group>"; };
-		00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTabVC.swift; sourceTree = "<group>"; };
+		00B50BC8219892D500B5A4A6 /* ListingVehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingVehiclesViewController.swift; sourceTree = "<group>"; };
 		00B50BCC219892E200B5A4A6 /* Host.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Host.storyboard; sourceTree = "<group>"; };
 		00B50BCD219892E300B5A4A6 /* ListedVehiclesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListedVehiclesTableViewCell.swift; sourceTree = "<group>"; };
 		00B50BD0219892F200B5A4A6 /* HostDashboardFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDashboardFacade.swift; sourceTree = "<group>"; };
@@ -455,6 +456,7 @@
 		00B50BD92198997100B5A4A6 /* LoginSlideMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideMainViewController.swift; sourceTree = "<group>"; };
 		00B50BDA2198997200B5A4A6 /* LoginSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSlideViewController.swift; sourceTree = "<group>"; };
 		00B50BE32198B2D600B5A4A6 /* ListedVehiclesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListedVehiclesTableViewCell.xib; sourceTree = "<group>"; };
+		00B50BE72198BF0E00B5A4A6 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		00C01DBA2174F08E00473AE6 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		00C01DBD2174F0A800473AE6 /* ExploreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFacade.swift; sourceTree = "<group>"; };
 		00C01DBF2174F17800473AE6 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
@@ -1508,7 +1510,8 @@
 		00B50BE02198AF4600B5A4A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				00B50BC8219892D500B5A4A6 /* ListingTabVC.swift */,
+				00B50BE72198BF0E00B5A4A6 /* HostViewController.swift */,
+				00B50BC8219892D500B5A4A6 /* ListingVehiclesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2301,6 +2304,7 @@
 				00F9388E2185D5ED0075386D /* ThanksReportViewController.swift in Sources */,
 				00B50B5021974F9A00B5A4A6 /* JSONEncoderExtension.swift in Sources */,
 				0018478821766BF2000B0ED3 /* UINavigationControllerExtension.swift in Sources */,
+				00B50BE82198BF0E00B5A4A6 /* HostViewController.swift in Sources */,
 				00B50BA42198893000B5A4A6 /* ParentAddOwnCarResult.swift in Sources */,
 				00639108218F4F9000E25152 /* KeyboardManager.swift in Sources */,
 				00874475218B21F9007E8E13 /* ChnageYourPhoneViewController.swift in Sources */,
@@ -2356,7 +2360,7 @@
 				0064CC7E216F9691005FCC70 /* NibLoadableViewExtension.swift in Sources */,
 				00E1A1572181FD93003BE03B /* CarFeaturesViewController.swift in Sources */,
 				00B50B86219888C700B5A4A6 /* BookingWindowViewController.swift in Sources */,
-				00B50BCA219892D500B5A4A6 /* ListingTabVC.swift in Sources */,
+				00B50BCA219892D500B5A4A6 /* ListingVehiclesViewController.swift in Sources */,
 				3598E02220EBB8E100E595EE /* MphTextField.swift in Sources */,
 				00B50B91219888C700B5A4A6 /* SetPriceViewController.swift in Sources */,
 				00A910DB218C3AE100A991BB /* UIStoryboardExtension.swift in Sources */,

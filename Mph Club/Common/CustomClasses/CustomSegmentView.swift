@@ -19,9 +19,9 @@ final class CustomSegmentView: UIControl {
     // ==================
     
     // MARK: Public
-    var items: [String] = ["UPCOMING PAYOUTS", "COMPLETED PAYOUTS"] {
+    var items: [String] = [] {
         didSet {
-            setupLabels()
+            setupView()
         }
     }
     
@@ -125,9 +125,6 @@ private extension CustomSegmentView {
     }
     
     func setupLabels() {
-        labels.forEach { $0.removeFromSuperview() }
-        labels.removeAll()
-        
         items.forEach { title in
             let label = UILabel()
             

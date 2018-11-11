@@ -10,20 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HOST DASHBOARD-->
+        <!--Listing Vehicles View Controller-->
         <scene sceneID="RF2-oC-Uxk">
             <objects>
-                <viewController id="iWk-Vi-UXx" customClass="ListingTabVC" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iWk-Vi-UXx" customClass="ListingVehiclesViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mnn-Xq-lGH"/>
                         <viewControllerLayoutGuide type="bottom" id="CDN-d1-B5M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uwi-j8-bDy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9CD-Qw-jDM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="iWk-Vi-UXx" id="05z-SN-f7z"/>
@@ -40,14 +40,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xct-bi-1m9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HOST DASHBOARD" id="Esa-wc-6sl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Lh-lj-pnT">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="addOwnCar:" destination="iWk-Vi-UXx" id="PVU-I6-gJM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="9CD-Qw-jDM" id="kLk-qm-Thh"/>
                         <segue destination="HcZ-VE-KQj" kind="show" identifier="showAddCar" id="C77-t2-o7V"/>
@@ -55,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnu-Gu-NBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11271.200000000001" y="602.24887556221893"/>
+            <point key="canvasLocation" x="-12079" y="1325"/>
         </scene>
         <!--PeaceOfMind-->
         <scene sceneID="3sz-Tg-hgi">
@@ -63,13 +55,13 @@
                 <viewControllerPlaceholder storyboardName="PeaceOfMind" id="HcZ-VE-KQj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcH-Zb-KYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10694" y="601"/>
+            <point key="canvasLocation" x="-11314" y="1325"/>
         </scene>
         <!--Listing Tab Nav-->
         <scene sceneID="hKK-AB-weY">
             <objects>
                 <navigationController title="Listing Tab Nav" automaticallyAdjustsScrollViewInsets="NO" id="qqc-Oq-OEF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LISTINGS" image="car56PxBy36Px" id="hTO-Ah-nb0"/>
+                    <tabBarItem key="tabBarItem" title="HOST" image="car56PxBy36Px" id="hTO-Ah-nb0"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="elg-Nc-Z3D">
@@ -82,12 +74,52 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iWk-Vi-UXx" kind="relationship" relationship="rootViewController" id="dTj-yC-Gi5"/>
+                        <segue destination="JXc-hv-2PW" kind="relationship" relationship="rootViewController" id="kvE-xI-6jm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnP-Ex-TQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-12078" y="602"/>
+        </scene>
+        <!--HOST DASHBOARD-->
+        <scene sceneID="9bb-tq-46l">
+            <objects>
+                <viewController id="JXc-hv-2PW" customClass="HostViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjv-p4-6aG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xd7-Nt-zq7" customClass="CustomSegmentView" customModule="Mph_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="8" width="375" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="URB-lb-fee"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xd7-Nt-zq7" firstAttribute="leading" secondItem="LSJ-QP-uug" secondAttribute="leading" id="4sL-aZ-3kW"/>
+                            <constraint firstItem="xd7-Nt-zq7" firstAttribute="top" secondItem="LSJ-QP-uug" secondAttribute="top" constant="8" id="AaK-aa-ucU"/>
+                            <constraint firstItem="LSJ-QP-uug" firstAttribute="trailing" secondItem="xd7-Nt-zq7" secondAttribute="trailing" id="xa9-MA-xPY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LSJ-QP-uug"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOST DASHBOARD" id="Esa-wc-6sl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Lh-lj-pnT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addOwnCar:" destination="JXc-hv-2PW" id="auz-hg-Rlg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentView" destination="xd7-Nt-zq7" id="jBM-gl-Ait"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv4-R0-pX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11313" y="601"/>
         </scene>
     </scenes>
     <resources>

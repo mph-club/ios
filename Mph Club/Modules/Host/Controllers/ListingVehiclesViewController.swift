@@ -1,5 +1,5 @@
 //
-//  ListingTabVC.swift
+//  ListingVehiclesViewController.swift
 //  Mph Club
 //
 //  Created by Alex Cruz on 10/17/18.
@@ -10,7 +10,7 @@ import UIKit
 import PromiseKit
 import AWSCognitoIdentityProvider
 
-final class ListingTabVC: UIViewController {
+final class ListingVehiclesViewController: UIViewController {
     // ===============
     // MARK: - Outlets
     // ===============
@@ -38,7 +38,7 @@ final class ListingTabVC: UIViewController {
 // =======================
 
 // MARK: Life Cycle
-extension ListingTabVC {
+extension ListingVehiclesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -61,18 +61,12 @@ extension ListingTabVC {
 // ===============
 // MARK: - Actions
 // ===============
-private extension ListingTabVC {
-    @IBAction func addOwnCar(_ sender: UIBarButtonItem) {
-        Constant.viewIndex = 0
-        Constant.carKey = ""
-        performSegue(withIdentifier: "showAddCar", sender: nil)
-    }
-}
+private extension ListingVehiclesViewController {}
 
 // ===============
 // MARK: - Methods
 // ===============
-private extension ListingTabVC {
+private extension ListingVehiclesViewController {
     func registerTableViewCell() {
         tableView.register(ListedVehiclesTableViewCell.self)
     }
@@ -112,7 +106,7 @@ private extension ListingTabVC {
 // ==========================
 // MARK: - Facade Interaction
 // ==========================
-private extension ListingTabVC {
+private extension ListingVehiclesViewController {
     func getMyCars() -> Promise<Void> {
         return HostDashboardFacade.shared.getMyCars()
             .get(setVehicles)
@@ -127,7 +121,7 @@ private extension ListingTabVC {
 // ==========================
 // MARK: - View State Manager
 // ==========================
-private extension ListingTabVC {
+private extension ListingVehiclesViewController {
     func showLoading() -> Guarantee<Void> {
         tableView.showLoading()
         return Guarantee.value(())
@@ -155,7 +149,7 @@ private extension ListingTabVC {
 // ==================
 
 // MARK: Data Source
-extension ListingTabVC: UITableViewDataSource {
+extension ListingVehiclesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vehicles.count
     }
@@ -169,7 +163,7 @@ extension ListingTabVC: UITableViewDataSource {
 }
 
 // MARK: Delegate
-extension ListingTabVC: UITableViewDelegate {
+extension ListingVehiclesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
