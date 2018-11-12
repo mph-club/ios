@@ -10,9 +10,9 @@ import UIKit
 import Netverify
 
 // swiftlint:disable all
-class EnterDLViewController: StartViewController, NetverifyViewControllerDelegate {
+class EnterDLViewController: UIViewController {
     
-    var netverifyViewController:NetverifyViewController?
+    var netverifyViewController: NetverifyViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ class EnterDLViewController: StartViewController, NetverifyViewControllerDelegat
         if let netverifyVC = self.netverifyViewController {
             self.present(netverifyVC, animated: true, completion: nil)
         } else {
-            showJumioAlert(withTitle: "Netverify Mobile SDK", message: "NetverifyViewController is nil")
+//            showJumioAlert(withTitle: "Netverify Mobile SDK", message: "NetverifyViewController is nil")
         }
     }
 
@@ -75,18 +75,18 @@ class EnterDLViewController: StartViewController, NetverifyViewControllerDelegat
         //Setup the Configuration for Netverify
         let config:NetverifyConfiguration = createNetverifyConfiguration()
         //Set the delegate that implements NetverifyViewControllerDelegate
-        config.delegate = self
+//        config.delegate = self
         
         //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
         
-        do {
-            try ObjcExceptionHelper.catchException {
-                self.netverifyViewController = NetverifyViewController(configuration: config)
-            }
-        } catch {
-            let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
-        }
+//        do {
+//            try ObjcExceptionHelper.catchException {
+//                self.netverifyViewController = NetverifyViewController(configuration: config)
+//            }
+//        } catch {
+//            let err = error as NSError
+//            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+//        }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             self.netverifyViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
@@ -234,16 +234,16 @@ class EnterDLViewController: StartViewController, NetverifyViewControllerDelegat
         ////////  config.customUIDelegate = customUIViewControllerDelegate
         
         //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
-        do {
-            try ObjcExceptionHelper.catchException {
-                /////// self.customUIController = NetverifyUIController(configuration: config)
-                
-                NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor(red: 44.0/255.0, green: 152.0/255.0, blue: 240.0/255.0, alpha: 1.0)
-            }
-        } catch {
-            let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
-        }
+//        do {
+//            try ObjcExceptionHelper.catchException {
+//                /////// self.customUIController = NetverifyUIController(configuration: config)
+//
+//                NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor(red: 44.0/255.0, green: 152.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+//            }
+//        } catch {
+//            let err = error as NSError
+//            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+//        }
     }
     
     

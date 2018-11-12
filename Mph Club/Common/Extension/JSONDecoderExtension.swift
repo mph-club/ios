@@ -6,7 +6,9 @@
 //  Copyright © 2018 Mph Club. All rights reserved.
 //
 
-public extension JSONDecoder {
+import Foundation
+
+extension JSONDecoder {
     /// Default JSONDecoder
     static let `default` = JSONDecoder()
 }

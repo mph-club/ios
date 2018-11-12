@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mph Club. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIStoryboard {
     /// Instantiates an RTAStoryboardInitiable view controller
