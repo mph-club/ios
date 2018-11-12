@@ -11,6 +11,13 @@ import PromiseKit
 import AWSCognitoIdentityProvider
 
 final class ListingVehiclesViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case presentAddCar
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -174,7 +181,7 @@ extension ListingVehiclesViewController: UITableViewDelegate {
             Constant.viewIndex = car.viewIndex ?? 0
             Constant.carKey = car.id
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "showAddCar", sender: nil)
+                self.performSegue(withIdentifier: Segue.presentAddCar)
             }
         }
     }

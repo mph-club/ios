@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -199,14 +199,14 @@ while in town</string>
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="bKS-2W-9QW" customClass="SignInViewController" customModule="Mph_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXn-Mq-iR7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhw-a1-8aI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxW-72-BsF">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="768"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-gx-p4H">
                                                 <rect key="frame" x="0.0" y="-20" width="375" height="547"/>
@@ -222,9 +222,8 @@ while in town</string>
                                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pageControl>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-rf-YVR">
-                                                <rect key="frame" x="0.0" y="525" width="375" height="243"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-rf-YVR">
+                                                <rect key="frame" x="0.0" y="424" width="375" height="243"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER YOUR EMAIL" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wZS-KN-mJu" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
                                                         <rect key="frame" x="19" y="18" width="335" height="30"/>
@@ -280,9 +279,17 @@ while in town</string>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="243" id="hri-7u-X3D"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="d4G-rf-YVR" secondAttribute="bottom" id="Kcf-dg-jfG"/>
+                                            <constraint firstAttribute="trailing" secondItem="d4G-rf-YVR" secondAttribute="trailing" id="W57-gX-S9U"/>
+                                            <constraint firstItem="d4G-rf-YVR" firstAttribute="leading" secondItem="FxW-72-BsF" secondAttribute="leading" id="nab-bn-eQF"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -308,7 +315,6 @@ while in town</string>
                         <viewLayoutGuide key="safeArea" id="EXT-AO-ODh"/>
                     </view>
                     <navigationItem key="navigationItem" id="bkh-om-Ft8"/>
-                    <size key="freeformSize" width="375" height="768"/>
                     <connections>
                         <outlet property="constraintContentHeight" destination="r4h-KQ-hZN" id="vtB-lr-Y4X"/>
                         <outlet property="containerView" destination="mrG-gx-p4H" id="sSd-Bw-JEm"/>
@@ -334,7 +340,7 @@ while in town</string>
                         <viewControllerLayoutGuide type="bottom" id="vlR-Rr-BPB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="krr-rd-uBK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER YOUR EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phg-wi-Thu" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
@@ -382,7 +388,6 @@ while in town</string>
             <objects>
                 <navigationController storyboardIdentifier="signinController" automaticallyAdjustsScrollViewInsets="NO" id="ILx-rO-WvH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <size key="freeformSize" width="375" height="812"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4l6-mC-uz8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -405,7 +410,7 @@ while in town</string>
                         <viewControllerLayoutGuide type="bottom" id="68D-jI-EXf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LPR-dI-168">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER CONFIRMATION CODE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHj-rC-iyX" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">

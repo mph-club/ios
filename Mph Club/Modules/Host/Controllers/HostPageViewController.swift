@@ -9,11 +9,34 @@
 import UIKit
 
 final class HostPageViewController: UIPageViewController {
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Public
+    var currentIndex: Int = 1 {
+        didSet {
+            if oldValue < currentIndex {
+                setViewControllers([orderedViewControllers[currentIndex]],
+                                   direction: .forward,
+                                   animated: true,
+                                   completion: nil)
+            } else {
+                setViewControllers([orderedViewControllers[currentIndex]],
+                                   direction: .reverse,
+                                   animated: true,
+                                   completion: nil)
+            }
+        }
+    }
+    
     // MARK: Private
     private(set) lazy var orderedViewControllers: [UIViewController] = {
+        let hostRequestVC: HostRequestViewController = UIStoryboard.host.instantiateViewController()
         let listingVehiclesVC: ListingVehiclesViewController = UIStoryboard.host.instantiateViewController()
+        let hostHistoryVC: HostHistoryViewController = UIStoryboard.host.instantiateViewController()
         //
-        return [listingVehiclesVC]
+        return [hostRequestVC, listingVehiclesVC, hostHistoryVC]
     }()
 }
 
@@ -27,11 +50,9 @@ extension HostPageViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-        }
+        setViewControllers([orderedViewControllers[currentIndex]],
+                           direction: .forward,
+                           animated: true,
+                           completion: nil)
     }
 }

@@ -9,6 +9,14 @@
 import UIKit
 
 final class HostViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case embedPageView
+        case presentAddCar
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -20,8 +28,17 @@ final class HostViewController: UIViewController {
             segmentView.items = ["REQUEST", "VEHICLES", "HISTORY"]
             //
             segmentView.selectedIndex = 1
+            //
+            segmentView.delegate = self
         }
     }
+    
+    // ==================
+    // MARK: - Properties
+    // ==================
+    
+    // MARK: Private
+    private weak var pageViewController: HostPageViewController?
 }
 
 // =======================
@@ -37,6 +54,20 @@ extension HostViewController {
     }
 }
 
+// MARK: Navigatio
+extension HostViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = Segue(rawValue: segue.identifier ?? "") else { return }
+        //
+        switch identifier {
+        case .embedPageView:
+            pageViewController = segue.destination as? HostPageViewController
+        case .presentAddCar:
+            break
+        }
+    }
+}
+
 // ===============
 // MARK: - Actions
 // ===============
@@ -44,6 +75,17 @@ private extension HostViewController {
     @IBAction func addOwnCar(_ sender: UIBarButtonItem) {
         Constant.viewIndex = 0
         Constant.carKey = ""
-        performSegue(withIdentifier: "showAddCar", sender: nil)
+        performSegue(withIdentifier: Segue.presentAddCar)
+    }
+}
+
+// ====================================
+// MARK: - Custom Segment View Delegate
+// ====================================
+extension HostViewController: CustomSegmentViewDelegate {
+    func customSegmentView(_ customSegmentView: CustomSegmentView, didSelectItem index: Int) {
+        guard let pageViewController = self.pageViewController else { return }
+        //
+        pageViewController.currentIndex = index
     }
 }

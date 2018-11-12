@@ -196,6 +196,8 @@
 		00C01DC22174F1B600473AE6 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DC12174F1B600473AE6 /* Car.swift */; };
 		00C01DC92174FB3E00473AE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DC82174FB3D00473AE6 /* Endpoint.swift */; };
 		00C01DD12174FC0E00473AE6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C01DD02174FC0E00473AE6 /* Endpoints.swift */; };
+		00C262EA219A083100346FA4 /* HostRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C262E9219A083100346FA4 /* HostRequestViewController.swift */; };
+		00C262EE219A0E5800346FA4 /* HostHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C262ED219A0E5800346FA4 /* HostHistoryViewController.swift */; };
 		00D06E482173D1D7004A668F /* ExploreCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */; };
 		00D06E492173D1D7004A668F /* ExploreCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */; };
 		00D642C12188CA1B0015DAD7 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D642C02188CA1B0015DAD7 /* Account.storyboard */; };
@@ -467,6 +469,8 @@
 		00C01DC12174F1B600473AE6 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		00C01DC82174FB3D00473AE6 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		00C01DD02174FC0E00473AE6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		00C262E9219A083100346FA4 /* HostRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostRequestViewController.swift; sourceTree = "<group>"; };
+		00C262ED219A0E5800346FA4 /* HostHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewController.swift; sourceTree = "<group>"; };
 		00D06E462173D1D7004A668F /* ExploreCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCarCollectionViewCell.swift; sourceTree = "<group>"; };
 		00D06E472173D1D7004A668F /* ExploreCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreCarCollectionViewCell.xib; sourceTree = "<group>"; };
 		00D642C02188CA1B0015DAD7 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -1502,6 +1506,7 @@
 		00B50BDF2198AF3900B5A4A6 /* Host */ = {
 			isa = PBXGroup;
 			children = (
+				00C262E4219A078900346FA4 /* Modules */,
 				00B50BE12198AF5200B5A4A6 /* Views */,
 				00B50BE02198AF4600B5A4A6 /* Controllers */,
 				00B50BBB2198927B00B5A4A6 /* Extensions */,
@@ -1517,7 +1522,6 @@
 			children = (
 				00B50BE72198BF0E00B5A4A6 /* HostViewController.swift */,
 				00B50BE92198C51900B5A4A6 /* HostPageViewController.swift */,
-				00B50BC8219892D500B5A4A6 /* ListingVehiclesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1603,6 +1607,64 @@
 				00C01DD02174FC0E00473AE6 /* Endpoints.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		00C262E4219A078900346FA4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				00C262E7219A07F400346FA4 /* HostRequest */,
+				00C262E5219A079600346FA4 /* ListingVehicles */,
+				00C262EB219A0E1E00346FA4 /* HostHistory */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		00C262E5219A079600346FA4 /* ListingVehicles */ = {
+			isa = PBXGroup;
+			children = (
+				00C262E6219A07CA00346FA4 /* Controllers */,
+			);
+			path = ListingVehicles;
+			sourceTree = "<group>";
+		};
+		00C262E6219A07CA00346FA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BC8219892D500B5A4A6 /* ListingVehiclesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00C262E7219A07F400346FA4 /* HostRequest */ = {
+			isa = PBXGroup;
+			children = (
+				00C262E8219A080900346FA4 /* Controllers */,
+			);
+			path = HostRequest;
+			sourceTree = "<group>";
+		};
+		00C262E8219A080900346FA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00C262E9219A083100346FA4 /* HostRequestViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00C262EB219A0E1E00346FA4 /* HostHistory */ = {
+			isa = PBXGroup;
+			children = (
+				00C262EC219A0E2C00346FA4 /* Controllers */,
+			);
+			path = HostHistory;
+			sourceTree = "<group>";
+		};
+		00C262EC219A0E2C00346FA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00C262ED219A0E5800346FA4 /* HostHistoryViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		00D06E442173CA41004A668F /* TableViewCell */ = {
@@ -2282,6 +2344,7 @@
 				00B50B2721974BB000B5A4A6 /* NetworkProtocol.swift in Sources */,
 				00B50B90219888C700B5A4A6 /* TermsOfServiceViewController.swift in Sources */,
 				35FAB4A020E57A62008EED64 /* CreateAccountViewController.swift in Sources */,
+				00C262EA219A083100346FA4 /* HostRequestViewController.swift in Sources */,
 				00AEE9DA217C562C00AD7348 /* BookingLocation.swift in Sources */,
 				0064CC83216F9E19005FCC70 /* UIColorExtension.swift in Sources */,
 				00B50B4521974C9E00B5A4A6 /* UIImageViewExtension.swift in Sources */,
@@ -2394,6 +2457,7 @@
 				00AEE9ED217C6BDD00AD7348 /* Vehicle.swift in Sources */,
 				00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */,
 				001D98F8217E36D200CEC8E3 /* CarDetailDescriptionCollectionViewCell.swift in Sources */,
+				00C262EE219A0E5800346FA4 /* HostHistoryViewController.swift in Sources */,
 				00B50BC7219892C900B5A4A6 /* Enpoints+HostDashboard.swift in Sources */,
 				00B50BC2219892B100B5A4A6 /* DataVechicles.swift in Sources */,
 				00B50B8C219888C700B5A4A6 /* ReviewTermsViewController.swift in Sources */,

@@ -9,16 +9,6 @@
 import UIKit
 
 final class ListedVehiclesTableViewCell: UITableViewCell {
-    // =============
-    // MARK: - Enums
-    // =============
-    enum Status: String {
-        case pending = "P"
-        case rejected = "R"
-        case unlisted = "U"
-        case banned = "B"
-    }
-    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -28,11 +18,11 @@ final class ListedVehiclesTableViewCell: UITableViewCell {
     
     // MARK: Label
     @IBOutlet private weak var titleStatusLabel: UILabel!
-    @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var shortDescriptionTextView: UILabel!
     
     // MARK: Image View
     @IBOutlet private weak var carImageView: UIImageView!
+    @IBOutlet private weak var statusImageView: UIImageView!
 }
 
 // =======================
@@ -46,8 +36,8 @@ extension ListedVehiclesTableViewCell {
         // Initialization code
         cellBackgroundView.layer.shadowColor = UIColor.lightGray.cgColor
         cellBackgroundView.layer.shadowOpacity = 0.5
-        cellBackgroundView.layer.shadowOffset = CGSize.zero
-        cellBackgroundView.layer.shadowRadius = 6
+        cellBackgroundView.layer.shadowOffset = .zero
+        cellBackgroundView.layer.shadowRadius = 3
     }
 }
 
@@ -60,21 +50,17 @@ extension ListedVehiclesTableViewCell {
         if vehicles.viewIndex == 0 {
             switch vehicles.status {
             case .pending:
-                titleStatusLabel.text = "Pending Approval"
-                statusLabel.text = "Your listing is pending approval"
-            case  .approved:
-                titleStatusLabel.text = "Listing Approved"
-                statusLabel.text = "Your listing is approved approval"
-            case .denied:
-                titleStatusLabel.text = "Listing Rejected"
-                statusLabel.text = "Your listing is denied approval"
-            case .none:
-                titleStatusLabel.text = ""
-                statusLabel.text = ""
+                statusImageView.image = #imageLiteral(resourceName: "pending-approval")
+                titleStatusLabel.text = "Your listing is pending approval"
+            case .approved:
+                statusImageView.image = nil
+                titleStatusLabel.text = "Your listing is approved approval"
+            default:
+                break
             }
         } else {
-            titleStatusLabel.text = "In-progress"
-            statusLabel.text = "Your listing is In-progress"
+            statusImageView.image = #imageLiteral(resourceName: "in-progress")
+            titleStatusLabel.text = "Your listing is In-progress"
         }
         
         shortDescriptionTextView.text = "\(vehicles.make ?? "")  \(vehicles.model ?? "") \(vehicles.year ?? 0)"
