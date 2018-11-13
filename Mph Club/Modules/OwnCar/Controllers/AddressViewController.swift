@@ -108,17 +108,8 @@ private extension AddressViewController {
         performSegue(withIdentifier: Segue.showEnterCar)
     }
     
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
-        let fireAction = fireActionSheet(title: "Before you close",
-                                         message: "If you proceed with this action, you'll have to start from the beginning.")
-        
-        fireAction.addAction(UIAlertAction(title: "Confirm", style: .default) { [weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
-        })
-        
-        fireAction.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        present(fireAction, animated: true)
+    @IBAction func closeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}

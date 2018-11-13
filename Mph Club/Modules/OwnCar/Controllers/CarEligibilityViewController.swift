@@ -118,6 +118,10 @@ private extension CarEligibilityViewController {
                 .catch(presentError)
         }
     }
+    
+    @IBAction func closeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 // ===============

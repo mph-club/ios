@@ -239,7 +239,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <barButtonItem key="leftBarButtonItem" image="close28Px" id="UUN-h3-vhw">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="backButton:" destination="LdP-gs-a8K" id="rtL-yF-4XR"/>
+                                <action selector="closeButton:" destination="LdP-gs-a8K" id="rtL-yF-4XR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -475,6 +475,9 @@ Everyone else will just see an approximate location and get an idea of where you
                         <barButtonItem key="backBarButtonItem" title=" " id="kkr-tS-fV9"/>
                         <barButtonItem key="leftBarButtonItem" image="close28Px" id="Oe7-La-zaN">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeButton:" destination="RAr-JE-D5A" id="E4O-qP-UKQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -618,6 +621,9 @@ Everyone else will just see an approximate location and get an idea of where you
                         <barButtonItem key="backBarButtonItem" title=" " id="uyD-hE-hjI"/>
                         <barButtonItem key="leftBarButtonItem" image="close28Px" id="5nR-F8-fHD">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeButton:" destination="rEB-Gg-njg" id="Lal-iF-Hft"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
