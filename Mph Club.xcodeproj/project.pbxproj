@@ -1375,18 +1375,15 @@
 				00B50B69219888C400B5A4A6 /* AddPriceViewController.swift */,
 				00B50B6F219888C500B5A4A6 /* AddProfilePhotoViewController.swift */,
 				00B50B6D219888C500B5A4A6 /* BookingWindowViewController.swift */,
-				00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */,
 				00B50B70219888C500B5A4A6 /* CarPhotoViewViewController.swift */,
 				00B50B79219888C700B5A4A6 /* EnterDLViewController.swift */,
 				00B50B75219888C600B5A4A6 /* HowBookingWorksViewController.swift */,
 				00B50B68219888C400B5A4A6 /* HowGuestWillBookContainerViewController.swift */,
-				00B50B6C219888C500B5A4A6 /* InfoCarLocationViewController.swift */,
 				00B50B6E219888C500B5A4A6 /* LocationSearchTable.swift */,
 				00B50B6A219888C400B5A4A6 /* MapViewController.swift */,
 				00B50B67219888C400B5A4A6 /* PendingApprovalViewController.swift */,
 				00B50B66219888C400B5A4A6 /* PhotoReviewViewController.swift */,
 				00B50B65219888C400B5A4A6 /* PriceContainerViewController.swift */,
-				00B50B74219888C600B5A4A6 /* ProgressViewController.swift */,
 				00B50B71219888C500B5A4A6 /* PublishViewController.swift */,
 				00B50B73219888C600B5A4A6 /* ReviewTermsViewController.swift */,
 				00B50B78219888C700B5A4A6 /* SetPriceViewController.swift */,
@@ -1828,6 +1825,9 @@
 			isa = PBXGroup;
 			children = (
 				00B50B63219888C300B5A4A6 /* AddressViewController.swift */,
+				00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */,
+				00B50B6C219888C500B5A4A6 /* InfoCarLocationViewController.swift */,
+				00B50B74219888C600B5A4A6 /* ProgressViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

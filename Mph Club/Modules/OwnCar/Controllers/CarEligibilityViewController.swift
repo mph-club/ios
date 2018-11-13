@@ -8,7 +8,6 @@
 
 import UIKit
 import PromiseKit
-import APJTextPickerView
 
 final class CarEligibilityViewController: UIViewController, UIScrollViewDelegate {
     // ===============
@@ -16,22 +15,20 @@ final class CarEligibilityViewController: UIViewController, UIScrollViewDelegate
     // ===============
     
     // MARK: Scroll View
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
     // MARK: View
-    @IBOutlet weak var contentView: UIView!
-    
-    // MARK: Picker View
-    @IBOutlet private weak var yearPickerView: APJTextPickerView!
+    @IBOutlet private weak var contentView: UIView!
     
     // MARK: Text Field
+    @IBOutlet private weak var yearTextField: MphTextField!
     @IBOutlet private weak var makeTextField: MphTextField!
     @IBOutlet private weak var modelTextField: MphTextField!
     @IBOutlet private weak var odemeterTextField: MphTextField!
     @IBOutlet private weak var transmissionTextField: MphTextField!
     
     // MARK: Button
-    @IBOutlet private weak var nextButtton: NextButton!
+    @IBOutlet private weak var nextButtton: UIButton!
     
     // MARK: Label
     @IBOutlet private weak var makeLabel: UILabel!
@@ -39,21 +36,28 @@ final class CarEligibilityViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet private weak var odemeterLabel: UILabel!
     @IBOutlet private weak var transmissionLabel: UILabel!
     
-    
     // ==================
     // MARK: - Properties
     // ==================
     
     // MARK: Private
     private var activeField: UITextField?
-    private var yearStrings = ["2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011"]
-    private var transmissionItem = ["AUTO", "MANUAL"]
+    private var yearItems = ["2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011"]
+    private var transmissionItems = ["AUTO", "MANUAL"]
     
     // MARK: Passing Object
     var location = [String: String]()
     
     // MARK: Lazy Var
     private lazy var transmissionPickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        
+        return pickerView
+    }()
+    //
+    private lazy var yearsPickerView: UIPickerView = {
         let pickerView = UIPickerView()
         pickerView.dataSource = self
         pickerView.delegate = self
@@ -72,31 +76,15 @@ extension CarEligibilityViewController {
         super.viewDidLoad()
         //
         transmissionTextField.inputView = transmissionPickerView
-        //
-        initYearPickerView()
+        yearTextField.inputView = yearsPickerView
         //
         setUpTextField(color: UIColor.lightGray.cgColor)
-        //
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowLeft28Px"), style: .done, target: self, action: #selector(close))
-        navigationItem.leftBarButtonItem?.tintColor = .black
-        // Observe keyboard change
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
-        // add tap gesture for dismiss keyboard
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDidFire))
-        scrollView.addGestureRecognizer(tapGesture)
     }
     
     func updateListCar() -> Promise<Void> {
         let parameters = AddOwnCarParameters(make: makeTextField.text,
                                              model: modelTextField.text,
-                                             year: Int(yearPickerView.text ?? "-1"),
+                                             year: Int(yearTextField.text ?? "-1"),
                                              miles: Int(odemeterTextField.text ?? "-1"),
                                              transmission: transmissionTextField.text,
                                              address: location["address"],
@@ -117,8 +105,12 @@ extension CarEligibilityViewController {
 // MARK: - Actions
 // ===============
 private extension CarEligibilityViewController {
-    @IBAction func nextButton(_ sender: NextButton) {
-        if yearPickerView.text != "" && self.makeTextField.text != "" && self.modelTextField.text != "" && self.odemeterTextField.text != "" && self.transmissionTextField.text != "" {
+    @IBAction func nextTouchUpInside(_ sender: UIButton) {
+        if !(yearTextField.text?.isEmpty ?? true) &&
+            !(makeTextField.text?.isEmpty ?? true) &&
+            !(modelTextField.text?.isEmpty ?? true) &&
+            !(odemeterTextField.text?.isEmpty ?? true) &&
+            !(transmissionTextField.text?.isEmpty ?? true) {
             showLoading()
                 .then(updateListCar)
                 .done(showNextPage)
@@ -140,10 +132,30 @@ private extension CarEligibilityViewController {
         
     }
     
-    func initYearPickerView() {
-        yearPickerView.type = .strings
-        yearPickerView.pickerDelegate = self
-        yearPickerView.dataSource = self
+    func checkTextField() {
+        if !(makeTextField.text?.isEmpty ?? true) {
+            makeLabel.textColor = UIColor.black
+        }
+        
+        if !(modelTextField.text?.isEmpty ?? true) {
+            modelLabel.textColor = UIColor.black
+        }
+        
+        if !(odemeterTextField.text?.isEmpty ?? true) {
+            odemeterLabel.textColor = UIColor.black
+        }
+        
+        if !(transmissionTextField.text?.isEmpty ?? true) {
+            transmissionLabel.textColor = UIColor.black
+        }
+    }
+    
+    func checkAllSelected() {
+        if !(yearTextField.text?.isEmpty ?? true) &&
+            !(makeTextField.text?.isEmpty ?? true) &&
+            !(modelTextField.text?.isEmpty ?? true) {
+            nextButtton.backgroundColor = UIColor.black
+        }
     }
     
     func setOwnCarID(_ result: ParentAddOwnCarResult) {
@@ -196,90 +208,9 @@ extension CarEligibilityViewController: UITextFieldDelegate {
         return true
     }
     
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.checkTextField()
     }
-}
-
-
-// MARK: Keyboard Handling
-extension CarEligibilityViewController {
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.size else { return }
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.checkTextField()
-        //
-        let contentInsets: UIEdgeInsets = .zero
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-    }
-    
-    
-    func checkTextField() {
-        
-        if makeTextField.text != "" {
-            makeLabel.textColor = UIColor.black
-        }
-        
-        if modelTextField.text != "" {
-            modelLabel.textColor = UIColor.black
-        }
-        
-        if odemeterTextField.text != "" {
-            odemeterLabel.textColor = UIColor.black
-        }
-        
-        if transmissionTextField.text != "" {
-            transmissionLabel.textColor = UIColor.black
-        }
-    }
-}
-
-
-
-// ===========================
-// MARK: - APJText Picker View
-// ===========================
-
-// MARK: Data Source
-extension CarEligibilityViewController: APJTextPickerViewDataSource {
-    func numberOfRows(in pickerView: APJTextPickerView) -> Int {
-        return yearStrings.count
-    }
-}
-
-// MARK: Delegate
-extension CarEligibilityViewController: APJTextPickerViewDelegate {
-    
-    private func textPickerView(_ textPickerView: APJTextPickerView, didSelectDate date: Date) {
-        print("Date Selected: \(date)")
-    }
-    
-    func textPickerView(_ textPickerView: APJTextPickerView, didSelectString row: Int) {
-        if textPickerView.tag == 1 {
-            print("Selected: \(yearStrings[row])")
-            yearPickerView.text = yearStrings[row]
-        }
-        
-        checkAllSelected()
-    }
-    
-    func checkAllSelected() {
-        if yearPickerView.text != "" && makeTextField.text != "" && modelTextField.text != "" {
-            nextButtton.backgroundColor = UIColor.black
-        }
-    }
-    
-    func textPickerView(_ textPickerView: APJTextPickerView, titleForRow row: Int) -> String? {
-        return yearStrings[row]
-    }
-    
 }
 
 // ===================
@@ -293,42 +224,65 @@ extension CarEligibilityViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return transmissionItem[row]
+        switch pickerView {
+        case transmissionPickerView:
+            return transmissionItems[row]
+        case yearsPickerView:
+            return yearItems[row]
+        default:
+            return nil
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return transmissionItem.count
+        switch pickerView {
+        case transmissionPickerView:
+            return transmissionItems.count
+        case yearsPickerView:
+            return yearItems.count
+        default:
+            return 0
+        }
     }
 }
 
 // MARK: Delegate
 extension CarEligibilityViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        transmissionTextField.text = transmissionItem[row]
+        switch pickerView {
+        case transmissionPickerView:
+            transmissionTextField.text = transmissionItems[row]
+        case yearsPickerView:
+            yearTextField.text = yearItems[row]
+            checkAllSelected()
+        default:
+            break
+        }
     }
 }
-
 
 // ===================
 // MARK: - Scroll View
 // ===================
+
+// MARK: Delegate
 extension CarEligibilityViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.setBottomBorder()
-        if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
+        
+        if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             print("reach bottom")
         }
         
-        if (scrollView.contentOffset.y <= 0){
+        if scrollView.contentOffset.y <= 0 {
             print("reach top")
             self.removeBottomBorder()
         }
         
-        if (scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)) {
+        if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height) {
             // not top and not bottom
         }
     }
-    
     
     func setBottomBorder() {
         self.navigationController?.navigationBar.layer.backgroundColor = UIColor.white.cgColor
