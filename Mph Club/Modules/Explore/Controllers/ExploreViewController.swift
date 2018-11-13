@@ -148,8 +148,6 @@ private extension ExploreViewController {
     @IBAction func luxurayVehicleTouchUpInside(_ sender: UIButton) {
         performSegue(withIdentifier: Segue.presentListCar)
     }
-    
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
 }
 
 // ===============

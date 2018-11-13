@@ -51,8 +51,8 @@
                     <connections>
                         <outlet property="searchBar" destination="ISe-dv-4wK" id="dPN-tt-dvW"/>
                         <outlet property="tableView" destination="Lkn-zG-bt3" id="YZl-lm-Wct"/>
-                        <segue destination="SN7-J3-pUa" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="dFi-2q-z7m"/>
                         <segue destination="5A8-Xn-Erz" kind="show" identifier="showFleetView" id="MQz-l3-hzx"/>
+                        <segue destination="SN7-J3-pUa" kind="unwind" identifier="unwindToAddress" unwindAction="unwindToAddressWithSegue:" id="svl-7m-FPu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvH-Un-OEL" sceneMemberID="firstResponder"/>

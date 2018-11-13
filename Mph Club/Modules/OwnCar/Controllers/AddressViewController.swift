@@ -11,6 +11,14 @@ import MapKit
 import Contacts
 
 final class AddressViewController: UIViewController {
+    // =============
+    // MARK: - Enums
+    // =============
+    private enum Segue: String {
+        case showSearchLocation
+        case showEnterCar
+    }
+    
     // ===============
     // MARK: - Outlets
     // ===============
@@ -32,7 +40,7 @@ final class AddressViewController: UIViewController {
     // ==================
     
     // MARK: Object sent over in segue
-    private var location: CLPlacemark?
+    var location: CLPlacemark?
     
     // MARK: Object to pass to next view controller
     private var carLocation = [String: String]()
@@ -71,8 +79,15 @@ extension AddressViewController {
 // MARK: Navigation
 extension AddressViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let carEligibilityViewController = segue.destination as? CarEligibilityViewController {
-            carEligibilityViewController.location = carLocation
+        guard let identifier = Segue(rawValue: segue.identifier ?? "") else { return }
+        //
+        switch identifier {
+        case .showEnterCar:
+            let carEligibilityVC = segue.destination as? CarEligibilityViewController
+            carEligibilityVC?.location = carLocation
+        case .showSearchLocation:
+            let searchLocationVC = segue.destination as? BookingSearchLoacationViewController
+            searchLocationVC?.isOwnCar = true
         }
     }
 }
@@ -90,7 +105,7 @@ private extension AddressViewController {
             carLocation["state"] = location?.postalAddress?.state
             carLocation["place"] = placeTextField.text
         }
-        performSegue(withIdentifier: "goToEnterCar", sender: nil)
+        performSegue(withIdentifier: Segue.showEnterCar)
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
@@ -150,6 +165,6 @@ private extension AddressViewController {
 extension AddressViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         addressTextField.isUserInteractionEnabled = false
-        performSegue(withIdentifier: "goToSearchTable", sender: nil)
+        performSegue(withIdentifier: Segue.showSearchLocation)
     }
 }

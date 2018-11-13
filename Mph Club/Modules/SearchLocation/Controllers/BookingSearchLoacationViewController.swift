@@ -15,6 +15,7 @@ final class BookingSearchLoacationViewController: UIViewController {
     // =============
     private enum Segue: String {
         case showFleetView
+        case unwindToAddress
     }
     
     // ===============
@@ -35,6 +36,9 @@ final class BookingSearchLoacationViewController: UIViewController {
     // ==================
     // MARK: - Properties
     // ==================
+    
+    // MARK: Public
+    var isOwnCar = false
     
     // MARK: Private
     private var userLocation = String()
@@ -70,22 +74,30 @@ extension BookingSearchLoacationViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        //
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .whiteNavigationBar
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //
         navigationController?.navigationBar.prefersLargeTitles = false
+        //
+        (navigationController?.navigationBar as? CustomNavigationBar)?.styleView = .transparentWithWhiteTint
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
 
 // MARK: Navigation
 extension BookingSearchLoacationViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addressvc = segue.destination as? AddressViewController {
+            addressvc.location = sender as? CLPlacemark
+        }
+    }
 }
 
 // ===============
@@ -99,7 +111,6 @@ private extension BookingSearchLoacationViewController {}
 private extension BookingSearchLoacationViewController {
     func configView() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        //
     }
     
     func registerTableView() {
@@ -210,7 +221,11 @@ extension BookingSearchLoacationViewController: CLLocationManagerDelegate {
 // =================================
 private extension BookingSearchLoacationViewController {
     func dropPinZoomIn(_ placemark: CLPlacemark, locationName: String) {
-        performSegue(withIdentifier: Segue.showFleetView)
+        if isOwnCar {
+            performSegue(withIdentifier: Segue.unwindToAddress, sender: placemark)
+        } else {
+            performSegue(withIdentifier: Segue.showFleetView)
+        }
     }
     
     func saveCarLocation(_ placemark: CLPlacemark) {
