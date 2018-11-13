@@ -850,6 +850,7 @@
 				00B50BDF2198AF3900B5A4A6 /* Host */,
 				35D639242151493B00B912AA /* Account */,
 				00F522AE219AC48600D9E2FE /* PeaceOfMind */,
+				00F522B5219AEC2200D9E2FE /* OwnCar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1357,14 +1358,6 @@
 			path = Later_Views;
 			sourceTree = "<group>";
 		};
-		00B50B542198885000B5A4A6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				00B50BA82198894F00B5A4A6 /* ListCar.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		00B50B552198885500B5A4A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1381,7 +1374,6 @@
 				00B50B61219888C300B5A4A6 /* AddAPhotoOfCarViewController.swift */,
 				00B50B69219888C400B5A4A6 /* AddPriceViewController.swift */,
 				00B50B6F219888C500B5A4A6 /* AddProfilePhotoViewController.swift */,
-				00B50B63219888C300B5A4A6 /* AddressViewController.swift */,
 				00B50B6D219888C500B5A4A6 /* BookingWindowViewController.swift */,
 				00B50B6B219888C400B5A4A6 /* CarEligibilityViewController.swift */,
 				00B50B70219888C500B5A4A6 /* CarPhotoViewViewController.swift */,
@@ -1819,6 +1811,35 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		00F522B5219AEC2200D9E2FE /* OwnCar */ = {
+			isa = PBXGroup;
+			children = (
+				00F522B7219AEE1500D9E2FE /* Views */,
+				00F522B6219AEE0700D9E2FE /* Controllers */,
+				00B50B592198888200B5A4A6 /* Extensions */,
+				00B50B552198885500B5A4A6 /* Models */,
+				00B50B522198883A00B5A4A6 /* Facade */,
+				00B50B512198883300B5A4A6 /* Service */,
+			);
+			path = OwnCar;
+			sourceTree = "<group>";
+		};
+		00F522B6219AEE0700D9E2FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B63219888C300B5A4A6 /* AddressViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00F522B7219AEE1500D9E2FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BA82198894F00B5A4A6 /* ListCar.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		00F938822185AB4B0075386D /* ReportListingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1942,14 +1963,9 @@
 		3598E02620EBD78900E595EE /* List your Car */ = {
 			isa = PBXGroup;
 			children = (
-				00B50B592198888200B5A4A6 /* Extensions */,
 				00B50B572198887000B5A4A6 /* Jumio Bridge */,
 				00B50B562198886000B5A4A6 /* Controllers */,
-				00B50B552198885500B5A4A6 /* Models */,
-				00B50B542198885000B5A4A6 /* Views */,
 				00B50B532198884500B5A4A6 /* Later_Views */,
-				00B50B522198883A00B5A4A6 /* Facade */,
-				00B50B512198883300B5A4A6 /* Service */,
 			);
 			path = "List your Car";
 			sourceTree = "<group>";
