@@ -42,7 +42,7 @@ final class CustomSegmentView: UIControl {
         }
     }
     
-    @IBInspectable var selectedTextColor: UIColor = UIColor.PaletteName.green.color {
+    @IBInspectable var selectedTextColor: UIColor = .mphGreen {
         didSet {
             setColors()
         }

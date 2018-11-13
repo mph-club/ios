@@ -216,6 +216,7 @@
 		00E1A16521821DF1003BE03B /* CarGuidelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */; };
 		00E1A1672182234D003BE03B /* RenterReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */; };
 		00E1A1692182334C003BE03B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1A1682182334C003BE03B /* ProfileViewController.swift */; };
+		00F522B4219AD56A00D9E2FE /* UIStoryboard+PeaceOfMind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F522B3219AD56A00D9E2FE /* UIStoryboard+PeaceOfMind.swift */; };
 		00F6E2E0216FADD00065EF2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */; };
 		00F6E2E2216FAE550065EF2B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */; };
 		00F6E2EE216FBC440065EF2B /* ExploreHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */; };
@@ -489,6 +490,7 @@
 		00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarGuidelineTableViewCell.xib; sourceTree = "<group>"; };
 		00E1A1662182234D003BE03B /* RenterReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenterReviewsViewController.swift; sourceTree = "<group>"; };
 		00E1A1682182334C003BE03B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		00F522B3219AD56A00D9E2FE /* UIStoryboard+PeaceOfMind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+PeaceOfMind.swift"; sourceTree = "<group>"; };
 		00F6E2DF216FADD00065EF2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		00F6E2E1216FAE540065EF2B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		00F6E2EC216FBC430065EF2B /* ExploreHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -847,6 +849,7 @@
 				00D642C22188CF7F0015DAD7 /* Trips */,
 				00B50BDF2198AF3900B5A4A6 /* Host */,
 				35D639242151493B00B912AA /* Account */,
+				00F522AE219AC48600D9E2FE /* PeaceOfMind */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1358,7 +1361,6 @@
 			isa = PBXGroup;
 			children = (
 				00B50BA82198894F00B5A4A6 /* ListCar.storyboard */,
-				00B50BA92198894F00B5A4A6 /* PeaceOfMind.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1400,7 +1402,6 @@
 				00B50B77219888C600B5A4A6 /* TermsOfServiceViewController.swift */,
 				00B50B62219888C300B5A4A6 /* TripLengthViewController.swift */,
 				00B50B72219888C500B5A4A6 /* WhenReadyViewController.swift */,
-				00B50B93219888C900B5A4A6 /* Peace of mind */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1420,16 +1421,6 @@
 				00B50B5A2198889300B5A4A6 /* Enspoints+ListYourCar.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		00B50B93219888C900B5A4A6 /* Peace of mind */ = {
-			isa = PBXGroup;
-			children = (
-				00B50B94219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift */,
-				00B50B96219888DE00B5A4A6 /* PeaceOfMindVC.swift */,
-				00B50B95219888DE00B5A4A6 /* VPPageControl.swift */,
-			);
-			path = "Peace of mind";
 			sourceTree = "<group>";
 		};
 		00B50B9A219888FD00B5A4A6 /* Encodables */ = {
@@ -1782,6 +1773,50 @@
 				00E1A16321821DF1003BE03B /* CarGuidelineTableViewCell.xib */,
 			);
 			path = CarGuidelineView;
+			sourceTree = "<group>";
+		};
+		00F522AE219AC48600D9E2FE /* PeaceOfMind */ = {
+			isa = PBXGroup;
+			children = (
+				00F522B0219AC4EE00D9E2FE /* Views */,
+				00F522AF219AC4E300D9E2FE /* Controllers */,
+				00F522B1219ACDFA00D9E2FE /* CustomClass */,
+				00F522B2219AD54300D9E2FE /* Extension */,
+			);
+			path = PeaceOfMind;
+			sourceTree = "<group>";
+		};
+		00F522AF219AC4E300D9E2FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B96219888DE00B5A4A6 /* PeaceOfMindVC.swift */,
+				00B50B94219888DE00B5A4A6 /* PeaceOfMindSlideVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		00F522B0219AC4EE00D9E2FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B50BA92198894F00B5A4A6 /* PeaceOfMind.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00F522B1219ACDFA00D9E2FE /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				00B50B95219888DE00B5A4A6 /* VPPageControl.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		00F522B2219AD54300D9E2FE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00F522B3219AD56A00D9E2FE /* UIStoryboard+PeaceOfMind.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		00F938822185AB4B0075386D /* ReportListingView */ = {
@@ -2478,6 +2513,7 @@
 				00B50B3221974BE600B5A4A6 /* NetworkConfigurator.swift in Sources */,
 				0062EDAE21727D030041B687 /* ExploreTableViewCell.swift in Sources */,
 				00B50BAF2198896600B5A4A6 /* ListYourCarFacade.swift in Sources */,
+				00F522B4219AD56A00D9E2FE /* UIStoryboard+PeaceOfMind.swift in Sources */,
 				0064CC81216F9D06005FCC70 /* CollectionViewExtension.swift in Sources */,
 				00B50BA12198892100B5A4A6 /* ImageUploadFileModel.swift in Sources */,
 				00B50B8E219888C700B5A4A6 /* HowBookingWorksViewController.swift in Sources */,

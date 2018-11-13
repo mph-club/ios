@@ -50,12 +50,12 @@ extension TransactionHistoryTableViewCell {
         //
         if transaction.payoutStatus == .faild {
             lineView.isHidden = false
-            priceLabel.textColor = UIColor.PaletteName.gray.color
-            payoutStatusLabel.textColor = UIColor.PaletteName.red.color
+            priceLabel.textColor = .mphGray
+            payoutStatusLabel.textColor = .mphRed
         } else {
             lineView.isHidden = true
             priceLabel.textColor = .black
-            payoutStatusLabel.textColor = UIColor.PaletteName.gray.color
+            payoutStatusLabel.textColor = .mphGray
         }
         //
         payoutStatusLabel.text = transaction.payoutStatus == .complete ? "Oct 05, 2018" : transaction.payoutStatus.rawValue

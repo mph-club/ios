@@ -31,39 +31,39 @@
 
 import UIKit
 
-protocol PageControlDelegate : class {
+protocol PageControlDelegate: class {
     /// Called whenever the pageControl view is tapped.
-    func pageControl(_ pageControl : VPPageControl, didSelectPageIndex pageIndex : Int)
+    func pageControl(_ pageControl: VPPageControl, didSelectPageIndex pageIndex: Int)
 }
 
-enum PageControlType : Int {
+enum PageControlType: Int {
     case squareBorderFilledSelected
 }
 
-class VPPageControl: UIView {
+final class VPPageControl: UIView {
     
     var pageControlType = PageControlType.squareBorderFilledSelected
-    var pageControlSpacing : CGFloat = 7
-    var pageControlWidth : CGFloat = 37
+    var pageControlSpacing: CGFloat = 8
+    var pageControlWidth: CGFloat = 16
+    var pageControlHeight: CGFloat = 4
     
-
-    @IBInspectable var numberOfPages : Int = 0 {
+    @IBInspectable var numberOfPages: Int = 0 {
         didSet {
             setPageControlUI()
         }
     }
     
     /// The current selected page. Defaults to 0.
-    @IBInspectable var currentPage : Int = 0
+    @IBInspectable var currentPage: Int = 0
     
     /// The unselected page control tintColor. Defaults to whiteColor.
-    @IBInspectable var pageIndicatorTintColor : UIColor = UIColor.white
+    @IBInspectable var pageIndicatorTintColor: UIColor = UIColor.white
     
     /// The selected page control tintColor. Defaults to whiteColor with 50% opacity
-    @IBInspectable var currentPageIndicatorTintColor : UIColor = UIColor.init(white: 1.0, alpha: 0.5)
+    @IBInspectable var currentPageIndicatorTintColor: UIColor = UIColor.init(white: 1.0, alpha: 0.5)
     
     /// The delegate for handling changes in page control states.
-    weak var delegate : PageControlDelegate?
+    weak var delegate: PageControlDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,9 +78,8 @@ class VPPageControl: UIView {
         updatePageControlViews()
     }
     
-    
-    //MARK: Update UI
-    fileprivate func updatePageControlViews() {
+    // MARK: Update UI
+    private func updatePageControlViews() {
         let actualPageControlSpacing = getActualPageControlSpacing()
         
         // Calculate the start X point for first page control
@@ -95,80 +94,71 @@ class VPPageControl: UIView {
         }
     }
     
-    fileprivate func setUIForPageControlView(_ pageControlView : UIView?, withIndex pageControlIndex : Int) {
+    private func setUIForPageControlView(_ pageControlView: UIView?, withIndex pageControlIndex: Int) {
         switch pageControlType {
-            
-            
         case .squareBorderFilledSelected:
             createSquarePageControl(pageControlView)
             createBorderFilledSelectedState(pageControlView, pageControlIndex: pageControlIndex)
-            
-
         }
     }
     
-    //MARK: Init UI
-    fileprivate func setPageControlUI() {
+    // MARK: Init UI
+    private func setPageControlUI() {
         for pageControlIndex in stride(from: 0, to: numberOfPages, by: 1) {
             addSubview(getPageControlForIndex(pageControlIndex))
         }
     }
     
-    fileprivate func getPageControlForIndex(_ index : Int) -> UIView {
-        let pageControlView = UIView(frame: CGRect(x: 0, y: 0, width: pageControlWidth, height: 5))
+    private func getPageControlForIndex(_ index: Int) -> UIView {
+        let pageControlView = UIView(frame: CGRect(x: 0, y: 0, width: pageControlWidth, height: pageControlHeight))
         pageControlView.tag = index + 1
         
         return pageControlView
     }
     
-    //MARK: Helper methods
-    fileprivate func getPageControlColorForIndex(_ index : Int) -> UIColor {
+    // MARK: Helper methods
+    private func getPageControlColorForIndex(_ index: Int) -> UIColor {
         return (currentPage == index) ? currentPageIndicatorTintColor : pageIndicatorTintColor
     }
     
     // Calculate the pagecontrol's spacing
-    fileprivate func getActualPageControlSpacing() -> CGFloat {
-        var actualPageControlSpacing = pageControlSpacing
+    private func getActualPageControlSpacing() -> CGFloat {
+        let actualPageControlSpacing = pageControlSpacing
         return actualPageControlSpacing
     }
     
-
-    
-    fileprivate func createSquarePageControl(_ pageControlView : UIView?) {
-        pageControlView?.layer.cornerRadius = 0.0
+    private func createSquarePageControl(_ pageControlView: UIView?) {
+        pageControlView?.layer.cornerRadius = pageControlHeight / 2
         pageControlView?.layer.masksToBounds = true
     }
     
-    
     // Create pageControl displayColor
-    fileprivate func createBorderPageControl(_ pageControlView : UIView?, pageControlIndex : Int) {
+    private func createBorderPageControl(_ pageControlView: UIView?, pageControlIndex: Int) {
         pageControlView?.layer.borderWidth = 0.0
         pageControlView?.layer.borderColor = getPageControlColorForIndex(pageControlIndex).cgColor
         pageControlView?.backgroundColor = UIColor.lightGray
     }
     
-    fileprivate func createFilledPageControl(_ pageControlView : UIView?, pageControlIndex : Int) {
+    private func createFilledPageControl(_ pageControlView: UIView?, pageControlIndex: Int) {
         pageControlView?.layer.borderWidth = 0.0
         pageControlView?.backgroundColor = getPageControlColorForIndex(pageControlIndex)
         pageControlView?.layer.borderColor = UIColor.clear.cgColor
     }
     
     // Create pageControl BorderFilledSelected state
-    fileprivate func createBorderFilledSelectedState(_ pageControlView : UIView?, pageControlIndex : Int) {
+    private func createBorderFilledSelectedState(_ pageControlView: UIView?, pageControlIndex: Int) {
         if currentPage != pageControlIndex {
             createBorderPageControl(pageControlView, pageControlIndex: pageControlIndex)
-        }
-        else {
+        } else {
             createFilledPageControl(pageControlView, pageControlIndex: pageControlIndex)
         }
     }
     
     // Create pageControl FilledBorderSelected state
-    fileprivate func createFilledBorderSelectedState(_ pageControlView : UIView?, pageControlIndex : Int) {
+    private func createFilledBorderSelectedState(_ pageControlView: UIView?, pageControlIndex: Int) {
         if currentPage == pageControlIndex {
             createBorderPageControl(pageControlView, pageControlIndex: pageControlIndex)
-        }
-        else {
+        } else {
             createFilledPageControl(pageControlView, pageControlIndex: pageControlIndex)
         }
     }

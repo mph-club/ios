@@ -8,7 +8,23 @@
 
 import UIKit
 
-class PeaceOfMindSlideVC: UIPageViewController {
+protocol PeaceOfMindSlideVCDelegate: class {
+    /// Called when the number of pages is updated.
+    ///
+    /// - Parameters:
+    ///   - loginSlidePageViewController: the LoginSlidePageViewController instance
+    ///   - count: the total number of pages.
+    func peaceOfMindSlideVC(loginSlidePageViewController: PeaceOfMindSlideVC, didUpdatePageCount count: Int)
+    
+    /// Called when the current index is updated.
+    ///
+    /// - Parameters:
+    ///   - loginSlidePageViewController: the LoginSlidePageViewController instance
+    ///   - index: the index of the currently visible page.
+    func peaceOfMindSlideVC(loginSlidePageViewController: PeaceOfMindSlideVC, didUpdatePageIndex index: Int)
+}
+
+final class PeaceOfMindSlideVC: UIPageViewController {
     weak var peaceOfMindDelegate: PeaceOfMindSlideVCDelegate?
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
@@ -22,53 +38,42 @@ class PeaceOfMindSlideVC: UIPageViewController {
         return UIStoryboard(name: "PeaceOfMind", bundle: nil) .
             instantiateViewController(withIdentifier: "\(slideNumber)ViewController")
     }
-    
+}
+
+// ============================
+// MARK: - Page View Controller
+// ============================
+
+// MARK: Life Cycle
+extension PeaceOfMindSlideVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         dataSource = self
         delegate = self
-        
+        //
         peaceOfMindDelegate?.peaceOfMindSlideVC(loginSlidePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
-        
-        
+        //
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
                                animated: true,
                                completion: nil)
         }
-        
-        
-        
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
 }
-    
-    
-// MARK: UIPageViewControllerDataSource
 
+// ============================
+// MARK: - Page View Controller
+// ============================
+
+// MARK: Data Source
 extension PeaceOfMindSlideVC: UIPageViewControllerDataSource {
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else { return nil }
         
         //    let previousIndex = 4
-        
         let previousIndex = viewControllerIndex - 1
         
         // User is on the first view controller and swiped left to loop to
@@ -102,15 +107,10 @@ extension PeaceOfMindSlideVC: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
-    
-    
-    
 }
-    
-    
+
+// MARK: Delegate
 extension PeaceOfMindSlideVC: UIPageViewControllerDelegate {
-    
-    
     func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
@@ -120,26 +120,4 @@ extension PeaceOfMindSlideVC: UIPageViewControllerDelegate {
             peaceOfMindDelegate?.peaceOfMindSlideVC(loginSlidePageViewController: self, didUpdatePageIndex: index)
         }
     }
-    
-}
-    
-    
-protocol PeaceOfMindSlideVCDelegate: class {
-        
-        /**
-         Called when the number of pages is updated.
-         
-         - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
-         - parameter count: the total number of pages.
-         */
-        func peaceOfMindSlideVC(loginSlidePageViewController: PeaceOfMindSlideVC, didUpdatePageCount count: Int)
-        
-        /**
-         Called when the current index is updated.
-         
-         - parameter LoginSlidePageViewController: the LoginSlidePageViewController instance
-         - parameter index: the index of the currently visible page.
-         */
-        func peaceOfMindSlideVC(loginSlidePageViewController: PeaceOfMindSlideVC, didUpdatePageIndex index: Int)
-        
 }

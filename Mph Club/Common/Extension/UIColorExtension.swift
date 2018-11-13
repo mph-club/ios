@@ -8,30 +8,25 @@
 
 import UIKit
 
-/// Typealias
-typealias PaletteName = UIColor.PaletteName
-
 extension UIColor {
-    static let Palette: [String: UIColor] = [
-        "yellow": #colorLiteral(red: 1, green: 0.8164650798, blue: 0.03998695686, alpha: 1),                    // #FECF33
-        "lightOrange": #colorLiteral(red: 1, green: 0.746743083, blue: 0.1352950335, alpha: 1),               // #FDBD39
-        "peach": #colorLiteral(red: 1, green: 0.4046171308, blue: 0.0813671127, alpha: 1),                     // #EE6723
-        "red": #colorLiteral(red: 1, green: 0.007843137255, blue: 0.1176470588, alpha: 1),                       // #FF021E
-        "gray": #colorLiteral(red: 0.6054732203, green: 0.6055628657, blue: 0.6054536104, alpha: 1),                      // #999999
-        "green": #colorLiteral(red: 0, green: 0.8588126898, blue: 0.3436958194, alpha: 1)                      // #31DA62
-    ]
+    @nonobjc class var mphYellow: UIColor {
+        return #colorLiteral(red: 1, green: 0.8164650798, blue: 0.03998695686, alpha: 1)    // #FECF33
+    }
     
-    /// Enum
-    enum PaletteName: String {
-        case yellow, lightOrange, peach, red, gray, green
-        
-        var color: UIColor {
-            guard let color = UIColor.Palette[self.rawValue] else {
-                fatalError("no color defined for name \(self.rawValue)")
-            }
-            return color
-        }
-        
+    @nonobjc class var mphLightOrange: UIColor {
+        return #colorLiteral(red: 1, green: 0.746743083, blue: 0.1352950335, alpha: 1)    // #EE6723
+    }
+    
+    @nonobjc class var mphRed: UIColor {
+        return #colorLiteral(red: 1, green: 0.007843137255, blue: 0.1176470588, alpha: 1)    // #FF021E
+    }
+    
+    @nonobjc class var mphGray: UIColor {
+        return #colorLiteral(red: 0.6054732203, green: 0.6055628657, blue: 0.6054536104, alpha: 1)    // #999999
+    }
+    
+    @nonobjc class var mphGreen: UIColor {
+        return #colorLiteral(red: 0, green: 0.8588126898, blue: 0.3436958194, alpha: 1)    // #31DA62
     }
     
     /// Create random color
