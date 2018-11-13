@@ -14,9 +14,6 @@ final class CarEligibilityViewController: UIViewController, UIScrollViewDelegate
     // MARK: - Outlets
     // ===============
     
-    // MARK: Scroll View
-    @IBOutlet private weak var scrollView: UIScrollView!
-    
     // MARK: View
     @IBOutlet private weak var contentView: UIView!
     
@@ -120,7 +117,7 @@ private extension CarEligibilityViewController {
     }
     
     @IBAction func closeButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindToAddress", sender: nil)
     }
 }
 
@@ -168,14 +165,6 @@ private extension CarEligibilityViewController {
     
     func showNextPage() {
         performSegue(withIdentifier: "goToProgressVC", sender: nil)
-    }
-    
-    @objc func close() {
-        performSegue(withIdentifier: "unwindToAddress", sender: nil)
-    }
-    
-    @objc func tapGestureDidFire() {
-        scrollView.endEditing(true)
     }
 }
 

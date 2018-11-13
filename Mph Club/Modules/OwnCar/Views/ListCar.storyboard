@@ -475,9 +475,6 @@ Everyone else will just see an approximate location and get an idea of where you
                         <barButtonItem key="backBarButtonItem" title=" " id="kkr-tS-fV9"/>
                         <barButtonItem key="leftBarButtonItem" image="close28Px" id="Oe7-La-zaN">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="closeButton:" destination="RAr-JE-D5A" id="E4O-qP-UKQ"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -489,7 +486,6 @@ Everyone else will just see an approximate location and get an idea of where you
                         <outlet property="nextButtton" destination="E7O-QL-xR9" id="xod-wu-vaq"/>
                         <outlet property="odemeterLabel" destination="eTt-xu-HZk" id="eLH-tB-Jaj"/>
                         <outlet property="odemeterTextField" destination="81B-Qe-dHl" id="bik-2f-tdv"/>
-                        <outlet property="scrollView" destination="mbW-tS-XXS" id="idW-Bs-Lzu"/>
                         <outlet property="transmissionLabel" destination="nks-Qn-YHZ" id="ATE-q2-dB0"/>
                         <outlet property="transmissionTextField" destination="oK7-Cz-ase" id="G7M-Ml-i3h"/>
                         <outlet property="yearTextField" destination="jj4-Nq-aTX" id="cmx-Qr-oKq"/>
@@ -574,7 +570,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircleFilled64Px" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-Rp-X9Z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircle" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-Rp-X9Z">
                                 <rect key="frame" x="342" y="133.5" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="6EY-fM-EWr"/>
@@ -626,9 +622,6 @@ Everyone else will just see an approximate location and get an idea of where you
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="checkForEligible" destination="1cQ-Rp-X9Z" id="0Mm-AQ-dGu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQU-cK-iQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,71 +706,54 @@ Everyone else will just see an approximate location and get an idea of where you
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-c6-k3m">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2g-ug-btN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us a bit more about your car" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKA-vR-jIe">
-                                                <rect key="frame" x="17" y="39" width="253" height="66"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us a bit more about your car" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKA-vR-jIe">
+                                                <rect key="frame" x="16" y="24" width="382" height="96"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="ByY-wn-6Dr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. ZYC555" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1V0-fr-Qbh" customClass="MphTextField" customModule="Mph_Club" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="208" width="343" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-hj-806">
-                                                <rect key="frame" x="17" y="267" width="342" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This description will be help guests make a decision on booking your car." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDJ-ae-baG">
+                                                <rect key="frame" x="16" y="152" width="382" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe your car to guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLp-rw-p3i">
-                                                <rect key="frame" x="17" y="288" width="342" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plate number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6Y-si-TMi">
-                                                <rect key="frame" x="17" y="179" width="334" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-8r-aUV">
-                                                <rect key="frame" x="17" y="317" width="342" height="140"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-8r-aUV">
+                                                <rect key="frame" x="16" y="225" width="382" height="176"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="176" id="zal-Hu-eVR"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="fVw-kM-H4p" id="jaE-eX-rvt"/>
                                                 </connections>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your license plate number will not be publicly visible." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDJ-ae-baG">
-                                                <rect key="frame" x="17" y="113" width="334" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="vDJ-ae-baG" firstAttribute="trailing" secondItem="TKA-vR-jIe" secondAttribute="trailing" id="9Re-Yy-W9I"/>
+                                            <constraint firstAttribute="trailing" secondItem="TKA-vR-jIe" secondAttribute="trailing" constant="16" id="GMQ-9i-Erz"/>
+                                            <constraint firstItem="bcc-8r-aUV" firstAttribute="top" secondItem="vDJ-ae-baG" secondAttribute="bottom" constant="32" id="ISN-kM-SlQ"/>
+                                            <constraint firstItem="TKA-vR-jIe" firstAttribute="leading" secondItem="N2g-ug-btN" secondAttribute="leading" constant="16" id="IYx-hG-WuV"/>
+                                            <constraint firstItem="bcc-8r-aUV" firstAttribute="leading" secondItem="vDJ-ae-baG" secondAttribute="leading" id="NFF-iE-sqV"/>
+                                            <constraint firstItem="TKA-vR-jIe" firstAttribute="top" secondItem="N2g-ug-btN" secondAttribute="top" constant="24" id="VHR-4D-iom"/>
+                                            <constraint firstItem="vDJ-ae-baG" firstAttribute="leading" secondItem="TKA-vR-jIe" secondAttribute="leading" id="aXX-cR-lMb"/>
+                                            <constraint firstItem="bcc-8r-aUV" firstAttribute="trailing" secondItem="vDJ-ae-baG" secondAttribute="trailing" id="hiu-kv-gDK"/>
+                                            <constraint firstItem="vDJ-ae-baG" firstAttribute="top" secondItem="TKA-vR-jIe" secondAttribute="bottom" constant="32" id="y8h-Xe-WDH"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -789,16 +765,21 @@ Everyone else will just see an approximate location and get an idea of where you
                                     <constraint firstItem="N2g-ug-btN" firstAttribute="width" secondItem="UO0-c6-k3m" secondAttribute="width" id="zkX-4A-d85"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-hH-Sbi" customClass="nextButton" customModule="Mph_Club" customModuleProvider="target">
-                                <rect key="frame" x="9" y="807" width="396" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-hH-Sbi">
+                                <rect key="frame" x="16" y="782" width="382" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="QUX-r2-Pox"/>
+                                    <constraint firstAttribute="height" constant="64" id="CjR-5o-2VE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPressed:" destination="fVw-kM-H4p" eventType="touchUpInside" id="END-Qf-kkF"/>
                                 </connections>
@@ -808,26 +789,36 @@ Everyone else will just see an approximate location and get an idea of where you
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="UO0-c6-k3m" secondAttribute="bottom" id="Fza-vM-Lxk"/>
                             <constraint firstItem="UO0-c6-k3m" firstAttribute="trailing" secondItem="s8V-8A-1jc" secondAttribute="trailing" id="VbH-WN-Fe2"/>
-                            <constraint firstAttribute="bottom" secondItem="B4I-hH-Sbi" secondAttribute="bottom" constant="28" id="dvI-YD-LWs"/>
+                            <constraint firstItem="s8V-8A-1jc" firstAttribute="trailing" secondItem="B4I-hH-Sbi" secondAttribute="trailing" constant="16" id="Xg1-Dy-3QY"/>
                             <constraint firstItem="UO0-c6-k3m" firstAttribute="top" secondItem="s8V-8A-1jc" secondAttribute="top" id="fmU-6L-uoz"/>
-                            <constraint firstItem="B4I-hH-Sbi" firstAttribute="leading" secondItem="s8V-8A-1jc" secondAttribute="leading" constant="9" id="nFg-v0-OIi"/>
-                            <constraint firstItem="s8V-8A-1jc" firstAttribute="trailing" secondItem="B4I-hH-Sbi" secondAttribute="trailing" constant="9" id="qTc-ew-Z1l"/>
                             <constraint firstItem="UO0-c6-k3m" firstAttribute="leading" secondItem="s8V-8A-1jc" secondAttribute="leading" id="uck-PW-Hnb"/>
+                            <constraint firstItem="s8V-8A-1jc" firstAttribute="bottom" secondItem="B4I-hH-Sbi" secondAttribute="bottom" constant="16" id="urW-TB-H04"/>
+                            <constraint firstItem="B4I-hH-Sbi" firstAttribute="leading" secondItem="s8V-8A-1jc" secondAttribute="leading" constant="16" id="vn6-qM-pJ2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s8V-8A-1jc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fHR-UG-G9u">
+                        <barButtonItem key="backBarButtonItem" title=" " id="IKM-Od-Hsw"/>
+                        <barButtonItem key="leftBarButtonItem" image="close28Px" id="TgD-R9-DBo">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeButton:" destination="fVw-kM-H4p" id="lqt-gx-44T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carDescTextView" destination="bcc-8r-aUV" id="01s-oE-cp1"/>
-                        <outlet property="carDescriptionLabel" destination="5JS-hj-806" id="m7y-6i-uxE"/>
-                        <outlet property="constraintContentHeight" destination="CwW-GM-tZR" id="Jmz-tC-eq3"/>
                         <outlet property="contentView" destination="N2g-ug-btN" id="UoJ-Yq-7i5"/>
                         <outlet property="nextButtton" destination="B4I-hH-Sbi" id="H1k-r3-6QB"/>
-                        <outlet property="plateTextField" destination="1V0-fr-Qbh" id="lzm-KD-Yo0"/>
-                        <outlet property="scrollView" destination="UO0-c6-k3m" id="U5r-O6-wcH"/>
-                        <segue destination="xtw-k6-f30" kind="show" identifier="goToAddPhotos" id="rK5-zg-3Dl"/>
+                        <segue destination="xtw-k6-f30" kind="show" identifier="showAddPhoto" id="rK5-zg-3Dl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wg3-D0-oRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="0vr-uj-WuB" customClass="KeyboardManager" customModule="Mph_Club" customModuleProvider="target">
+                    <connections>
+                        <outlet property="scrollView" destination="UO0-c6-k3m" id="jR1-Il-BgC"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="8904" y="3094"/>
         </scene>
@@ -903,7 +894,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="375x313" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-8N-Qi8">
-                                <rect key="frame" x="8" y="48" width="398" height="313"/>
+                                <rect key="frame" x="8" y="92" width="398" height="313"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="313" id="2I8-fK-iUz"/>
@@ -913,7 +904,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-u1-9Zg">
-                                <rect key="frame" x="8" y="369" width="398" height="96.5"/>
+                                <rect key="frame" x="8" y="413" width="398" height="96.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95x95" translatesAutoresizingMaskIntoConstraints="NO" id="hE1-zi-5yq">
                                         <rect key="frame" x="0.0" y="0.0" width="96.5" height="96.5"/>
@@ -1086,7 +1077,7 @@ Everyone else will just see an approximate location and get an idea of where you
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your face is clearly visible." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDf-ze-KZw">
-                                <rect key="frame" x="20" y="325" width="374" height="27.5"/>
+                                <rect key="frame" x="20" y="369" width="374" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1120,7 +1111,7 @@ Everyone else will just see an approximate location and get an idea of where you
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-oj-zNZ">
-                                <rect key="frame" x="157" y="90" width="100" height="100"/>
+                                <rect key="frame" x="157" y="134" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jRH-oj-zNZ" secondAttribute="height" multiplier="1:1" id="ONO-vg-2pe"/>
@@ -1830,14 +1821,14 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircleFilled64Px" translatesAutoresizingMaskIntoConstraints="NO" id="eay-MK-dZU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircle" translatesAutoresizingMaskIntoConstraints="NO" id="eay-MK-dZU">
                                 <rect key="frame" x="342" y="133.5" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eay-MK-dZU" secondAttribute="height" multiplier="1:1" id="Btw-V0-POX"/>
                                     <constraint firstAttribute="height" constant="48" id="JjS-tf-Av6"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircleFilled64Px" translatesAutoresizingMaskIntoConstraints="NO" id="5L0-ue-vkd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkCircle" translatesAutoresizingMaskIntoConstraints="NO" id="5L0-ue-vkd">
                                 <rect key="frame" x="342" y="265" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="OfJ-BU-IEZ"/>
@@ -1903,11 +1894,14 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
                         <barButtonItem key="backBarButtonItem" title=" " id="sBl-ql-5bR"/>
                         <barButtonItem key="leftBarButtonItem" image="close28Px" id="Bod-Gf-nix">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeButton:" destination="a1A-jE-Zdm" id="aYx-sB-FFd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="checkForEligible" destination="eay-MK-dZU" id="lTm-MS-f1l"/>
                         <outlet property="continueButton" destination="6YR-Gb-Z95" id="0W1-Jn-q8q"/>
+                        <segue destination="fVw-kM-H4p" kind="show" identifier="showTellUs" id="43H-J2-wSM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiT-ZN-9yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1918,7 +1912,7 @@ To join the mph car sharing community and rent cars from the marketplace, you mu
     <resources>
         <image name="375x313" width="375" height="313"/>
         <image name="95x95" width="95" height="95"/>
-        <image name="checkCircleFilled64Px" width="64" height="64"/>
+        <image name="checkCircle" width="64" height="64"/>
         <image name="close28Px" width="28" height="28"/>
         <image name="group7" width="40" height="40"/>
         <image name="group7-1" width="40" height="40"/>

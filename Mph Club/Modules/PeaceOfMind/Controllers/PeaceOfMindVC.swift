@@ -42,19 +42,19 @@ extension PeaceOfMindVC {
         // FIXME: We must refactor this
         switch Constant.viewIndex {
         case 1:
-            let progressVC = UIStoryboard.peaceOfMind.instantiateViewController(withIdentifier: "ProgressViewController")
+            let progressVC = UIStoryboard.listCar.instantiateViewController(withIdentifier: "ProgressViewController")
             navigationController?.pushViewController(progressVC, animated: true)
         case 2:
-            let tellUsVC = UIStoryboard.peaceOfMind.instantiateViewController(withIdentifier: "TellUsAboutYourCarViewController")
+            let tellUsVC = UIStoryboard.listCar.instantiateViewController(withIdentifier: "TellUsAboutYourCarViewController")
             navigationController?.pushViewController(tellUsVC, animated: true)
         case 3:
-            let addPhotoOfCarVC = UIStoryboard.peaceOfMind.instantiateViewController(withIdentifier: "AddAPhotoOfCarViewController")
+            let addPhotoOfCarVC = UIStoryboard.listCar.instantiateViewController(withIdentifier: "AddAPhotoOfCarViewController")
             navigationController?.pushViewController(addPhotoOfCarVC, animated: true)
         case 4:
-            let addProfilePhotoVC = UIStoryboard.peaceOfMind.instantiateViewController(withIdentifier: "AddProfilePhotoViewController")
+            let addProfilePhotoVC = UIStoryboard.listCar.instantiateViewController(withIdentifier: "AddProfilePhotoViewController")
             navigationController?.pushViewController(addProfilePhotoVC, animated: true)
         case 5:
-            let termsVC = UIStoryboard.peaceOfMind.instantiateViewController(withIdentifier: "ReviewTermsViewController")
+            let termsVC = UIStoryboard.listCar.instantiateViewController(withIdentifier: "ReviewTermsViewController")
             navigationController?.pushViewController(termsVC, animated: true)
         default:
             break
